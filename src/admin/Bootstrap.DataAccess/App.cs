@@ -36,7 +36,7 @@ namespace Bootstrap.DataAccess
             using var db = DbManager.Create();
             var ret = db.Fetch<App>($"select d.Code as Id, d.Name as AppName, case ra.AppId when d.Code then 'checked' else '' end Checked from Dicts d left join RoleApp ra on d.Code = ra.AppId and ra.RoleId = @1 where d.Category = @0", "應用程序", roleId);
 
-            // 判断是否為Administrators
+            // 判斷是否為Administrators
             var role = RoleHelper.Retrieves().FirstOrDefault(r => r.Id == roleId);
             if (role != null && role.RoleName.Equals("Administrators", StringComparison.OrdinalIgnoreCase))
             {

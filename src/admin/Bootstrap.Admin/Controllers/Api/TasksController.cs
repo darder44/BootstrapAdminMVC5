@@ -54,7 +54,7 @@ namespace Bootstrap.Admin.Controllers.Api
         [HttpPost]
         public bool Post([FromBody]TaskWidget widget)
         {
-            // 判断 Cron 表达式
+            // 判斷 Cron 表达式
             if (string.IsNullOrEmpty(widget.CronExpression)) return false;
 
             // 系统内置任務禁止更改

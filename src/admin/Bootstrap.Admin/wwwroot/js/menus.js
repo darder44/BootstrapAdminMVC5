@@ -175,7 +175,7 @@ $(function () {
             case 'clear':
                 $input.val("");
                 if ($input.attr('id') === 'parentName') {
-                    // 判断是否有子项
+                    // 判斷是否有子项
                     var valid = hasNodes($("#menuID").val());
                     $('#app').lgbSelect(valid ? 'enable' : 'disabled');
                 }

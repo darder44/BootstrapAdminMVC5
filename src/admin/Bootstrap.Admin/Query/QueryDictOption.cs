@@ -54,7 +54,7 @@ namespace Bootstrap.Admin.Query
             }
             var ret = new QueryData<BootstrapDict>();
             ret.total = data.Count();
-            // 通過option.Sort属性判断对那列进行排序
+            // 通過option.Sort属性判斷对那列进行排序
             switch (Sort)
             {
                 case "Category":

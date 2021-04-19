@@ -44,7 +44,7 @@ namespace Microsoft.AspNetCore.Builder
                                     var folder = dbSection.GetValue(SqlFolderKey, "").ReplaceOSPlatformPath();
                                     if (!string.IsNullOrEmpty(folder))
                                     {
-                                        // 判断文件夹是否存在
+                                        // 判斷文件夹是否存在
                                         var env = context.RequestServices.GetRequiredService<IWebHostEnvironment>();
                                         var fullFolder = Path.Combine(env.ContentRootPath, folder);
                                         if (Directory.Exists(fullFolder))

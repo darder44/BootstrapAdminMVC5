@@ -251,7 +251,7 @@
                     var data = $.extend({}, row);
                     data = [data];
 
-                    // 判断是否为父项選單
+                    // 判斷是否为父项選單
                     var idField = findIdField(op.table);
                     var idValue = row[idField];
 
