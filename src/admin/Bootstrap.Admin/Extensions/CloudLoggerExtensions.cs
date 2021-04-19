@@ -27,7 +27,7 @@ namespace Microsoft.Extensions.DependencyInjection
     }
 
     /// <summary>
-    /// 云日志提供类
+    /// 云日志提供類
     /// </summary>
     [ProviderAlias("Cloud")]
     public class CloudLoggerProvider : LoggerProvider
@@ -76,7 +76,7 @@ namespace Microsoft.Extensions.DependencyInjection
     }
 
     /// <summary>
-    /// 云日志配置类
+    /// 云日志配置類
     /// </summary>
     public class CloudLoggerOption
     {

@@ -15,7 +15,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
     public class TasksBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 编辑类型實例
+        /// 獲得/設置 编辑類型實例
         /// </summary>
         protected DefaultScheduler DataContext { get; set; } = new DefaultScheduler();
 

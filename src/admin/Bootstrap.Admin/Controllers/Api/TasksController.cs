@@ -62,11 +62,11 @@ namespace Bootstrap.Admin.Controllers.Api
             if (DictHelper.RetrieveSystemModel() && _tasks.Any(t => t.Equals(widget.Name, StringComparison.OrdinalIgnoreCase))) return false;
 
             // 加载任務執行體
-            // 此處可以扩展為任意 DLL 中的任意继承 ITask 接口的實體类
+            // 此處可以扩展為任意 DLL 中的任意继承 ITask 接口的實體類
             var taskExecutor = LgbActivator.CreateInstance<ITask>("Bootstrap.Admin", widget.TaskExecutorName);
             if (taskExecutor == null) return false;
 
-            // 此處未存储到資料库中，直接送入任務中心
+            // 此處未存储到資料庫中，直接送入任務中心
             TaskServicesManager.Remove(widget.Name);
             TaskServicesManager.GetOrAdd(widget.Name, token => taskExecutor.Execute(token), TriggerBuilder.Build(widget.CronExpression));
             return true;

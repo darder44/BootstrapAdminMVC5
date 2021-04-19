@@ -32,7 +32,7 @@
                 this.log({ crud: '重置密码' });
             },
             '#btnSaveDisplayName': function () {
-                this.log({ crud: '設置显示名称' });
+                this.log({ crud: '設置顯示名称' });
             },
             '#btnSavePassword': function () {
                 this.log({ crud: '修改密码' });

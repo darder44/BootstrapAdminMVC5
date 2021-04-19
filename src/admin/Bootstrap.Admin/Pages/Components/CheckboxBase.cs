@@ -4,21 +4,21 @@ using System;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// Checkbox 組件基类
+    /// Checkbox 組件基類
     /// </summary>
     /// <typeparam name="TItem"></typeparam>
     public class CheckboxBase<TItem> : ComponentBase
     {
 #nullable disable
         /// <summary>
-        /// 獲得/設置 資料绑定项
+        /// 獲得/設置 資料綁定項
         /// </summary>
         [Parameter]
         public TItem Item { get; set; }
 #nullable restore
 
         /// <summary>
-        /// 獲得/設置 显示文本
+        /// 獲得/設置 顯示文本
         /// </summary>
         [Parameter]
         public string Text { get; set; } = "";

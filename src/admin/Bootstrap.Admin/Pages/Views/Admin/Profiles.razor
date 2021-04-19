@@ -6,7 +6,7 @@
         <div class="card-body">
             <ConditionComponent>
                 <div class="alert alert-danger" role="alert">
-                    <span>演示系统禁止更改管理员显示名称</span>
+                    <span>演示系统禁止更改管理员顯示名称</span>
                 </div>
             </ConditionComponent>
             <LgbEditForm class="form-inline" Id="Profile" Model="User" OnValidSubmit="SaveDisplayName">
@@ -15,7 +15,7 @@
                         <label class="control-label" for="userName">登录名称</label>
                         <input type="text" class="form-control ignore" value="@Model?.UserName" readonly />
                     </div>
-                    <LgbInputText ColumnClass="col-sm-6 col-md-auto" @bind-Value="@DisplayName" placeholder="不可为空，16字以内" maxlength="16">
+                    <LgbInputText ColumnClass="col-sm-6 col-md-auto" @bind-Value="@DisplayName" placeholder="不可為空，16字以内" maxlength="16">
                         <RequiredValidator />
                         <StringLengthValidator Length="16" />
                     </LgbInputText>

@@ -7,12 +7,12 @@ using System.Linq;
 namespace Bootstrap.Admin.Query
 {
     /// <summary>
-    /// 字典表查詢类
+    /// 字典表查詢類
     /// </summary>
     public class QueryDictOption : PaginationOption
     {
         /// <summary>
-        /// 字典分项
+        /// 字典分項
         /// </summary>
         public string? Category { get; set; }
 
@@ -22,7 +22,7 @@ namespace Bootstrap.Admin.Query
         public string? Name { get; set; }
 
         /// <summary>
-        /// 字典种类
+        /// 字典种類
         /// </summary>
         public string? Define { get; set; }
 

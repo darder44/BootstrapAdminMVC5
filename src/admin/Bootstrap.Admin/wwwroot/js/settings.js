@@ -110,7 +110,7 @@ $(function () {
                     url: Settings.url, data: [{ name: 'Blazor', code: blazor }], title: 'Blazor 設置', method: "post",
                     callback: function (result) {
                         if (result) {
-                            // 通過值設置是否显示 Blazor 挂件
+                            // 通過值設置是否顯示 Blazor 挂件
                             var $blazor = $('header .nav .dropdown-blazor').parent();
                             if (blazor === "1") $blazor.removeClass('d-none');
                             else $blazor.addClass('d-none');

@@ -13,7 +13,7 @@ namespace Bootstrap.DataAccess
     public class Trace
     {
         /// <summary>
-        /// 獲得/設置 操作日誌主键ID
+        /// 獲得/設置 操作日誌主鍵ID
         /// </summary>
         public string? Id { get; set; }
 
@@ -54,7 +54,7 @@ namespace Bootstrap.DataAccess
         public string OS { get; set; } = "";
 
         /// <summary>
-        /// 获取/設置 請求網址
+        /// 獲取/設置 請求網址
         /// </summary>
         [DisplayName("操作頁面")]
         public string RequestUrl { get; set; } = "";

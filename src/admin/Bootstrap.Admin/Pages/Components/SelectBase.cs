@@ -6,7 +6,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// Select 組件基类
+    /// Select 組件基類
     /// </summary>
     public class SelectBase<TItem> : ValidateInputBase<TItem>
     {
@@ -17,12 +17,12 @@ namespace Bootstrap.Admin.Pages.Components
         public string ColumnClass { get; set; } = "col-sm-6";
 
         /// <summary>
-        /// 當前选择项實例
+        /// 當前选择項實例
         /// </summary>
         public SelectedItem SelectedItem { get; set; } = new SelectedItem();
 
         /// <summary>
-        /// 獲得/設置 绑定資料集
+        /// 獲得/設置 綁定資料集
         /// </summary>
         [Parameter]
         public List<SelectedItem> Items { get; set; } = new List<SelectedItem>();
@@ -64,7 +64,7 @@ namespace Bootstrap.Admin.Pages.Components
         public Action<SelectedItem>? SelectedItemChanged { get; set; }
 
         /// <summary>
-        /// 下拉框项被选中时調用此方法
+        /// 下拉框項被选中时調用此方法
         /// </summary>
         public void ItemClickCallback(SelectedItem item)
         {

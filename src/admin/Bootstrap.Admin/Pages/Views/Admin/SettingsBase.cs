@@ -51,7 +51,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         public NavigationManager? NavigationManager { get; set; }
 
         /// <summary>
-        /// 显示提示信息
+        /// 顯示提示信息
         /// </summary>
         /// <param name="text"></param>
         /// <param name="ret"></param>
@@ -176,7 +176,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected void SaveLogin()
         {
             var ret = DictHelper.SaveSettings(new BootstrapDict[]{
-                 new BootstrapDict() { Category = "網站設置", Name = "OAuth 认证登录", Code = Model.ShowOAuth ? "1" : "0" },
+                 new BootstrapDict() { Category = "網站設置", Name = "OAuth 認证登录", Code = Model.ShowOAuth ? "1" : "0" },
                  new BootstrapDict() { Category = "網站設置", Name = "短信验证码登录", Code = Model.ShowMobile ? "1" : "0" }
             });
             ShowMessage("保存登录設置", ret);
@@ -274,7 +274,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 網站設置编辑模型實體类
+        /// 網站設置编辑模型實體類
         /// </summary>
         protected class EditModel
         {

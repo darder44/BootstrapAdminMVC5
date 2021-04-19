@@ -42,7 +42,7 @@ namespace Bootstrap.Admin.Api
         [Theory()]
         [InlineData("Administrator")]
         [InlineData("Admin")]
-        [InlineData("系统默认創建")]
+        [InlineData("系统默認創建")]
         public async void Search_Ok(string search)
         {
             // 選單 系统選單 系统使用条件

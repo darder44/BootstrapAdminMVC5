@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 分頁組件基类
+    /// 分頁組件基類
     /// </summary>
     public class PaginationBase : ComponentBase
     {

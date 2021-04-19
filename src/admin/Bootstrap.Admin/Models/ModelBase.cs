@@ -1,7 +1,7 @@
 ﻿namespace Bootstrap.Admin.Models
 {
     /// <summary>
-    /// Model 基类
+    /// Model 基類
     /// </summary>
     public class ModelBase
     {

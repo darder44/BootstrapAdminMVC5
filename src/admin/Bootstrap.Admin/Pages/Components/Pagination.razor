@@ -3,10 +3,10 @@
 <CascadingValue Value="this">
     <nav class="nav align-items-center" aria-label="分頁組件">
         <div class="pagination-bar">
-            显示第 <span>@((PageIndex - 1) * PageItems + 1)</span> 到第 <span>@(Math.Min(PageIndex * PageItems, TotalCount))</span> 条记录，总共 <span>@TotalCount</span> 条记录
+            顯示第 <span>@((PageIndex - 1) * PageItems + 1)</span> 到第 <span>@(Math.Min(PageIndex * PageItems, TotalCount))</span> 条记录，总共 <span>@TotalCount</span> 条记录
             @if(PageCount > 1)
             {
-                <span>每頁显示</span>
+                <span>每頁顯示</span>
                 <div class="btn-group dropup">
                     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@PageItems</button>
                     <div class="dropdown-menu">

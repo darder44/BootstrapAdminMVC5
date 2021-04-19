@@ -3,7 +3,7 @@
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 弹窗組件基类
+    /// 弹窗組件基類
     /// </summary>
     public class AlertBase : ModalBase
     {

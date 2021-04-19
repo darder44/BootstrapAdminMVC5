@@ -61,7 +61,7 @@ namespace Bootstrap.DataAccess
         {
             UserHelper.Delete(UserHelper.Retrieves().Where(usr => usr.UserName == "UnitTest").Select(usr => usr.Id));
 
-            var up = new User() { UserName = "UnitTest", Password = "123", Description = "新建用户用于测试批准", DisplayName = "UnitTest", Icon = "default.jpg" };
+            var up = new User() { UserName = "UnitTest", Password = "123", Description = "新建用户用于測試批准", DisplayName = "UnitTest", Icon = "default.jpg" };
             UserHelper.Save(up);
             Assert.True(UserHelper.Approve(up.Id, "UnitTest"));
 
@@ -142,7 +142,7 @@ namespace Bootstrap.DataAccess
             var usr = UserHelper.RetrieveUserByUserName("Admin");
             Assert.Equal("Administrator", usr.DisplayName);
 
-            // 新建用户 默认角色為 Default
+            // 新建用户 默認角色為 Default
             var user = new User { UserName = "UnitTest_ICON", Password = "123", DisplayName = "DisplayName", ApprovedBy = "System", ApprovedTime = DateTime.Now, Description = "Desc", Icon = "" };
             Assert.True(UserHelper.Save(user));
             var u = UserHelper.RetrieveUserByUserName(user.UserName);

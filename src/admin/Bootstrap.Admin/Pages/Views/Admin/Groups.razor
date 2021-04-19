@@ -21,15 +21,15 @@
     </RowTemplate>
     <EditTemplate>
         <div class="row">
-            <LgbInputText @bind-Value="@context.GroupName" placeholder="不可为空，50字以内" maxlength="50">
+            <LgbInputText @bind-Value="@context.GroupName" placeholder="不可為空，50字以内" maxlength="50">
                 <RequiredValidator />
                 <StringLengthValidator Length="50" />
             </LgbInputText>
-            <LgbInputText @bind-Value="@context.GroupCode" placeholder="不可为空，50字以内" maxlength="50">
+            <LgbInputText @bind-Value="@context.GroupCode" placeholder="不可為空，50字以内" maxlength="50">
                 <RequiredValidator />
                 <StringLengthValidator Length="50" />
             </LgbInputText>
-            <LgbInputText @bind-Value="@context.Description" placeholder="不可为空，500字以内" maxlength="500">
+            <LgbInputText @bind-Value="@context.Description" placeholder="不可為空，500字以内" maxlength="500">
                 <RequiredValidator />
                 <StringLengthValidator Length="500" />
             </LgbInputText>

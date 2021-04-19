@@ -54,7 +54,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 待删除文件集合类
+        /// 待删除文件集合類
         /// </summary>
         public class DeleteFileCollection
         {
@@ -104,7 +104,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 個人中心操作方法 更改样式 更改显示名稱 更改預設應用
+        /// 個人中心操作方法 更改样式 更改顯示名稱 更改預設應用
         /// </summary>
         /// <returns></returns>
         [HttpPut]

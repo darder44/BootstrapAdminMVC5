@@ -14,7 +14,7 @@ namespace Bootstrap.DataAccess
     public class Role
     {
         /// <summary>
-        /// 獲得/設置 角色主键ID
+        /// 獲得/設置 角色主鍵ID
         /// </summary>
         public string? Id { get; set; }
 
@@ -31,7 +31,7 @@ namespace Bootstrap.DataAccess
         public string Description { get; set; } = "";
 
         /// <summary>
-        /// 获取/設置 用户角色关联状態 checked 标示已经关联 '' 标示未关联
+        /// 獲取/設置 用户角色关联狀態 checked 標示已经关联 '' 標示未关联
         /// </summary>
         [ResultColumn]
         public string Checked { get; set; } = "";

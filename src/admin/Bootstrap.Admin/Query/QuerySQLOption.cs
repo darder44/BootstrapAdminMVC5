@@ -5,7 +5,7 @@ using System;
 namespace Bootstrap.Admin.Query
 {
     /// <summary>
-    /// SQL執行查詢配置类
+    /// SQL執行查詢配置類
     /// </summary>
     public class QuerySQLOption : PaginationOption
     {

@@ -1,7 +1,7 @@
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// 任務描述类
+    /// 任務描述類
     /// </summary>
     public class TaskWidget
     {

@@ -15,12 +15,12 @@ namespace Bootstrap.DataAccess
     public class Exceptions
     {
         /// <summary>
-        /// 獲得/設置 主键
+        /// 獲得/設置 主鍵
         /// </summary>
         public string? Id { get; set; }
 
         /// <summary>
-        /// 獲得/設置 主键
+        /// 獲得/設置 主鍵
         /// </summary>
         public string AppDomainName { get; set; } = "";
 

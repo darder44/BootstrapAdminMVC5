@@ -3,7 +3,7 @@
 namespace Bootstrap.Admin.Pages.Views.Admin.Components
 {
     /// <summary>
-    /// 頁面組件基类
+    /// 頁面組件基類
     /// </summary>
     public abstract class PageBase : ComponentBase
     {

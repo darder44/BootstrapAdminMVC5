@@ -1,7 +1,7 @@
 ﻿namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// PageContentAttributes 實體类
+    /// PageContentAttributes 實體類
     /// </summary>
     public class PageContentAttributes
     {
@@ -16,7 +16,7 @@
         public string Name { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 是否显示
+        /// 獲得/設置 是否顯示
         /// </summary>
         public bool Active { get; set; }
     }

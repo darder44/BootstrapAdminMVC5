@@ -15,12 +15,12 @@ namespace Bootstrap.DataAccess
     public static class MenuHelper
     {
         /// <summary>
-        /// 通过指定角色ID相关選單快取键值
+        /// 通过指定角色ID相关選單快取鍵值
         /// </summary>
         public const string RetrieveMenusByRoleIdDataKey = "MenuHelper-RetrieveMenusByRoleId";
 
         /// <summary>
-        /// 通过当前用户获取所有選單資料快取键名稱 "BootstrapMenu-RetrieveMenus"
+        /// 通过當前用户獲取所有選單資料快取鍵名稱 "BootstrapMenu-RetrieveMenus"
         /// </summary>
         public const string RetrieveMenusAll = DbHelper.RetrieveMenusAll;
 
@@ -31,7 +31,7 @@ namespace Bootstrap.DataAccess
         /// <returns></returns>
         public static bool Save(BootstrapMenu p)
         {
-            // 不允许保存系统選單与前台演示系统的默认選單
+            // 不允许保存系统選單与前台演示系统的默認選單
             if (DictHelper.RetrieveSystemModel())
             {
                 if (p.Category == "0") return true;
@@ -67,7 +67,7 @@ namespace Bootstrap.DataAccess
         {
             if (DictHelper.RetrieveSystemModel())
             {
-                // 不允许删除系统選單与前台演示系统的默认選單
+                // 不允许删除系统選單与前台演示系统的默認選單
                 var systemMenus = RetrieveAllMenus("Admin").Where(m => m.Category == "0");
                 value = value.Where(v => !systemMenus.Any(m => m.Id == v));
                 if (!value.Any()) return true;
@@ -93,7 +93,7 @@ namespace Bootstrap.DataAccess
         public static IEnumerable<BootstrapMenu> RetrieveMenusByUserName(string? userName) => RetrieveAllMenus(userName);
 
         /// <summary>
-        /// 通过角色获取相关選單集合
+        /// 通过角色獲取相关選單集合
         /// </summary>
         /// <param name="roleId"></param>
         /// <returns></returns>
@@ -113,7 +113,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 获取指定用户的應用程序選單
+        /// 獲取指定用户的應用程序選單
         /// </summary>
         /// <param name="appId"></param>
         /// <param name="userName"></param>
@@ -129,10 +129,10 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 通过当前用户名獲得後台選單，层次化後集合
+        /// 通过當前用户名獲得後台選單，层次化後集合
         /// </summary>
-        /// <param name="userName">当前登錄的用户名</param>
-        /// <param name="activeUrl">当前访问選單</param>
+        /// <param name="userName">當前登錄的用户名</param>
+        /// <param name="activeUrl">當前访问選單</param>
         /// <returns></returns>
         public static IEnumerable<BootstrapMenu> RetrieveSystemMenus(string userName, string? activeUrl = null)
         {
@@ -144,7 +144,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 通过当前用户名獲得所有選單，层次化後集合
+        /// 通过當前用户名獲得所有選單，层次化後集合
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
@@ -162,11 +162,11 @@ namespace Bootstrap.DataAccess
         public static IEnumerable<BootstrapMenu> RetrieveAllMenus(string? userName) => string.IsNullOrEmpty(userName) ? new BootstrapMenu[0] : CacheManager.GetOrAdd($"{RetrieveMenusAll}-{userName}", key => DbContextManager.Create<Menu>()?.RetrieveAllMenus(userName), RetrieveMenusAll) ?? new BootstrapMenu[0];
 
         /// <summary>
-        /// 通过当前用户名与指定選單路径获取此選單下所有授权按钮集合 (userName, url, auths) => bool
+        /// 通过當前用户名与指定選單路徑獲取此選單下所有授權按钮集合 (userName, url, auths) => bool
         /// </summary>
-        /// <param name="userName">当前操作用户名</param>
+        /// <param name="userName">當前操作用户名</param>
         /// <param name="url">资源按钮所属選單</param>
-        /// <param name="auths">资源授权码</param>
+        /// <param name="auths">资源授權碼</param>
         /// <returns></returns>
         public static bool AuthorizateButtons(string userName, string url, string auths) => DbContextManager.Create<Menu>()?.AuthorizateButtons(userName, url, auths) ?? false;
     }

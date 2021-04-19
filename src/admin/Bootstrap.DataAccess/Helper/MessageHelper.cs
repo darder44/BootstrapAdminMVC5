@@ -35,14 +35,14 @@ namespace Bootstrap.DataAccess
         public static IEnumerable<Message> Trash(string? userName) => string.IsNullOrEmpty(userName) ? new Message[0] : DbContextManager.Create<Message>()?.Trash(userName) ?? new Message[0];
 
         /// <summary>
-        /// 标旗
+        /// 標旗
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
         public static IEnumerable<Message> Mark(string? userName) => string.IsNullOrEmpty(userName) ? new Message[0] : DbContextManager.Create<Message>()?.Mark(userName) ?? new Message[0];
 
         /// <summary>
-        /// 获取Header處显示的訊息列表
+        /// 獲取Header處顯示的訊息列表
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>

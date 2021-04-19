@@ -318,11 +318,11 @@
 
             $.validator.addMethod("radioGroup", function (value, element) {
                 return $(element).find(':checked').length === 1;
-            }, "请选择一个选项");
+            }, "请选择一个选項");
 
             $.validator.addMethod("checkGroup", function (value, element) {
                 return $(element).parents('[data-toggle="LgbValidate"]').find(':checked').length >= 1;
-            }, "请选择一个选项");
+            }, "请选择一个选項");
 
             $.validator.addMethod("userName", function (value, element) {
                 return this.optional(element) || /^[a-zA-Z0-9_@.]*$/.test(value);

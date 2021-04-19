@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 模態框組件类
+    /// 模態框組件類
     /// </summary>
     public class ModalBase : ComponentBase
     {
@@ -59,7 +59,7 @@ namespace Bootstrap.Admin.Pages.Components
         public bool IsCentered { get; set; } = true;
 
         /// <summary>
-        /// 獲得/設置 是否显示 Footer 預設為 true
+        /// 獲得/設置 是否顯示 Footer 預設為 true
         /// </summary>
         [Parameter]
         public bool ShowFooter { get; set; } = true;

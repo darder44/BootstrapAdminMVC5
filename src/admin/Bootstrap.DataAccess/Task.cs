@@ -11,17 +11,17 @@ namespace Bootstrap.DataAccess
     public class Task
     {
         /// <summary>
-        /// 获取/設置  任務ID
+        /// 獲取/設置  任務ID
         /// </summary>
         public string? Id { get; set; }
 
         /// <summary>
-        /// 获取/設置  任務名稱
+        /// 獲取/設置  任務名稱
         /// </summary>
         public string TaskName { get; set; } = "";
 
         /// <summary>
-        /// 获取/設置  分配人
+        /// 獲取/設置  分配人
         /// </summary>
         public string AssignName { get; set; } = "";
 
@@ -32,22 +32,22 @@ namespace Bootstrap.DataAccess
         public string AssignDisplayName { get; set; } = "";
 
         /// <summary>
-        /// 获取/設置  完成任務人
+        /// 獲取/設置  完成任務人
         /// </summary>
         public string UserName { get; set; } = "";
 
         /// <summary>
-        /// 获取/設置  任務所需時間（天）
+        /// 獲取/設置  任務所需時間（天）
         /// </summary>
         public int TaskTime { get; set; }
 
         /// <summary>
-        /// 获取/設置  任務进度
+        /// 獲取/設置  任務进度
         /// </summary>
         public double TaskProgress { get; set; }
 
         /// <summary>
-        /// 获取/設置  分配時間
+        /// 獲取/設置  分配時間
         /// </summary>
         public DateTime AssignTime { get; set; }
 

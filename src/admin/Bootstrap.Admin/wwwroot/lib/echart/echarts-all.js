@@ -2195,7 +2195,7 @@ define('zrender/zrender', [
             },
             saveAsImage: {
                 show: false,
-                title: '保存为圖片',
+                title: '保存為圖片',
                 type: 'png',
                 lang: ['点击保存']
             }
@@ -2820,7 +2820,7 @@ define('zrender/zrender', [
             var downloadLink = document.createElement('a');
             downloadLink.href = image;
             downloadLink.setAttribute('download', (saveOption.name ? saveOption.name : this.option.title && (this.option.title.text || this.option.title.subtext) ? this.option.title.text || this.option.title.subtext : 'ECharts') + '.' + imgType);
-            downloadLink.innerHTML = '<img style="vertical-align:middle" src="' + image + '" title="' + (!!window.ActiveXObject || 'ActiveXObject' in window ? '右鍵->圖片另存为' : saveOption.lang ? saveOption.lang[0] : '点击保存') + '"/>';
+            downloadLink.innerHTML = '<img style="vertical-align:middle" src="' + image + '" title="' + (!!window.ActiveXObject || 'ActiveXObject' in window ? '右鍵->圖片另存為' : saveOption.lang ? saveOption.lang[0] : '点击保存') + '"/>';
             downloadDiv.appendChild(downloadLink);
             document.body.appendChild(downloadDiv);
             downloadLink = null;

@@ -13,7 +13,7 @@ using System.Net.Http.Headers;
 namespace Bootstrap.DataAccess
 {
     /// <summary>
-    /// Gitee 授权幫助類別
+    /// Gitee 授權幫助類別
     /// </summary>
     public static class OAuthHelper
     {
@@ -51,7 +51,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 插入 Gitee 授权用户到資料庫中
+        /// 插入 Gitee 授權用户到資料庫中
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -89,7 +89,7 @@ namespace Bootstrap.DataAccess
                     if (!string.IsNullOrEmpty(uid)) user.Delete(new string[] { uid });
                     if (user.Save(newUser))
                     {
-                        // 根據配置文件設置默认角色
+                        // 根據配置文件設置默認角色
                         var role = DbContextManager.Create<Role>();
                         if (role != null)
                         {

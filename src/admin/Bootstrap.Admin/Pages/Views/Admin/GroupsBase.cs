@@ -123,7 +123,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected IJSRuntime? JSRuntime { get; set; }
 
         /// <summary>
-        /// 显示提示信息
+        /// 顯示提示信息
         /// </summary>
         /// <param name="title"></param>
         /// <param name="text"></param>

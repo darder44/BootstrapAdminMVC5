@@ -87,7 +87,7 @@
             case 'user':
                 data.UserStatus = 'ChangeDisplayName';
                 $.bc({
-                    url: Profiles.url, method: "put", data: data, title: "修改用户显示名称",
+                    url: Profiles.url, method: "put", data: data, title: "修改用户顯示名称",
                     callback: function (result) {
                         if (result) {
                             $('.username').text(data.DisplayName);

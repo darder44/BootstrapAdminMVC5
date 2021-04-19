@@ -19,7 +19,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected IButtonAuthorization? ComponentAuthorization { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否显示 預設 true 显示
+        /// 獲得/設置 是否顯示 預設 true 顯示
         /// </summary>
         [Parameter]
         public bool Inverse { get; set; }
@@ -31,7 +31,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string AuthKey { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 是否显示
+        /// 獲得/設置 是否顯示
         /// </summary>
         [Parameter]
         public bool? Condition { get; set; }

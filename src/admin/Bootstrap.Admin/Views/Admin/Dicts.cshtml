@@ -20,7 +20,7 @@
     <form class="form-inline">
         <div class="row">
             <div class="form-group col-12">
-                <label class="control-label" for="txt_dict_cate">字典標签</label>
+                <label class="control-label" for="txt_dict_cate">字典標簽</label>
                 <input type="text" class="form-control" id="txt_dict_cate" data-provide="typeahead" data-default-val="" />
             </div>
             <div class="form-group col-12">
@@ -28,7 +28,7 @@
                 <input type="text" class="form-control" id="txt_dict_name" data-default-val="" />
             </div>
             <div class="form-group col-12">
-                <label class="control-label" for="txt_dict_define">字典类型</label>
+                <label class="control-label" for="txt_dict_define">字典類型</label>
                 <input class="form-control" data-toggle="lgbSelect" data-default-val="" />
                 <select data-toggle="lgbSelect" class="d-none" id="txt_dict_define">
                     <option value="">全部</option>
@@ -41,7 +41,7 @@
 }
 @section cardbody {
     <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-        <span>演示系统禁止修改系统使用字典配置项</span>
+        <span>演示系统禁止修改系统使用字典配置項</span>
     </div>
 }
 @section modal {
@@ -54,11 +54,11 @@
             <div class="row">
                 <input type="hidden" id="dictID" />
                 <div class="form-group col-sm-6">
-                    <label class="control-label" for="dictCate">字典標签</label>
+                    <label class="control-label" for="dictCate">字典標簽</label>
                     <input type="text" class="form-control" id="dictCate" placeholder="不可為空，50字以内" maxlength="50" data-valid="true" />
                 </div>
                 <div class="form-group col-sm-6">
-                    <label class="control-label" for="dictDefine">字典类型</label>
+                    <label class="control-label" for="dictDefine">字典類型</label>
                     <input class="form-control" data-toggle="lgbSelect" />
                     <select data-toggle="lgbSelect" class="d-none" data-default-val="1" id="dictDefine">
                         <option value="0">系统使用</option>

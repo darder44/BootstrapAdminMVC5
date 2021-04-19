@@ -44,7 +44,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 查詢指定頁码登錄日誌
+        /// 查詢指定頁碼登錄日誌
         /// </summary>
         /// <param name="po"></param>
         /// <param name="startTime"></param>

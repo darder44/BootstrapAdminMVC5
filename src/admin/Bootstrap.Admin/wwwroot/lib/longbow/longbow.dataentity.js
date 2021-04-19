@@ -104,7 +104,7 @@
                         return;
                     }
                     else if (arrselections.length > 1) {
-                        lgbSwal({ title: '只能选择一项要编辑的資料', type: "warning" });
+                        lgbSwal({ title: '只能选择一項要编辑的資料', type: "warning" });
                         return;
                     }
                     else {
@@ -128,8 +128,8 @@
                     if (options.advancedSearchModal) {
                         $(options.advancedSearchModal).modal('hide');
                     }
-                    // fix bug: 翻頁後再更改查詢条件导致頁码未更改資料为空
-                    // 更改頁码为 1 即可
+                    // fix bug: 翻頁後再更改查詢条件导致頁码未更改資料為空
+                    // 更改頁码為 1 即可
                     // https://gitee.com/dotnetchina/BootstrapAdmin/issues/I1A739
                     var options = this.options.bootstrapTable.data('bootstrap.table').options;
                     options.pageNumber = 1;
@@ -172,7 +172,7 @@
                         return;
                     }
                     else if (arrselections.length > 1) {
-                        lgbSwal({ title: '只能选择一项要编辑的資料', type: "warning" });
+                        lgbSwal({ title: '只能选择一項要编辑的資料', type: "warning" });
                         return;
                     }
                     else {
@@ -245,13 +245,13 @@
                     $(op.modal).modal("show");
                 },
                 'click .del': function (e, value, row, index) {
-                    var displayName = "本项目";
+                    var displayName = "本項目";
                     if (row.Name) displayName = " <span class='text-danger font-weight-bold'>" + row.Name + "</span> ";
                     var text = "您確定要删除" + displayName + "吗？";
                     var data = $.extend({}, row);
                     data = [data];
 
-                    // 判斷是否为父项選單
+                    // 判斷是否為父項選單
                     var idField = findIdField(op.table);
                     var idValue = row[idField];
 
@@ -263,7 +263,7 @@
                             $.each(nodes, function (index, element) {
                                 data.push($.extend({}, element));
                             });
-                            text = "本删除项含有级联子项目</br>您確定要删除 <span class='text-danger font-weight-bold'>" + row.Name + "</span> 以及子项目吗？";
+                            text = "本删除項含有級联子項目</br>您確定要删除 <span class='text-danger font-weight-bold'>" + row.Name + "</span> 以及子項目吗？";
                         }
                     }
                     swal($.extend({}, swalDeleteOptions, { html: text })).then(function (result) {

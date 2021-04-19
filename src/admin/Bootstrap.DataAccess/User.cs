@@ -16,23 +16,23 @@ namespace Bootstrap.DataAccess
     public class User : BootstrapUser
     {
         /// <summary>
-        /// 獲得/設置 用户主键ID
+        /// 獲得/設置 用户主鍵ID
         /// </summary>
         public string? Id { get; set; }
 
         /// <summary>
-        /// 获取/設置 密码
+        /// 獲取/設置 密碼
         /// </summary>
-        [DisplayName("登錄密码")]
+        [DisplayName("登錄密碼")]
         public string Password { get; set; } = "";
 
         /// <summary>
-        /// 获取/設置 密码盐
+        /// 獲取/設置 密碼盐
         /// </summary>
         public string PassSalt { get; set; } = "";
 
         /// <summary>
-        /// 获取/設置 角色用户关联状態 checked 标示已经关联 '' 标示未关联
+        /// 獲取/設置 角色用户关联狀態 checked 標示已经关联 '' 標示未关联
         /// </summary>
         [ResultColumn]
         public string Checked { get; set; } = "";
@@ -46,13 +46,13 @@ namespace Bootstrap.DataAccess
         /// <summary>
         /// 獲得/設置 用户被批复時間
         /// </summary>
-        [DisplayName("授权時間")]
+        [DisplayName("授權時間")]
         public DateTime? ApprovedTime { get; set; }
 
         /// <summary>
         /// 獲得/設置 用户批复人
         /// </summary>
-        [DisplayName("授权人")]
+        [DisplayName("授權人")]
         public string? ApprovedBy { get; set; }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Bootstrap.DataAccess
         public string Description { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 用户当前状態 0 表示管理员注册用户 1 表示用户注册 2 表示更改密码 3 表示更改個人皮肤 4 表示更改显示名稱 5 批复新用户注册操作
+        /// 獲得/設置 用户當前狀態 0 表示管理员注册用户 1 表示用户注册 2 表示更改密碼 3 表示更改個人皮肤 4 表示更改顯示名稱 5 批复新用户注册操作
         /// </summary>
         [ResultColumn]
         public UserStates UserStatus { get; set; }
@@ -74,20 +74,20 @@ namespace Bootstrap.DataAccess
         public string? Period { get; set; }
 
         /// <summary>
-        /// 獲得/設置 新密码
+        /// 獲得/設置 新密碼
         /// </summary>
         [ResultColumn]
-        [DisplayName("确认密码")]
+        [DisplayName("确認密碼")]
         public string NewPassword { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 是否重置密码
+        /// 獲得/設置 是否重置密碼
         /// </summary>
         [ResultColumn]
         public int IsReset { get; set; }
 
         /// <summary>
-        /// 验证用户登錄账号与密码正确
+        /// 驗證用户登錄账号与密碼正确
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
@@ -101,7 +101,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 保存默认應用方法
+        /// 保存默認應用方法
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="app"></param>
@@ -113,7 +113,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 更改密码方法
+        /// 更改密碼方法
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
@@ -181,7 +181,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 重置密码方法
+        /// 重置密碼方法
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
@@ -212,7 +212,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 忘記密码方法
+        /// 忘記密碼方法
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
@@ -251,7 +251,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// User List 视图保存按钮調用
+        /// User List 视圖保存按钮調用
         /// </summary>
         /// <param name="id"></param>
         /// <param name="password"></param>
@@ -306,7 +306,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 通过roleId获取所有用户
+        /// 通过roleId獲取所有用户
         /// </summary>
         /// <param name="roleId"></param>
         /// <returns></returns>
@@ -317,7 +317,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 通过角色ID保存当前授权用户（插入）
+        /// 通过角色ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="roleId">角色ID</param>
         /// <param name="userIds">用户ID数组</param>
@@ -344,7 +344,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 通过groupId获取所有用户
+        /// 通过groupId獲取所有用户
         /// </summary>
         /// <param name="groupId"></param>
         /// <returns></returns>
@@ -355,7 +355,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 通过部门ID保存当前授权用户（插入）
+        /// 通过部门ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="groupId">GroupID</param>
         /// <param name="userIds">用户ID数组</param>
@@ -382,7 +382,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 根據用户名修改用户头像
+        /// 根據用户名修改用户頭像
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="iconName"></param>
@@ -394,7 +394,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 保存显示名稱方法
+        /// 保存顯示名稱方法
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="displayName"></param>
@@ -435,12 +435,12 @@ namespace Bootstrap.DataAccess
     }
 
     /// <summary>
-    /// 用户状態枚举類別型
+    /// 用户狀態枚举類別型
     /// </summary>
     public enum UserStates
     {
         /// <summary>
-        /// 更改密码
+        /// 更改密碼
         /// </summary>
         ChangePassword,
         /// <summary>
@@ -448,7 +448,7 @@ namespace Bootstrap.DataAccess
         /// </summary>
         ChangeTheme,
         /// <summary>
-        /// 更改显示名稱
+        /// 更改顯示名稱
         /// </summary>
         ChangeDisplayName,
         /// <summary>
@@ -460,7 +460,7 @@ namespace Bootstrap.DataAccess
         /// </summary>
         RejectUser,
         /// <summary>
-        /// 保存默认應用
+        /// 保存默認應用
         /// </summary>
         SaveApp
     }

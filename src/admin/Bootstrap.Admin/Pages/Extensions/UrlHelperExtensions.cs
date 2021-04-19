@@ -5,7 +5,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Pages.Extensions
 {
     /// <summary>
-    /// Url 地址辅助操作类
+    /// Url 地址辅助操作類
     /// </summary>
     public static class UrlHelperExtensions
     {

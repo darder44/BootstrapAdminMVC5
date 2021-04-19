@@ -149,7 +149,7 @@ $(function () {
                 child.find(':checkbox').prop('checked', val);
             }
 
-            // 子节点全部取消时父级選單也取消
+            // 子节点全部取消时父級選單也取消
             $this.parents('ol.dd-list').each(function (index, p) {
                 var $menuType = $this.parents('.dd3-item').attr('data-resource');
                 if ($menuType === "0") {

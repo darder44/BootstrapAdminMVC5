@@ -101,7 +101,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 获取所有登錄資料
+        /// 獲取所有登錄資料
         /// </summary>
         /// <returns></returns>
         public virtual IEnumerable<LoginUser> RetrieveAll(DateTime? startTime, DateTime? endTime, string? ip)

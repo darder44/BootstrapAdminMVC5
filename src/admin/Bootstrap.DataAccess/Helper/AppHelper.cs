@@ -10,12 +10,12 @@ namespace Bootstrap.DataAccess
     public static class AppHelper
     {
         /// <summary>
-        /// 通过角色 ID 獲得授权前台應用資料快取键值
+        /// 通过角色 ID 獲得授權前台應用資料快取鍵值
         /// </summary>
         public const string RetrieveAppsByRoleIdDataKey = "AppHelper-RetrieveAppsByRoleId";
 
         /// <summary>
-        /// 通过用户名稱獲得授权前台應用資料快取键值
+        /// 通过用户名稱獲得授權前台應用資料快取鍵值
         /// </summary>
         public const string RetrieveAppsByUserNameDataKey = DbHelper.RetrieveAppsByUserNameDataKey;
         /// <summary>
@@ -39,7 +39,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 根據指定用户名獲得授权應用程序集合
+        /// 根據指定用户名獲得授權應用程序集合
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>

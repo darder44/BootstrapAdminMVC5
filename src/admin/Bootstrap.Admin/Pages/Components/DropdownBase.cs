@@ -9,19 +9,19 @@ namespace Bootstrap.Admin.Pages.Components
     public class DropdownBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 绑定資料集合
+        /// 獲得/設置 綁定資料集合
         /// </summary>
         [Parameter]
         public IEnumerable<SelectedItem> Items { get; set; } = new SelectedItem[0];
 
         /// <summary>
-        /// 獲得/設置 选中项實例
+        /// 獲得/設置 选中項實例
         /// </summary>
         [Parameter]
         public SelectedItem Value { get; set; } = new SelectedItem();
 
         /// <summary>
-        /// 獲得/設置 选中项改变回調方法
+        /// 獲得/設置 选中項改变回調方法
         /// </summary>
         [Parameter]
         public EventCallback<SelectedItem> ValueChanged { get; set; }

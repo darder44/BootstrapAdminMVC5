@@ -27,7 +27,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected AssignModalBase<Role>? AssignRoleModal { get; set; }
 
         /// <summary>
-        /// 獲得/設置 選單类别
+        /// 獲得/設置 選單類别
         /// </summary>
         protected List<SelectedItem> QueryCategory { get; set; } = new List<SelectedItem>(new SelectedItem[] {
             new SelectedItem() { Text = "全部", Value = "", Active = true },
@@ -36,7 +36,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         });
 
         /// <summary>
-        /// 獲得/設置 選單类型
+        /// 獲得/設置 選單類型
         /// </summary>
         protected List<SelectedItem> QueryResource { get; set; } = new List<SelectedItem>(new SelectedItem[] {
             new SelectedItem() { Text = "全部", Value = "-1", Active = true },
@@ -54,7 +54,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
 
 
         /// <summary>
-        /// 獲得/設置 選單类别
+        /// 獲得/設置 選單類别
         /// </summary>
         protected List<SelectedItem> DefineCategory { get; set; } = new List<SelectedItem>(new SelectedItem[] {
             new SelectedItem() { Text = "系统選單", Value = "0" },
@@ -62,7 +62,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         });
 
         /// <summary>
-        /// 獲得/設置 選單类型
+        /// 獲得/設置 選單類型
         /// </summary>
         protected List<SelectedItem> DefineResource { get; set; } = new List<SelectedItem>(new SelectedItem[] {
             new SelectedItem() { Text = "選單", Value = "0" },
@@ -81,8 +81,8 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected List<SelectedItem> DefineTarget { get; set; } = new List<SelectedItem>() {
             new SelectedItem() { Text = "本窗口", Value = "_self" },
             new SelectedItem() { Text = "新窗口", Value = "_blank" },
-            new SelectedItem() { Text = "父级窗口", Value = "_parent" },
-            new SelectedItem() { Text = "顶级窗口", Value = "_top" }
+            new SelectedItem() { Text = "父級窗口", Value = "_parent" },
+            new SelectedItem() { Text = "顶級窗口", Value = "_top" }
         };
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected IJSRuntime? JSRuntime { get; set; }
 
         /// <summary>
-        /// 显示提示信息
+        /// 顯示提示信息
         /// </summary>
         /// <param name="title"></param>
         /// <param name="text"></param>

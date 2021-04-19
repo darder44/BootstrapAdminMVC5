@@ -5,7 +5,7 @@ using Longbow.Tasks;
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// 預設任務執行體實體类
+    /// 預設任務執行體實體類
     /// </summary>
     public class DefaultTaskExecutor : ITask
     {

@@ -15,12 +15,12 @@
         }
 
         /// <summary>
-        /// 獲得/設置 返回路径
+        /// 獲得/設置 返回路徑
         /// </summary>
         public string? ReturnUrl { get; set; }
 
         /// <summary>
-        /// 獲得/設置 认证方式 Cookie Mobile Gitee GitHub
+        /// 獲得/設置 認证方式 Cookie Mobile Gitee GitHub
         /// </summary>
         public string? AuthenticationType { get; set; }
     }

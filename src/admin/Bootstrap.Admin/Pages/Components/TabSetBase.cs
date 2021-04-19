@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// TabSet 組件类
+    /// TabSet 組件類
     /// </summary>
     public class TabSetBase : ComponentBase
     {
@@ -96,7 +96,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 關閉指定標签頁方法
+        /// 關閉指定標簽頁方法
         /// </summary>
         /// <param name="tabId"></param>
         /// <returns></returns>
@@ -133,7 +133,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 關閉所有標签頁方法
+        /// 關閉所有標簽頁方法
         /// </summary>
         protected void CloseAllTab()
         {
@@ -141,7 +141,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 關閉當前標签頁方法
+        /// 關閉當前標簽頁方法
         /// </summary>
         protected async Task CloseCurrentTab()
         {
@@ -150,7 +150,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 關閉其他標签頁方法
+        /// 關閉其他標簽頁方法
         /// </summary>
         protected void CloseOtherTab()
         {
@@ -165,7 +165,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 前移標签頁方法
+        /// 前移標簽頁方法
         /// </summary>
         protected async Task MovePrev()
         {
@@ -174,7 +174,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 後移標签頁方法
+        /// 後移標簽頁方法
         /// </summary>
         /// <returns></returns>
         protected async Task MoveNext()

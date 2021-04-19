@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Bootstrap.Admin.Models
 {
     /// <summary>
-    /// 任務管理頁面 Model 类
+    /// 任務管理頁面 Model 類
     /// </summary>
     public class TaskModel : NavigatorBarModel
     {
@@ -14,7 +14,7 @@ namespace Bootstrap.Admin.Models
         /// <param name="controller"></param>
         public TaskModel(ControllerBase controller) : base(controller)
         {
-            // 此處為演示程式碼，具體生产环境可以从資料库配置獲得
+            // 此處為演示程式碼，具體生产环境可以从資料庫配置獲得
             // Key 為任務名稱 Value 為任務執行體 FullName
             TaskExecutors = new Dictionary<string, string>
             {

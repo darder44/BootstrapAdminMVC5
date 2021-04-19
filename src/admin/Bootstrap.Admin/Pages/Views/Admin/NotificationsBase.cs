@@ -18,7 +18,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected AuthenticationStateProvider? AuthenticationStateProvider { get; set; }
 
         /// <summary>
-        /// 獲得/設置 编辑类型實例
+        /// 獲得/設置 编辑類型實例
         /// </summary>
         protected User DataContext { get; set; } = new User();
 

@@ -16,13 +16,13 @@ namespace Bootstrap.Admin.Pages.Components
     {
 #nullable disable
         /// <summary>
-        /// 獲得/設置 資料绑定 Value
+        /// 獲得/設置 資料綁定 Value
         /// </summary>
         [Parameter(CaptureUnmatchedValues = true)]
         public IReadOnlyDictionary<string, object> AdditionalAttributes { get; set; }
 
         /// <summary>
-        /// 獲得/設置 資料绑定 Value
+        /// 獲得/設置 資料綁定 Value
         /// </summary>
         [Parameter] public TItem Value { get; set; }
 #nullable restore
@@ -60,7 +60,7 @@ namespace Bootstrap.Admin.Pages.Components
 
         private FieldIdentifier? _fieldIdentifier;
         /// <summary>
-        /// 獲取绑定字段显示名稱方法
+        /// 獲取綁定字段顯示名稱方法
         /// </summary>
         public string GetDisplayName()
         {
@@ -82,7 +82,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 獲取绑定字段信息方法
+        /// 獲取綁定字段信息方法
         /// </summary>
         public string GetFieldName()
         {

@@ -31,7 +31,7 @@
             return $(window).width() < 768 ? 256 : 272;
         },
         capHeight: function () {
-            // 如果關闭 oAuth 认证 高度要缩小
+            // 如果關闭 oAuth 認证 高度要缩小
             var height = 150;
             if ($(window).width() < 768) height = $('.slidercaptcha:first').hasClass('oauth') ? 96 : 150;
             return height;
@@ -175,7 +175,7 @@
                 $loginMobile.addClass('d-none');
 
                 $this.attr('data-value', 'username').text('短信验证登陆');
-                $loginButton.attr('data-original-title', '不填写密码預設使用 Gitee 认证');
+                $loginButton.attr('data-original-title', '不填写密码預設使用 Gitee 認证');
             }
         });
     }

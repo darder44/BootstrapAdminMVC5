@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// 注册用户操作类
+    /// 注册用户操作類
     /// </summary>
     [Route("api/[controller]")]
     [AllowAnonymous]

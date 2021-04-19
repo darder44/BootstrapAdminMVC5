@@ -113,15 +113,15 @@ $(function () {
                         return value ? $.format('<i class="text-info {0}"></i>', value) : "";
                     }
                 },
-                { title: "選單路径", field: "Url", sortable: false },
-                { title: "選單类别", field: "CategoryName", sortable: true },
+                { title: "選單路徑", field: "Url", sortable: false },
+                { title: "選單類别", field: "CategoryName", sortable: true },
                 {
                     title: "目標", field: "Target", sortable: true, formatter: function (value, row, index) {
                         return $('#target').getTextByValue(value);
                     }
                 },
                 {
-                    title: "選單类型", field: "IsResource", sortable: true, formatter: function (value, row, index) {
+                    title: "選單類型", field: "IsResource", sortable: true, formatter: function (value, row, index) {
                         return $('#isRes').getTextByValue(value);
                     }
                 },
@@ -175,7 +175,7 @@ $(function () {
             case 'clear':
                 $input.val("");
                 if ($input.attr('id') === 'parentName') {
-                    // 判斷是否有子项
+                    // 判斷是否有子項
                     var valid = hasNodes($("#menuID").val());
                     $('#app').lgbSelect(valid ? 'enable' : 'disabled');
                 }
@@ -260,7 +260,7 @@ $(function () {
         var type = $(this).data('type');
         switch (type) {
             case "parent":
-                // 父级選單不可以是资源或者按钮类型
+                // 父級選單不可以是资源或者按钮類型
                 var pId = $('.dd3-content :radio:checked').val();
                 var check = $.remoteValidate('api/Category/ValidateParentMenuById/' + pId);
                 if (check) {
@@ -363,7 +363,7 @@ $(function () {
         }
     });
 
-    // 所属應用更新是联动選單类别
+    // 所属應用更新是联动選單類别
     var $app = $('#app').on('changed.lgbSelect', function (e) {
         var defaultVal = $app.attr('data-default-val');
         var val = defaultVal === $app.val() ? '0' : '1';
@@ -375,6 +375,6 @@ $(function () {
             var id = $("#menuID").val();
             var check = id === "" || value === "選單" || $.remoteValidate('api/Category/ValidateMenuBySubMenu/' + id);
             return check;
-        }, "拥有子選單时選單类型不可更改为资源或者按钮");
+        }, "拥有子選單时選單類型不可更改為资源或者按钮");
     }
 });

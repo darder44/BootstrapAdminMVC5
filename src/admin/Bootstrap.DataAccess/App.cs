@@ -12,7 +12,7 @@ namespace Bootstrap.DataAccess
     public class App
     {
         /// <summary>
-        /// 獲得/設置 應用程序主键ID
+        /// 獲得/設置 應用程序主鍵ID
         /// </summary>
         public string? Id { get; set; }
 
@@ -22,7 +22,7 @@ namespace Bootstrap.DataAccess
         public string AppName { get; set; } = "未設置";
 
         /// <summary>
-        /// 获取/設置 用户群组关联状態 checked 标示已经关联 '' 标示未关联
+        /// 獲取/設置 用户群组关联狀態 checked 標示已经关联 '' 標示未关联
         /// </summary>
         public string Checked { get; set; } = "";
 
@@ -46,7 +46,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 根據指定用户名獲得授权應用程序集合
+        /// 根據指定用户名獲得授權應用程序集合
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>

@@ -28,7 +28,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public QueryData<LoginUser> Get([FromQuery]QueryLoginOption value) => value.RetrieveData();
 
         /// <summary>
-        /// JWT 登陆认证接口
+        /// JWT 登陆認证接口
         /// </summary>
         /// <param name="config"></param>
         /// <param name="user"></param>

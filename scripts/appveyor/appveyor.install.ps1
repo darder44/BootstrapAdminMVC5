@@ -1,8 +1,8 @@
-﻿# 显示 dotnet version
+﻿# 顯示 dotnet version
 write-host "dotnet --version" -ForegroundColor Cyan
 dotnet --version
 
-# 注意 my.ini 文件行结束符必须为CRLF
+# 注意 my.ini 文件行结束符必须為CRLF
 
 $iniPath="C:\Program Files\MySQL\MySQL Server 5.7\my.ini"
 write-host "copy $($env:appveyor_build_folder)\db\MySQL\my.ini -> $iniPath" -ForegroundColor Cyan

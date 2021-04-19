@@ -12,19 +12,19 @@ namespace Bootstrap.DataAccess
     public static class RoleHelper
     {
         /// <summary>
-        /// 获取所有角色資料快取键值 RoleHelper-RetrieveRoles
+        /// 獲取所有角色資料快取鍵值 RoleHelper-RetrieveRoles
         /// </summary>
         public const string RetrieveRolesDataKey = "RoleHelper-RetrieveRoles";
         /// <summary>
-        /// 通过用户 ID 获取相关角色集合键值 RoleHelper-RetrieveRolesByUserId
+        /// 通过用户 ID 獲取相关角色集合鍵值 RoleHelper-RetrieveRolesByUserId
         /// </summary>
         public const string RetrieveRolesByUserIdDataKey = "RoleHelper-RetrieveRolesByUserId";
         /// <summary>
-        /// 通过選單 ID 獲得相关角色集合键值 RoleHelper-RetrieveRolesByMenuId
+        /// 通过選單 ID 獲得相关角色集合鍵值 RoleHelper-RetrieveRolesByMenuId
         /// </summary>
         public const string RetrieveRolesByMenuIdDataKey = "RoleHelper-RetrieveRolesByMenuId";
         /// <summary>
-        /// 通过部门 ID 獲得相关角色集合键值 RoleHelper-RetrieveRolesByGroupId
+        /// 通过部门 ID 獲得相关角色集合鍵值 RoleHelper-RetrieveRolesByGroupId
         /// </summary>
         public const string RetrieveRolesByGroupIdDataKey = "RoleHelper-RetrieveRolesByGroupId";
 
@@ -137,14 +137,14 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 通过用户名获取授权角色集合
+        /// 通过用户名獲取授權角色集合
         /// </summary>
         /// <param name="userName">指定用户名</param>
         /// <returns>角色名稱集合</returns>
         public static IEnumerable<string> RetrievesByUserName(string userName) => CacheManager.GetOrAdd(string.Format("{0}-{1}", DbHelper.RetrieveRolesByUserNameDataKey, userName), key => DbContextManager.Create<Role>()?.RetrievesByUserName(userName), DbHelper.RetrieveRolesByUserNameDataKey) ?? new string[0];
 
         /// <summary>
-        /// 通过指定 Url 地址獲得授权角色集合
+        /// 通过指定 Url 地址獲得授權角色集合
         /// </summary>
         /// <param name="url">請求 Url 地址</param>
         /// <param name="appId">應用程序Id</param>

@@ -75,7 +75,7 @@
             return activeTabId;
         },
         resetTab: function (tabId) {
-            // 通過计算 Tab 宽度控制滚动条显示完整 Tab
+            // 通過计算 Tab 宽度控制滚动条顯示完整 Tab
             var $tab = $('#' + tabId);
             if ($tab.length === 0) return;
 

@@ -35,19 +35,19 @@ namespace Bootstrap.Admin.Pages.Components
         public string Icon { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 用户显示名稱
+        /// 獲得/設置 用户顯示名稱
         /// </summary>
         [Parameter]
         public string DisplayName { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 用户显示名稱改变事件回調方法
+        /// 獲得/設置 用户顯示名稱改变事件回調方法
         /// </summary>
         [Parameter]
         public EventCallback<string> DisplayNameChanged { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否显示 Blazor MVC 切换圖標
+        /// 獲得/設置 是否顯示 Blazor MVC 切换圖標
         /// </summary>
         protected bool EnableBlazor { get; set; }
 

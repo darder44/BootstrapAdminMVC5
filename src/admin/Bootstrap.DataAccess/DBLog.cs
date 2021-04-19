@@ -13,12 +13,12 @@ namespace Bootstrap.DataAccess
     {
 
         /// <summary>
-        /// 獲得/設置 主键ID
+        /// 獲得/設置 主鍵ID
         /// </summary>
         public string? Id { get; set; }
 
         /// <summary>
-        /// 獲得/設置 当前登錄名
+        /// 獲得/設置 當前登錄名
         /// </summary>
         [DisplayName("所属用户")]
         public string? UserName { get; set; }
@@ -30,7 +30,7 @@ namespace Bootstrap.DataAccess
         public string SQL { get; set; } = "";
 
         /// <summary>
-        /// 获取/設置 用户角色关联状態 checked 标示已经关联 '' 标示未关联
+        /// 獲取/設置 用户角色关联狀態 checked 標示已经关联 '' 標示未关联
         /// </summary>
         [DisplayName("執行時間")]
         public DateTime LogTime { get; set; }

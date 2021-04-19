@@ -77,11 +77,11 @@
                 presto: u.indexOf('Presto') > -1, //opera内核
                 webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
                 gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') === -1, //火狐内核
-                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否為移动终端
                 ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
                 android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
-                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
-                iPod: u.indexOf('iPod') > -1, //是否为iPod或者QQHD浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否為iPhone或者QQHD浏览器
+                iPod: u.indexOf('iPod') > -1, //是否為iPod或者QQHD浏览器
                 iPad: u.indexOf('iPad') > -1, //是否iPad
                 webApp: u.indexOf('Safari') === -1 //是否web應该程序，没有頭部与底部
             };
@@ -345,8 +345,8 @@
         smartTable: function (options) {
             var settings = $.extend({
                 toolbar: '#toolbar',                //工具按钮用哪个容器
-                cache: false,                       //是否使用缓存，預設为true，所以一般情况下需要設置一下这个属性（*）
-                pagination: true,                   //是否显示分頁（*）
+                cache: false,                       //是否使用缓存，預設為true，所以一般情况下需要設置一下这个属性（*）
+                pagination: true,                   //是否顯示分頁（*）
                 sortOrder: "asc",                   //排序方式
                 sidePagination: "server",           //分頁方式：client客户端分頁，server服务端分頁（*）
                 pageNumber: 1,                      //初始化加载第一頁，預設第一頁
@@ -365,14 +365,14 @@
                 showSearchClearButton: true,
                 showAdvancedSearchButton: true,
                 showButtonText: true,
-                showSearchButton: true,             //是否显示搜索按钮
-                showColumns: true,                  //是否显示所有的列
-                showRefresh: true,                  //是否显示刷新按钮
-                showToggle: true,                   //是否显示详细视圖和列表视圖的切换按钮
-                cardView: $(window).width() < 768,  //是否显示详细视圖
+                showSearchButton: true,             //是否顯示搜索按钮
+                showColumns: true,                  //是否顯示所有的列
+                showRefresh: true,                  //是否顯示刷新按钮
+                showToggle: true,                   //是否顯示详细视圖和列表视圖的切换按钮
+                cardView: $(window).width() < 768,  //是否顯示详细视圖
                 queryButton: '#btn_query',
                 onLoadSuccess: function (data) {
-                    // 設置 資料库 滚动条
+                    // 設置 資料庫 滚动条
                     if (settings.height !== undefined) {
                         $('.bootstrap-table .fixed-table-body').overlayScrollbars({
                             className: 'os-theme-dark',
@@ -479,7 +479,7 @@
                     };
                 }
 
-                // 設置最小高度为
+                // 設置最小高度為
                 settings.height = settings.calcHeight(this);
 
                 // 設置 onresize 事件
@@ -506,8 +506,8 @@
             });
             if (settings.queryButton) {
                 $(settings.queryButton).on('click', this, function (e) {
-                    // fix bug: 翻頁後再更改查詢条件导致頁码未更改資料为空
-                    // 更改頁码为 1 即可
+                    // fix bug: 翻頁後再更改查詢条件导致頁码未更改資料為空
+                    // 更改頁码為 1 即可
                     // https://gitee.com/dotnetchina/BootstrapAdmin/issues/I1A739
                     var options = e.data.data('bootstrap.table').options;
                     options.pageNumber = 1;
@@ -523,16 +523,16 @@
                     html: true
                 });
 
-                // 生成高级查詢按钮
+                // 生成高級查詢按钮
                 if (settings.showAdvancedSearchButton) {
                     // template
-                    var $advancedSearchButtonHtml = $('<button class="btn btn-secondary" type="button" name="advancedSearch" title="高级搜索"><i class="fa fa-search-plus"></i><span>高级搜索</span></button>');
+                    var $advancedSearchButtonHtml = $('<button class="btn btn-secondary" type="button" name="advancedSearch" title="高級搜索"><i class="fa fa-search-plus"></i><span>高級搜索</span></button>');
                     $advancedSearchButtonHtml.insertAfter($('.bootstrap-table .fixed-table-toolbar .search [name="clearSearch"]')).on('click', function () {
-                        // 弹出高级查詢对话框
+                        // 弹出高級查詢对话框
                         $(settings.advancedSearchModal).modal('show');
                     });
 
-                    // 高级搜索有值时颜色为红色
+                    // 高級搜索有值时颜色為红色
                     $(settings.advancedSearchModal).on('hide.bs.modal', function () {
                         var $modal = $(this)
                         var hasValue = false;
@@ -660,7 +660,7 @@
                 return console.error(err.toString());
             }).then(function () {
                 // 连接成功
-                // invoke 为 调用服务端方法
+                // invoke 為 调用服务端方法
                 // invoke: function (connection) { return connection.invoke('RetrieveDashboard'); }
                 if (!op.invoke) return;
                 var executor = op.invoke(connection);
@@ -710,10 +710,10 @@
                     return '<span>没有找到匹配的记录</span>';
                 },
                 formatPaginationSwitch: function formatPaginationSwitch() {
-                    return '<span>隐藏/显示分頁</span>';
+                    return '<span>隐藏/顯示分頁</span>';
                 },
                 formatPaginationSwitchDown: function formatPaginationSwitchDown() {
-                    return '<span>显示分頁</span>';
+                    return '<span>顯示分頁</span>';
                 },
                 formatPaginationSwitchUp: function formatPaginationSwitchUp() {
                     return '<span>隐藏分頁</span>';
@@ -725,7 +725,7 @@
                     return '<span>切换</span>';
                 },
                 formatToggleOn: function formatToggleOn() {
-                    return '<span>显示卡片视圖</span>';
+                    return '<span>顯示卡片视圖</span>';
                 },
                 formatToggleOff: function formatToggleOff() {
                     return '<span>隐藏卡片视圖</span>';
@@ -752,7 +752,7 @@
                     return '<span>跳转</span>';
                 },
                 formatAdvancedSearch: function formatAdvancedSearch() {
-                    return '<span>高级搜索</span>';
+                    return '<span>高級搜索</span>';
                 },
                 formatAdvancedCloseButton: function formatAdvancedCloseButton() {
                     return '<span>關闭</span>';

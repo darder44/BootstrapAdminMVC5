@@ -302,7 +302,7 @@ $(function () {
             var msg = result.Message;
             switch (cate) {
                 case "DB":
-                    toastr.error(msg, "資料库操作发生异常");
+                    toastr.error(msg, "資料庫操作发生异常");
                     break;
                 case "Users":
                     toastr.success(msg, "新用户注册");

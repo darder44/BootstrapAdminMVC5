@@ -62,7 +62,7 @@ For more information, please click [wiki](https://gitee.com/dotnetchina/Bootstra
 ### Database 
 **MSSQL/Oracle/SQLite/MySql/MariaDB/Firebird/MongoDB**  
 
-For more information, please click [wiki](https://gitee.com/dotnetchina/BootstrapAdmin/wikis/数据库连接配置?sort_id=1333482)  
+For more information, please click [wiki](https://gitee.com/dotnetchina/BootstrapAdmin/wikis/数据庫连接配置?sort_id=1333482)  
 
 ### Browser
 ![chrome](https://img.shields.io/badge/chrome->%3D4.5-success.svg?logo=google%20chrome&logoColor=red)

@@ -214,12 +214,12 @@ namespace Bootstrap.DataAccess
             Assert.Equal("http://localhost:49185", DictHelper.RetrieveHomeUrl("Admin", "Demo"));
             Assert.Equal("~/Home/Index", DictHelper.RetrieveHomeUrl("Admin", "BA"));
 
-            // 开启默认程序功能
+            // 开启默認程序功能
             DictHelper.SaveSettings(new BootstrapDict[] {
                 new BootstrapDict()
                 {
                     Category = "網站设置",
-                    Name = "默认应用程序",
+                    Name = "默認应用程序",
                     Code = "1"
                 }
             });
@@ -228,12 +228,12 @@ namespace Bootstrap.DataAccess
             Assert.True(defaultApp);
             DictHelper.RetrieveHomeUrl("Admin", "BA");
 
-            // 关閉默认程序功能
+            // 关閉默認程序功能
             DictHelper.SaveSettings(new BootstrapDict[] {
                 new BootstrapDict()
                 {
                     Category = "網站设置",
-                    Name = "默认应用程序",
+                    Name = "默認应用程序",
                     Code = "0"
                 }
             });
@@ -339,18 +339,18 @@ namespace Bootstrap.DataAccess
             public string Status { get; set; } = "";
 
             /// <summary>
-            /// 获得/设置 地理位置结果
+            /// 獲得/设置 地理位置结果
             /// </summary>
             public IEnumerable<BaiDuIp138LocatorResult> Data { get; set; } = Array.Empty<BaiDuIp138LocatorResult>();
         }
 
         /// <summary>
-        /// Ip138 地理位置结果实体类
+        /// Ip138 地理位置结果实体類
         /// </summary>
         private class BaiDuIp138LocatorResult
         {
             /// <summary>
-            /// 获得/设置 地理位置信息
+            /// 獲得/设置 地理位置信息
             /// </summary>
             public string Location { get; set; } = "";
 

@@ -4,7 +4,7 @@ using PetaPoco;
 namespace Bootstrap.Admin.Pages.Extensions
 {
     /// <summary>
-    /// Pages 扩展操作类
+    /// Pages 扩展操作類
     /// </summary>
     public static class PagesExtensions
     {

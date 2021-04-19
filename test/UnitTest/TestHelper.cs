@@ -12,7 +12,7 @@ namespace Bootstrap.Admin
     public static class TestHelper
     {
         /// <summary>
-        /// 获得当前工程解决方案目录
+        /// 獲得當前工程解决方案目录
         /// </summary>
         /// <returns></returns>
         public static string RetrieveSolutionPath()

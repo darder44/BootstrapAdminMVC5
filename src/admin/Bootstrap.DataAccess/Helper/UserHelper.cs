@@ -14,23 +14,23 @@ namespace Bootstrap.DataAccess
     public static class UserHelper
     {
         /// <summary>
-        /// 获取所有用户快取資料键值
+        /// 獲取所有用户快取資料鍵值
         /// </summary>
         public const string RetrieveUsersDataKey = "UserHelper-RetrieveUsers";
         /// <summary>
-        /// 通过角色ID获取所有用户快取資料键值
+        /// 通过角色ID獲取所有用户快取資料鍵值
         /// </summary>
         public const string RetrieveUsersByRoleIdDataKey = "UserHelper-RetrieveUsersByRoleId";
         /// <summary>
-        /// 通过部门ID获取所有用户快取資料键值
+        /// 通过部门ID獲取所有用户快取資料鍵值
         /// </summary>
         public const string RetrieveUsersByGroupIdDataKey = "UserHelper-RetrieveUsersByGroupId";
         /// <summary>
-        /// 获取所有新用户快取資料键值
+        /// 獲取所有新用户快取資料鍵值
         /// </summary>
         public const string RetrieveNewUsersDataKey = "UserHelper-RetrieveNewUsers";
         /// <summary>
-        /// 通过登錄名获取登錄用户快取資料键值
+        /// 通过登錄名獲取登錄用户快取資料鍵值
         /// </summary>
         public const string RetrieveUsersByNameDataKey = DbHelper.RetrieveUsersByNameDataKey;
 
@@ -51,11 +51,11 @@ namespace Bootstrap.DataAccess
         public static IEnumerable<User> Retrieves() => CacheManager.GetOrAdd(RetrieveUsersDataKey, key => DbContextManager.Create<User>()?.Retrieves()) ?? new User[0];
 
         /// <summary>
-        /// 认证方法
+        /// 認證方法
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
-        /// <returns>返回真表示认证通过</returns>
+        /// <returns>返回真表示認證通过</returns>
         public static bool Authenticate(string userName, string password) => DbContextManager.Create<User>()?.Authenticate(userName, password) ?? false;
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 保存用户默认App
+        /// 保存用户默認App
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="app"></param>
@@ -147,7 +147,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 更改密码方法
+        /// 更改密碼方法
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
@@ -163,11 +163,11 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 重置密码方法
+        /// 重置密碼方法
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
-        /// <remarks>用户使用忘記密码功能後，管理员在用户管理頁面中可以点击重置按钮</remarks>
+        /// <remarks>用户使用忘記密碼功能後，管理员在用户管理頁面中可以点击重置按钮</remarks>
         /// <returns></returns>
         public static bool ResetPassword(string userName, string password)
         {
@@ -179,7 +179,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 忘記密码調用
+        /// 忘記密碼調用
         /// </summary>
         /// <param name="user"></param>
         public static bool ForgotPassword(ResetUser user)
@@ -203,14 +203,14 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 通过roleId获取所有用户
+        /// 通过roleId獲取所有用户
         /// </summary>
         /// <param name="roleId"></param>
         /// <returns></returns>
         public static IEnumerable<User> RetrievesByRoleId(string roleId) => CacheManager.GetOrAdd(string.Format("{0}-{1}", RetrieveUsersByRoleIdDataKey, roleId), k => DbContextManager.Create<User>()?.RetrievesByRoleId(roleId), RetrieveUsersByRoleIdDataKey) ?? new User[0];
 
         /// <summary>
-        /// 通过角色ID保存当前授权用户（插入）
+        /// 通过角色ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="roleId">角色ID</param>
         /// <param name="userIds">用户ID数组</param>
@@ -234,14 +234,14 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 通过groupId获取所有用户
+        /// 通过groupId獲取所有用户
         /// </summary>
         /// <param name="groupId"></param>
         /// <returns></returns>
         public static IEnumerable<User> RetrievesByGroupId(string groupId) => CacheManager.GetOrAdd(string.Format("{0}-{1}", RetrieveUsersByGroupIdDataKey, groupId), k => DbContextManager.Create<User>()?.RetrievesByGroupId(groupId), RetrieveUsersByRoleIdDataKey) ?? new User[0];
 
         /// <summary>
-        /// 通过部门ID保存当前授权用户（插入）
+        /// 通过部门ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="groupId">GroupID</param>
         /// <param name="userIds">用户ID数组</param>
@@ -254,7 +254,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 根據用户名修改用户头像
+        /// 根據用户名修改用户頭像
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="iconName"></param>
@@ -267,7 +267,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 保存显示名稱方法
+        /// 保存顯示名稱方法
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="displayName"></param>
@@ -294,7 +294,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 通过登錄名获取登錄用户方法
+        /// 通过登錄名獲取登錄用户方法
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
@@ -308,7 +308,7 @@ namespace Bootstrap.DataAccess
         public static ResetUser? RetrieveResetUserByUserName(string userName) => DbContextManager.Create<ResetUser>()?.RetrieveUserByUserName(userName);
 
         /// <summary>
-        /// 通过登錄账户獲得重置密码原因
+        /// 通过登錄账户獲得重置密碼原因
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>

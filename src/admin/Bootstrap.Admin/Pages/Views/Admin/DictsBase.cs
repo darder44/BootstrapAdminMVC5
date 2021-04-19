@@ -12,7 +12,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
     public class DictsBase : QueryPageBase<BootstrapDict>
     {
         /// <summary>
-        /// 獲得/設置 字典类别集合
+        /// 獲得/設置 字典類别集合
         /// </summary>
         protected List<SelectedItem> DefineItems { get; set; } = new List<SelectedItem>(new SelectedItem[] { new SelectedItem() { Text = "系统使用", Value = "0" }, new SelectedItem() { Text = "自定义", Value = "1" } });
 

@@ -33,7 +33,7 @@ namespace Bootstrap.Admin.Controllers.Api
         /// 用户相關授權操作
         /// </summary>
         /// <param name="id">主鍵</param>
-        /// <param name="type">类型 如角色、部門</param>
+        /// <param name="type">類型 如角色、部門</param>
         /// <returns></returns>
         [HttpPost("{id}")]
         public IEnumerable<object> Post(string id, [FromQuery]string type) => type switch

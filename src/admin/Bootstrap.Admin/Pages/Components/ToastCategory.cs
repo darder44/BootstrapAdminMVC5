@@ -1,7 +1,7 @@
 ﻿namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// Toast 組件类型
+    /// Toast 組件類型
     /// </summary>
     public enum ToastCategory
     {

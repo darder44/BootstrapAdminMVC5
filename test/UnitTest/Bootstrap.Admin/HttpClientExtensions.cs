@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// HttpClient 扩展操作类
+    /// HttpClient 扩展操作類
     /// </summary>
     public static class HttpClientExtensions
     {

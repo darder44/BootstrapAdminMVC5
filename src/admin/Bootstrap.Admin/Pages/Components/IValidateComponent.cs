@@ -17,7 +17,7 @@ namespace Bootstrap.Admin.Pages.Components
         void ValidateProperty(object? propertyValue, ValidationContext context, List<ValidationResult> results);
 
         /// <summary>
-        /// 显示或者隐藏提示信息方法
+        /// 顯示或者隐藏提示信息方法
         /// </summary>
         /// <param name="results"></param>
         /// <param name="validProperty"></param>

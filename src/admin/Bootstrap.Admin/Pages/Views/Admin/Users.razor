@@ -27,15 +27,15 @@
     </RowTemplate>
     <EditTemplate>
         <div class="row">
-            <LgbInputText @bind-Value="@context.UserName" placeholder="不可为空，16字以内" maxlength="16">
+            <LgbInputText @bind-Value="@context.UserName" placeholder="不可為空，16字以内" maxlength="16">
                 <RequiredValidator />
                 <StringLengthValidator Length="16" />
             </LgbInputText>
-            <LgbInputText @bind-Value="@context.DisplayName" placeholder="不可为空，20字以内" maxlength="20">
+            <LgbInputText @bind-Value="@context.DisplayName" placeholder="不可為空，20字以内" maxlength="20">
                 <RequiredValidator />
                 <StringLengthValidator Length="20" />
             </LgbInputText>
-            <LgbInputText InputType="password" @bind-Value="@context.Password" autocomplete="off" placeholder="不可为空，16字以内" maxlength="16">
+            <LgbInputText InputType="password" @bind-Value="@context.Password" autocomplete="off" placeholder="不可為空，16字以内" maxlength="16">
                 <RequiredValidator />
                 <StringLengthValidator Length="16" />
             </LgbInputText>

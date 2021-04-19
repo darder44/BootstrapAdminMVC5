@@ -43,7 +43,7 @@ namespace Bootstrap.Admin.Models
             {
                 var fileName = Path.Combine(host.WebRootPath, Icon.TrimStart('~', '/').Replace('/', Path.DirectorySeparatorChar));
 
-                // 資料库存储的個人圖片有後缀 default.jpg?v=1234567
+                // 資料庫存储的個人圖片有後缀 default.jpg?v=1234567
                 fileName = fileName.Split('?').FirstOrDefault();
                 if (!string.IsNullOrEmpty(fileName) && File.Exists(fileName))
                 {

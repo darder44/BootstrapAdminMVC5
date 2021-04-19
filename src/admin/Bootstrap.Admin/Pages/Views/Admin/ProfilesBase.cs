@@ -13,7 +13,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Pages.Views.Admin.Components
 {
     /// <summary>
-    /// 個人中心組件类
+    /// 個人中心組件類
     /// </summary>
     public class ProfilesBase : PageBase
     {
@@ -44,9 +44,9 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected PasswordModel Password { get; set; } = new PasswordModel();
 
         /// <summary>
-        /// 獲得/設置  當前用户显示名稱
+        /// 獲得/設置  當前用户顯示名稱
         /// </summary>
-        [DisplayName("显示名稱")]
+        [DisplayName("顯示名稱")]
         public string DisplayName { get; set; } = "";
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected IJSRuntime? JSRuntime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 选中的样式项
+        /// 獲得/設置 选中的样式項
         /// </summary>
         protected SelectedItem SelectedTheme { get; set; } = new SelectedItem();
 
@@ -76,7 +76,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected IEnumerable<SelectedItem> Themes { get; set; } = new SelectedItem[0];
 
         /// <summary>
-        /// 显示提示信息
+        /// 顯示提示信息
         /// </summary>
         /// <param name="text"></param>
         /// <param name="ret"></param>
@@ -97,12 +97,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             var user = UserHelper.RetrieveUserByUserName(Model?.UserName);
             if (user != null) User = user;
 
-            // 直接绑定 User.DisplayName 導致未保存时 UI 的显示名稱也会变化
+            // 直接绑定 User.DisplayName 導致未保存时 UI 的顯示名稱也会变化
             DisplayName = User.DisplayName;
         }
 
         /// <summary>
-        /// 保存显示名稱方法
+        /// 保存顯示名稱方法
         /// </summary>
         protected void SaveDisplayName(EditContext context)
         {
@@ -117,7 +117,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
 
                 // 弹窗提示是否保存成功
                 var result = ret ? "成功" : "失败";
-                ShowMessage($"保存显示名稱{result}", ret);
+                ShowMessage($"保存顯示名稱{result}", ret);
             }
         }
 
@@ -158,7 +158,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 密码保存實體类
+        /// 密码保存實體類
         /// </summary>
         protected class PasswordModel
         {
@@ -175,9 +175,9 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             public string NewPassword { get; set; } = "";
 
             /// <summary>
-            /// 獲得/設置 確认密码
+            /// 獲得/設置 確認密码
             /// </summary>
-            [DisplayName("確认密码")]
+            [DisplayName("確認密码")]
             public string ConfirmPassword { get; set; } = "";
         }
     }

@@ -5,12 +5,12 @@ using System;
 namespace Bootstrap.Admin.Query
 {
     /// <summary>
-    /// 操作日志查詢条件类
+    /// 操作日志查詢条件類
     /// </summary>
     public class QueryLogOption : PaginationOption
     {
         /// <summary>
-        /// 獲得/設置 操作类型
+        /// 獲得/設置 操作類型
         /// </summary>
         public string? OperateType { get; set; }
 

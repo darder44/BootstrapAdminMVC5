@@ -7,7 +7,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// 資料字典分类
+    /// 資料字典分類
     /// </summary>
     [Route("api/[controller]/[action]")]
     [Authorize]
@@ -36,7 +36,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 獲取所有父级選單資料
+        /// 獲取所有父級選單資料
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -56,7 +56,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 通過指定選單檢查父级選單是否為選單类型 资源与按钮返回 false
+        /// 通過指定選單檢查父級選單是否為選單類型 资源与按钮返回 false
         /// </summary>
         /// <returns></returns>
         [HttpGet("{id}")]

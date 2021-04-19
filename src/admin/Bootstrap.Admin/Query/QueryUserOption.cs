@@ -6,7 +6,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Query
 {
     /// <summary>
-    /// 用户維護查詢条件类
+    /// 用户維護查詢条件類
     /// </summary>
     public class QueryUserOption : PaginationOption
     {
@@ -16,7 +16,7 @@ namespace Bootstrap.Admin.Query
         public string? Name { get; set; }
 
         /// <summary>
-        /// 獲得/設置 用户显示名稱
+        /// 獲得/設置 用户顯示名稱
         /// </summary>
         public string? DisplayName { get; set; }
 

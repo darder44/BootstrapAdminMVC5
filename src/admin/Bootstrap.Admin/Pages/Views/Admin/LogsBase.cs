@@ -12,12 +12,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
     public class LogsBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 编辑类型實例
+        /// 獲得/設置 编辑類型實例
         /// </summary>
         protected Log DataContext { get; set; } = new Log();
 
         /// <summary>
-        /// 獲得/設置 查詢绑定类型實例
+        /// 獲得/設置 查詢绑定類型實例
         /// </summary>
         protected Log QueryModel { get; set; } = new Log();
 

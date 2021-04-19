@@ -28,7 +28,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string Icon { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 按钮显示文字
+        /// 獲得/設置 按钮顯示文字
         /// </summary>
         [Parameter]
         public string Title { get; set; } = "未設置";

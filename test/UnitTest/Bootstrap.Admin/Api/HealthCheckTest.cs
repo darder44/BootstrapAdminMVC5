@@ -36,7 +36,7 @@ namespace Bootstrap.Admin.Api
             var cates = await client.GetStringAsync("/Healths");
             Assert.Contains("TotalDuration", cates);
 
-            // 测试資料库不能加载时健康检查
+            // 測試資料庫不能加载时健康检查
             var config = HealthCheckStartup.Configuration;
             config["DB:0:Enabled"] = "false";
             config["DB:4:Enabled"] = "true";
@@ -44,7 +44,7 @@ namespace Bootstrap.Admin.Api
             cates = await client.GetStringAsync("/Healths");
             Assert.Contains("TotalDuration", cates);
 
-            // 测试資料库连接字符串未配置
+            // 測試資料庫连接字符串未配置
             config["DB:0:Enabled"] = "false";
             config["DB:2:Enabled"] = "true";
             config["DB:2:ConnectionStrings:ba"] = "Server=localhost;Database=UnitTest1;Uid=argozhang123;Pwd=argo@163.com;SslMode=none;";
@@ -74,7 +74,7 @@ namespace Bootstrap.Admin.Api
         }
 
         /// <summary>
-        /// 获得 系统配置项 Iconfiguration 实例
+        /// 獲得 系统配置項 Iconfiguration 实例
         /// </summary>
         public static IConfiguration Configuration { get; private set; }
 

@@ -4,7 +4,7 @@ using Longbow.Web.Mvc;
 namespace Bootstrap.Admin.Pages.Extensions
 {
     /// <summary>
-    /// QueryPageOptions 扩展操作类
+    /// QueryPageOptions 扩展操作類
     /// </summary>
     public static class QueryPageOptionsExtensions
     {

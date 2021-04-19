@@ -11,7 +11,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 表格組件类
+    /// 表格組件類
     /// </summary>
     public class TableBase<TItem> : ComponentBase
     {
@@ -88,13 +88,13 @@ namespace Bootstrap.Admin.Pages.Components
         public bool AutoHeight { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否显示搜索框 預設為 false 不显示搜索框
+        /// 獲得/設置 是否顯示搜索框 預設為 false 不顯示搜索框
         /// </summary>
         [Parameter]
         public bool ShowSearch { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否显示高级搜索按钮 預設显示
+        /// 獲得/設置 是否顯示高級搜索按钮 預設顯示
         /// </summary>
         [Parameter]
         public bool ShowAdvancedSearch { get; set; } = true;
@@ -110,37 +110,37 @@ namespace Bootstrap.Admin.Pages.Components
         public List<TItem> SelectedItems { get; } = new List<TItem>();
 
         /// <summary>
-        /// 獲得/設置 是否显示行号
+        /// 獲得/設置 是否顯示行号
         /// </summary>
         [Parameter]
         public bool ShowLineNo { get; set; } = true;
 
         /// <summary>
-        /// 獲得/設置 是否显示选择列 預設為 false
+        /// 獲得/設置 是否顯示选择列 預設為 false
         /// </summary>
         [Parameter]
         public bool ShowCheckbox { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否显示按钮列 預設為 false
+        /// 獲得/設置 是否顯示按钮列 預設為 false
         /// </summary>
         [Parameter]
         public bool ShowDefaultButtons { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否显示表脚 預設為 false
+        /// 獲得/設置 是否顯示表脚 預設為 false
         /// </summary>
         [Parameter]
         public bool ShowFooter { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否显示扩展按钮 預設為 true
+        /// 獲得/設置 是否顯示扩展按钮 預設為 true
         /// </summary>
         [Parameter]
         public bool ShowExtendButtons { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否显示刷新按钮 預設為 true
+        /// 獲得/設置 是否顯示刷新按钮 預設為 true
         /// </summary>
         [Parameter]
         public bool ShowRefresh { get; set; }
@@ -152,7 +152,7 @@ namespace Bootstrap.Admin.Pages.Components
         public bool ShowPagination { get; set; } = true;
 
         /// <summary>
-        /// 獲得/設置 是否显示工具欄 預設為 true
+        /// 獲得/設置 是否顯示工具欄 預設為 true
         /// </summary>
         [Parameter]
         public bool ShowToolBar { get; set; }
@@ -231,12 +231,12 @@ namespace Bootstrap.Admin.Pages.Components
         protected SubmitModal<TItem>? EditModal { get; set; }
 
         /// <summary>
-        /// 確认删除弹窗
+        /// 確認删除弹窗
         /// </summary>
         protected Modal? ConfirmModal { get; set; }
 
         /// <summary>
-        /// 高级查詢弹窗
+        /// 高級查詢弹窗
         /// </summary>
         protected Modal? SearchModal { get; set; }
 
@@ -361,7 +361,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 显示提示信息
+        /// 顯示提示信息
         /// </summary>
         /// <param name="title"></param>
         /// <param name="text"></param>
@@ -440,7 +440,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 確认删除方法
+        /// 確認删除方法
         /// </summary>
         public void Confirm()
         {
@@ -484,11 +484,11 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 高级查詢按钮点击时調用此方法
+        /// 高級查詢按钮点击时調用此方法
         /// </summary>
         protected void AdvancedSearchClick()
         {
-            // 弹出高级查詢弹窗
+            // 弹出高級查詢弹窗
             SearchModal?.Toggle();
         }
 

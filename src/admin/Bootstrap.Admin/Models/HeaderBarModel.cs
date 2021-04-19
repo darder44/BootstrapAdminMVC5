@@ -46,7 +46,7 @@ namespace Bootstrap.Admin.Models
         public string UserName { get; } = "";
 
         /// <summary>
-        /// 獲得 當前用户显示名稱
+        /// 獲得 當前用户顯示名稱
         /// </summary>
         public string DisplayName { get; set; } = "";
 

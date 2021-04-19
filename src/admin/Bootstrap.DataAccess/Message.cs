@@ -12,12 +12,12 @@ namespace Bootstrap.DataAccess
     public class Message
     {
         /// <summary>
-        /// 訊息主键 資料庫自增
+        /// 訊息主鍵 資料庫自增
         /// </summary>
         public string? Id { get; set; }
 
         /// <summary>
-        /// 标题
+        /// 標題
         /// </summary>
         public string Title { get; set; } = "";
 
@@ -42,27 +42,27 @@ namespace Bootstrap.DataAccess
         public DateTime SendTime { get; set; }
 
         /// <summary>
-        /// 訊息状態：0-未读，1-已读 和Dict表的通知訊息关联
+        /// 訊息狀態：0-未读，1-已读 和Dict表的通知訊息关联
         /// </summary>
         public string Status { get; set; } = "0";
 
         /// <summary>
-        /// 标旗状態：0-未标旗，1-已标旗
+        /// 標旗狀態：0-未標旗，1-已標旗
         /// </summary>
         public int Flag { get; set; }
 
         /// <summary>
-        /// 删除状態：0-未删除，1-已删除
+        /// 删除狀態：0-未删除，1-已删除
         /// </summary>
         public int IsDelete { get; set; }
 
         /// <summary>
-        /// 訊息标签：0-一般，1-紧要 和Dict表的訊息标签关联
+        /// 訊息標簽：0-一般，1-紧要 和Dict表的訊息標簽关联
         /// </summary>
         public string Label { get; set; } = "0";
 
         /// <summary>
-        /// 獲得/設置 标签名稱
+        /// 獲得/設置 標簽名稱
         /// </summary>
         [ResultColumn]
         public string LabelName { get; set; } = "";
@@ -74,7 +74,7 @@ namespace Bootstrap.DataAccess
         public string Period { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 发件人头像
+        /// 獲得/設置 发件人頭像
         /// </summary>
         [ResultColumn]
         public string FromIcon { get; set; } = "";
@@ -95,7 +95,7 @@ namespace Bootstrap.DataAccess
             using var db = DbManager.Create();
             var t = db.Provider.EscapeSqlIdentifier("To");
             var f = db.Provider.EscapeSqlIdentifier("From");
-            return db.Fetch<Message>($"select m.*, d.Name, u.DisplayName from Messages m left join Dicts d on m.Label = d.Code and d.Category = @0 and d.Define = 0 inner join Users u on m.{f} = u.UserName where {t} = @1 or {f} = @1 order by SendTime desc", "訊息标签", userName);
+            return db.Fetch<Message>($"select m.*, d.Name, u.DisplayName from Messages m left join Dicts d on m.Label = d.Code and d.Category = @0 and d.Define = 0 inner join Users u on m.{f} = u.UserName where {t} = @1 or {f} = @1 order by SendTime desc", "訊息標簽", userName);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 标旗
+        /// 標旗
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
@@ -142,7 +142,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 获取Header處显示的訊息列表
+        /// 獲取Header處顯示的訊息列表
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>

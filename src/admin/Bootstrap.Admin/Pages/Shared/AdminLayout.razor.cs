@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Components;
 namespace Bootstrap.Admin.Pages.Shared
 {
     /// <summary>
-    /// AdminLayout 布局类
+    /// AdminLayout 布局類
     /// </summary>
     public partial class AdminLayout
     {

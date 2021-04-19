@@ -9,7 +9,7 @@ using Task = System.Threading.Tasks.Task;
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// SignalR 操作扩展类
+    /// SignalR 操作扩展類
     /// </summary>
     public static class SignalRExtensions
     {

@@ -32,7 +32,7 @@ namespace Bootstrap.Admin.Controllers.Api
         /// 通過指定用户ID/部門ID/選單ID獲得所有角色集合，已经授權的有checked標记
         /// </summary>
         /// <param name="id">用户ID/部門ID/選單ID</param>
-        /// <param name="type">类型</param>
+        /// <param name="type">類型</param>
         /// <returns></returns>
         [HttpPost("{id}")]
         public IEnumerable<object> Post(string id, [FromQuery]string type)

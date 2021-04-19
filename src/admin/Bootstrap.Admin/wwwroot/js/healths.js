@@ -9,7 +9,7 @@
         return healthStatus[value];
     };
 
-    var cate = { "db": "資料库", "file": "組件文件", "mem": "内存", "Gitee": "Gitee 接口", "gc": "垃圾回收器", "dotnet-runtime": "运行时", "environment": "环境变量" };
+    var cate = { "db": "資料庫", "file": "組件文件", "mem": "内存", "Gitee": "Gitee 接口", "gc": "垃圾回收器", "dotnet-runtime": "运行时", "environment": "环境变量" };
     var CategoryFormatter = function (value) {
         return cate[value];
     };
@@ -26,7 +26,7 @@
         toolbar: false,
         search: false,
         columns: [
-            { title: "分类", field: "Name", formatter: CategoryFormatter },
+            { title: "分類", field: "Name", formatter: CategoryFormatter },
             { title: "描述", field: "Description" },
             { title: "异常信息", field: "Exception", formatter: ExceptionFormatter },
             { title: "耗时", field: "Duration" },
@@ -75,7 +75,7 @@
         showRefresh: false,
         showColumns: false,
         columns: [
-            { title: "檢查项", field: "name" },
+            { title: "檢查項", field: "name" },
             {
                 title: "值", field: "value", formatter: function (value, row) {
                     if (row.name === "Exception") value = $.format("<span class='text-danger'>{0}</span>", value);

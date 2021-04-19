@@ -24,7 +24,7 @@ namespace Bootstrap.Admin.Api
 
         [Theory()]
         [InlineData("Admin")]
-        [InlineData("系统默认")]
+        [InlineData("系统默認")]
         public async void Search_Ok(string search)
         {
             var qd = await Client.GetAsJsonAsync<QueryData<Group>>($"?search={search}&sort=&order=&offset=0&limit=20&category=&name=&define=0&_=1547608210979");

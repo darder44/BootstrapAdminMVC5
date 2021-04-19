@@ -13,12 +13,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
     public class ExceptionsBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 编辑类型實例
+        /// 獲得/設置 编辑類型實例
         /// </summary>
         protected Bootstrap.DataAccess.Exceptions DataContext { get; set; } = new Bootstrap.DataAccess.Exceptions();
 
         /// <summary>
-        /// 獲得/設置 查詢绑定类型實例
+        /// 獲得/設置 查詢绑定類型實例
         /// </summary>
         protected Bootstrap.DataAccess.Exceptions QueryModel { get; set; } = new Bootstrap.DataAccess.Exceptions();
 
@@ -50,7 +50,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
 
         private bool show;
         /// <summary>
-        /// 显示异常明细方法
+        /// 顯示异常明细方法
         /// </summary>
         protected void ShowDetail()
         {
@@ -77,7 +77,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected ModalBase? Modal { get; set; }
 
         /// <summary>
-        /// 显示指定文件内容明细
+        /// 顯示指定文件内容明细
         /// </summary>
         protected void ShowLog(string fileName)
         {

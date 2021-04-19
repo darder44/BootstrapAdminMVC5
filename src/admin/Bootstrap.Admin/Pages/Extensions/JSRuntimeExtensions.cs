@@ -4,12 +4,12 @@ using Bootstrap.Admin.Pages.Components;
 namespace Microsoft.JSInterop
 {
     /// <summary>
-    /// JSRuntime 扩展操作类
+    /// JSRuntime 扩展操作類
     /// </summary>
     public static class JSRuntimeExtensions
     {
         /// <summary>
-        /// 根据指定選單 ID 激活側邊欄選單项
+        /// 根据指定選單 ID 激活側邊欄選單項
         /// </summary>
         /// <param name="jsRuntime"></param>
         /// <param name="menuId"></param>
@@ -72,14 +72,14 @@ namespace Microsoft.JSInterop
         public static void Tooltip(this IJSRuntime? jSRuntime, string id, string method) => jSRuntime?.InvokeVoidAsync("$.tooltip", $"#{id}", method);
 
         /// <summary>
-        /// 显示或者隐藏 網站 Blazor 挂件圖標
+        /// 顯示或者隐藏 網站 Blazor 挂件圖標
         /// </summary>
         /// <param name="jSRuntime"></param>
         /// <param name="show"></param>
         public static void ToggleBlazor(this IJSRuntime? jSRuntime, bool show) => jSRuntime?.InvokeVoidAsync("$.toggleBlazor", show);
 
         /// <summary>
-        /// 显示或者隐藏 網站 Blazor 挂件圖標
+        /// 顯示或者隐藏 網站 Blazor 挂件圖標
         /// </summary>
         /// <param name="jSRuntime"></param>
         /// <param name="showSidebar"></param>

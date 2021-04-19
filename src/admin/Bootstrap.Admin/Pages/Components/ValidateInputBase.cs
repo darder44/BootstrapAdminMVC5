@@ -12,7 +12,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 内置验证組件基类
+    /// 内置验证組件基類
     /// </summary>
     public abstract class ValidateInputBase<TItem> : InputBase<TItem>, IValidateComponent, IRules
     {
@@ -109,7 +109,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 显示/隐藏验证结果方法
+        /// 顯示/隐藏验证结果方法
         /// </summary>
         /// <param name="results"></param>
         /// <param name="validProperty">是否对本属性进行資料验证</param>
@@ -123,9 +123,9 @@ namespace Bootstrap.Admin.Pages.Components
                     ErrorMessage = messages.First().ErrorMessage ?? string.Empty;
                     ValidCss = "is-invalid";
 
-                    // 控件自身資料验证时显示 tooltip
+                    // 控件自身資料验证时顯示 tooltip
                     // EditForm 資料验证时調用 tooltip('enable') 保证 tooltip 組件生成
-                    // 調用 tooltip('hide') 後導致鼠標悬停时 tooltip 无法正常显示
+                    // 調用 tooltip('hide') 後導致鼠標悬停时 tooltip 无法正常顯示
                     _tooltipMethod = validProperty ? "show" : "enable";
                 }
                 else

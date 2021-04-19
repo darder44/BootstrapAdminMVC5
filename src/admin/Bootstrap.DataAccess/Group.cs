@@ -19,7 +19,7 @@ namespace Bootstrap.DataAccess
         public string? Description { get; set; }
 
         /// <summary>
-        /// 获取/設置 用户群组关联状態 checked 标示已经关联 '' 标示未关联
+        /// 獲取/設置 用户群组关联狀態 checked 標示已经关联 '' 標示未关联
         /// </summary>
         [ResultColumn]
         public string Checked { get; set; } = "";

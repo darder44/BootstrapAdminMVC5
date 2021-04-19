@@ -73,7 +73,7 @@ namespace Bootstrap.Admin.Pages.Shared
         public string HomeUrl { get; protected set; } = "Pages";
 
         /// <summary>
-        /// 獲得/設置 當前請求路径
+        /// 獲得/設置 當前請求路徑
         /// </summary>
         protected string RequestUrl { get; set; } = "";
 
@@ -138,7 +138,7 @@ namespace Bootstrap.Admin.Pages.Shared
         }
 
         /// <summary>
-        /// 显示名稱变化时方法
+        /// 顯示名稱变化时方法
         /// </summary>
         public void OnDisplayNameChanged(string displayName)
         {

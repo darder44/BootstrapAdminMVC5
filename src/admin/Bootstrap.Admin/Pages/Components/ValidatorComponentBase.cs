@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 验证組件基类
+    /// 验证組件基類
     /// </summary>
     public abstract class ValidatorComponentBase : ComponentBase
     {

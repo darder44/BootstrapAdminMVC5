@@ -12,7 +12,7 @@ namespace Bootstrap.DataAccess
     public class ResetUser
     {
         /// <summary>
-        /// 獲得/設置 用户主键ID
+        /// 獲得/設置 用户主鍵ID
         /// </summary>
         public string? Id { get; set; }
 

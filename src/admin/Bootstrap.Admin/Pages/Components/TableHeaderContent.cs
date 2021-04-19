@@ -90,7 +90,7 @@ namespace Bootstrap.Admin.Pages.Components
     }
 
     /// <summary>
-    /// 排序顺序枚举类型
+    /// 排序顺序枚举類型
     /// </summary>
     public enum SortOrder
     {

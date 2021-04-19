@@ -668,10 +668,10 @@
 	    return '没有找到匹配的记录';
 	  },
 	  formatPaginationSwitch: function formatPaginationSwitch() {
-	    return '隐藏/显示分頁';
+	    return '隐藏/顯示分頁';
 	  },
 	  formatPaginationSwitchDown: function formatPaginationSwitchDown() {
-	    return '显示分頁';
+	    return '顯示分頁';
 	  },
 	  formatPaginationSwitchUp: function formatPaginationSwitchUp() {
 	    return '隐藏分頁';
@@ -683,7 +683,7 @@
 	    return '切换';
 	  },
 	  formatToggleOn: function formatToggleOn() {
-	    return '显示卡片视圖';
+	    return '顯示卡片视圖';
 	  },
 	  formatToggleOff: function formatToggleOff() {
 	    return '隐藏卡片视圖';
@@ -710,7 +710,7 @@
 	    return '跳转';
 	  },
 	  formatAdvancedSearch: function formatAdvancedSearch() {
-	    return '高级搜索';
+	    return '高級搜索';
 	  },
 	  formatAdvancedCloseButton: function formatAdvancedCloseButton() {
 	    return '關闭';

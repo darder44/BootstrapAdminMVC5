@@ -15,10 +15,10 @@
         height: 155,    // canvas高度
         PI: Math.PI,
         sliderL: 42,    // 滑块邊长
-        sliderR: 9,     // 滑块半径
+        sliderR: 9,     // 滑块半徑
         offset: 5,      // 容错偏差
         loadingText: '正在加载中...',
-        failedText: '再试一次',
+        failedText: '再試一次',
         barText: '向右滑动填充拼圖',
         repeatIcon: 'fa fa-repeat',
         maxLoadCount: 3,
@@ -191,7 +191,7 @@
             that.text.removeClass('text-danger');
             if ($.isFunction(that.options.setSrc)) src = that.options.setSrc();
             if (!src || src === '') src = 'https://picsum.photos/' + that.options.width + '/' + that.options.height + '/?image=' + Math.round(Math.random() * 20);
-            if (isIE) { // IE浏览器无法通過img.crossOrigin跨域，使用ajax獲取圖片blob然後转为dataURL显示
+            if (isIE) { // IE浏览器无法通過img.crossOrigin跨域，使用ajax獲取圖片blob然後转為dataURL顯示
                 var xhr = new XMLHttpRequest();
                 xhr.onloadend = function (e) {
                     var file = new FileReader(); // FileReader仅支持IE10+

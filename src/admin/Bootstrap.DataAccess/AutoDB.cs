@@ -68,7 +68,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 執行建库脚本
+        /// 執行建庫脚本
         /// </summary>
         protected void GenerateDB(string folder)
         {

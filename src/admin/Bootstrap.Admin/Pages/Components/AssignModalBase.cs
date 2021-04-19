@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 模態框組件类
+    /// 模態框組件類
     /// </summary>
     public class AssignModalBase<TItem> : ComponentBase
     {
 #nullable disable
         /// <summary>
-        /// 獲得/設置 資料绑定项
+        /// 獲得/設置 資料綁定項
         /// </summary>
         [Parameter]
         public TItem Item { get; set; }

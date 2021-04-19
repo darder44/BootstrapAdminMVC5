@@ -12,12 +12,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
     public class TracesBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 编辑类型實例
+        /// 獲得/設置 编辑類型實例
         /// </summary>
         protected Trace DataContext { get; set; } = new Trace();
 
         /// <summary>
-        /// 獲得/設置 查詢绑定类型實例
+        /// 獲得/設置 查詢绑定類型實例
         /// </summary>
         protected Trace QueryModel { get; set; } = new Trace();
 

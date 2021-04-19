@@ -1,7 +1,7 @@
 ﻿namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 組件位置枚举类型
+    /// 組件位置枚举類型
     /// </summary>
     public enum Placement
     {

@@ -60,7 +60,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 分析資料實體类
+        /// 分析資料實體類
         /// </summary>
         public class AnalyseData
         {

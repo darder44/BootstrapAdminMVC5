@@ -26,7 +26,7 @@ namespace Microsoft.Extensions.DependencyInjection
     }
 
     /// <summary>
-    /// 後台任務服务类
+    /// 後台任務服务類
     /// </summary>
     internal class BootstrapAdminBackgroundServices : BackgroundService
     {
@@ -42,7 +42,7 @@ namespace Microsoft.Extensions.DependencyInjection
             TaskServicesManager.GetOrAdd("Cron 任務", token => Task.Delay(1000), TriggerBuilder.Build(Cron.Secondly(5)));
             TaskServicesManager.GetOrAdd("超时任務", token => Task.Delay(2000), TriggerBuilder.Default.WithTimeout(1000).WithInterval(1000).WithRepeatCount(2).Build());
 
-            // 本机調试时此處会抛出异常，配置文件中預設开启了任務持久化到物理文件，此處异常只有首次加载时会抛出
+            // 本机調試时此處会抛出异常，配置文件中預設开启了任務持久化到物理文件，此處异常只有首次加载时会抛出
             // 此處异常是示例自定义任務内部未进行捕獲异常时任務仍然能继续运行，不会導致整個进程崩溃退出
             // 此處程式碼可注释掉
             //TaskServicesManager.GetOrAdd("故障任務", token => throw new Exception("故障任務"));

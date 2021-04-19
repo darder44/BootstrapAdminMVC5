@@ -9,7 +9,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Models
 {
     /// <summary>
-    /// 網站設置 Model 實體类
+    /// 網站設置 Model 實體類
     /// </summary>
     public class SettingsModel : NavigatorBarModel
     {
@@ -63,7 +63,7 @@ namespace Bootstrap.Admin.Models
         public IEnumerable<BootstrapDict> IPLocators { get; }
 
         /// <summary>
-        /// 獲得 資料库中配置的地理位置信息接口
+        /// 獲得 資料庫中配置的地理位置信息接口
         /// </summary>
         public string IPLocatorSvr { get; }
 

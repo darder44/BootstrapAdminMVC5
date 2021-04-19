@@ -22,7 +22,7 @@ namespace Bootstrap.Admin.Models
         public string ImageLibUrl { get; protected set; }
 
         /// <summary>
-        /// 是否登录认证失败 為真时客户端弹出滑块验证码
+        /// 是否登录認证失败 為真时客户端弹出滑块验证码
         /// </summary>
         public bool AuthFailed { get; set; }
     }

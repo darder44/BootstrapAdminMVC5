@@ -8,17 +8,17 @@ namespace Bootstrap.Admin.Pages.Components
     public interface ITableHeader
     {
         /// <summary>
-        /// 獲取绑定字段显示名稱方法
+        /// 獲取綁定字段顯示名稱方法
         /// </summary>
         IReadOnlyDictionary<string, object> AdditionalAttributes { get; set; }
 
         /// <summary>
-        /// 獲取绑定字段显示名稱方法
+        /// 獲取綁定字段顯示名稱方法
         /// </summary>
         string GetDisplayName();
 
         /// <summary>
-        /// 獲取绑定字段信息方法
+        /// 獲取綁定字段信息方法
         /// </summary>
         string GetFieldName();
 

@@ -39,7 +39,7 @@ namespace Bootstrap.Admin
         public IWebHostEnvironment Enviroment { get; }
 
         /// <summary>
-        /// 獲得 系统配置项 Iconfiguration 實例
+        /// 獲得 系统配置項 Iconfiguration 實例
         /// </summary>
         public IConfiguration Configuration { get; }
 

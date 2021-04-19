@@ -17,7 +17,7 @@
             { title: "请求網址", field: "ErrorPage", sortable: true },
             { title: "用户名", field: "UserId", sortable: true },
             { title: "登录主机", field: "UserIp", sortable: true },
-            { title: "异常类型", field: "ExceptionType", sortable: false },
+            { title: "异常類型", field: "ExceptionType", sortable: false },
             { title: "异常描述", field: "Message", sortable: false }
         ],
         exportOptions: {

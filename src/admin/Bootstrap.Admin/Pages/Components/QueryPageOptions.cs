@@ -1,7 +1,7 @@
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 查詢条件實體类
+    /// 查詢条件實體類
     /// </summary>
     public class QueryPageOptions
     {

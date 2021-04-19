@@ -36,7 +36,7 @@ namespace Bootstrap.Admin.Api
                 AppName = "UnitTest_Put",
                 AppCode = "UnitTest_Put",
                 AppUrl = "http://localhost",
-                AppTitle = "網站标题",
+                AppTitle = "網站標題",
                 AppFooter = "網站页脚"
             };
 

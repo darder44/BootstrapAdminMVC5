@@ -1,28 +1,28 @@
 -- ADMIN/123789
 -- User/123789
 DELETE From Users where UserName in ('Admin', 'User');
-INSERT INTO Users (UserName, Password, PassSalt, DisplayName, RegisterTime, ApprovedTime, ApprovedBy, [Description]) values ('Admin', 'Es7WVgNsJuELwWK8daCqufUBknCsSC0IYDphQZAiGOo=', 'W5vpBEOYRGHkQXatN0t+ECM/U8cHDuEgrq56+zZBk4J481xH', 'Administrator', datetime(CURRENT_TIMESTAMP, 'localtime'), datetime(CURRENT_TIMESTAMP, 'localtime'), 'system', '系统默认創建');
-INSERT INTO Users (UserName, Password, PassSalt, DisplayName, RegisterTime, ApprovedTime, ApprovedBy, [Description], [App]) values ('User', 'tXG/yNffpnm6cThrCH7wf6jN1ic3VHvLoY4OrzKtrZ4=', 'c5cIrRMn8XjB84M/D/X7Lg9uUqQFmYNEdxb/4HWH8OLa4pNZ', '测试账号', datetime(CURRENT_TIMESTAMP, 'localtime'), datetime(CURRENT_TIMESTAMP, 'localtime'), 'system', '系统默认創建', 'Demo');
+INSERT INTO Users (UserName, Password, PassSalt, DisplayName, RegisterTime, ApprovedTime, ApprovedBy, [Description]) values ('Admin', 'Es7WVgNsJuELwWK8daCqufUBknCsSC0IYDphQZAiGOo=', 'W5vpBEOYRGHkQXatN0t+ECM/U8cHDuEgrq56+zZBk4J481xH', 'Administrator', datetime(CURRENT_TIMESTAMP, 'localtime'), datetime(CURRENT_TIMESTAMP, 'localtime'), 'system', '系统默認創建');
+INSERT INTO Users (UserName, Password, PassSalt, DisplayName, RegisterTime, ApprovedTime, ApprovedBy, [Description], [App]) values ('User', 'tXG/yNffpnm6cThrCH7wf6jN1ic3VHvLoY4OrzKtrZ4=', 'c5cIrRMn8XjB84M/D/X7Lg9uUqQFmYNEdxb/4HWH8OLa4pNZ', '測試账号', datetime(CURRENT_TIMESTAMP, 'localtime'), datetime(CURRENT_TIMESTAMP, 'localtime'), 'system', '系统默認創建', 'Demo');
 
 DELETE From Dicts Where Define = 0;
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('選單', '系统選單', '0', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('選單', '外部選單', '1', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('应用程序', '後台管理', 'BA', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '網站标题', '後台管理系统', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '網站標題', '後台管理系统', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '網站页脚', '2016 © 通用後台管理系统', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系统通知', '用户注册', '0', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系统通知', '程序异常', '1', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系统通知', '資料库连接', '2', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系统通知', '資料庫连接', '2', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('通知状態', '未處理', '0', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('通知状態', '已處理', '1', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('處理结果', '同意', '0', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('處理结果', '拒绝', '1', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('訊息状態', '未读', '0', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('訊息状態', '已读', '1', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('訊息标签', '一般', '0', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('訊息标签', '紧要', '1', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('头像地址', '头像路径', '~/images/uploader/', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('头像地址', '头像文件', 'default.jpg', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('訊息標簽', '一般', '0', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('訊息標簽', '紧要', '1', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('頭像地址', '頭像路徑', '~/images/uploader/', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('頭像地址', '頭像文件', 'default.jpg', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站样式', '蓝色样式', 'blue.css', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站样式', '黑色样式', 'black.css', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站样式', 'AdminLTE', 'lte.css', 0);
@@ -30,22 +30,22 @@ INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '前台首页', '~/Home/Index', 0);
 
 -- 網站UI设置
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '侧边栏状態', '1', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '卡片标题状態', '1', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '固定表头', '1', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '侧边欄状態', '1', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '卡片標題状態', '1', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '固定表頭', '1', 0);
 
 -- 登录配置
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '短信验证码登录', '1', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', 'OAuth 认证登录', '1', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', 'OAuth 認证登录', '1', 0);
 
--- 自動锁屏（秒）默认 30 秒
+-- 自動锁屏（秒）默認 30 秒
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '自動锁屏时長', '30', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '自動锁屏', '0', 0);
 
--- 是否启用 Blazor 默认為 0 未启用
+-- 是否启用 Blazor 默認為 0 未启用
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', 'Blazor', '0', 0);
 
--- 是否启用 健康检查 默认為 0 未启用 1 启用
+-- 是否启用 健康检查 默認為 0 未启用 1 启用
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '健康检查', '1', 0);
 
 -- 时長单位 月
@@ -71,20 +71,20 @@ INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置
 
 -- 演示系统
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '演示系统', '0', 0);
--- 授权密码默认為 123789
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '授权盐值', 'yjglE2eddCGcS7tTFTDd2DfvqXHgCnMhNhpmx9HJaC9l8GAZ', 0);
+-- 授權密码默認為 123789
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '授權盐值', 'yjglE2eddCGcS7tTFTDd2DfvqXHgCnMhNhpmx9HJaC9l8GAZ', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '哈希结果', '6jTT50HGuk8V+AIsiE4IfqjcER71PBN1DY7gqOLZE7E=', 0);
 
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '验证码图床', 'http://imgs.sdgxgz.com/images/', 0);
 
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '默认应用程序', '0', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '默認应用程序', '0', 0);
 
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置', '後台地址', 'http://localhost:50852', 0);
 
 -- 系统登录首页设置
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系统首页', '高仿码云', 'Login-Gitee', 1);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系统首页', '蓝色清新', 'Login-Blue', 1);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系统首页', '系统默认', 'Login', 1);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系统首页', '系统默認', 'Login', 1);
 INSERT INTO Dicts (Category, Name, Code, Define) VALUES ('系统首页', '科技動感', 'Login-Tec', 1);
 INSERT INTO Dicts (Category, Name, Code, Define) VALUES ('系统首页', 'Admin-LTE', 'Login-LTE', 1);
 
@@ -93,11 +93,11 @@ INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站设置
 DELETE FROM Navigations Where Category = '0';
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '後台管理', 10, 'fa fa-gear', '~/Admin/Index', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '個人中心', 20, 'fa fa-suitcase', '~/Admin/Profiles', '0');
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid(), '保存显示名稱', 10, 'fa fa-fa', 'saveDisplayName', '0', 2);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid(), '保存顯示名稱', 10, 'fa fa-fa', 'saveDisplayName', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 1, '保存密码', 20, 'fa fa-fa', 'savePassword', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 2, '保存应用', 30, 'fa fa-fa', 'saveApp', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 3, '保存样式', 40, 'fa fa-fa', 'saveTheme', '0', 2);
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 4, '保存头像', 50, 'fa fa-fa', 'saveIcon', '0', 2);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 4, '保存頭像', 50, 'fa fa-fa', 'saveIcon', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 5, '保存網站设置', 60, 'fa fa-fa', 'saveUISettings', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '系统锁屏', 25, 'fa fa-television', '~/Account/Lock', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '返回前台', 30, 'fa fa-hand-o-left', '~/Home/Index', '0');
@@ -109,14 +109,14 @@ INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 4, '清理全部缓存', 50, 'fa fa-fa', 'clearAllCache', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 5, '登录设置', 60, 'fa fa-fa', 'loginSettings', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 6, '自動锁屏', 70, 'fa fa-fa', 'lockScreen', '0', 2);
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 7, '默认应用', 80, 'fa fa-fa', 'defaultApp', '0', 2);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 7, '默認应用', 80, 'fa fa-fa', 'defaultApp', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '選單管理', 50, 'fa fa-dashboard', '~/Admin/Menus', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid(), '新增', 10, 'fa fa-fa', 'add', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 1, '编辑', 20, 'fa fa-fa', 'edit', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 2, '删除', 30, 'fa fa-fa', 'del', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 3, '分配角色', 40, 'fa fa-fa', 'assignRole', '0', 2);
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (0, '图标页面', 50, 'fa fa-fa', '~/Admin/IconView', '0', 1);
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (0, '侧边栏', 55, 'fa fa-fa', '~/Admin/Sidebar', '0', 1);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (0, '图標页面', 50, 'fa fa-fa', '~/Admin/IconView', '0', 1);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (0, '侧边欄', 55, 'fa fa-fa', '~/Admin/Sidebar', '0', 1);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '用户管理', 60, 'fa fa-user', '~/Admin/Users', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid(), '新增', 10, 'fa fa-fa', 'add', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 1, '编辑', 20, 'fa fa-fa', 'edit', '0', 2);
@@ -157,9 +157,9 @@ INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid(), '服务器日志', 10, 'fa fa-fa', 'log', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '健康检查', 155, 'fa fa-heartbeat', '~/Admin/Healths', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '工具集合', 160, 'fa fa-gavel', '#', '0');
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid(), '客户端测试', 10, 'fa fa-wrench', '~/Admin/Mobile', '0');
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid(), '客户端測試', 10, 'fa fa-wrench', '~/Admin/Mobile', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid() - 1, 'API文档', 20, 'fa fa-wrench', '~/swagger', '0');
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid() - 2, '图标集', 30, 'fa fa-dashboard', '~/Admin/FAIcon', '0');
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid() - 2, '图標集', 30, 'fa fa-dashboard', '~/Admin/FAIcon', '0');
 
 -- 控件集合選單
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '控件集合', 170, 'fa fa-stethoscope', '#', '0');
@@ -167,11 +167,11 @@ INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid() - 1, '下拉框', 20, 'fa fa-bars', 'http://longbowenterprise.gitee.io/longbow-select/', '0');
 
 DELETE FROM GROUPS WHERE GroupName = 'Admin';
-INSERT INTO [Groups] ([GroupCode], [GroupName], [Description]) VALUES ('001', 'Admin', '系统默认组');
+INSERT INTO [Groups] ([GroupCode], [GroupName], [Description]) VALUES ('001', 'Admin', '系统默認组');
 
 DELETE FROM Roles where RoleName in ('Administrators', 'Default');
 INSERT INTO [Roles] ([RoleName], [Description]) VALUES ('Administrators', '系统管理员');
-INSERT INTO [Roles] ([RoleName], [Description]) VALUES ('Default', '默认用户，可访问前台页面');
+INSERT INTO [Roles] ([RoleName], [Description]) VALUES ('Default', '默認用户，可访问前台页面');
 
 DELETE FROM RoleGroup;
 INSERT INTO RoleGroup (GroupId, RoleId) SELECT g.Id, r.Id From Groups g left join Roles r on 1=1 where GroupName = 'Admin' and RoleName = 'Administrators';
@@ -189,31 +189,31 @@ INSERT INTO NavigationRole (NavigationID, RoleID) SELECT n.Id, r.Id FROM Navigat
 
 -- Client Data
 Delete From [Dicts] Where Category = '应用程序' and Code = 'Demo';
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('应用程序', '测试平台', 'Demo', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('应用程序', '測試平台', 'Demo', 0);
 Delete From [Dicts] Where Category = '应用首页' and Name = 'Demo';
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('应用首页', 'Demo', 'http://localhost:49185', 0);
 
-Delete From [Dicts] Where Category = '测试平台';
-Insert into Dicts (Category, [Name], Code, Define) values ('测试平台', '網站标题', '前台演示系统', 1);
-Insert into Dicts (Category, [Name], Code, Define) values ('测试平台', '網站页脚', '前台演示程序後台权限管理框架', 1);
-Insert into Dicts (Category, [Name], Code, Define) values ('测试平台', '個人中心地址', '/Admin/Profiles', 1);
-Insert into Dicts (Category, [Name], Code, Define) values ('测试平台', '系统设置地址', '/Admin/Index', 1);
-Insert into Dicts (Category, [Name], Code, Define) values ('测试平台', '系统通知地址', '/Admin/Notifications', 1);
-INSERT INTO Dicts (Category, [Name], Code, Define) VALUES ('测试平台', 'favicon', '/favicon.ico', 1);
-INSERT INTO Dicts (Category, [Name], Code, Define) VALUES ('测试平台', '網站图标', '/favicon.png', 1);
+Delete From [Dicts] Where Category = '測試平台';
+Insert into Dicts (Category, [Name], Code, Define) values ('測試平台', '網站標題', '前台演示系统', 1);
+Insert into Dicts (Category, [Name], Code, Define) values ('測試平台', '網站页脚', '前台演示程序後台權限管理框架', 1);
+Insert into Dicts (Category, [Name], Code, Define) values ('測試平台', '個人中心地址', '/Admin/Profiles', 1);
+Insert into Dicts (Category, [Name], Code, Define) values ('測試平台', '系统设置地址', '/Admin/Index', 1);
+Insert into Dicts (Category, [Name], Code, Define) values ('測試平台', '系统通知地址', '/Admin/Notifications', 1);
+INSERT INTO Dicts (Category, [Name], Code, Define) VALUES ('測試平台', 'favicon', '/favicon.ico', 1);
+INSERT INTO Dicts (Category, [Name], Code, Define) VALUES ('測試平台', '網站图標', '/favicon.png', 1);
 
 Delete from [Navigations] where Application = 'Demo';
 INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (0, '首页', 10, 'fa fa-fa', '~/Home/Index', '1', 'Demo');
 
-INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (0, '测试页面', 20, 'fa fa-fa', '#', '1', 'Demo');
+INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (0, '測試页面', 20, 'fa fa-fa', '#', '1', 'Demo');
 INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (last_insert_rowid(), '关于', 10, 'fa fa-fa', '~/Home/About', '1', 'Demo');
 
 INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (0, '返回码云', 20, 'fa fa-fa', 'https://gitee.com/dotnetchina/BootstrapAdmin', '1', 'Demo');
 
--- 選單授权
+-- 選單授權
 INSERT INTO NavigationRole (NavigationId, RoleId) SELECT n.ID, r.ID FROM Navigations n left join Roles r on 1=1 Where r.RoleName = 'Default' and [Application] = 'Demo';
 
--- 角色对应用授权
+-- 角色对应用授權
 DELETE From RoleApp where AppId in ('Demo', 'BA');
 INSERT INTO RoleApp (AppId, RoleId) SELECT 'Demo', ID From Roles Where RoleName = 'Default';
 INSERT INTO RoleApp (AppId, RoleId) SELECT 'BA', ID From Roles Where RoleName = 'Default';

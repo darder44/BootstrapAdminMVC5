@@ -4,7 +4,7 @@ using Bootstrap.Security.Mvc;
 namespace Bootstrap.Admin.Models
 {
     /// <summary>
-    /// AdminModel 實體类
+    /// AdminModel 實體類
     /// </summary>
     public class AdminModel : ModelBase
     {
@@ -52,7 +52,7 @@ namespace Bootstrap.Admin.Models
         public bool IsDemo { get; protected set; }
 
         /// <summary>
-        /// 是否显示卡片標題
+        /// 是否顯示卡片標題
         /// </summary>
         public bool ShowCardTitle { get; protected set; }
 
@@ -67,7 +67,7 @@ namespace Bootstrap.Admin.Models
         public bool AllowMobile { get; }
 
         /// <summary>
-        /// 獲得 是否允许第三方 OAuth 认证登录
+        /// 獲得 是否允许第三方 OAuth 認证登录
         /// </summary>
         public bool AllowOAuth { get; }
 
@@ -77,7 +77,7 @@ namespace Bootstrap.Admin.Models
         public bool ShowMobile { get; }
 
         /// <summary>
-        /// 獲得 是否允许第三方 OAuth 认证登录
+        /// 獲得 是否允许第三方 OAuth 認证登录
         /// </summary>
         public bool ShowOAuth { get; }
 

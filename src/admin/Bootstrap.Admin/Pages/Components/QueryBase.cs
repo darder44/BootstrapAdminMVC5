@@ -24,7 +24,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string Title { get; set; } = "";
 
         /// <summary>
-        /// 查詢按钮显示文字 預設為 查詢
+        /// 查詢按钮顯示文字 預設為 查詢
         /// </summary>
         [Parameter]
         public string Text { get; set; } = "";

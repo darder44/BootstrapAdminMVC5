@@ -10,7 +10,7 @@ namespace Bootstrap.Admin.Pages.Components
     public class SideBarBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 側邊欄绑定 Model 實例
+        /// 獲得/設置 側邊欄綁定 Model 實例
         /// </summary>
         [Parameter]
         public NavigatorBarModel Model { get; set; } = new NavigatorBarModel("");
@@ -22,13 +22,13 @@ namespace Bootstrap.Admin.Pages.Components
         public DefaultLayout? RootLayout { get; protected set; }
 
         /// <summary>
-        /// 獲得/設置 用户显示名稱
+        /// 獲得/設置 用户顯示名稱
         /// </summary>
         [Parameter]
         public string DisplayName { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 用户显示名稱改变事件回調方法
+        /// 獲得/設置 用户顯示名稱改变事件回調方法
         /// </summary>
         [Parameter]
         public EventCallback<string> DisplayNameChanged { get; set; }
