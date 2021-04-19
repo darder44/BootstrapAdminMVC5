@@ -1,0 +1,10 @@
+﻿@model LoginModel
+<div class="login-footer" asp-condition="@Model.IsDemo">
+    <ui class="login-footer-body">
+        <li><a href="~/Account/Login?View=Login">系统預設</a></li>
+        <li><a href="~/Account/Login?View=Login-Gitee">高仿码云</a></li>
+        <li><a href="~/Account/Login?View=Login-Blue">蓝色简约</a></li>
+        <li><a href="~/Account/Login?View=Login-Tec">科技動感</a></li>
+        <li><a href="~/Account/Login?View=Login-LTE">Admin-LTE</a></li>
+    </ui>
+</div>
