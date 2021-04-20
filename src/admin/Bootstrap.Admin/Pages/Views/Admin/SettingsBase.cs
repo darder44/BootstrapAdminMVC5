@@ -394,7 +394,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             public bool EnableDemo { get; set; }
 
             /// <summary>
-            /// 獲得 系統是否允许健康檢查
+            /// 獲得 系統是否允許健康檢查
             /// </summary>
             public bool EnableHealth { get; set; }
 

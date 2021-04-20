@@ -26,7 +26,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string OffText { get; set; } = "收缩";
 
         /// <summary>
-        /// 獲得/設置 組件是否處于 On 狀態 預設為 Off 狀態
+        /// 獲得/設置 組件是否處於 On 狀態 預設為 Off 狀態
         /// </summary>
         [Parameter]
         public bool Value { get; set; } = false;

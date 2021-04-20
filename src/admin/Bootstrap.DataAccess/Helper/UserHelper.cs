@@ -167,7 +167,7 @@ namespace Bootstrap.DataAccess
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
-        /// <remarks>用户使用忘記密碼功能後，管理员在用户管理頁面中可以点击重置按钮</remarks>
+        /// <remarks>用户使用忘記密碼功能後，管理员在用户管理頁面中可以点击重置按鈕</remarks>
         /// <returns></returns>
         public static bool ResetPassword(string userName, string password)
         {

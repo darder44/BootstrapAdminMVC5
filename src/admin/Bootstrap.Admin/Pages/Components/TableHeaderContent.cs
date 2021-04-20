@@ -41,7 +41,7 @@ namespace Bootstrap.Admin.Pages.Components
         /// </summary>
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
-            // 渲染正常按钮
+            // 渲染正常按鈕
             if (Header != null)
             {
                 var index = 0;
@@ -52,7 +52,7 @@ namespace Bootstrap.Admin.Pages.Components
                     builder.OpenElement(index++, "th");
                     builder.AddMultipleAttributes(index++, header.AdditionalAttributes);
 
-                    // 如果允许排序
+                    // 如果允許排序
                     if (header.Sort)
                     {
                         builder.AddAttribute(index++, "onclick", new Action(() =>

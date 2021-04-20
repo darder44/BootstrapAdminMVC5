@@ -256,7 +256,7 @@
             var op = $.extend({ header: "header", content: "body > section:first", ele: 'footer' }, options);
             var $ele = $(op.ele);
 
-            // 增加 1px 修复 IE11 下由于小数点導致頁脚消失bug
+            // 增加 1px 修复 IE11 下由於小数点導致頁脚消失bug
             return $(op.header).outerHeight() + $(op.content).outerHeight() + $ele.outerHeight() > $(window).height() + 1 ? $ele.removeClass('position-fixed') : $ele.addClass('position-fixed');
         },
         formatUrl: function (url) {
@@ -344,7 +344,7 @@
         },
         smartTable: function (options) {
             var settings = $.extend({
-                toolbar: '#toolbar',                //工具按钮用哪個容器
+                toolbar: '#toolbar',                //工具按鈕用哪個容器
                 cache: false,                       //是否使用缓存，預設為true，所以一般情况下需要設置一下这個属性（*）
                 pagination: true,                   //是否顯示分頁（*）
                 sortOrder: "asc",                   //排序方式
@@ -365,10 +365,10 @@
                 showSearchClearButton: true,
                 showAdvancedSearchButton: true,
                 showButtonText: true,
-                showSearchButton: true,             //是否顯示查詢按钮
+                showSearchButton: true,             //是否顯示查詢按鈕
                 showColumns: true,                  //是否顯示所有的列
-                showRefresh: true,                  //是否顯示刷新按钮
-                showToggle: true,                   //是否顯示詳詳視圖和列表視圖的切换按钮
+                showRefresh: true,                  //是否顯示刷新按鈕
+                showToggle: true,                   //是否顯示詳詳視圖和列表視圖的切换按鈕
                 cardView: $(window).width() < 768,  //是否顯示詳詳視圖
                 queryButton: '#btn_query',
                 onLoadSuccess: function (data) {
@@ -425,7 +425,7 @@
                             $search.trigger('click');
                         }
                         else {
-                            // 无查詢按钮是使用 refresh 方法
+                            // 无查詢按鈕是使用 refresh 方法
                             event.data.bootstrapTable('refresh');
                         }
                     }
@@ -523,12 +523,12 @@
                     html: true
                 });
 
-                // 生成高級查詢按钮
+                // 生成高級查詢按鈕
                 if (settings.showAdvancedSearchButton) {
                     // template
                     var $advancedSearchButtonHtml = $('<button class="btn btn-secondary" type="button" name="advancedSearch" title="高級查詢"><i class="fa fa-search-plus"></i><span>高級查詢</span></button>');
                     $advancedSearchButtonHtml.insertAfter($('.bootstrap-table .fixed-table-toolbar .search [name="clearSearch"]')).on('click', function () {
-                        // 弹出高級查詢对话框
+                        // 彈出高級查詢对话框
                         $(settings.advancedSearchModal).modal('show');
                     });
 
@@ -556,7 +556,7 @@
                 }
             }
 
-            // fix bug 移除 Toolbar 按钮 Title 中的 Html
+            // fix bug 移除 Toolbar 按鈕 Title 中的 Html
             $('.bootstrap-table .fixed-table-toolbar button[title]').each(function (index, element) {
                 element.title = element.title.replace('<span>', '').replace('</span>', '');
             });
@@ -659,7 +659,7 @@
                 if ($.isFunction(op.callback)) op.callback.apply(that, arguments);
                 return console.error(err.toString());
             }).then(function () {
-                // 连接成功
+                // 連接成功
                 // invoke 為 调用服务端方法
                 // invoke: function (connection) { return connection.invoke('RetrieveDashboard'); }
                 if (!op.invoke) return;

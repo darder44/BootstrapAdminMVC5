@@ -333,13 +333,13 @@ namespace Bootstrap.DataAccess
         public static bool RetrieveSidebarStatus() => DbContextManager.Create<Dict>()?.RetrieveSidebarStatus() ?? true;
 
         /// <summary>
-        /// 獲得是否允许短信驗證碼登錄
+        /// 獲得是否允許短信驗證碼登錄
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveMobileLogin() => DbContextManager.Create<Dict>()?.RetrieveMobileLogin() ?? false;
 
         /// <summary>
-        /// 獲得是否允许 OAuth 認證登錄
+        /// 獲得是否允許 OAuth 認證登錄
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveOAuthLogin() => DbContextManager.Create<Dict>()?.RetrieveOAuthLogin() ?? false;
@@ -416,7 +416,7 @@ namespace Bootstrap.DataAccess
             // dict define == 1 時為新建前台應用
             bool ret;
 
-            // 前台網站配置地址 不允许以 / 结尾
+            // 前台網站配置地址 不允許以 / 结尾
             option.AppUrl = option.AppUrl.TrimEnd('/');
             if (update)
             {

@@ -13,7 +13,7 @@ namespace Bootstrap.Admin.Api
         [Fact]
         public async void Get_Ok()
         {
-            var log = new Log() { CRUD = "UnitTest", Browser = "UnitTest", OS = "UnitTest", City = "本地连接", Ip = "::1", RequestUrl = "~/UnitTest", UserName = "UnitTest", LogTime = DateTime.Now };
+            var log = new Log() { CRUD = "UnitTest", Browser = "UnitTest", OS = "UnitTest", City = "本地連接", Ip = "::1", RequestUrl = "~/UnitTest", UserName = "UnitTest", LogTime = DateTime.Now };
             log.Save(log);
 
             // 選單 系統選單 系統使用條件

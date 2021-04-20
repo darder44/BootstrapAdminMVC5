@@ -15,11 +15,11 @@ namespace Bootstrap.Admin.Pages.Components
         /// </summary>
         public RequiredValidator()
         {
-            ErrorMessage = "这是必填字段";
+            ErrorMessage = "这是必填字串";
         }
 
         /// <summary>
-        /// 獲得/設置 是否允许空字符串 預設 false 不允许
+        /// 獲得/設置 是否允許空字符串 預設 false 不允許
         /// </summary>
         [Parameter]
         public bool AllowEmptyString { get; set; }

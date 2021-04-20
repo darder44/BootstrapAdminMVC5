@@ -44,7 +44,7 @@ namespace Bootstrap.Admin.Api
             cates = await client.GetStringAsync("/Healths");
             Assert.Contains("TotalDuration", cates);
 
-            // 測試資料庫连接字符串未配置
+            // 測試資料庫連接字符串未配置
             config["DB:0:Enabled"] = "false";
             config["DB:2:Enabled"] = "true";
             config["DB:2:ConnectionStrings:ba"] = "Server=localhost;Database=UnitTest1;Uid=argozhang123;Pwd=argo@163.com;SslMode=none;";

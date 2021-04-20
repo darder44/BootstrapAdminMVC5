@@ -212,7 +212,7 @@ $(function () {
         $btnPickIcon.find('i').attr('class', icon);
     });
 
-    // 排序按钮
+    // 排序按鈕
     $('#btnMenuOrder').on('click', function () {
         $btnSubmitMenu.data('type', 'order');
         $nestMenuInput.find('label:last').find('input').hide();
@@ -231,7 +231,7 @@ $(function () {
         showDialog();
     });
 
-    // 选择父节点按钮
+    // 选择父节点按鈕
     $('#btnMenuParent').on('click', function () {
         $btnSubmitMenu.data('type', 'parent');
         $nestMenuInput.find('label:last').find('input').show();
@@ -260,7 +260,7 @@ $(function () {
         var type = $(this).data('type');
         switch (type) {
             case "parent":
-                // 父級選單不可以是资源或者按钮類型
+                // 父級選單不可以是资源或者按鈕類型
                 var pId = $('.dd3-content :radio:checked').val();
                 var check = $.remoteValidate('api/Category/ValidateParentMenuById/' + pId);
                 if (check) {
@@ -375,6 +375,6 @@ $(function () {
             var id = $("#menuID").val();
             var check = id === "" || value === "選單" || $.remoteValidate('api/Category/ValidateMenuBySubMenu/' + id);
             return check;
-        }, "拥有子選單時選單類型不可更改為资源或者按钮");
+        }, "拥有子選單時選單類型不可更改為资源或者按鈕");
     }
 });

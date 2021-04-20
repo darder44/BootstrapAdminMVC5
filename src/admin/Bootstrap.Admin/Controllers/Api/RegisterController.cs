@@ -28,7 +28,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 登入頁面注册新用户提交按钮調用
+        /// 登入頁面注册新用户提交按鈕調用
         /// </summary>
         /// <param name="hub"></param>
         /// <param name="user"></param>

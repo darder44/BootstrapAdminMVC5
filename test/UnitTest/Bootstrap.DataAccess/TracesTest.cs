@@ -14,7 +14,7 @@ namespace Bootstrap.DataAccess
             {
                 UserName = "UnitTest",
                 Browser = "UnitTest",
-                City = "本地连接",
+                City = "本地連接",
                 OS = "UnitTest",
                 Ip = "::1",
                 LogTime = DateTime.Now,

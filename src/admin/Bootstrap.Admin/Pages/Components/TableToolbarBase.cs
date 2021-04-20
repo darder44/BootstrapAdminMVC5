@@ -15,12 +15,12 @@ namespace Bootstrap.Admin.Pages.Components
         public RenderFragment? ChildContent { get; set; }
 
         /// <summary>
-        /// 添加按钮到工具欄方法
+        /// 添加按鈕到工具欄方法
         /// </summary>
         public void AddButtons(TableToolbarButton button) => Buttons.Add(button);
 
         /// <summary>
-        /// 獲得 Toolbar 按钮集合
+        /// 獲得 Toolbar 按鈕集合
         /// </summary>
         public ICollection<TableToolbarButton> Buttons { get; } = new HashSet<TableToolbarButton>();
     }

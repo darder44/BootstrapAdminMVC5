@@ -3,7 +3,7 @@
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 弹窗組件基類
+    /// 彈窗組件基類
     /// </summary>
     public class AlertBase : ModalBase
     {
@@ -14,7 +14,7 @@ namespace Bootstrap.Admin.Pages.Components
         public RenderFragment? AlertBody { get; set; }
 
         /// <summary>
-        /// 獲得/設置 弹窗 Footer 程式碼块
+        /// 獲得/設置 彈窗 Footer 程式碼块
         /// </summary>
         [Parameter]
         public RenderFragment? AlertFooter { get; set; }

@@ -14,7 +14,7 @@ namespace Bootstrap.Admin.Api
         [Fact]
         public async void Get_Ok()
         {
-            var trac = new Trace() { Browser = "UnitTest", OS = "UnitTest", City = "本地连接", Ip = "::1", RequestUrl = "~/UnitTest", UserName = "UnitTest", LogTime = DateTime.Now };
+            var trac = new Trace() { Browser = "UnitTest", OS = "UnitTest", City = "本地連接", Ip = "::1", RequestUrl = "~/UnitTest", UserName = "UnitTest", LogTime = DateTime.Now };
             trac.Save(trac);
 
             // 選單 系統選單 系統使用條件

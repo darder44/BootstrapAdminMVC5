@@ -25,7 +25,7 @@ namespace Bootstrap.Admin.Pages.Models
         /// <summary>
         /// 獲得 是否為第三方用户
         /// </summary>
-        /// <remarks>第三方用户不允许修改密碼</remarks>
+        /// <remarks>第三方用户不允許修改密碼</remarks>
         public bool External { get; }
 
         /// <summary>

@@ -43,7 +43,7 @@
                 return $.data(element, "previousValue") || $.data(element, "previousValue", {
                     old: null,
                     valid: true,
-                    message: "请修正本字段"
+                    message: "请修正本字串"
                 });
             },
             startRequest: function (element) {
@@ -109,7 +109,7 @@
                 that.reset();
             });
 
-            // bs bug 弹窗内控件值更改後再次点击關闭按钮是 hide.bs.modal 事件不被触發
+            // bs bug 彈窗内控件值更改後再次点击關闭按鈕是 hide.bs.modal 事件不被触發
             // 兼容 鍵盘事件 ESC
             var dismissTooltip = function (e) {
                 // 移除残留 tooltip

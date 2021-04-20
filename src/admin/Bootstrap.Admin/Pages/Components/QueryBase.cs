@@ -24,7 +24,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string Title { get; set; } = "";
 
         /// <summary>
-        /// 查詢按钮顯示文字 預設為 查詢
+        /// 查詢按鈕顯示文字 預設為 查詢
         /// </summary>
         [Parameter]
         public string Text { get; set; } = "";
@@ -44,7 +44,7 @@ namespace Bootstrap.Admin.Pages.Components
 #nullable restore
 
         /// <summary>
-        /// 查詢按钮回調方法
+        /// 查詢按鈕回調方法
         /// </summary>
         [Parameter]
         public Action? OnQuery { get; set; }

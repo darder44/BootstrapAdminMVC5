@@ -31,7 +31,7 @@ namespace Bootstrap.Admin.Pages.Components
         public RenderFragment<TItem>? QueryBody { get; set; }
 
         /// <summary>
-        /// 查詢按钮回調方法
+        /// 查詢按鈕回調方法
         /// </summary>
         [Parameter]
         public Func<QueryPageOptions, QueryData<TItem>>? OnQuery { get; set; }
@@ -49,13 +49,13 @@ namespace Bootstrap.Admin.Pages.Components
         public RenderFragment<TItem>? RowTemplate { get; set; }
 
         /// <summary>
-        /// 獲得/設置 按钮模板
+        /// 獲得/設置 按鈕模板
         /// </summary>
         [Parameter]
         public RenderFragment<TItem>? ButtonTemplate { get; set; }
 
         /// <summary>
-        /// 獲得/設置 表格 Toolbar 按钮模板
+        /// 獲得/設置 表格 Toolbar 按鈕模板
         /// </summary>
         [Parameter]
         public RenderFragment? TableToolbarTemplate { get; set; }
@@ -96,19 +96,19 @@ namespace Bootstrap.Admin.Pages.Components
         protected Table<TItem>? Table { get; set; }
 
         /// <summary>
-        /// 編輯資料弹窗 Title
+        /// 編輯資料彈窗 Title
         /// </summary>
         [Parameter]
         public string SubmitModalTitle { get; set; } = "";
 
         /// <summary>
-        /// 新建按钮回調方法
+        /// 新建按鈕回調方法
         /// </summary>
         [Parameter]
         public Func<TItem> OnAdd { get; set; } = () => throw new InvalidOperationException($"The property {nameof(OnAdd)} can't be set to Null");
 
         /// <summary>
-        /// 保存按钮回調方法
+        /// 保存按鈕回調方法
         /// </summary>
         [Parameter]
         public Func<TItem, bool> OnSave { get; set; } = item => false;
@@ -120,7 +120,7 @@ namespace Bootstrap.Admin.Pages.Components
         public Action OnResetSearch { get; set; } = () => { };
 
         /// <summary>
-        /// 刪除按钮回調方法
+        /// 刪除按鈕回調方法
         /// </summary>
         [Parameter]
         public Func<IEnumerable<TItem>, bool> OnDelete { get; set; } = item => false;
@@ -134,7 +134,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 資料表格内刪除按钮方法
+        /// 資料表格内刪除按鈕方法
         /// </summary>
         /// <param name="item"></param>
         protected void Delete(TItem item)

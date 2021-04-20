@@ -62,22 +62,22 @@ namespace Bootstrap.Admin.Models
         public bool ShowSideBar { get; protected set; }
 
         /// <summary>
-        /// 獲得 是否允许短信驗證碼登入
+        /// 獲得 是否允許短信驗證碼登入
         /// </summary>
         public bool AllowMobile { get; }
 
         /// <summary>
-        /// 獲得 是否允许第三方 OAuth 認證登入
+        /// 獲得 是否允許第三方 OAuth 認證登入
         /// </summary>
         public bool AllowOAuth { get; }
 
         /// <summary>
-        /// 獲得 是否允许短信驗證碼登入
+        /// 獲得 是否允許短信驗證碼登入
         /// </summary>
         public bool ShowMobile { get; }
 
         /// <summary>
-        /// 獲得 是否允许第三方 OAuth 認證登入
+        /// 獲得 是否允許第三方 OAuth 認證登入
         /// </summary>
         public bool ShowOAuth { get; }
 

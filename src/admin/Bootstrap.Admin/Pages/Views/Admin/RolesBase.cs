@@ -63,7 +63,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected AssignModalBase<User>? AssignUserModal { get; set; }
 
         /// <summary>
-        /// 弹窗分配角色方法
+        /// 彈窗分配角色方法
         /// </summary>
         protected void AssignUsers()
         {
@@ -136,7 +136,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected AssignModalBase<Group>? AssignGroupModal { get; set; }
 
         /// <summary>
-        /// 弹窗分配角色方法
+        /// 彈窗分配角色方法
         /// </summary>
         protected void AssignGroups()
         {
@@ -195,7 +195,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected AssignModalBase<DataAccess.App>? AssignAppModal { get; set; }
 
         /// <summary>
-        /// 弹窗分配角色方法
+        /// 彈窗分配角色方法
         /// </summary>
         protected void AssignApps()
         {
@@ -254,7 +254,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected AssignModalBase<Menu>? AssignMenuModal { get; set; }
 
         /// <summary>
-        /// 弹窗分配選單方法
+        /// 彈窗分配選單方法
         /// </summary>
         protected void AssignMenus()
         {

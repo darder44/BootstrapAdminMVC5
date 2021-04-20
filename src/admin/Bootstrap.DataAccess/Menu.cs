@@ -103,10 +103,10 @@ namespace Bootstrap.DataAccess
         public virtual IEnumerable<BootstrapMenu> RetrieveAllMenus(string userName) => DbHelper.RetrieveAllMenus(userName);
 
         /// <summary>
-        /// 通过當前用户名与指定選單路徑獲取此選單下所有授權按钮集合 (userName, url, auths) => bool
+        /// 通过當前用户名与指定選單路徑獲取此選單下所有授權按鈕集合 (userName, url, auths) => bool
         /// </summary>
         /// <param name="userName">當前操作用户名</param>
-        /// <param name="url">资源按钮所属選單</param>
+        /// <param name="url">资源按鈕所属選單</param>
         /// <param name="auths">资源授權碼</param>
         /// <returns></returns>
         public virtual bool AuthorizateButtons(string userName, string url, string auths)

@@ -162,7 +162,7 @@ $(function () {
         }).children('.radio').hide();
     });
 
-    // 選單弹窗過濾條件
+    // 選單彈窗過濾條件
     $('.modal-footer > .flex-fill.d-none').addClass('d-sm-block');
     $('.custom-radio').on('click', ':radio', function (e) {
         var filter = $(this).val();

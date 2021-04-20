@@ -61,7 +61,7 @@ namespace Bootstrap.DataAccess
         {
             UserHelper.Delete(UserHelper.Retrieves().Where(usr => usr.UserName == "UnitTest").Select(usr => usr.Id));
 
-            var up = new User() { UserName = "UnitTest", Password = "123", Description = "新建用户用于測試批准", DisplayName = "UnitTest", Icon = "default.jpg" };
+            var up = new User() { UserName = "UnitTest", Password = "123", Description = "新建用户用於測試批准", DisplayName = "UnitTest", Icon = "default.jpg" };
             UserHelper.Save(up);
             Assert.True(UserHelper.Approve(up.Id, "UnitTest"));
 

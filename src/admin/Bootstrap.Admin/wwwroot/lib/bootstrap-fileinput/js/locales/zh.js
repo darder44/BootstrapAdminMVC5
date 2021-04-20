@@ -28,8 +28,8 @@
         msgPlaceholder: '选择 {files}...',
         msgZoomModalHeading: '詳詳预览',
         msgFileRequired: '必须选择一個文件上传.',
-        msgSizeTooSmall: '文件 "{name}" (<b>{size} KB</b>) 必须大于限定大小 <b>{minSize} KB</b>.',
-        msgSizeTooLarge: '文件 "{name}" (<b>{size} KB</b>) 超過了允许大小 <b>{maxSize} KB</b>.',
+        msgSizeTooSmall: '文件 "{name}" (<b>{size} KB</b>) 必须大於限定大小 <b>{minSize} KB</b>.',
+        msgSizeTooLarge: '文件 "{name}" (<b>{size} KB</b>) 超過了允許大小 <b>{maxSize} KB</b>.',
         msgFilesTooLess: '你必须选择最少 <b>{n}</b> {files} 来上传. ',
         msgFilesTooMany: '选择的上传文件個数 <b>({n})</b> 超出最大文件的限制個数 <b>{m}</b>.',
         msgFileNotFound: '文件 "{name}" 未找到!',
@@ -76,7 +76,7 @@
             uploadExtra: '表單資料上传'
         },
         dropZoneTitle: '拖拽文件到这里 &hellip;<br>支持多文件同時上传',
-        dropZoneClickTitle: '<br>(或点击{files}按钮选择文件)',
+        dropZoneClickTitle: '<br>(或点击{files}按鈕选择文件)',
         fileActionSettings: {
             removeTitle: '刪除文件',
             uploadTitle: '上传文件',

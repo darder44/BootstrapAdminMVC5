@@ -42,7 +42,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             new SelectedItem() { Text = "全部", Value = "-1", Active = true },
             new SelectedItem() { Text = "選單", Value = "0" },
             new SelectedItem() { Text = "资源", Value = "1" },
-            new SelectedItem() { Text = "按钮", Value = "2" }
+            new SelectedItem() { Text = "按鈕", Value = "2" }
         });
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected List<SelectedItem> DefineResource { get; set; } = new List<SelectedItem>(new SelectedItem[] {
             new SelectedItem() { Text = "選單", Value = "0" },
             new SelectedItem() { Text = "资源", Value = "1" },
-            new SelectedItem() { Text = "按钮", Value = "2" }
+            new SelectedItem() { Text = "按鈕", Value = "2" }
         });
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 弹窗分配角色方法
+        /// 彈窗分配角色方法
         /// </summary>
         protected void AssignRoles()
         {

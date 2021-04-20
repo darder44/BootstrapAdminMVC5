@@ -13,7 +13,7 @@ namespace Bootstrap.Admin.Pages.Components
     public class LgbEditFormBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 Id 用于内部 Label-For
+        /// 獲得/設置 Id 用於内部 Label-For
         /// </summary>
         [Parameter]
         public string Id { get; set; } = "";
@@ -84,7 +84,7 @@ namespace Bootstrap.Admin.Pages.Components
                 {
                     if (BootstrapAdminEditContextDataAnnotationsExtensions.TryGetValidatableProperty(new FieldIdentifier(model, key.Key.FieldName), out var propertyInfo))
                     {
-                        // 設置其關联属性字段
+                        // 設置其關联属性字串
                         var propertyValue = propertyInfo.GetValue(model);
                         context.MemberName = propertyInfo.Name;
 
@@ -99,7 +99,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 字段驗證方法
+        /// 字串驗證方法
         /// </summary>
         /// <param name="propertyValue"></param>
         /// <param name="context"></param>

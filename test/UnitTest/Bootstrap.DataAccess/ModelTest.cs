@@ -68,7 +68,7 @@ namespace Bootstrap.DataAccess
             var user = UserHelper.Retrieves().FirstOrDefault(m => m.UserName == "User");
             user.DisplayName = "UnitTest";
 
-            // 演示模式下不允许更改  Admin User 账户信息
+            // 演示模式下不允許更改  Admin User 账户信息
             Assert.True(UserHelper.Save(user));
         }
 
@@ -107,7 +107,7 @@ namespace Bootstrap.DataAccess
         {
             var roleId = RoleHelper.Retrieves().FirstOrDefault(r => r.RoleName.Equals("Administrators", System.StringComparison.OrdinalIgnoreCase)).Id;
             Assert.True(UserHelper.SaveByRoleId(roleId, new string[0]));
-            // 仍然属于 Administrators
+            // 仍然属於 Administrators
             Assert.Contains(RoleHelper.RetrievesByUserName("Admin"), r => r.Equals("Administrators"));
         }
 

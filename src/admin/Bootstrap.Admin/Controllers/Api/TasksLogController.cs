@@ -16,7 +16,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class TasksLogController : ControllerBase
     {
         /// <summary>
-        /// 任務管理頁面日誌按钮調用此方法
+        /// 任務管理頁面日誌按鈕調用此方法
         /// </summary>
         /// <param name="name"></param>
         /// <param name="hub"></param>

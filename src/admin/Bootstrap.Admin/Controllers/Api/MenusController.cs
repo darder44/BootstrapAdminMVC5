@@ -51,10 +51,10 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 角色管理選單授權按钮調用
+        /// 角色管理選單授權按鈕調用
         /// </summary>
         /// <param name="id">角色ID</param>
-        /// <param name="type">type=role時，角色管理選單授權調用；type=user時，選單管理編輯頁面父類選單按钮調用</param>
+        /// <param name="type">type=role時，角色管理選單授權調用；type=user時，選單管理編輯頁面父類選單按鈕調用</param>
         /// <returns></returns>
         [HttpPost("{id}")]
         public IEnumerable<object> Post(string id, [FromQuery]string type)
@@ -73,7 +73,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 角色管理選單授權保存按钮調用
+        /// 角色管理選單授權保存按鈕調用
         /// </summary>
         /// <param name="id">選單ID</param>
         /// <param name="roleIds">角色ID集合</param>

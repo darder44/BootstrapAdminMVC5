@@ -155,7 +155,7 @@ namespace Bootstrap.Admin.Controllers
         public ActionResult Analyse() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// 用于測試ExceptionFilter
+        /// 用於測試ExceptionFilter
         /// </summary>
         /// <returns></returns>
         public ActionResult Error() => throw new Exception("Customer Excetion UnitTest");

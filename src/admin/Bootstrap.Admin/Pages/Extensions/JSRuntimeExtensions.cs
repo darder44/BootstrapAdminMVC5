@@ -48,14 +48,14 @@ namespace Microsoft.JSInterop
         public static void InitDocument(this IJSRuntime? jSRuntime) => jSRuntime?.InvokeVoidAsync("$.initDocument");
 
         /// <summary>
-        /// 弹出 Modal 組件
+        /// 彈出 Modal 組件
         /// </summary>
         /// <param name="jSRuntime"></param>
         /// <param name="modalId"></param>
         public static void ToggleModal(this IJSRuntime? jSRuntime, string modalId) => jSRuntime?.InvokeVoidAsync("$.toggleModal", modalId);
 
         /// <summary>
-        /// 弹出 Toast 組件
+        /// 彈出 Toast 組件
         /// </summary>
         /// <param name="jSRuntime"></param>
         /// <param name="title"></param>
@@ -64,7 +64,7 @@ namespace Microsoft.JSInterop
         public static void ShowToast(this IJSRuntime? jSRuntime, string title, string message, ToastCategory cate) => jSRuntime?.InvokeVoidAsync("$.showToast", title, message, cate.ToString());
 
         /// <summary>
-        /// 弹出 Tooltip 組件
+        /// 彈出 Tooltip 組件
         /// </summary>
         /// <param name="jSRuntime"></param>
         /// <param name="id"></param>

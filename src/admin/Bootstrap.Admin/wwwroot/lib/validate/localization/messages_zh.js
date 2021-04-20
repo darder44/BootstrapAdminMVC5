@@ -13,8 +13,8 @@
  * Locale: ZH (Chinese, 中文 (Zhōngwén), 汉语, 漢語)
  */
 $.extend( $.validator.messages, {
-	required: "这是必填字段",
-	remote: "请修正此字段",
+	required: "这是必填字串",
+	remote: "请修正此字串",
 	email: "请輸入有效的电子邮件地址",
 	url: "请輸入有效的網址",
 	date: "请輸入有效的日期",
@@ -29,8 +29,8 @@ $.extend( $.validator.messages, {
 	rangelength: $.validator.format( "请輸入长度在 {0} 到 {1} 之间的字符串" ),
 	range: $.validator.format( "请輸入范围在 {0} 到 {1} 之间的数值" ),
 	step: $.validator.format( "请輸入 {0} 的整数倍值" ),
-	max: $.validator.format( "请輸入不大于 {0} 的数值" ),
-	min: $.validator.format( "请輸入不小于 {0} 的数值" )
+	max: $.validator.format( "请輸入不大於 {0} 的数值" ),
+	min: $.validator.format( "请輸入不小於 {0} 的数值" )
 } );
 return $;
 }));

@@ -31,13 +31,13 @@ namespace Bootstrap.Admin.Pages.Components
         public string Id { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 弹窗標題
+        /// 獲得/設置 彈窗標題
         /// </summary>
         [Parameter]
         public string Title { get; set; } = "未設置";
 
         /// <summary>
-        /// 獲得/設置 表格 Toolbar 按钮模板
+        /// 獲得/設置 表格 Toolbar 按鈕模板
         /// </summary>
         [Parameter]
         public RenderFragment<TItem>? ItemTemplate { get; set; }

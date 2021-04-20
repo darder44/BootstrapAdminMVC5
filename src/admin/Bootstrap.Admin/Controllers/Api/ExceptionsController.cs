@@ -31,7 +31,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 异常程式頁面点击服务器日誌按钮獲取所有物理日誌文件列表方法
+        /// 异常程式頁面点击服务器日誌按鈕獲取所有物理日誌文件列表方法
         /// </summary>
         /// <returns></returns>
         [HttpPost]

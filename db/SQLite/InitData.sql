@@ -12,7 +12,7 @@ INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '網站页脚', '2016 © 通用後台管理系統', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系統通知', '用户注册', '0', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系統通知', '程式异常', '1', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系統通知', '資料庫连接', '2', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系統通知', '資料庫連接', '2', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('通知状態', '未處理', '0', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('通知状態', '已處理', '1', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('處理结果', '同意', '0', 0);
@@ -206,7 +206,7 @@ Delete from [Navigations] where Application = 'Demo';
 INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (0, '首页', 10, 'fa fa-fa', '~/Home/Index', '1', 'Demo');
 
 INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (0, '測試页面', 20, 'fa fa-fa', '#', '1', 'Demo');
-INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (last_insert_rowid(), '關于', 10, 'fa fa-fa', '~/Home/About', '1', 'Demo');
+INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (last_insert_rowid(), '關於', 10, 'fa fa-fa', '~/Home/About', '1', 'Demo');
 
 INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (0, '返回碼云', 20, 'fa fa-fa', 'https://gitee.com/dotnetchina/BootstrapAdmin', '1', 'Demo');
 

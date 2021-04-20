@@ -23,7 +23,7 @@ namespace Bootstrap.Admin.Pages.Components
         public RenderFragment? ModalBody { get; set; }
 
         /// <summary>
-        /// 獲得/設置 弹窗 Footer 程式碼块
+        /// 獲得/設置 彈窗 Footer 程式碼块
         /// </summary>
         [Parameter]
         public RenderFragment? ModalFooter { get; set; }
@@ -35,19 +35,19 @@ namespace Bootstrap.Admin.Pages.Components
         public string Id { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 弹窗標題
+        /// 獲得/設置 彈窗標題
         /// </summary>
         [Parameter]
         public string Title { get; set; } = "未設置";
 
         /// <summary>
-        /// 獲得/設置 是否允许点击後台關閉弹窗 預設為 false
+        /// 獲得/設置 是否允許点击後台關閉彈窗 預設為 false
         /// </summary>
         [Parameter]
         public bool Backdrop { get; set; }
 
         /// <summary>
-        /// 獲得/設置 弹窗大小
+        /// 獲得/設置 彈窗大小
         /// </summary>
         [Parameter]
         public ModalSize Size { get; set; }
@@ -99,7 +99,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// Toggle 弹窗方法
+        /// Toggle 彈窗方法
         /// </summary>
         public void Toggle()
         {
@@ -108,7 +108,7 @@ namespace Bootstrap.Admin.Pages.Components
     }
 
     /// <summary>
-    /// 弹窗大小
+    /// 彈窗大小
     /// </summary>
     public enum ModalSize
     {

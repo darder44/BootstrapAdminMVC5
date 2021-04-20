@@ -251,7 +251,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// User List 視圖保存按钮調用
+        /// User List 視圖保存按鈕調用
         /// </summary>
         /// <param name="id"></param>
         /// <param name="password"></param>

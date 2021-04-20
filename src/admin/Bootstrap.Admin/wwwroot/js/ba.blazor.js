@@ -141,7 +141,7 @@
             toastTemplate += '<div class="toast-progress"></div>';
             toastTemplate += '</div>';
 
-            // 利用 js 生成一個临時 toast 弹窗後自我销毁
+            // 利用 js 生成一個临時 toast 彈窗後自我销毁
             var $toast = $(toastTemplate).appendTo('body');
             var handler = window.setTimeout(function () {
                 window.clearTimeout(handler);

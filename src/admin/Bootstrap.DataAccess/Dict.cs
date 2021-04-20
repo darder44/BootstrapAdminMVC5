@@ -265,13 +265,13 @@ namespace Bootstrap.DataAccess
         public bool RetrieveSidebarStatus() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "側邊欄狀態" && d.Define == 0)?.Code ?? "1") == "1";
 
         /// <summary>
-        /// 獲得是否允许短信驗證碼登錄
+        /// 獲得是否允許短信驗證碼登錄
         /// </summary>
         /// <returns></returns>
         public bool RetrieveMobileLogin() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "短信驗證碼登錄" && d.Define == 0)?.Code ?? "1") == "1";
 
         /// <summary>
-        /// 獲得是否允许 OAuth 認證登錄
+        /// 獲得是否允許 OAuth 認證登錄
         /// </summary>
         /// <returns></returns>
         public bool RetrieveOAuthLogin() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "OAuth 認證登錄" && d.Define == 0)?.Code ?? "1") == "1";

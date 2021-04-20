@@ -60,7 +60,7 @@ namespace Bootstrap.Admin.Pages.Components
 
         private FieldIdentifier? _fieldIdentifier;
         /// <summary>
-        /// 獲取綁定字段顯示名稱方法
+        /// 獲取綁定字串顯示名稱方法
         /// </summary>
         public string GetDisplayName()
         {
@@ -82,7 +82,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 獲取綁定字段信息方法
+        /// 獲取綁定字串信息方法
         /// </summary>
         public string GetFieldName()
         {

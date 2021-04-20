@@ -66,7 +66,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected AssignModalBase<Group>? AssignGroupModal { get; set; }
 
         /// <summary>
-        /// 弹窗分配角色方法
+        /// 彈窗分配角色方法
         /// </summary>
         protected void AssignGroups()
         {
@@ -139,7 +139,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected AssignModalBase<Role>? AssignRoleModal { get; set; }
 
         /// <summary>
-        /// 弹窗分配角色方法
+        /// 彈窗分配角色方法
         /// </summary>
         protected void AssignRoles()
         {

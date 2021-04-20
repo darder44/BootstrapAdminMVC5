@@ -115,7 +115,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
                     RootLayout?.OnDisplayNameChanged(DisplayName);
                 }
 
-                // 弹窗提示是否保存成功
+                // 彈窗提示是否保存成功
                 var result = ret ? "成功" : "失败";
                 ShowMessage($"保存顯示名稱{result}", ret);
             }
@@ -128,7 +128,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         {
             var ret = UserHelper.ChangePassword(User.UserName, Password.Password, Password.NewPassword);
 
-            // 弹窗提示是否保存成功
+            // 彈窗提示是否保存成功
             var result = ret ? "成功" : "失败";
             ShowMessage($"更新密碼{result}", ret);
         }
@@ -140,7 +140,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         {
             var ret = UserHelper.SaveApp(User.UserName, SelectedApp.Value);
 
-            // 弹窗提示是否保存成功
+            // 彈窗提示是否保存成功
             var result = ret ? "成功" : "失败";
             ShowMessage($"保存預設應用{result}", ret);
         }
@@ -152,7 +152,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         {
             var ret = UserHelper.SaveUserCssByName(User.UserName, SelectedTheme.Value);
 
-            // 弹窗提示是否保存成功
+            // 彈窗提示是否保存成功
             var result = ret ? "成功" : "失败";
             ShowMessage($"保存網站样式{result}", ret);
         }

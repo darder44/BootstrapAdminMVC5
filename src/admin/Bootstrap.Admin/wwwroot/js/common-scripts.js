@@ -121,7 +121,7 @@
 
     var formatCategoryName = function (menu) {
         var ret = "";
-        if (menu.IsResource === 2) ret = "按钮";
+        if (menu.IsResource === 2) ret = "按鈕";
         else if (menu.IsResource === 1) ret = "资源";
         else ret = menu.CategoryName;
         return ret;
@@ -209,7 +209,7 @@ $(function () {
     // custom scrollbar
     $sidebar = $('.sidebar').addNiceScroll().autoScrollSidebar({ target: arch.parent(), offsetTop: arch.parent().innerHeight() / 2 });
 
-    // 大于 768 時考虑網站設置 收缩側邊欄
+    // 大於 768 時考虑網站設置 收缩側邊欄
     if ($(window).width() > 768) {
         var $ele = $('aside');
         var collapsed = $ele.hasClass('collapsed');

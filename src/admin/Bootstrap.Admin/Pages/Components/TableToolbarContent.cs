@@ -5,7 +5,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// Table Toolbar 按钮呈现組件
+    /// Table Toolbar 按鈕呈现組件
     /// </summary>
     public class TableToolbarContent : ComponentBase
     {
@@ -20,10 +20,10 @@ namespace Bootstrap.Admin.Pages.Components
         /// </summary>
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
-            // 渲染正常按钮
+            // 渲染正常按鈕
             if (Toolbar != null && Toolbar.Buttons.Any())
             {
-                // 渲染 Toolbar 按钮
+                // 渲染 Toolbar 按鈕
                 //<div class="toolbar btn-group">
                 //  <button type="button" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i><span>新增</span></button>
                 //  <button type="button" class="btn btn-danger"><i class="fa fa-remove" aria-hidden="true"></i><span>刪除</span></button>
@@ -55,7 +55,7 @@ namespace Bootstrap.Admin.Pages.Components
                 }
                 builder.CloseElement();
 
-                // 渲染移動版按钮
+                // 渲染移動版按鈕
                 //<div class="gear btn-group">
                 //  <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button"><i class="fa fa-gear"></i></button>
                 //  <div class="dropdown-menu">

@@ -19,7 +19,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class ProfilesController : ControllerBase
     {
         /// <summary>
-        /// 刪除頭像按钮調用
+        /// 刪除頭像按鈕調用
         /// </summary>
         /// <param name="id">Delete</param>
         /// <param name="env"></param>
@@ -65,7 +65,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 上传頭像按钮調用
+        /// 上传頭像按鈕調用
         /// </summary>
         /// <param name="env"></param>
         /// <param name="files"></param>

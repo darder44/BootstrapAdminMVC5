@@ -11,7 +11,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string SearchText { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 排序字段名稱
+        /// 獲得/設置 排序字串名稱
         /// </summary>
         public string SortName { get; set; } = "";
 

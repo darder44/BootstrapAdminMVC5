@@ -46,7 +46,7 @@ namespace Bootstrap.Admin.Pages.Components
         public RenderFragment<TItem>? RowTemplate { get; set; }
 
         /// <summary>
-        /// 獲得/設置 按钮模板 實例
+        /// 獲得/設置 按鈕模板 實例
         /// </summary>
         [Parameter]
         public RenderFragment<TItem>? ButtonTemplate { get; set; }
@@ -64,7 +64,7 @@ namespace Bootstrap.Admin.Pages.Components
         public RenderFragment<TItem>? SearchTemplate { get; set; }
 
         /// <summary>
-        /// 獲得/設置 表格 Toolbar 按钮模板
+        /// 獲得/設置 表格 Toolbar 按鈕模板
         /// </summary>
         [Parameter]
         public RenderFragment? TableToolbarTemplate { get; set; }
@@ -94,7 +94,7 @@ namespace Bootstrap.Admin.Pages.Components
         public bool ShowSearch { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否顯示高級查詢按钮 預設顯示
+        /// 獲得/設置 是否顯示高級查詢按鈕 預設顯示
         /// </summary>
         [Parameter]
         public bool ShowAdvancedSearch { get; set; } = true;
@@ -122,7 +122,7 @@ namespace Bootstrap.Admin.Pages.Components
         public bool ShowCheckbox { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否顯示按钮列 預設為 false
+        /// 獲得/設置 是否顯示按鈕列 預設為 false
         /// </summary>
         [Parameter]
         public bool ShowDefaultButtons { get; set; }
@@ -134,13 +134,13 @@ namespace Bootstrap.Admin.Pages.Components
         public bool ShowFooter { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否顯示扩展按钮 預設為 true
+        /// 獲得/設置 是否顯示扩展按鈕 預設為 true
         /// </summary>
         [Parameter]
         public bool ShowExtendButtons { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否顯示刷新按钮 預設為 true
+        /// 獲得/設置 是否顯示刷新按鈕 預設為 true
         /// </summary>
         [Parameter]
         public bool ShowRefresh { get; set; }
@@ -158,7 +158,7 @@ namespace Bootstrap.Admin.Pages.Components
         public bool ShowToolBar { get; set; }
 
         /// <summary>
-        /// 獲得/設置 按钮列 Header 文本 預設為 操作
+        /// 獲得/設置 按鈕列 Header 文本 預設為 操作
         /// </summary>
         [Parameter]
         public string ButtonTemplateHeaderText { get; set; } = "操作";
@@ -170,19 +170,19 @@ namespace Bootstrap.Admin.Pages.Components
         public Func<QueryPageOptions, QueryData<TItem>>? OnQuery { get; set; }
 
         /// <summary>
-        /// 新建按钮回調方法
+        /// 新建按鈕回調方法
         /// </summary>
         [Parameter]
         public Func<TItem>? OnAdd { get; set; }
 
         /// <summary>
-        /// 編輯按钮回調方法
+        /// 編輯按鈕回調方法
         /// </summary>
         [Parameter]
         public Action<TItem>? OnEdit { get; set; }
 
         /// <summary>
-        /// 保存按钮回調方法
+        /// 保存按鈕回調方法
         /// </summary>
         [Parameter]
         public Func<TItem, bool>? OnSave { get; set; }
@@ -194,7 +194,7 @@ namespace Bootstrap.Admin.Pages.Components
         public Action<string, SortOrder> OnSort { get; set; } = new Action<string, SortOrder>((name, order) => { });
 
         /// <summary>
-        /// 刪除按钮回調方法
+        /// 刪除按鈕回調方法
         /// </summary>
         [Parameter]
         public Func<IEnumerable<TItem>, bool>? OnDelete { get; set; }
@@ -220,23 +220,23 @@ namespace Bootstrap.Admin.Pages.Components
 #nullable restore
 
         /// <summary>
-        /// 編輯資料弹窗 Title
+        /// 編輯資料彈窗 Title
         /// </summary>
         [Parameter]
         public string SubmitModalTitle { get; set; } = "";
 
         /// <summary>
-        /// 編輯資料弹窗
+        /// 編輯資料彈窗
         /// </summary>
         protected SubmitModal<TItem>? EditModal { get; set; }
 
         /// <summary>
-        /// 確認刪除弹窗
+        /// 確認刪除彈窗
         /// </summary>
         protected Modal? ConfirmModal { get; set; }
 
         /// <summary>
-        /// 高級查詢弹窗
+        /// 高級查詢彈窗
         /// </summary>
         protected Modal? SearchModal { get; set; }
 
@@ -251,7 +251,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected int PageIndex { get; set; } = 1;
 
         /// <summary>
-        /// 獲得/設置 當前排序字段名稱
+        /// 獲得/設置 當前排序字串名稱
         /// </summary>
         protected string SortName { get; set; } = "";
 
@@ -351,7 +351,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 新建按钮方法
+        /// 新建按鈕方法
         /// </summary>
         public void Add()
         {
@@ -369,7 +369,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected void ShowMessage(string title, string text, ToastCategory cate = ToastCategory.Success) => JSRuntime?.ShowToast(title, text, cate);
 
         /// <summary>
-        /// 編輯按钮方法
+        /// 編輯按鈕方法
         /// </summary>
         public void Edit()
         {
@@ -387,7 +387,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 查詢按钮調用此方法
+        /// 查詢按鈕調用此方法
         /// </summary>
         public void Query()
         {
@@ -425,7 +425,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 刪除按钮方法
+        /// 刪除按鈕方法
         /// </summary>
         public void Delete()
         {
@@ -459,7 +459,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected string RetrieveId() => $"{Id}_table";
 
         /// <summary>
-        /// 重置查詢按钮回調方法
+        /// 重置查詢按鈕回調方法
         /// </summary>
         [Parameter]
         public Action? OnResetSearch { get; set; }
@@ -478,17 +478,17 @@ namespace Bootstrap.Admin.Pages.Components
         /// </summary>
         protected void SearchClick()
         {
-            // 查詢控件按钮触發此事件
+            // 查詢控件按鈕触發此事件
             PageIndex = 1;
             Query();
         }
 
         /// <summary>
-        /// 高級查詢按钮点击時調用此方法
+        /// 高級查詢按鈕点击時調用此方法
         /// </summary>
         protected void AdvancedSearchClick()
         {
-            // 弹出高級查詢弹窗
+            // 彈出高級查詢彈窗
             SearchModal?.Toggle();
         }
 
@@ -505,7 +505,7 @@ namespace Bootstrap.Admin.Pages.Components
         public EventCallback<string> SearchTextChanged { get; set; }
 
         /// <summary>
-        /// 重置查詢按钮調用此方法
+        /// 重置查詢按鈕調用此方法
         /// </summary>
         protected void ClearSearchClick()
         {

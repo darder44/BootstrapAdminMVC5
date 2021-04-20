@@ -19,7 +19,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class UsersController : ControllerBase
     {
         /// <summary>
-        /// 調用獲取所有用户信息 用户管理查詢按钮
+        /// 調用獲取所有用户信息 用户管理查詢按鈕
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>

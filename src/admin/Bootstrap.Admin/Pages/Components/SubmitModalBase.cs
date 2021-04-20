@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Components.Forms;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 資料綁定提交弹窗組件
+    /// 資料綁定提交彈窗組件
     /// </summary>
     public class SubmitModalBase<TItem> : ModalBase
     {
 #nullable disable
         /// <summary>
-        /// 獲得/設置 弹窗綁定資料實體
+        /// 獲得/設置 彈窗綁定資料實體
         /// </summary>
         [Parameter]
         public TItem Model { get; set; }

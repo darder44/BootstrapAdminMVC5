@@ -42,7 +42,7 @@
                         var content = $.map(row.Data, function (v, name) {
                             return { name: name, value: v };
                         });
-                        // 弹出 modal 健康檢查明詳窗口
+                        // 彈出 modal 健康檢查明詳窗口
                         $checkDetail.bootstrapTable('load', content);
                         $('#dialogNew').modal('show');
                     }

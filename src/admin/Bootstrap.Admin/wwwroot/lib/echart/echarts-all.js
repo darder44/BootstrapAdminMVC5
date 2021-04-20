@@ -37759,7 +37759,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '4110',
                 'properties': {
-                    'name': '许昌市',
+                    'name': '許昌市',
                     'cp': [
                         113.6975,
                         34.0466
@@ -38627,7 +38627,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '3207',
                 'properties': {
-                    'name': '连云港市',
+                    'name': '連云港市',
                     'cp': [
                         119.1248,
                         34.552
@@ -39188,7 +39188,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '2102',
                 'properties': {
-                    'name': '大连市',
+                    'name': '大連市',
                     'cp': [
                         122.2229,
                         39.4409
