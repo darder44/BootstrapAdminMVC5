@@ -19,8 +19,8 @@
         ],
         initialPreviewAsData: true,
         overwriteInitial: true,
-        dropZoneTitle: "请选择頭像",
-        msgPlaceholder: "请选择頭像",
+        dropZoneTitle: "請选择頭像",
+        msgPlaceholder: "請选择頭像",
         fileActionSettings: { showUpload: false }
     }).on('fileuploaded', function (event, data, previewId, index) {
         var url = data.response.initialPreview[0];
@@ -98,7 +98,7 @@
             case 'profileCss':
                 data.UserStatus = 'ChangeTheme';
                 $.bc({
-                    url: Profiles.url, method: "put", data: data, title: "保存样式", callback: function (result) {
+                    url: Profiles.url, method: "put", data: data, title: "保存樣式", callback: function (result) {
                         if (result) {
                             window.setTimeout(function () { window.location.reload(true); }, 1000);
                         }

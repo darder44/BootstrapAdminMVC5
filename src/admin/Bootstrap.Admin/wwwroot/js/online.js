@@ -24,10 +24,10 @@ $(function () {
             { title: "顯示名稱", field: "DisplayName" },
             { title: "登入時間", field: "FirstAccessTime" },
             { title: "訪問時間", field: "LastAccessTime" },
-            { title: "请求方式", field: "Method" },
-            { title: "主机", field: "Ip" },
+            { title: "請求方式", field: "Method" },
+            { title: "主機", field: "Ip" },
             { title: "登入地点", field: "Location" },
-            { title: "浏览器", field: "Browser" },
+            { title: "瀏覽器", field: "Browser" },
             { title: "操作系統", field: "OS" },
             { title: "訪問地址", field: "RequestUrl" },
             {

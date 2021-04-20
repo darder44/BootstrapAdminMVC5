@@ -46,7 +46,7 @@ namespace Bootstrap.DataAccess
         public static Page<Exceptions> RetrievePages(PaginationOption po, DateTime? startTime, DateTime? endTime) => DbContextManager.Create<Exceptions>()?.RetrievePages(po, startTime, endTime) ?? new Page<Exceptions>() { Items = new List<Exceptions>() };
 
         /// <summary>
-        /// 獲得 Error 错误日誌目錄下所有文件
+        /// 獲得 Error 錯誤日誌目錄下所有文件
         /// </summary>
         public static IEnumerable<string> RetrieveLogFiles()
         {

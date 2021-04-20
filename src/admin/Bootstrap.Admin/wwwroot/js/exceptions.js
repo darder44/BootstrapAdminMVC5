@@ -14,14 +14,14 @@
         queryParams: function (params) { return $.extend(params, { StartTime: $("#txt_operate_start").val(), EndTime: $("#txt_operate_end").val() }); },
         columns: [
             { title: "紀錄時間", field: "LogTime", sortable: true },
-            { title: "请求網址", field: "ErrorPage", sortable: true },
+            { title: "請求網址", field: "ErrorPage", sortable: true },
             { title: "用户名", field: "UserId", sortable: true },
-            { title: "登入主机", field: "UserIp", sortable: true },
-            { title: "异常類型", field: "ExceptionType", sortable: false },
-            { title: "异常描述", field: "Message", sortable: false }
+            { title: "登入主機", field: "UserIp", sortable: true },
+            { title: "異常類型", field: "ExceptionType", sortable: false },
+            { title: "異常描述", field: "Message", sortable: false }
         ],
         exportOptions: {
-            fileName: "程式异常資料"
+            fileName: "程式異常資料"
         }
     });
 

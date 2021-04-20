@@ -9,12 +9,12 @@ using Task = System.Threading.Tasks.Task;
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// SignalR 操作扩展類
+    /// SignalR 操作擴展類
     /// </summary>
     public static class SignalRExtensions
     {
         /// <summary>
-        /// 推送异常信息到客户端方法扩展
+        /// 推送異常信息到客户端方法擴展
         /// </summary>
         /// <param name="context"></param>
         /// <param name="ex"></param>
@@ -28,7 +28,7 @@ namespace Bootstrap.Admin
         }
 
         /// <summary>
-        /// 推送 MessageBody 到客户端方法扩展
+        /// 推送 MessageBody 到客户端方法擴展
         /// </summary>
         /// <param name="context"></param>
         /// <param name="messageBody"></param>
@@ -37,7 +37,7 @@ namespace Bootstrap.Admin
         public static Task SendMessageBody(this IHubContext<SignalRHub> context, MessageBody messageBody, CancellationToken token = default) => context.Clients.All.SendAsync("rev", messageBody, token);
 
         /// <summary>
-        /// 推送任務訊息到客户端扩展
+        /// 推送任務訊息到客户端擴展
         /// </summary>
         /// <param name="context"></param>
         /// <param name="args"></param>

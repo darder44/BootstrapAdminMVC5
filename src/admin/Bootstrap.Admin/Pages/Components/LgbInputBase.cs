@@ -10,7 +10,7 @@ namespace Bootstrap.Admin.Pages.Components
     public class LgbInputBase<TItem> : ValidateInputBase<TItem>
     {
         /// <summary>
-        /// 獲得/設置 控件样式 預設為 col-sm-6
+        /// 獲得/設置 控件樣式 預設為 col-sm-6
         /// </summary>
         [Parameter]
         public string ColumnClass { get; set; } = "col-sm-6";

@@ -1373,7 +1373,7 @@ define('echarts/echarts', [
         loadingEffect: 'spin',
         loadingText: '資料讀取中...',
         noDataEffect: 'bubble',
-        noDataText: '暂无資料',
+        noDataText: '暂無資料',
         calculable: false,
         calculableColor: 'rgba(255,165,0,0.6)',
         calculableHolderColor: '#ccc',
@@ -2148,9 +2148,9 @@ define('zrender/zrender', [
             mark: {
                 show: false,
                 title: {
-                    mark: '辅助线开關',
-                    markUndo: '刪除辅助线',
-                    markClear: '清空辅助线'
+                    mark: '輔助线开關',
+                    markUndo: '刪除輔助线',
+                    markClear: '清空輔助线'
                 },
                 lineStyle: {
                     width: 1,
@@ -2161,8 +2161,8 @@ define('zrender/zrender', [
             dataZoom: {
                 show: false,
                 title: {
-                    dataZoom: '区域缩放',
-                    dataZoomReset: '区域缩放後退'
+                    dataZoom: '区域縮放',
+                    dataZoomReset: '区域縮放後退'
                 }
             },
             dataView: {
@@ -2171,7 +2171,7 @@ define('zrender/zrender', [
                 readOnly: false,
                 lang: [
                     '資料視圖',
-                    '關闭',
+                    '關閉',
                     '刷新'
                 ]
             },
@@ -38024,7 +38024,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '4213',
                 'properties': {
-                    'name': '随州市',
+                    'name': '隨州市',
                     'cp': [
                         113.4338,
                         31.8768
@@ -38707,7 +38707,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '3202',
                 'properties': {
-                    'name': '无锡市',
+                    'name': '無锡市',
                     'cp': [
                         120.3442,
                         31.5527
@@ -41442,7 +41442,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '5120',
                 'properties': {
-                    'name': '资阳市',
+                    'name': '資阳市',
                     'cp': [
                         104.9744,
                         30.1575

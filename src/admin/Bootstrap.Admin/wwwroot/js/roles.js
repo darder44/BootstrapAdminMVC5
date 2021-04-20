@@ -127,7 +127,7 @@ $(function () {
         },
         smartTable: {
             sortName: 'RoleName',
-            queryParams: function (params) { return $.extend(params, { roleName: $("#txt_search_name").val(), description: $("#txt_role_desc").val() }); },           //传递参数（*）
+            queryParams: function (params) { return $.extend(params, { roleName: $("#txt_search_name").val(), description: $("#txt_role_desc").val() }); },           //傳递参数（*）
             columns: [
                 { title: "角色名稱", field: "RoleName", sortable: true },
                 { title: "角色描述", field: "Description", sortable: false }

@@ -11,7 +11,7 @@ INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('應用程式
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '網站標題', '後台管理系統', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '網站頁腳', '2016 © 通用後台管理系統', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系統通知', '用户注册', '0', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系統通知', '程式异常', '1', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系統通知', '程式異常', '1', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('系統通知', '資料庫連接', '2', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('通知状態', '未處理', '0', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('通知状態', '已處理', '1', 0);
@@ -23,14 +23,14 @@ INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('訊息標簽
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('訊息標簽', '紧要', '1', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('頭像地址', '頭像路徑', '~/images/uploader/', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('頭像地址', '頭像文件', 'default.jpg', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站样式', '蓝色样式', 'blue.css', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站样式', '黑色样式', 'black.css', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站样式', 'AdminLTE', 'lte.css', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '使用样式', 'blue.css', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站樣式', '蓝色樣式', 'blue.css', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站樣式', '黑色樣式', 'black.css', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站樣式', 'AdminLTE', 'lte.css', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '使用樣式', 'blue.css', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '前台首頁', '~/Home/Index', 0);
 
 -- 網站UI設置
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '侧边欄状態', '1', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '侧邊欄状態', '1', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '卡片標題状態', '1', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '固定表頭', '1', 0);
 
@@ -49,7 +49,7 @@ INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '健康检查', '1', 0);
 
 -- 時長單位 月
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '程式异常保留時長', '1', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '程式異常保留時長', '1', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '操作日誌保留時長', '12', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '登入日誌保留時長', '12', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '訪問日誌保留時長', '1', 0);
@@ -58,9 +58,9 @@ INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', 'Cookie保留時長', '7', 0);
 
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', 'IP地理位置接口', 'None', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('地理位置服务', '百度地图开放平台', 'BaiDuIPSvr', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('地理位置服务', '聚合地理位置', 'JuheIPSvr', 0);
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('地理位置服务', '百度138地理位置', 'BaiDuIP138Svr', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('地理位置服務', '百度地圖开放平台', 'BaiDuIPSvr', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('地理位置服務', '聚合地理位置', 'JuheIPSvr', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('地理位置服務', '百度138地理位置', 'BaiDuIP138Svr', 0);
 
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('地理位置', 'BaiDuIPSvr', 'http://api.map.baidu.com/location/ip?ak=6lvVPMDlm2gjLpU0aiqPsHXi2OiwGQRj&ip=', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('地理位置', 'JuheIPSvr', 'http://apis.juhe.cn/ip/ipNew?key=f57102d1b9fadd3f4a1c29072d0c0206&ip=', 0);
@@ -75,7 +75,7 @@ INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '授權盐值', 'yjglE2eddCGcS7tTFTDd2DfvqXHgCnMhNhpmx9HJaC9l8GAZ', 0);
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '哈希结果', '6jTT50HGuk8V+AIsiE4IfqjcER71PBN1DY7gqOLZE7E=', 0);
 
-INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '驗證碼图床', 'http://imgs.sdgxgz.com/images/', 0);
+INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '驗證碼圖床', 'http://imgs.sdgxgz.com/images/', 0);
 
 INSERT INTO [Dicts] ([Category], [Name], [Code], [Define]) VALUES ('網站設置', '預設應用程式', '0', 0);
 
@@ -96,7 +96,7 @@ INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid(), '保存顯示名稱', 10, 'fa fa-fa', 'saveDisplayName', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 1, '保存密碼', 20, 'fa fa-fa', 'savePassword', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 2, '保存應用', 30, 'fa fa-fa', 'saveApp', '0', 2);
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 3, '保存样式', 40, 'fa fa-fa', 'saveTheme', '0', 2);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 3, '保存樣式', 40, 'fa fa-fa', 'saveTheme', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 4, '保存頭像', 50, 'fa fa-fa', 'saveIcon', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 5, '保存網站設置', 60, 'fa fa-fa', 'saveUISettings', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '系統鎖屏', 25, 'fa fa-television', '~/Account/Lock', '0');
@@ -104,7 +104,7 @@ INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '網站設置', 40, 'fa fa-fa', '~/Admin/Settings', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid(), '保存系統名稱', 10, 'fa fa-fa', 'saveTitle', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 1, '保存頁腳設置', 20, 'fa fa-fa', 'saveFooter', '0', 2);
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 2, '保存样式', 30, 'fa fa-fa', 'saveTheme', '0', 2);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 2, '保存樣式', 30, 'fa fa-fa', 'saveTheme', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 3, '清理缓存', 40, 'fa fa-fa', 'clearCache', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 4, '清理全部缓存', 50, 'fa fa-fa', 'clearAllCache', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 5, '登入設置', 60, 'fa fa-fa', 'loginSettings', '0', 2);
@@ -115,8 +115,8 @@ INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 1, '編輯', 20, 'fa fa-fa', 'edit', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 2, '刪除', 30, 'fa fa-fa', 'del', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 3, '分配角色', 40, 'fa fa-fa', 'assignRole', '0', 2);
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (0, '图標頁面', 50, 'fa fa-fa', '~/Admin/IconView', '0', 1);
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (0, '侧边欄', 55, 'fa fa-fa', '~/Admin/Sidebar', '0', 1);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (0, '圖標頁面', 50, 'fa fa-fa', '~/Admin/IconView', '0', 1);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (0, '侧邊欄', 55, 'fa fa-fa', '~/Admin/Sidebar', '0', 1);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '用户管理', 60, 'fa fa-user', '~/Admin/Users', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid(), '新增', 10, 'fa fa-fa', 'add', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid() - 1, '編輯', 20, 'fa fa-fa', 'edit', '0', 2);
@@ -153,13 +153,13 @@ INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid() - 3, 'SQL日誌', 40, 'fa fa-database', '~/Admin/SQL', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '線上用户', 140, 'fa fa-users', '~/Admin/Online', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '網站分析', 145, 'fa fa-line-chart', '~/Admin/Analyse', '0');
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '程式异常', 150, 'fa fa-cubes', '~/Admin/Exceptions', '0');
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid(), '服务器日誌', 10, 'fa fa-fa', 'log', '0', 2);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '程式異常', 150, 'fa fa-cubes', '~/Admin/Exceptions', '0');
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (last_insert_rowid(), '服務器日誌', 10, 'fa fa-fa', 'log', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '健康检查', 155, 'fa fa-heartbeat', '~/Admin/Healths', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '工具集合', 160, 'fa fa-gavel', '#', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid(), '客户端測試', 10, 'fa fa-wrench', '~/Admin/Mobile', '0');
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid() - 1, 'API文档', 20, 'fa fa-wrench', '~/swagger', '0');
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid() - 2, '图標集', 30, 'fa fa-dashboard', '~/Admin/FAIcon', '0');
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid() - 1, 'API文檔', 20, 'fa fa-wrench', '~/swagger', '0');
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (last_insert_rowid() - 2, '圖標集', 30, 'fa fa-dashboard', '~/Admin/FAIcon', '0');
 
 -- 控件集合選單
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, '控件集合', 170, 'fa fa-stethoscope', '#', '0');
@@ -200,7 +200,7 @@ Insert into Dicts (Category, [Name], Code, Define) values ('測試平台', '個�
 Insert into Dicts (Category, [Name], Code, Define) values ('測試平台', '系統設置地址', '/Admin/Index', 1);
 Insert into Dicts (Category, [Name], Code, Define) values ('測試平台', '系統通知地址', '/Admin/Notifications', 1);
 INSERT INTO Dicts (Category, [Name], Code, Define) VALUES ('測試平台', 'favicon', '/favicon.ico', 1);
-INSERT INTO Dicts (Category, [Name], Code, Define) VALUES ('測試平台', '網站图標', '/favicon.png', 1);
+INSERT INTO Dicts (Category, [Name], Code, Define) VALUES ('測試平台', '網站圖標', '/favicon.png', 1);
 
 Delete from [Navigations] where Application = 'Demo';
 INSERT into [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], [Application]) VALUES (0, '首頁', 10, 'fa fa-fa', '~/Home/Index', '1', 'Demo');

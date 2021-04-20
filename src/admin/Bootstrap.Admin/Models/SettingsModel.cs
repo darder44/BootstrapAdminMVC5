@@ -14,7 +14,7 @@ namespace Bootstrap.Admin.Models
     public class SettingsModel : NavigatorBarModel
     {
         /// <summary>
-        /// 构造函数
+        /// 構造函数
         /// </summary>
         /// <param name="controller"></param>
         public SettingsModel(ControllerBase controller) : base(controller)
@@ -53,7 +53,7 @@ namespace Bootstrap.Admin.Models
         }
 
         /// <summary>
-        /// 獲得 系統配置的所有样式表
+        /// 獲得 系統配置的所有樣式表
         /// </summary>
         public IEnumerable<BootstrapDict> Themes { get; }
 
@@ -78,7 +78,7 @@ namespace Bootstrap.Admin.Models
         public bool DefaultApp { get; }
 
         /// <summary>
-        /// 程式异常日誌保留時長
+        /// 程式異常日誌保留時長
         /// </summary>
         public int ErrorLogPeriod { get; }
 

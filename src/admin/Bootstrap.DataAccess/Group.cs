@@ -107,7 +107,7 @@ namespace Bootstrap.DataAccess
             try
             {
                 db.BeginTransaction();
-                //刪除用户部门表中该用户所有的部门關係
+                //刪除用户部门表中該用户所有的部门關係
                 db.Execute("delete from UserGroup where UserID = @0", userId);
                 db.InsertBatch("UserGroup", groupIds.Select(g => new { UserID = userId, GroupID = g }));
                 db.CompleteTransaction();
@@ -134,7 +134,7 @@ namespace Bootstrap.DataAccess
             try
             {
                 db.BeginTransaction();
-                //刪除角色部门表该角色所有的部门
+                //刪除角色部门表該角色所有的部门
                 db.Execute("delete from RoleGroup where RoleID = @0", roleId);
                 db.InsertBatch("RoleGroup", groupIds.Select(g => new { RoleID = roleId, GroupID = g }));
                 db.CompleteTransaction();

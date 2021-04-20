@@ -87,7 +87,7 @@ namespace Bootstrap.DataAccess
         {
             if (!value.Any()) return true;
 
-            // 禁止刪除系統資料与測試平台資料
+            // 禁止刪除系統資料與測試平台資料
             if (RetrieveSystemModel() && RetrieveProtectedDicts().Any(d => value.Any(v => v == d.Id))) return true;
             var ret = DbContextManager.Create<Dict>()?.Delete(value) ?? false;
             if (ret) CacheCleanUtility.ClearCache(dictIds: value);
@@ -147,7 +147,7 @@ namespace Bootstrap.DataAccess
             {
                 ["SaveWebTitle"] = "網站標題",
                 ["SaveWebFooter"] = "網站頁腳",
-                ["SaveTheme"] = "使用样式",
+                ["SaveTheme"] = "使用樣式",
                 ["ShowCardTitle"] = "卡片標題狀態",
                 ["ShowSideBar"] = "側邊欄狀態",
                 ["FixedTableHeader"] = "固定表頭",
@@ -200,13 +200,13 @@ namespace Bootstrap.DataAccess
         public static string RetrieveWebFooter(string appId) => DbContextManager.Create<Dict>()?.RetrieveWebFooter(appId) ?? string.Empty;
 
         /// <summary>
-        /// 獲得系統中配置的可以使用的網站样式
+        /// 獲得系統中配置的可以使用的網站樣式
         /// </summary>
         /// <returns></returns>
         public static IEnumerable<BootstrapDict> RetrieveThemes() => DbContextManager.Create<Dict>()?.RetrieveThemes() ?? new BootstrapDict[0];
 
         /// <summary>
-        /// 獲得網站設置中的當前样式
+        /// 獲得網站設置中的當前樣式
         /// </summary>
         /// <returns></returns>
         public static string RetrieveActiveTheme() => DbContextManager.Create<Dict>()?.RetrieveActiveTheme() ?? string.Empty;
@@ -256,20 +256,20 @@ namespace Bootstrap.DataAccess
         public static int RetrieveCookieExpiresPeriod() => DbContextManager.Create<Dict>()?.RetrieveCookieExpiresPeriod() ?? 7;
 
         /// <summary>
-        /// 獲取 IP 地址位置查詢服务名稱
+        /// 獲取 IP 地址位置查詢服務名稱
         /// </summary>
         /// <returns></returns>
         public static string RetrieveLocaleIPSvr() => DbContextManager.Create<Dict>()?.RetrieveLocaleIPSvr() ?? string.Empty;
 
         /// <summary>
-        /// 通过 IP 地理位置查詢服务名稱獲得請求地址方法
+        /// 通过 IP 地理位置查詢服務名稱獲得請求地址方法
         /// </summary>
-        /// <param name="ipSvr">ip地址請求服务名稱</param>
+        /// <param name="ipSvr">ip地址請求服務名稱</param>
         /// <returns></returns>
         public static string RetrieveLocaleIPSvrUrl(string ipSvr) => DbContextManager.Create<Dict>()?.RetrieveLocaleIPSvrUrl(ipSvr) ?? string.Empty;
 
         /// <summary>
-        /// 獲取 IP 地理位置查詢服务快取時長
+        /// 獲取 IP 地理位置查詢服務快取時長
         /// </summary>
         /// <returns></returns>
         public static int RetrieveLocaleIPSvrCachePeriod() => DbContextManager.Create<Dict>()?.RetrieveLocaleIPSvrCachePeriod() ?? 10;
@@ -294,7 +294,7 @@ namespace Bootstrap.DataAccess
         {
             var ret = false;
             // 檢查授權碼
-            // 請求者提供 秘钥与结果 服务器端通过算法比对结果
+            // 請求者提供 秘钥與结果 服務器端通过算法比对结果
             if (LgbCryptography.ComputeHash(authKey, RetrieveAuthorSalt()) == RetrieveAuthorHash())
             {
                 ret = DbContextManager.Create<Dict>()?.UpdateSystemModel(isDemo) ?? false;

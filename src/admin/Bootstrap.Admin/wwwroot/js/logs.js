@@ -14,13 +14,13 @@
             { title: "操作類型", field: "CRUD", sortable: true },
             { title: "用户名稱", field: "UserName", sortable: true },
             { title: "操作時間", field: "LogTime", sortable: true },
-            { title: "登入主机", field: "Ip", sortable: true },
+            { title: "登入主機", field: "Ip", sortable: true },
             { title: "操作地点", field: "City" },
-            { title: "浏览器", field: "Browser" },
+            { title: "瀏覽器", field: "Browser" },
             { title: "操作系統", field: "OS" },
             { title: "操作頁面", field: "RequestUrl", sortable: true },
             {
-                title: "请求資料", field: "RequestData", formatter: function (value, row, index) {
+                title: "請求資料", field: "RequestData", formatter: function (value, row, index) {
                     return '<button class="detail btn btn-info"><i class="fa fa-info"></i><span>明詳</span></button>';
                 },
                 events: {

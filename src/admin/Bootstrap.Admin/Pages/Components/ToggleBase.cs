@@ -23,7 +23,7 @@ namespace Bootstrap.Admin.Pages.Components
         /// 獲得/設置 組件 Off 時顯示文本
         /// </summary>
         [Parameter]
-        public string OffText { get; set; } = "收缩";
+        public string OffText { get; set; } = "收縮";
 
         /// <summary>
         /// 獲得/設置 組件是否處於 On 狀態 預設為 Off 狀態
@@ -32,13 +32,13 @@ namespace Bootstrap.Admin.Pages.Components
         public bool Value { get; set; } = false;
 
         /// <summary>
-        /// 獲得/設置 Value 值改变時回調事件
+        /// 獲得/設置 Value 值改變時回調事件
         /// </summary>
         [Parameter]
         public EventCallback<bool> ValueChanged { get; set; }
 
         /// <summary>
-        /// 獲得/設置 Value 值改变時回調事件
+        /// 獲得/設置 Value 值改變時回調事件
         /// </summary>
         protected void ToggleClick()
         {

@@ -68,7 +68,7 @@ namespace Bootstrap.DataAccess
             try
             {
                 db.BeginTransaction();
-                //刪除角色應用表该角色所有的應用
+                //刪除角色應用表該角色所有的應用
                 db.Execute("delete from RoleApp where RoleID = @0", roleId);
                 db.InsertBatch("RoleApp", appIds.Select(g => new { RoleID = roleId, AppID = g }));
                 db.CompleteTransaction();

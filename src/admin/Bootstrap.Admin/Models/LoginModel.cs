@@ -8,7 +8,7 @@ namespace Bootstrap.Admin.Models
     public class LoginModel : AdminModel
     {
         /// <summary>
-        /// 預設构造函数
+        /// 預設構造函数
         /// </summary>
         /// <param name="appId"></param>
         public LoginModel(string? appId = null) : base(appId)
@@ -22,7 +22,7 @@ namespace Bootstrap.Admin.Models
         public string ImageLibUrl { get; protected set; }
 
         /// <summary>
-        /// 是否登入認證失败 為真時客户端彈出滑块驗證碼
+        /// 是否登入認證失败 為真時客户端彈出slide-bar驗證碼
         /// </summary>
         public bool AuthFailed { get; set; }
     }

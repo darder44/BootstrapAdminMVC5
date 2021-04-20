@@ -634,7 +634,7 @@
 
 	$.fn.bootstrapTable.locales['zh-CN'] = {
 	  formatLoadingMessage: function formatLoadingMessage() {
-	    return '正在努力地加载資料中，请稍候';
+	    return '正在努力地加載資料中，請稍候';
 	  },
 	  formatRecordsPerPage: function formatRecordsPerPage(pageNumber) {
 	    return "\u6BCF\u9875\u663E\u793A ".concat(pageNumber, " \u6761\u8BB0\u5F55");
@@ -713,7 +713,7 @@
 	    return '高級查詢';
 	  },
 	  formatAdvancedCloseButton: function formatAdvancedCloseButton() {
-	    return '關闭';
+	    return '關閉';
 	  }
 	};
 	$.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);

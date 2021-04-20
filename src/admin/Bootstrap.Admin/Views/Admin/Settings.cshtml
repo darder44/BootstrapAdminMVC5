@@ -123,17 +123,17 @@
     </div>
 </div>
 <div class="card" asp-auth="saveTheme">
-    <div class="card-header">網站样式設置</div>
+    <div class="card-header">網站樣式設置</div>
     <div class="card-body">
         <div class="alert alert-info" role="alert">
-            <span>注意：<b><a class="badge-pill" href="./Profiles">個人中心</a></b>中設置的網站样式覆盖本設置</span>
+            <span>注意：<b><a class="badge-pill" href="./Profiles">個人中心</a></b>中設置的網站樣式覆盖本設置</span>
         </div>
         <div class="form-group text-right">
             <div class="btn-group" role="group">
                 <div class="btn-group" role="group">
-                    <button id="dictCssDefine" class="btn btn-success dropdown-select dropdown-toggle" data-toggle="dropdown" data-default-val="" value="@Model.Theme">預設样式</button>
+                    <button id="dictCssDefine" class="btn btn-success dropdown-select dropdown-toggle" data-toggle="dropdown" data-default-val="" value="@Model.Theme">預設樣式</button>
                     <div class="dropdown-menu">
-                        <a href="#" data-val="">預設样式</a>
+                        <a href="#" data-val="">預設樣式</a>
                         @foreach (var css in Model.Themes)
                         {
                             <a href="#" data-val="@css.Code">@css.Name</a>
@@ -152,7 +152,7 @@
             <div class="row">
                 <div class="form-group col-6">
                     <label class="control-label" for="sider">側邊欄設置</label>
-                    <input id="sider" hidden type="checkbox" data-default-val="@Model.ShowSideBar" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="展开" data-off="收缩" />
+                    <input id="sider" hidden type="checkbox" data-default-val="@Model.ShowSideBar" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="展开" data-off="收縮" />
                 </div>
                 <div class="form-group col-6">
                     <label class="control-label" for="cardTitle">標題設置</label>
@@ -160,7 +160,7 @@
                 </div>
                 <div class="form-group col-6">
                     <label class="control-label" for="tableHeader">固定表頭</label>
-                    <input id="tableHeader" hidden type="checkbox" data-default-val="@Model.FixedTableHeader" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="固定" data-off="跟随" />
+                    <input id="tableHeader" hidden type="checkbox" data-default-val="@Model.FixedTableHeader" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="固定" data-off="跟隨" />
                 </div>
                 <div class="form-group col-6">
                     <label class="control-label" for="health">健康檢查</label>
@@ -182,7 +182,7 @@
         <div class="form-inline">
             <div class="row">
                 <div class="form-group col-6">
-                    <label class="control-label" for="mobile">手机登入</label>
+                    <label class="control-label" for="mobile">手機登入</label>
                     <input id="mobile" hidden type="checkbox" data-default-val="@Model.ShowMobile" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="允許" data-off="關閉" />
                 </div>
                 <div class="form-group col-6">
@@ -238,7 +238,7 @@
         <div class="form-inline">
             <div class="row">
                 <div class="form-group col-6">
-                    <label class="control-label" data-toggle="lgbinfo" data-content="开啟此功能網站增加 Blazor 与 MVC 切换挂件" for="blazor">Blazor 切换</label>
+                    <label class="control-label" data-toggle="lgbinfo" data-content="开啟此功能網站增加 Blazor 與 MVC 切换挂件" for="blazor">Blazor 切换</label>
                     <input id="blazor" hidden type="checkbox" data-default-val="@Model.EnableBlazor" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="开啟" data-off="關閉" />
                 </div>
             </div>
@@ -280,7 +280,7 @@
         <div class="form-inline">
             <div class="row">
                 <div class="form-group col-6">
-                    <label class="control-label" for="appErrorLog">异常日誌(月)</label>
+                    <label class="control-label" for="appErrorLog">異常日誌(月)</label>
                     <input id="appErrorLog" type="number" class="form-control" min="1" value="@Model.ErrorLogPeriod" />
                 </div>
                 <div class="form-group col-6">

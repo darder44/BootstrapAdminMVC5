@@ -1,5 +1,5 @@
 (function ($) {
-    // 增加Array扩展
+    // 增加Array擴展
     if (!$.isFunction(Array.prototype.filter)) {
         Array.prototype.filter = function (callback, thisObject) {
             if ($.isFunction(callback)) {
@@ -12,7 +12,7 @@
         };
     }
 
-    // 增加String扩展
+    // 增加String擴展
     if (!$.isFunction(String.prototype.trim)) {
         String.prototype.trim = function () {
             if (this === null) return "";
@@ -21,7 +21,7 @@
         };
     }
 
-    // 扩展Date
+    // 擴展Date
     if (!$.isFunction(Date.prototype.format)) {
         Date.prototype.format = function (format) {
             var o = {
@@ -72,18 +72,18 @@
     jQuery.browser = {
         versions: function () {
             var u = navigator.userAgent;
-            return {         //移动终端浏览器版本信息
+            return {         //移动终端瀏覽器版本信息
                 trident: u.indexOf('Trident') > -1, //IE内核
                 presto: u.indexOf('Presto') > -1, //opera内核
                 webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
                 gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') === -1, //火狐内核
                 mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否為移动终端
                 ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
-                iPhone: u.indexOf('iPhone') > -1, //是否為iPhone或者QQHD浏览器
-                iPod: u.indexOf('iPod') > -1, //是否為iPod或者QQHD浏览器
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc瀏覽器
+                iPhone: u.indexOf('iPhone') > -1, //是否為iPhone或者QQHD瀏覽器
+                iPod: u.indexOf('iPod') > -1, //是否為iPod或者QQHD瀏覽器
                 iPad: u.indexOf('iPad') > -1, //是否iPad
-                webApp: u.indexOf('Safari') === -1 //是否web應该程式，没有頭部与底部
+                webApp: u.indexOf('Safari') === -1 //是否web應該程式，没有頭部與底部
             };
         }(),
         language: (navigator.browserLanguage || navigator.language).toLowerCase()
@@ -156,7 +156,7 @@
             }, options);
 
             if (!options.url || options.url === "") {
-                toastr.error('未設置请求地址Url', '参数错误');
+                toastr.error('未設置請求地址Url', '参数錯誤');
                 return;
             }
 
@@ -225,7 +225,7 @@
                     }
                     if (window.toastr) {
                         if (errorThrown === '') errorThrown = url;
-                        toastr.error(XMLHttpRequest.status === 500 ? '後台應用程式错误' : errorThrown, '程式错误');
+                        toastr.error(XMLHttpRequest.status === 500 ? '後台應用程式錯誤' : errorThrown, '程式錯誤');
                     }
                     success(false);
                 }
@@ -256,7 +256,7 @@
             var op = $.extend({ header: "header", content: "body > section:first", ele: 'footer' }, options);
             var $ele = $(op.ele);
 
-            // 增加 1px 修复 IE11 下由於小数点導致頁腳消失bug
+            // 增加 1px 修復 IE11 下由於小数点導致頁腳消失bug
             return $(op.header).outerHeight() + $(op.content).outerHeight() + $ele.outerHeight() > $(window).height() + 1 ? $ele.removeClass('position-fixed') : $ele.addClass('position-fixed');
         },
         formatUrl: function (url) {
@@ -348,8 +348,8 @@
                 cache: false,                       //是否使用缓存，預設為true，所以一般情况下需要設置一下这個属性（*）
                 pagination: true,                   //是否顯示分頁（*）
                 sortOrder: "asc",                   //排序方式
-                sidePagination: "server",           //分頁方式：client客户端分頁，server服务端分頁（*）
-                pageNumber: 1,                      //初始化加载第一頁，預設第一頁
+                sidePagination: "server",           //分頁方式：client客户端分頁，server服務端分頁（*）
+                pageNumber: 1,                      //初始化加載第一頁，預設第一頁
                 pageSize: 20,                       //每頁的紀錄行数（*）
                 pageList: [20, 40, 80, 120],        //可供选择的每頁的行数（*）
                 showExport: true,
@@ -425,7 +425,7 @@
                             $search.trigger('click');
                         }
                         else {
-                            // 无查詢按鈕是使用 refresh 方法
+                            // 無查詢按鈕是使用 refresh 方法
                             event.data.bootstrapTable('refresh');
                         }
                     }
@@ -488,7 +488,7 @@
                 });
             }
 
-            // 加载資料
+            // 加載資料
             this.bootstrapTable(settings);
 
             // 如果固定表頭 禁止容器滚动條出现
@@ -660,7 +660,7 @@
                 return console.error(err.toString());
             }).then(function () {
                 // 連接成功
-                // invoke 為 调用服务端方法
+                // invoke 為 调用服務端方法
                 // invoke: function (connection) { return connection.invoke('RetrieveDashboard'); }
                 if (!op.invoke) return;
                 var executor = op.invoke(connection);
@@ -755,7 +755,7 @@
                     return '<span>高級查詢</span>';
                 },
                 formatAdvancedCloseButton: function formatAdvancedCloseButton() {
-                    return '<span>關闭</span>';
+                    return '<span>關閉</span>';
                 }
             });
         }

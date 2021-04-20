@@ -55,13 +55,13 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 下發手机短信方法
+        /// 下發手機短信方法
         /// </summary>
         /// <param name="provider"></param>
         /// <param name="phone"></param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<SMSResult> Put([FromServices]ISMSProvider provider, [FromQuery]string phone) => string.IsNullOrEmpty(phone) ? new SMSResult() { Result = false, Msg = "手机号不可為空" } : await provider.SendCodeAsync(phone);
+        public async Task<SMSResult> Put([FromServices]ISMSProvider provider, [FromQuery]string phone) => string.IsNullOrEmpty(phone) ? new SMSResult() { Result = false, Msg = "手機号不可為空" } : await provider.SendCodeAsync(phone);
 
         /// <summary>
         /// 跨域握手协议

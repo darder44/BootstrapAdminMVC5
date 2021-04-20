@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 可編輯頁面組件包含查詢与資料表格
+    /// 可編輯頁面組件包含查詢與資料表格
     /// </summary>
     public class EditPageBase<TItem> : ComponentBase
     {

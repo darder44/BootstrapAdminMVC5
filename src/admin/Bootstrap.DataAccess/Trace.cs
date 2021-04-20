@@ -32,7 +32,7 @@ namespace Bootstrap.DataAccess
         /// <summary>
         /// 獲得/設置 客户端IP
         /// </summary>
-        [DisplayName("登錄主机")]
+        [DisplayName("登錄主機")]
         public string Ip { get; set; } = "";
 
         /// <summary>
@@ -42,9 +42,9 @@ namespace Bootstrap.DataAccess
         public string City { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 客户端浏览器
+        /// 獲得/設置 客户端瀏覽器
         /// </summary>
-        [DisplayName("浏览器")]
+        [DisplayName("瀏覽器")]
         public string Browser { get; set; } = "";
 
         /// <summary>

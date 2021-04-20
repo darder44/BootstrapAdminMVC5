@@ -31,12 +31,12 @@ namespace Bootstrap.DataAccess
         /// <returns></returns>
         public static bool Save(BootstrapMenu p)
         {
-            // 不允許保存系統選單与前台演示系統的預設選單
+            // 不允許保存系統選單與前台演示系統的預設選單
             if (DictHelper.RetrieveSystemModel())
             {
                 if (p.Category == "0") return true;
 
-                // 查找原有資料比对是否為系統選單与演示選單
+                // 查找原有資料比对是否為系統選單與演示選單
                 if (!string.IsNullOrEmpty(p.Id))
                 {
 
@@ -67,7 +67,7 @@ namespace Bootstrap.DataAccess
         {
             if (DictHelper.RetrieveSystemModel())
             {
-                // 不允許刪除系統選單与前台演示系統的預設選單
+                // 不允許刪除系統選單與前台演示系統的預設選單
                 var systemMenus = RetrieveAllMenus("Admin").Where(m => m.Category == "0");
                 value = value.Where(v => !systemMenus.Any(m => m.Id == v));
                 if (!value.Any()) return true;
@@ -162,11 +162,11 @@ namespace Bootstrap.DataAccess
         public static IEnumerable<BootstrapMenu> RetrieveAllMenus(string? userName) => string.IsNullOrEmpty(userName) ? new BootstrapMenu[0] : CacheManager.GetOrAdd($"{RetrieveMenusAll}-{userName}", key => DbContextManager.Create<Menu>()?.RetrieveAllMenus(userName), RetrieveMenusAll) ?? new BootstrapMenu[0];
 
         /// <summary>
-        /// 通过當前用户名与指定選單路徑獲取此選單下所有授權按鈕集合 (userName, url, auths) => bool
+        /// 通过當前用户名與指定選單路徑獲取此選單下所有授權按鈕集合 (userName, url, auths) => bool
         /// </summary>
         /// <param name="userName">當前操作用户名</param>
-        /// <param name="url">资源按鈕所属選單</param>
-        /// <param name="auths">资源授權碼</param>
+        /// <param name="url">資源按鈕所属選單</param>
+        /// <param name="auths">資源授權碼</param>
         /// <returns></returns>
         public static bool AuthorizateButtons(string userName, string url, string auths) => DbContextManager.Create<Menu>()?.AuthorizateButtons(userName, url, auths) ?? false;
     }

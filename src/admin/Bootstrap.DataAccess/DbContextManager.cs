@@ -3,7 +3,7 @@
 namespace Bootstrap.DataAccess
 {
     /// <summary>
-    /// 根據配置文件動態加载不同資料庫實體静態類別
+    /// 根據配置文件動態加載不同資料庫實體静態類別
     /// </summary>
     public static class DbContextManager
     {

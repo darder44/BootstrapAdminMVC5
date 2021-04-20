@@ -23,7 +23,7 @@ namespace Bootstrap.Admin
     public class Startup
     {
         /// <summary>
-        /// 构造函数
+        /// 構造函数
         /// </summary>
         /// <param name="configuration"></param>
         /// <param name="env"></param>
@@ -45,7 +45,7 @@ namespace Bootstrap.Admin
 
         // This method gets called by the runtime. Use this method to add services to the container.
         /// <summary>
-        /// 服务容器注入方法
+        /// 服務容器注入方法
         /// </summary>
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
@@ -93,7 +93,7 @@ namespace Bootstrap.Admin
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         /// <summary>
-        /// 管道构建方法
+        /// 管道構建方法
         /// </summary>
         /// <param name="app"></param>
         /// <param name="env"></param>

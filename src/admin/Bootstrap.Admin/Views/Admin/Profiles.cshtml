@@ -32,7 +32,7 @@
 }
 <input type="hidden" value="@Model.UserName" id="userName"/>
 <div class="card" asp-auth="saveDisplayName">
-    <div class="card-header">基本资料</div>
+    <div class="card-header">基本資料</div>
     <div class="card-body" data-toggle="LgbValidate" data-valid-button="#btnSaveDisplayName">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
             <span>演示系統禁止更改管理员顯示名稱</span>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="form-group col-sm-6 col-md-auto">
                     <label class="control-label" for="confirmPassword">確認密碼: </label>
-                    <input type="password" class="form-control" id="confirmPassword" placeholder="与新密碼一致" maxlength="16" equalTo="#newPassword" data-valid="true" />
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="與新密碼一致" maxlength="16" equalTo="#newPassword" data-valid="true" />
                 </div>
             </div>
         </form>
@@ -103,16 +103,16 @@
     </div>
 </div>
 <div class="card" asp-auth="saveTheme">
-    <div class="card-header">網站样式</div>
+    <div class="card-header">網站樣式</div>
     <div class="card-body">
         <div class="alert alert-info" role="alert">
-            <span>注意：本設置将覆盖<b><a class="badge-pill" href="./Settings">網站設置</a></b>中設置的網站样式</span>
+            <span>注意：本設置将覆盖<b><a class="badge-pill" href="./Settings">網站設置</a></b>中設置的網站樣式</span>
         </div>
         <div class="form-group">
             <div class="btn-group" role="group">
-                <button id="css" class="btn btn-success dropdown-select dropdown-toggle" data-toggle="dropdown" data-default-val="" value="@Model.Css">預設样式</button>
+                <button id="css" class="btn btn-success dropdown-select dropdown-toggle" data-toggle="dropdown" data-default-val="" value="@Model.Css">預設樣式</button>
                 <div class="dropdown-menu">
-                    <a href="#" data-val="">預設样式</a>
+                    <a href="#" data-val="">預設樣式</a>
                     @foreach (var css in Model.Themes)
                     {
                         <a href="#" data-val="@css.Code">@css.Name</a>

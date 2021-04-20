@@ -21,7 +21,7 @@
                 url: "api/OnlineUsers",
                 method: "put",
                 callback: function (result) {
-                    // 返回真時表示三次驗證需要滑块驗證碼
+                    // 返回真時表示三次驗證需要slide-bar驗證碼
                     if (result) captcha.addClass('d-block');
                     else success();
                 }
@@ -31,7 +31,7 @@
             return $(window).width() < 768 ? 256 : 272;
         },
         capHeight: function () {
-            // 如果關闭 oAuth 認證 高度要缩小
+            // 如果關閉 oAuth 認證 高度要縮小
             var height = 150;
             if ($(window).width() < 768) height = $('.slidercaptcha:first').hasClass('oauth') ? 96 : 150;
             return height;
@@ -165,7 +165,7 @@
                 $loginMobile.removeClass('d-none');
 
                 $this.attr('data-value', 'sms').text('用户名密碼登陆');
-                $loginButton.attr('data-original-title', '请輸入手机号碼并点击發送驗證碼');
+                $loginButton.attr('data-original-title', '請輸入手機号碼并点击發送驗證碼');
             }
             else {
                 // sms model
@@ -207,7 +207,7 @@
                     // send success
                     $this.text('已發送').attr('disabled', true);
                     $('#code').removeAttr('disabled');
-                    if (result.Data === null) $loginButton.attr('data-original-title', '请輸入驗證碼');
+                    if (result.Data === null) $loginButton.attr('data-original-title', '請輸入驗證碼');
                     else {
                         $('#code').val(result.Data);
                         $loginButton.attr('data-original-title', '点击登入系統');

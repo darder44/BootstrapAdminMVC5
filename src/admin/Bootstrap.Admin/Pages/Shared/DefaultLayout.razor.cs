@@ -138,7 +138,7 @@ namespace Bootstrap.Admin.Pages.Shared
         }
 
         /// <summary>
-        /// 顯示名稱变化時方法
+        /// 顯示名稱變化時方法
         /// </summary>
         public void OnDisplayNameChanged(string displayName)
         {
@@ -148,7 +148,7 @@ namespace Bootstrap.Admin.Pages.Shared
         }
 
         /// <summary>
-        /// 網站標題变化時触發此方法
+        /// 網站標題變化時触發此方法
         /// </summary>
         /// <param name="title"></param>
         public void OnWebTitleChanged(string title)
@@ -164,7 +164,7 @@ namespace Bootstrap.Admin.Pages.Shared
         public string WebFooter { get; set; } = "";
 
         /// <summary>
-        /// 網站頁腳文字变化是触發此方法
+        /// 網站頁腳文字變化是触發此方法
         /// </summary>
         /// <param name="text"></param>
         public void OnWebFooterChanged(string text) => Footer?.TextChanged.InvokeAsync(text);

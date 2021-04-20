@@ -29,7 +29,7 @@ namespace Bootstrap.Admin.Pages.Models
         public bool External { get; }
 
         /// <summary>
-        /// 构造函数 Blazor 頁面調用
+        /// 構造函数 Blazor 頁面調用
         /// </summary>
         public ProfilesModel(string? userName) : base(userName)
         {

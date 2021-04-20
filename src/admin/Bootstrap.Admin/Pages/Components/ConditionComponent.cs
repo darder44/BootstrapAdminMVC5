@@ -54,7 +54,7 @@ namespace Bootstrap.Admin.Pages.Components
         /// <param name="builder"></param>
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
-            // 授權碼赋值時使用 IButtonAuthorization 服务進行判斷
+            // 授權碼赋值時使用 IButtonAuthorization 服務進行判斷
             var render = false;
             if (!string.IsNullOrEmpty(AuthKey))
             {

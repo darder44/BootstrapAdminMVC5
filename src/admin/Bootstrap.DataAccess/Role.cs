@@ -179,7 +179,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 根據GroupId查詢和该Group有關的所有Roles
+        /// 根據GroupId查詢和該Group有關的所有Roles
         /// </summary>
         /// <param name="groupId"></param>
         /// <returns></returns>

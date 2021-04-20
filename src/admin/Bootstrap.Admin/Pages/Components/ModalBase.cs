@@ -17,13 +17,13 @@ namespace Bootstrap.Admin.Pages.Components
         protected IJSRuntime? JSRuntime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 ModalBody 程式碼块
+        /// 獲得/設置 ModalBody 程式碼塊
         /// </summary>
         [Parameter]
         public RenderFragment? ModalBody { get; set; }
 
         /// <summary>
-        /// 獲得/設置 彈窗 Footer 程式碼块
+        /// 獲得/設置 彈窗 Footer 程式碼塊
         /// </summary>
         [Parameter]
         public RenderFragment? ModalFooter { get; set; }
@@ -75,7 +75,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 輸出窗口大小样式
+        /// 輸出窗口大小樣式
         /// </summary>
         /// <returns></returns>
         protected string RenderModalSize()

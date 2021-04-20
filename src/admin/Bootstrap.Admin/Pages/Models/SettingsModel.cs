@@ -11,7 +11,7 @@ namespace Bootstrap.Admin.Pages.Models
     public class SettingsModel : NavigatorBarModel
     {
         /// <summary>
-        /// 构造函数 Blazor 使用
+        /// 構造函数 Blazor 使用
         /// </summary>
         public SettingsModel(string? userName) : base(userName)
         {
@@ -21,7 +21,7 @@ namespace Bootstrap.Admin.Pages.Models
         }
 
         /// <summary>
-        /// 獲得 系統配置的所有样式表
+        /// 獲得 系統配置的所有樣式表
         /// </summary>
         public IEnumerable<BootstrapDict> Themes { get; }
 

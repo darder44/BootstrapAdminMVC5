@@ -14,7 +14,7 @@ namespace Bootstrap.Admin.Pages.Components
         public RenderFragment? AlertBody { get; set; }
 
         /// <summary>
-        /// 獲得/設置 彈窗 Footer 程式碼块
+        /// 獲得/設置 彈窗 Footer 程式碼塊
         /// </summary>
         [Parameter]
         public RenderFragment? AlertFooter { get; set; }

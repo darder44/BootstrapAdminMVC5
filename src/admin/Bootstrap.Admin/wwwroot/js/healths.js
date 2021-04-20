@@ -9,7 +9,7 @@
         return healthStatus[value];
     };
 
-    var cate = { "db": "資料庫", "file": "組件文件", "mem": "内存", "Gitee": "Gitee 接口", "gc": "垃圾回收器", "dotnet-runtime": "运行時", "environment": "环境变量" };
+    var cate = { "db": "資料庫", "file": "組件文件", "mem": "内存", "Gitee": "Gitee 接口", "gc": "垃圾回收器", "dotnet-runtime": "运行時", "environment": "环境變量" };
     var CategoryFormatter = function (value) {
         return cate[value];
     };
@@ -28,7 +28,7 @@
         columns: [
             { title: "分類", field: "Name", formatter: CategoryFormatter },
             { title: "描述", field: "Description" },
-            { title: "异常信息", field: "Exception", formatter: ExceptionFormatter },
+            { title: "異常信息", field: "Exception", formatter: ExceptionFormatter },
             { title: "耗時", field: "Duration" },
             { title: "檢查结果", field: "Status", formatter: StatusFormatter },
             {

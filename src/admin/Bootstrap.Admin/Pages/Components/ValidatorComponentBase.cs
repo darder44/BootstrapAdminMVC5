@@ -11,7 +11,7 @@ namespace Bootstrap.Admin.Pages.Components
     public abstract class ValidatorComponentBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 错误描述信息
+        /// 獲得/設置 錯誤描述信息
         /// </summary>
         [Parameter]
         public string ErrorMessage { get; set; } = "";

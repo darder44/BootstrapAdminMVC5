@@ -4,12 +4,12 @@ using Bootstrap.Admin.Pages.Components;
 namespace Microsoft.JSInterop
 {
     /// <summary>
-    /// JSRuntime 扩展操作類
+    /// JSRuntime 擴展操作類
     /// </summary>
     public static class JSRuntimeExtensions
     {
         /// <summary>
-        /// 根据指定選單 ID 激活側邊欄選單項
+        /// 根據指定選單 ID 激活側邊欄選單項
         /// </summary>
         /// <param name="jsRuntime"></param>
         /// <param name="menuId"></param>

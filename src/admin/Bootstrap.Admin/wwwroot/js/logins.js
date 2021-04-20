@@ -21,9 +21,9 @@ $(function () {
             },
             { title: "登入名稱", field: "UserName" },
             { title: "登入時間", field: "LoginTime" },
-            { title: "主机", field: "Ip" },
+            { title: "主機", field: "Ip" },
             { title: "登入地点", field: "City" },
-            { title: "浏览器", field: "Browser" },
+            { title: "瀏覽器", field: "Browser" },
             { title: "操作系統", field: "OS" },
             {
                 title: "登入结果", field: "Result", formatter: function (value, row, index) {

@@ -56,7 +56,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 通過指定選單檢查父級選單是否為選單類型 资源与按鈕返回 false
+        /// 通過指定選單檢查父級選單是否為選單類型 資源與按鈕返回 false
         /// </summary>
         /// <returns></returns>
         [HttpGet("{id}")]

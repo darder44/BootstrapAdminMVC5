@@ -18,15 +18,15 @@ namespace Bootstrap.Admin.Controllers
             var content = await r.Content.ReadAsStringAsync();
             if (errorCode == 0)
             {
-                Assert.Contains("未處理服务器内部错误", content);
+                Assert.Contains("未處理服務器内部錯誤", content);
             }
             else if (errorCode == 404)
             {
-                Assert.Contains("請求资源未找到", content);
+                Assert.Contains("請求資源未找到", content);
             }
             else
             {
-                Assert.Contains("服务器内部错误", content);
+                Assert.Contains("服務器内部錯誤", content);
             }
         }
 

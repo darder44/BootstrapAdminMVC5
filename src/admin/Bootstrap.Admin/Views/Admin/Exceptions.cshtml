@@ -1,6 +1,6 @@
 @model NavigatorBarModel
 @{
-    ViewBag.Title = "程式异常";
+    ViewBag.Title = "程式異常";
 }
 @section css {
     <environment include="Development">
@@ -17,24 +17,24 @@
     <environment include="Development">
         <script src="~/lib/bootstrap-table/bootstrap-table.js"></script>
         <script src="~/lib/bootstrap-table/extensions/export/bootstrap-table-export.js"></script>
-        <script src="~/lib/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+        <script src="~/lib/bootstrap-table/locale/bootstrap-table-zh-TW.js"></script>
         <script src="~/lib/tablexport/tableExport.js"></script>
         <script src="~/lib/datetimepicker/js/bootstrap-datetimepicker.js"></script>
     </environment>
     <environment exclude="Development">
         <script src="~/lib/bootstrap-table/bootstrap-table.min.js"></script>
         <script src="~/lib/bootstrap-table/extensions/export/bootstrap-table-export.min.js"></script>
-        <script src="~/lib/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+        <script src="~/lib/bootstrap-table/locale/bootstrap-table-zh-TW.min.js"></script>
         <script src="~/lib/tablexport/tableExport.min.js"></script>
         <script src="~/lib/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
     </environment>
-    <script src="~/lib/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="~/lib/datetimepicker/js/locales/bootstrap-datetimepicker.zh-TW.js"></script>
     <script src="~/js/exceptions.js" asp-append-version="true"></script>
 }
 <div id="toolbar" class="d-none">
     <div class="toolbar btn-group">
         <button id="btn_view" type="button" class="btn btn-danger" asp-auth="log">
-            <i class="fa fa-file-text-o" aria-hidden="true"></i><span>服务器日誌</span>
+            <i class="fa fa-file-text-o" aria-hidden="true"></i><span>服務器日誌</span>
         </button>
     </div>
     <div class="gear btn-group dropdown">
@@ -56,7 +56,7 @@
     <div id="errorList" class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabel">程式异常日誌窗口</h5>
+                <h5 class="modal-title" id="myModalLabel">程式異常日誌窗口</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
@@ -73,7 +73,7 @@
 </div>
 <div id="errorDetail" class="modal-content icon-content">
     <div class="modal-header">
-        <h5 class="modal-title" id="myDetailModalLabel">程式异常日誌窗口</h5>
+        <h5 class="modal-title" id="myDetailModalLabel">程式異常日誌窗口</h5>
         <button type="button" class="close" aria-hidden="true">&times;</button>
     </div>
     <div class="modal-body">

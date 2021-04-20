@@ -8,7 +8,7 @@ using System.Net;
 namespace Microsoft.AspNetCore.Http
 {
     /// <summary>
-    /// HttpContextExtensions 扩展方法
+    /// HttpContextExtensions 擴展方法
     /// </summary>
     public static class HttpContextExtensions
     {

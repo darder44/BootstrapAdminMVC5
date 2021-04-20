@@ -35,7 +35,7 @@ namespace Bootstrap.Admin.Pages.Components
         public Action<TItem, bool>? OnClick { get; set; }
 
         /// <summary>
-        /// 組件狀態改变回調方法
+        /// 組件狀態改變回調方法
         /// </summary>
         [Parameter]
         public Func<TItem, CheckBoxState>? SetCheckCallback { get; set; }

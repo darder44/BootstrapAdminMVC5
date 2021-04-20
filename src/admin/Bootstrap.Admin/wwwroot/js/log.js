@@ -41,7 +41,7 @@
                 this.log({ crud: '設置預設應用' });
             },
             '#btnSaveCss': function () {
-                this.log({ crud: '設置個人样式' });
+                this.log({ crud: '設置個人樣式' });
             },
             'a.btn.fileinput-upload-button': function () {
                 this.log({ crud: '設置頭像' });
@@ -56,7 +56,7 @@
                 this.log({ crud: '保存網站頁腳' });
             },
             'button[data-method="css"]': function () {
-                this.log({ crud: '設置網站样式' });
+                this.log({ crud: '設置網站樣式' });
             },
             'button[data-method="UISettings"]': function () {
                 this.log({ crud: '保存網站設置' });

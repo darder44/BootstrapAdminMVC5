@@ -122,7 +122,7 @@
     var formatCategoryName = function (menu) {
         var ret = "";
         if (menu.IsResource === 2) ret = "按鈕";
-        else if (menu.IsResource === 1) ret = "资源";
+        else if (menu.IsResource === 1) ret = "資源";
         else ret = menu.CategoryName;
         return ret;
     };
@@ -209,7 +209,7 @@ $(function () {
     // custom scrollbar
     $sidebar = $('.sidebar').addNiceScroll().autoScrollSidebar({ target: arch.parent(), offsetTop: arch.parent().innerHeight() / 2 });
 
-    // 大於 768 時考虑網站設置 收缩側邊欄
+    // 大於 768 時考虑網站設置 收縮側邊欄
     if ($(window).width() > 768) {
         var $ele = $('aside');
         var collapsed = $ele.hasClass('collapsed');
@@ -258,7 +258,7 @@ $(function () {
     // Exceptions
     window.Exceptions = {
         url: 'api/Exceptions',
-        title: "程式异常日誌"
+        title: "程式異常日誌"
     };
 
     // Dicts
@@ -302,13 +302,13 @@ $(function () {
             var msg = result.Message;
             switch (cate) {
                 case "DB":
-                    toastr.error(msg, "資料庫操作發生异常");
+                    toastr.error(msg, "資料庫操作發生異常");
                     break;
                 case "Users":
                     toastr.success(msg, "新用户注册");
                     break;
                 case "App":
-                    toastr.warning(msg, "應用程式發生异常");
+                    toastr.warning(msg, "應用程式發生異常");
                     break;
             }
             if (result) this.reloadWidget();

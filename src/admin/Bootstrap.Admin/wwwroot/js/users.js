@@ -88,14 +88,14 @@ $(function () {
         smartTable: {
             sortName: 'RegisterTime',
             sortOrder: "desc",
-            queryParams: function (params) { return $.extend(params, { name: $("#txt_search_name").val(), displayName: $('#txt_display_name').val() }); },           //传递参数（*）
+            queryParams: function (params) { return $.extend(params, { name: $("#txt_search_name").val(), displayName: $('#txt_display_name').val() }); },           //傳递参数（*）
             columns: [
                 { title: "登入名稱", field: "UserName", sortable: true },
                 { title: "顯示名稱", field: "DisplayName", sortable: true },
                 { title: "注册時間", field: "RegisterTime", sortable: true },
                 { title: "授權時間", field: "ApprovedTime", sortable: true },
                 { title: "授權人", field: "ApprovedBy", sortable: true },
-                { title: "说明", field: "Description", sortable: false }
+                { title: "說明", field: "Description", sortable: false }
             ],
             editButtons: {
                 events: {

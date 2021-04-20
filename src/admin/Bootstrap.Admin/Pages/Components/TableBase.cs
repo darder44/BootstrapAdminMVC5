@@ -134,7 +134,7 @@ namespace Bootstrap.Admin.Pages.Components
         public bool ShowFooter { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否顯示扩展按鈕 預設為 true
+        /// 獲得/設置 是否顯示擴展按鈕 預設為 true
         /// </summary>
         [Parameter]
         public bool ShowExtendButtons { get; set; }
@@ -304,7 +304,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 每頁紀錄條数变化是調用此方法
+        /// 每頁紀錄條数變化是調用此方法
         /// </summary>
         protected void PageItemsChange(int pageItems)
         {
@@ -499,7 +499,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string SearchText { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 查詢關鍵字改变事件
+        /// 獲得/設置 查詢關鍵字改變事件
         /// </summary>
         [Parameter]
         public EventCallback<string> SearchTextChanged { get; set; }

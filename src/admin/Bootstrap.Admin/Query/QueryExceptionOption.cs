@@ -6,7 +6,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Query
 {
     /// <summary>
-    /// 程式异常查詢條件類
+    /// 程式異常查詢條件類
     /// </summary>
     public class QueryExceptionOption : PaginationOption
     {

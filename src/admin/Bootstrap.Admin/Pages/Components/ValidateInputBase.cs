@@ -60,12 +60,12 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 獲得/設置 错误描述信息
+        /// 獲得/設置 錯誤描述信息
         /// </summary>
         protected string ErrorMessage { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 資料合规样式
+        /// 獲得/設置 資料合规樣式
         /// </summary>
         protected string ValidCss { get; set; } = "";
 
@@ -125,7 +125,7 @@ namespace Bootstrap.Admin.Pages.Components
 
                     // 控件自身資料驗證時顯示 tooltip
                     // EditForm 資料驗證時調用 tooltip('enable') 保證 tooltip 組件生成
-                    // 調用 tooltip('hide') 後導致鼠標悬停時 tooltip 无法正常顯示
+                    // 調用 tooltip('hide') 後導致鼠標悬停時 tooltip 無法正常顯示
                     _tooltipMethod = validProperty ? "show" : "enable";
                 }
                 else

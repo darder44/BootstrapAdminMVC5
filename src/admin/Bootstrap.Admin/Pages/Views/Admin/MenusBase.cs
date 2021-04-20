@@ -16,7 +16,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
     public class MenusBase : QueryPageBase<BootstrapMenu>
     {
         /// <summary>
-        /// 獲得 授權服务
+        /// 獲得 授權服務
         /// </summary>
         [Inject]
         protected AuthenticationStateProvider? AuthenticationStateProvider { get; set; }
@@ -41,7 +41,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected List<SelectedItem> QueryResource { get; set; } = new List<SelectedItem>(new SelectedItem[] {
             new SelectedItem() { Text = "全部", Value = "-1", Active = true },
             new SelectedItem() { Text = "選單", Value = "0" },
-            new SelectedItem() { Text = "资源", Value = "1" },
+            new SelectedItem() { Text = "資源", Value = "1" },
             new SelectedItem() { Text = "按鈕", Value = "2" }
         });
 
@@ -66,7 +66,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         /// </summary>
         protected List<SelectedItem> DefineResource { get; set; } = new List<SelectedItem>(new SelectedItem[] {
             new SelectedItem() { Text = "選單", Value = "0" },
-            new SelectedItem() { Text = "资源", Value = "1" },
+            new SelectedItem() { Text = "資源", Value = "1" },
             new SelectedItem() { Text = "按鈕", Value = "2" }
         });
 

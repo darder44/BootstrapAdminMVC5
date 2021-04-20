@@ -49,7 +49,7 @@
         <div class="card-body">
             <form id="login" method="post" class="form-signin" data-demo="@Model.IsDemo">
                 <div class="" data-auth="@Model.AuthFailed" data-toggle="LgbValidate" data-valid-button="button[type='submit']">
-                    <div class="alert alert-danger d-none" asp-condition="@Model.AuthFailed">用户名或密碼错误！</div>
+                    <div class="alert alert-danger d-none" asp-condition="@Model.AuthFailed">用户名或密碼錯誤！</div>
                     <div id="loginUser" class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend" data-toggle="tooltip" title="用户名">
@@ -73,12 +73,12 @@
                     <div asp-condition="@Model.AllowMobile">
                         <div id="loginMobile" class="form-group d-none">
                             <div class="input-group">
-                                <div class="input-group-prepend" data-toggle="tooltip" title="手机号碼">
+                                <div class="input-group-prepend" data-toggle="tooltip" title="手機号碼">
                                     <div class="input-group-text">
                                         <span class="fa fa-phone"></span>
                                     </div>
                                 </div>
-                                <input type="tel" id="phone" name="phone" class="form-control digits" data-toggle="tooltip" placeholder="手机号碼" minlength="11" maxlength="11" data-required-msg="請輸入手机号碼" value="" data-valid="true" />
+                                <input type="tel" id="phone" name="phone" class="form-control digits" data-toggle="tooltip" placeholder="手機号碼" minlength="11" maxlength="11" data-required-msg="請輸入手機号碼" value="" data-valid="true" />
                             </div>
                         </div>
                         <div id="loginSMS" class="form-group d-none">
@@ -253,7 +253,7 @@
                 </div>
                 <div class="form-group">
                     <label for="f_desc">申請理由：</label>
-                    <textarea id="f_desc" class="form-control" placeholder="申請理由，500字以内" rows="3" maxlength="500" data-valid="true">我是用户XXX，我的手机号是XXXXXX，由於密碼忘记，請将密碼重置為123，登入後我自行更改，谢谢管理员</textarea>
+                    <textarea id="f_desc" class="form-control" placeholder="申請理由，500字以内" rows="3" maxlength="500" data-valid="true">我是用户XXX，我的手機号是XXXXXX，由於密碼忘记，請将密碼重置為123，登入後我自行更改，谢谢管理员</textarea>
                 </div>
             </div>
             <div class="modal-footer">

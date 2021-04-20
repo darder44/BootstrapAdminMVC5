@@ -20,7 +20,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class ExceptionsController : ControllerBase
     {
         /// <summary>
-        /// 顯示所有异常
+        /// 顯示所有異常
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -31,7 +31,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 异常程式頁面点击服务器日誌按鈕獲取所有物理日誌文件列表方法
+        /// 異常程式頁面点击服務器日誌按鈕獲取所有物理日誌文件列表方法
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -72,7 +72,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 查詢服务器端日誌文件参数類
+        /// 查詢服務器端日誌文件参数類
         /// </summary>
         public class ExceptionFileQuery
         {

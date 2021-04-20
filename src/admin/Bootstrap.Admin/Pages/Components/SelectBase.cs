@@ -11,7 +11,7 @@ namespace Bootstrap.Admin.Pages.Components
     public class SelectBase<TItem> : ValidateInputBase<TItem>
     {
         /// <summary>
-        /// 獲得/設置 Select 組件 列样式 預設 col-sm-6
+        /// 獲得/設置 Select 組件 列樣式 預設 col-sm-6
         /// </summary>
         [Parameter]
         public string ColumnClass { get; set; } = "col-sm-6";

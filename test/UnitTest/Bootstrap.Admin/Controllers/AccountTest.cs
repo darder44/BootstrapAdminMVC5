@@ -18,7 +18,7 @@ namespace Bootstrap.Admin.Controllers
 
             var r = await Client.GetAsync("Login");
 
-            // 恢复保护模式
+            // 恢復保护模式
             var db = DbManager.Create();
             db.Execute("Update Dicts Set Code = @0 Where Id = @1", "0", dict.Id);
             Assert.Equal(HttpStatusCode.OK, r.StatusCode);
@@ -33,7 +33,7 @@ namespace Bootstrap.Admin.Controllers
             var r = await Client.GetAsync("AccessDenied");
             Assert.True(r.IsSuccessStatusCode);
             var content = await r.Content.ReadAsStringAsync();
-            Assert.Contains("服务器拒绝處理您的請求", content);
+            Assert.Contains("服務器拒绝處理您的請求", content);
         }
     }
 }

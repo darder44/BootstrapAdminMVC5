@@ -61,8 +61,8 @@ namespace Bootstrap.Admin.Controllers.Api
             // 演示模式下禁止刪除内置任務
             if (DictHelper.RetrieveSystemModel() && _tasks.Any(t => t.Equals(widget.Name, StringComparison.OrdinalIgnoreCase))) return false;
 
-            // 加载任務執行體
-            // 此處可以扩展為任意 DLL 中的任意继承 ITask 接口的實體類
+            // 加載任務執行體
+            // 此處可以擴展為任意 DLL 中的任意继承 ITask 接口的實體類
             var taskExecutor = LgbActivator.CreateInstance<ITask>("Bootstrap.Admin", widget.TaskExecutorName);
             if (taskExecutor == null) return false;
 

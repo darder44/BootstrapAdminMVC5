@@ -14,10 +14,10 @@
         width: 280,     // canvas宽度
         height: 155,    // canvas高度
         PI: Math.PI,
-        sliderL: 42,    // 滑块邊长
-        sliderR: 9,     // 滑块半徑
-        offset: 5,      // 容错偏差
-        loadingText: '正在加载中...',
+        sliderL: 42,    // slide-bar邊长
+        sliderR: 9,     // slide-bar半徑
+        offset: 5,      // 容錯偏差
+        loadingText: '正在加載中...',
         failedText: '再試一次',
         barText: '向右滑动填充拼圖',
         repeatIcon: 'fa fa-repeat',
@@ -81,7 +81,7 @@
         };
 
         var canvas = createCanvas(this.options.width - 2, this.options.height); // 画布
-        var block = canvas.cloneNode(true); // 滑块
+        var block = canvas.cloneNode(true); // slide-bar
         var sliderContainer = createElement('div', 'sliderContainer');
         var refreshIcon = createElement('i', 'refreshIcon ' + this.options.repeatIcon);
         var sliderMask = createElement('div', 'sliderMask');
@@ -128,7 +128,7 @@
     _proto.initImg = function () {
         var that = this;
         var isIE = window.navigator.userAgent.indexOf('Trident') > -1;
-        var L = this.options.sliderL + this.options.sliderR * 2 + 3; // 滑块實际邊长
+        var L = this.options.sliderL + this.options.sliderR * 2 + 3; // slide-bar實际邊长
         var drawImg = function (ctx, operation) {
             var l = that.options.sliderL;
             var r = that.options.sliderR;
@@ -159,7 +159,7 @@
         img.crossOrigin = "Anonymous";
         var loadCount = 0;
         img.onload = function () {
-            // 随机创建滑块的位置
+            // 隨機創建slide-bar的位置
             that.x = getRandomNumberByRange(L + 10, that.options.width - (L + 10));
             that.y = getRandomNumberByRange(10 + that.options.sliderR * 2, that.options.height - (L + 10));
             drawImg(that.canvasCtx, 'fill');
@@ -180,7 +180,7 @@
                 console.error("can't load pic resource file from File protocal. Please try http or https");
             }
             if (loadCount >= that.options.maxLoadCount) {
-                that.text.text('加载失败').addClass('text-danger');
+                that.text.text('加載失败').addClass('text-danger');
                 return;
             }
             img.src = that.options.localImages();
@@ -191,7 +191,7 @@
             that.text.removeClass('text-danger');
             if ($.isFunction(that.options.setSrc)) src = that.options.setSrc();
             if (!src || src === '') src = 'https://picsum.photos/' + that.options.width + '/' + that.options.height + '/?image=' + Math.round(Math.random() * 20);
-            if (isIE) { // IE浏览器无法通過img.crossOrigin跨域，使用ajax獲取圖片blob然後转為dataURL顯示
+            if (isIE) { // IE瀏覽器無法通過img.crossOrigin跨域，使用ajax獲取圖片blob然後转為dataURL顯示
                 var xhr = new XMLHttpRequest();
                 xhr.onloadend = function (e) {
                     var file = new FileReader(); // FileReader仅支持IE10+

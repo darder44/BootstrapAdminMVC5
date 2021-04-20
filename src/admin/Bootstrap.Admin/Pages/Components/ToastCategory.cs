@@ -16,7 +16,7 @@
         Information,
 
         /// <summary>
-        /// 错误信息
+        /// 錯誤信息
         /// </summary>
         Error
     }

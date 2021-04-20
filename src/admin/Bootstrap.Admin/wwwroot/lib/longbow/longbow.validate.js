@@ -43,7 +43,7 @@
                 return $.data(element, "previousValue") || $.data(element, "previousValue", {
                     old: null,
                     valid: true,
-                    message: "请修正本字串"
+                    message: "請修正本字串"
                 });
             },
             startRequest: function (element) {
@@ -104,12 +104,12 @@
             }
         });
         if (this.options.modal) {
-            // 關闭 modal 時移除所有驗證信息
+            // 關閉 modal 時移除所有驗證信息
             $(this.options.modal).on('show.bs.modal', function (e) {
                 that.reset();
             });
 
-            // bs bug 彈窗内控件值更改後再次点击關闭按鈕是 hide.bs.modal 事件不被触發
+            // bs bug 彈窗内控件值更改後再次点击關閉按鈕是 hide.bs.modal 事件不被触發
             // 兼容 鍵盘事件 ESC
             var dismissTooltip = function (e) {
                 // 移除残留 tooltip
@@ -314,15 +314,15 @@
 
             $.validator.addMethod("ip", function (value, element) {
                 return this.optional(element) || /^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])$/.test(value);
-            }, "请填写正確的IP地址");
+            }, "請填写正確的IP地址");
 
             $.validator.addMethod("radioGroup", function (value, element) {
                 return $(element).find(':checked').length === 1;
-            }, "请选择一個选項");
+            }, "請选择一個选項");
 
             $.validator.addMethod("checkGroup", function (value, element) {
                 return $(element).parents('[data-toggle="LgbValidate"]').find(':checked').length >= 1;
-            }, "请选择一個选項");
+            }, "請选择一個选項");
 
             $.validator.addMethod("userName", function (value, element) {
                 return this.optional(element) || /^[a-zA-Z0-9_@.]*$/.test(value);

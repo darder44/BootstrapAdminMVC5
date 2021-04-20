@@ -65,7 +65,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 上传頭像按鈕調用
+        /// 上傳頭像按鈕調用
         /// </summary>
         /// <param name="env"></param>
         /// <param name="files"></param>
@@ -104,7 +104,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 個人中心操作方法 更改样式 更改顯示名稱 更改預設應用
+        /// 個人中心操作方法 更改樣式 更改顯示名稱 更改預設應用
         /// </summary>
         /// <returns></returns>
         [HttpPut]

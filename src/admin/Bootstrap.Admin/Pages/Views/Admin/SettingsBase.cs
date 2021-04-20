@@ -150,7 +150,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             var ret = DictHelper.SaveSettings(new BootstrapDict[] { new BootstrapDict() { Category = "網站設置", Name = "Blazor", Code = Model.EnableBlazor ? "1" : "0" } });
             if (Model.EnableBlazor) ShowMessage("MVC 切换設置保存", ret);
 
-            // 根据保存结果隐藏 Header 挂件
+            // 根據保存结果隐藏 Header 挂件
             if (ret) RootLayout?.JSRuntime?.ToggleBlazor(Model.EnableBlazor);
         }
 
@@ -166,7 +166,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             });
             ShowMessage("保存網站調整", ret);
 
-            // 根据保存结果設置網站样式
+            // 根據保存结果設置網站樣式
             if (ret) RootLayout?.JSRuntime?.SetWebSettings(Model.ShowSideBar, Model.ShowCardTitle, Model.FixedTableHeader);
         }
 
@@ -232,7 +232,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected void SaveLogSettings()
         {
             var items = new BootstrapDict[]{
-                new BootstrapDict() { Category = "網站設置", Name="程式异常保留時長", Code = Model.ErrorLogPeriod.ToString(), Define = 0 },
+                new BootstrapDict() { Category = "網站設置", Name="程式異常保留時長", Code = Model.ErrorLogPeriod.ToString(), Define = 0 },
                 new BootstrapDict() { Category = "網站設置", Name="操作日誌保留時長", Code = Model.OpLog.ToString(), Define = 0 },
                 new BootstrapDict() { Category = "網站設置", Name="登入日誌保留時長", Code = Model.LogLog.ToString(), Define = 0 },
                 new BootstrapDict() { Category = "網站設置", Name="訪問日誌保留時長", Code = Model.TraceLog.ToString(), Define = 0 },
@@ -339,7 +339,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             public bool FixedTableHeader { get; set; }
 
             /// <summary>
-            /// 獲得/設置 系統样式集合
+            /// 獲得/設置 系統樣式集合
             /// </summary>
             public IEnumerable<BootstrapDict> Themes { get; set; } = new HashSet<BootstrapDict>();
 
@@ -354,7 +354,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             public SelectedItem SelectedIPLocator { get; set; } = new SelectedItem();
 
             /// <summary>
-            /// 程式异常日誌保留時長
+            /// 程式異常日誌保留時長
             /// </summary>
             public int ErrorLogPeriod { get; set; }
 

@@ -17,7 +17,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class MessagesController : ControllerBase
     {
         /// <summary>
-        /// 根据Id返回不同的訊息列表
+        /// 根據Id返回不同的訊息列表
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

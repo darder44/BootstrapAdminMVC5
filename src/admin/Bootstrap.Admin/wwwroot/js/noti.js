@@ -13,7 +13,7 @@
         columns: [
             { title: "登入名稱", field: "UserName" },
             { title: "顯示名稱", field: "DisplayName" },
-            { title: "说明信息", field: "Description" },
+            { title: "說明信息", field: "Description" },
             { title: "注册時間", field: "RegisterTime" },
             {
                 title: "操作", field: "Id", formatter: function (value, row, index, field) {

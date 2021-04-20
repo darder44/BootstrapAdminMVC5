@@ -88,13 +88,13 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 獲得系統中配置的可以使用的網站样式
+        /// 獲得系統中配置的可以使用的網站樣式
         /// </summary>
         /// <returns></returns>
-        public virtual IEnumerable<BootstrapDict> RetrieveThemes() => DictHelper.RetrieveDicts().Where(d => d.Category == "網站样式");
+        public virtual IEnumerable<BootstrapDict> RetrieveThemes() => DictHelper.RetrieveDicts().Where(d => d.Category == "網站樣式");
 
         /// <summary>
-        /// 獲得網站設置中的當前样式
+        /// 獲得網站設置中的當前樣式
         /// </summary>
         /// <returns></returns>
         public virtual string RetrieveActiveTheme()
@@ -219,7 +219,7 @@ namespace Bootstrap.DataAccess
         /// <summary>
         /// 獲得 項目是否獲取登錄地点 預設為false
         /// </summary>
-        /// <param name="ipSvr">服务提供名稱</param>
+        /// <param name="ipSvr">服務提供名稱</param>
         /// <returns></returns>
         public string? RetrieveLocaleIPSvrUrl(string ipSvr) => DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "地理位置" && d.Name == ipSvr && d.Define == 0)?.Code;
 
@@ -310,7 +310,7 @@ namespace Bootstrap.DataAccess
         /// 獲得字典表地理位置配置訊息集合
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<BootstrapDict> RetireveLocators() => DictHelper.RetrieveDicts().Where(d => d.Category == "地理位置服务");
+        public IEnumerable<BootstrapDict> RetireveLocators() => DictHelper.RetrieveDicts().Where(d => d.Category == "地理位置服務");
 
         /// <summary>
         /// 獲得個人中心地址

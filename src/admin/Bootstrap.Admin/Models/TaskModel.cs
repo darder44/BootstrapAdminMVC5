@@ -9,7 +9,7 @@ namespace Bootstrap.Admin.Models
     public class TaskModel : NavigatorBarModel
     {
         /// <summary>
-        /// 构造函数
+        /// 構造函数
         /// </summary>
         /// <param name="controller"></param>
         public TaskModel(ControllerBase controller) : base(controller)

@@ -47,7 +47,7 @@ $(function () {
                 $.bc({
                     url: Settings.url, data: [
                         { name: 'SaveTheme', code: cssDefine }
-                    ], title: '保存網站样式', method: "post",
+                    ], title: '保存網站樣式', method: "post",
                     callback: function (result) {
                         if (result) {
                             window.setTimeout(function () { window.location.reload(true); }, 1000);
@@ -121,7 +121,7 @@ $(function () {
             case 'saveIpLocator':
                 var iplocator = $iplocator.val();
                 $.bc({
-                    url: Settings.url, data: [{ name: 'IPLocator', code: iplocator }], title: '保存地理位置服务設置', method: "post"
+                    url: Settings.url, data: [{ name: 'IPLocator', code: iplocator }], title: '保存地理位置服務設置', method: "post"
                 });
                 break;
             case 'saveLogPeriod':
@@ -187,8 +187,8 @@ $(function () {
                             $dialog.modal('hide');
 
                             if (appId === 'new') {
-                                // 保存成功创建新 dom
-                                var segment = $.format('<div class="form-group col-12 app" data-key="{0}"><label class="control-label" for="{0}">{1}</label><div class="input-group flex-fill"><input id="{0}" class="form-control" placeholder="请輸入應用首頁，2000字以内" value="{2}" maxlength="2000" data-valid="true" /><div class="input-group-append"><button class="btn btn-danger" type="button" data-key="{0}" data-method="delApp"><i class="fa fa-trash-o"></i><span>刪除</span></button><button class="btn btn-primary" type="button" data-key="{0}" data-method="editApp"><i class="fa fa fa-pencil"></i><span>編輯</span></button></div></div></div>', appKey, appName, appPath);
+                                // 保存成功創建新 dom
+                                var segment = $.format('<div class="form-group col-12 app" data-key="{0}"><label class="control-label" for="{0}">{1}</label><div class="input-group flex-fill"><input id="{0}" class="form-control" placeholder="請輸入應用首頁，2000字以内" value="{2}" maxlength="2000" data-valid="true" /><div class="input-group-append"><button class="btn btn-danger" type="button" data-key="{0}" data-method="delApp"><i class="fa fa-trash-o"></i><span>刪除</span></button><button class="btn btn-primary" type="button" data-key="{0}" data-method="editApp"><i class="fa fa fa-pencil"></i><span>編輯</span></button></div></div></div>', appKey, appName, appPath);
 
                                 // append dom
                                 $('#appList').append($(segment));

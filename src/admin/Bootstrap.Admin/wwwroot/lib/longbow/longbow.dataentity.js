@@ -100,7 +100,7 @@
                 if (options.bootstrapTable !== null) {
                     var arrselections = options.bootstrapTable.bootstrapTable('getSelections');
                     if (arrselections.length === 0) {
-                        lgbSwal({ title: '请选择要編輯的資料', type: "warning" });
+                        lgbSwal({ title: '請选择要編輯的資料', type: "warning" });
                         return;
                     }
                     else if (arrselections.length > 1) {
@@ -168,7 +168,7 @@
                 if (options.bootstrapTable !== null) {
                     var arrselections = options.bootstrapTable.bootstrapTable('getSelections');
                     if (arrselections.length === 0) {
-                        lgbSwal({ title: '请选择要編輯的資料', type: "warning" });
+                        lgbSwal({ title: '請选择要編輯的資料', type: "warning" });
                         return;
                     }
                     else if (arrselections.length > 1) {
@@ -189,7 +189,7 @@
                 if (options.bootstrapTable !== null) {
                     var arrselections = options.bootstrapTable.bootstrapTable('getSelections');
                     if (arrselections.length === 0) {
-                        lgbSwal({ title: '请选择要刪除的資料', type: "warning" });
+                        lgbSwal({ title: '請选择要刪除的資料', type: "warning" });
                         return;
                     }
                     else {

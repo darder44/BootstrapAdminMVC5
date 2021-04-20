@@ -44,13 +44,13 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 獲得 错误日誌文件集合
+        /// 獲得 錯誤日誌文件集合
         /// </summary>
         protected IEnumerable<string> Items { get; set; } = new string[0];
 
         private bool show;
         /// <summary>
-        /// 顯示异常明詳方法
+        /// 顯示異常明詳方法
         /// </summary>
         protected void ShowDetail()
         {

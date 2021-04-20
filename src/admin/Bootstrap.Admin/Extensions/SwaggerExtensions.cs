@@ -7,7 +7,7 @@ using System.IO;
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// Swagger 扩展方法
+    /// Swagger 擴展方法
     /// </summary>
     internal static class SwaggerExtensions
     {
@@ -26,7 +26,7 @@ namespace Bootstrap.Admin
         }
 
         /// <summary>
-        /// 注入 Swagger 服务到容器内
+        /// 注入 Swagger 服務到容器内
         /// </summary>
         /// <param name="services"></param>
         public static void AddSwagger(this IServiceCollection services)

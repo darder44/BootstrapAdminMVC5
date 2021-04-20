@@ -32,13 +32,13 @@ namespace Bootstrap.DataAccess
         /// <summary>
         /// 獲得/設置 登錄IP地址
         /// </summary>
-        [DisplayName("主机")]
+        [DisplayName("主機")]
         public string Ip { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 登錄浏览器
+        /// 獲得/設置 登錄瀏覽器
         /// </summary>
-        [DisplayName("浏览器")]
+        [DisplayName("瀏覽器")]
         public string Browser { get; set; } = "";
 
         /// <summary>

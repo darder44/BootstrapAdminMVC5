@@ -64,9 +64,9 @@ namespace Bootstrap.DataAccess
         {
             using var db = DbManager.Create();
             var menus = db.Fetch<BootstrapMenu>("select NavigationID as Id from NavigationRole where RoleID = @0", roleId);
-#pragma warning disable CS8619 // 值中的引用類別型的為 Null 性与目標類別型不匹配。
+#pragma warning disable CS8619 // 值中的引用類別型的為 Null 性與目標類別型不匹配。
             return menus.Select(m => m.Id);
-#pragma warning restore CS8619 // 值中的引用類別型的為 Null 性与目標類別型不匹配。
+#pragma warning restore CS8619 // 值中的引用類別型的為 Null 性與目標類別型不匹配。
         }
 
         /// <summary>
@@ -103,11 +103,11 @@ namespace Bootstrap.DataAccess
         public virtual IEnumerable<BootstrapMenu> RetrieveAllMenus(string userName) => DbHelper.RetrieveAllMenus(userName);
 
         /// <summary>
-        /// 通过當前用户名与指定選單路徑獲取此選單下所有授權按鈕集合 (userName, url, auths) => bool
+        /// 通过當前用户名與指定選單路徑獲取此選單下所有授權按鈕集合 (userName, url, auths) => bool
         /// </summary>
         /// <param name="userName">當前操作用户名</param>
-        /// <param name="url">资源按鈕所属選單</param>
-        /// <param name="auths">资源授權碼</param>
+        /// <param name="url">資源按鈕所属選單</param>
+        /// <param name="auths">資源授權碼</param>
         /// <returns></returns>
         public virtual bool AuthorizateButtons(string userName, string url, string auths)
         {

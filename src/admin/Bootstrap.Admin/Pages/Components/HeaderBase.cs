@@ -17,7 +17,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string WebTitle { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 網站標題改变事件回調方法
+        /// 獲得/設置 網站標題改變事件回調方法
         /// </summary>
         [Parameter]
         public EventCallback<string> WebTitleChanged { get; set; }
@@ -41,7 +41,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string DisplayName { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 用户顯示名稱改变事件回調方法
+        /// 獲得/設置 用户顯示名稱改變事件回調方法
         /// </summary>
         [Parameter]
         public EventCallback<string> DisplayNameChanged { get; set; }

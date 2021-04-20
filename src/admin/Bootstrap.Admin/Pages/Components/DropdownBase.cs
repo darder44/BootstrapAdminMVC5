@@ -21,7 +21,7 @@ namespace Bootstrap.Admin.Pages.Components
         public SelectedItem Value { get; set; } = new SelectedItem();
 
         /// <summary>
-        /// 獲得/設置 选中項改变回調方法
+        /// 獲得/設置 选中項改變回調方法
         /// </summary>
         [Parameter]
         public EventCallback<SelectedItem> ValueChanged { get; set; }

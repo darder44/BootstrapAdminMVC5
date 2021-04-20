@@ -1,6 +1,6 @@
 ﻿# BootstrapAdmin
 
-<span>English</span> | <a href="README.zh-CN.md">中文</a>
+<span>English</span> | <a href="README.zh-TW.md">中文</a>
 
 ---
 
@@ -62,7 +62,7 @@ For more information, please click [wiki](https://gitee.com/dotnetchina/Bootstra
 ### Database 
 **MSSQL/Oracle/SQLite/MySql/MariaDB/Firebird/MongoDB**  
 
-For more information, please click [wiki](https://gitee.com/dotnetchina/BootstrapAdmin/wikis/数据庫連接配置?sort_id=1333482)  
+For more information, please click [wiki](https://gitee.com/dotnetchina/BootstrapAdmin/wikis/資料庫連接配置?sort_id=1333482)  
 
 ### Browser
 ![chrome](https://img.shields.io/badge/chrome->%3D4.5-success.svg?logo=google%20chrome&logoColor=red)
@@ -118,7 +118,7 @@ For more information, please click [wiki](https://gitee.com/dotnetchina/Bootstra
 4. Login as Admin/123789  
 
 ## Branchs  
-[Details](https://gitee.com/dotnetchina/BootstrapAdmin/wikis/分支说明)
+[Details](https://gitee.com/dotnetchina/BootstrapAdmin/wikis/分支說明)
 
 ## Online Demonstration   
 [![website1](https://img.shields.io/badge/linux-http://ba.zylweb.cn-success.svg?logo=buzzfeed&logoColor=green)](http://ba.zylweb.cn)

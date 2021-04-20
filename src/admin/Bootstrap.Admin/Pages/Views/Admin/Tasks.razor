@@ -1,28 +1,28 @@
 ﻿@inherits TasksBase
 
 <div class="card">
-    <div class="card-header">任务介绍</div>
+    <div class="card-header">任務介绍</div>
     <div class="card-body">
         <div class="alert alert-info">
-            <p class="font-weight-bold">後台任务说明：</p>
-            <p>1. 預設任务 (立即执行，仅执行一次)</p>
+            <p class="font-weight-bold">後台任務說明：</p>
+            <p>1. 預設任務 (立即执行，仅执行一次)</p>
             <p>
                 <code>
-                    TaskServicesManager.GetOrAdd("简單任务", token => Task.Delay(1000));
+                    TaskServicesManager.GetOrAdd("簡單任務", token => Task.Delay(1000));
                 </code>
             </p>
-            <p>2. 周期性任务 (1 分钟後間隔 5 秒执行 2 次任务)</p>
+            <p>2. 周期性任務 (1 分钟後間隔 5 秒执行 2 次任務)</p>
             <p>
                 <code>
                     var trigger = TriggerBuilder.Default.WithInterval(TimeSpan.FromSeconds(5)).WithRepeatCount(2).WithStartTime(DateTimeOffset.Now.AddMinutes(1)).Build();
                     <br />
-                    TaskServicesManager.GetOrAdd("測試任务", token => Task.Delay(1000), trigger);
+                    TaskServicesManager.GetOrAdd("測試任務", token => Task.Delay(1000), trigger);
                 </code>
             </p>
-            <p>3. Cron 表达式任务 (間隔 5 秒循环执行任务)</p>
+            <p>3. Cron 表达式任務 (間隔 5 秒循环执行任務)</p>
             <div>
                 <code>
-                    TaskServicesManager.GetOrAdd("Cron 表达式任务", token => Task.Delay(1000), TriggerBuilder.Build("*/5 * * * * *"));
+                    TaskServicesManager.GetOrAdd("Cron 表达式任務", token => Task.Delay(1000), TriggerBuilder.Build("*/5 * * * * *"));
                 </code>
             </div>
         </div>
@@ -36,7 +36,7 @@
     <div class="card-body">
         <ConditionComponent>
             <div class="alert alert-danger" role="alert">
-                <span>演示系統禁止修改定時後台任务</span>
+                <span>演示系統禁止修改定時後台任務</span>
             </div>
         </ConditionComponent>
         <Table Id="task" TItem="DefaultScheduler" ShowToolBar="true" ShowRefresh="true" ShowExtendButtons="true" EditModel="DataContext" OnQuery="Query">

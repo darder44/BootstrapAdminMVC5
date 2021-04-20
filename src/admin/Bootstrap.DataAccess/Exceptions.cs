@@ -39,7 +39,7 @@ namespace Bootstrap.DataAccess
         /// <summary>
         /// 獲得/設置 用户 IP
         /// </summary>
-        [DisplayName("登錄主机")]
+        [DisplayName("登錄主機")]
         public string? UserIp { get; set; }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Bootstrap.DataAccess
         public string? ExceptionType { get; set; }
 
         /// <summary>
-        /// 獲得/設置 異常错误描述訊息
+        /// 獲得/設置 異常錯誤描述訊息
         /// </summary>
         [DisplayName("異常描述")]
         public string Message { get; set; } = "";

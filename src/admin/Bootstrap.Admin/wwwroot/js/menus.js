@@ -87,7 +87,7 @@ $(function () {
             pageSize: 100,
             pageList: [100, 200, 400],
             sortName: 'Order',
-            queryParams: function (params) { return $.extend(params, { parentName: $('#txt_parent_menus_name').val().trim(), name: $("#txt_menus_name").val().trim(), category: $('#sel_menus_category').val(), isresource: $('#sel_menus_res').val(), appId: $('#sel_app').val() }); },           //传递参数（*）
+            queryParams: function (params) { return $.extend(params, { parentName: $('#txt_parent_menus_name').val().trim(), name: $("#txt_menus_name").val().trim(), category: $('#sel_menus_category').val(), isresource: $('#sel_menus_res').val(), appId: $('#sel_app').val() }); },           //傳递参数（*）
             exportOptions: {
                 fileName: "選單資料",
                 ignoreColumn: [0, 9]
@@ -260,7 +260,7 @@ $(function () {
         var type = $(this).data('type');
         switch (type) {
             case "parent":
-                // 父級選單不可以是资源或者按鈕類型
+                // 父級選單不可以是資源或者按鈕類型
                 var pId = $('.dd3-content :radio:checked').val();
                 var check = $.remoteValidate('api/Category/ValidateParentMenuById/' + pId);
                 if (check) {
@@ -375,6 +375,6 @@ $(function () {
             var id = $("#menuID").val();
             var check = id === "" || value === "選單" || $.remoteValidate('api/Category/ValidateMenuBySubMenu/' + id);
             return check;
-        }, "拥有子選單時選單類型不可更改為资源或者按鈕");
+        }, "拥有子選單時選單類型不可更改為資源或者按鈕");
     }
 });

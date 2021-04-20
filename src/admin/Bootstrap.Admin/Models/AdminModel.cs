@@ -9,7 +9,7 @@ namespace Bootstrap.Admin.Models
     public class AdminModel : ModelBase
     {
         /// <summary>
-        /// 預設构造函数
+        /// 預設構造函数
         /// </summary>
         /// <param name="appId"></param>
         public AdminModel(string? appId = null)
@@ -42,7 +42,7 @@ namespace Bootstrap.Admin.Models
         public string Footer { get; protected set; }
 
         /// <summary>
-        /// 網站样式全局設置
+        /// 網站樣式全局設置
         /// </summary>
         public string Theme { get; protected set; }
 
@@ -57,7 +57,7 @@ namespace Bootstrap.Admin.Models
         public bool ShowCardTitle { get; protected set; }
 
         /// <summary>
-        /// 是否收缩側邊欄
+        /// 是否收縮側邊欄
         /// </summary>
         public bool ShowSideBar { get; protected set; }
 

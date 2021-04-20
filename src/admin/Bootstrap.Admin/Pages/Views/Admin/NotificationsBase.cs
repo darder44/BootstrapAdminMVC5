@@ -12,7 +12,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
     public class NotificationsBase : ComponentBase
     {
         /// <summary>
-        /// 獲得 授權服务
+        /// 獲得 授權服務
         /// </summary>
         [Inject]
         protected AuthenticationStateProvider? AuthenticationStateProvider { get; set; }

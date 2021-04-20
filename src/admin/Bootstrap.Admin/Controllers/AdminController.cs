@@ -119,7 +119,7 @@ namespace Bootstrap.Admin.Controllers
         public ActionResult Profiles([FromServices]IWebHostEnvironment host) => View(new ProfilesModel(this, host));
 
         /// <summary>
-        /// 程式异常
+        /// 程式異常
         /// </summary>
         /// <returns></returns>
         public ActionResult Exceptions() => View(new NavigatorBarModel(this));

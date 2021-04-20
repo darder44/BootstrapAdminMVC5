@@ -92,7 +92,7 @@
       "files": [
         "css/bootstrap-datetimepicker.css",
         "css/bootstrap-datetimepicker.min.css",
-        "js/locales/bootstrap-datetimepicker.zh-CN.js",
+        "js/locales/bootstrap-datetimepicker.zh-TW.js",
         "js/bootstrap-datetimepicker.js",
         "js/bootstrap-datetimepicker.min.js"
       ]

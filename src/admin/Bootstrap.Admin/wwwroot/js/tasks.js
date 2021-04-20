@@ -51,7 +51,7 @@
             queryParams: function (params) { return $.extend(params, { operateType: $("#txt_operate_type").val(), OperateTimeStart: $("#txt_operate_start").val(), OperateTimeEnd: $("#txt_operate_end").val() }); },
             columns: [
                 { title: "名稱", field: "Name", sortable: true },
-                { title: "创建時間", field: "CreatedTime", sortable: true },
+                { title: "創建時間", field: "CreatedTime", sortable: true },
                 { title: "上次执行時間", field: "LastRuntime", sortable: true },
                 { title: "下次执行時間", field: "NextRuntime", sortable: true },
                 { title: "触發條件", field: "TriggerExpression", sortable: false },
@@ -61,7 +61,7 @@
             editButtons: {
                 events: {
                     'click .info': function (e, value, row, index) {
-                        $taskLogModelTitle.html(row.Name + ' - 任务日誌窗口(最新50條)');
+                        $taskLogModelTitle.html(row.Name + ' - 任務日誌窗口(最新50條)');
                         $('#dialogLog').modal('show').on('hide.bs.modal', function () {
                             // close hub
                             if ($taskMsg.hub) $taskMsg.hub.stop();

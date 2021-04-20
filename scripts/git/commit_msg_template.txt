@@ -1,4 +1,4 @@
-fix(#BUGID): 简要描述
+fix(#BUGID): 簡要描述
 
 #Comment
 comment #BUGID
@@ -6,9 +6,9 @@ comment #BUGID
 #Issue
 close link fix https://gitee.com/LongbowEnterprise/dashboard/issues?id=BUGID
 
-#     样式 :    feat(location): 接入登入API
+#     樣式 :    feat(location): 接入登入API
 #                  
-#                  登入功能与服务器对接
+#                  登入功能與服務器对接
 #
 <type>(<scope>): <subject>
 
@@ -18,25 +18,25 @@ close link fix https://gitee.com/LongbowEnterprise/dashboard/issues?id=BUGID
 
 #其中 type 的值可以有
 #    feat: 新功能 
-#    fix: 修复bug
-#    doc: 文档改变
-#    style: 代碼格式改变
-#    refactor: 某個已有功能重构
+#    fix: 修復bug
+#    doc: 文檔改變
+#    style: 代碼格式改變
+#    refactor: 某個已有功能重構
 #    perf: 性能優化
 #    test: 增加測試
-#    build: 改变了build工具 如 更新 props 文件
-#    revert: 撤销上一次的 commit 
-#    db: 数据庫文件或者腳本更改
-#    script: 辅助腳本改变
+#    build: 改變了build工具 如 更新 props 文件
+#    revert: 撤銷上一次的 commit 
+#    db: 資料庫文件或者腳本更改
+#    script: 輔助腳本改變
 #
-#scope: 用来说明此次修改的影响范围
+#scope: 用来說明此次修改的影响范围
 #     all: 表示影响面大 ，如修改了网络框架  會对真個程式产生影响
 #     location: 表示影响小，某個小小的功能
-#     module: 表示會影响某個模块 如登入模块、首頁模块 、用户管理模块等等
+#     module: 表示會影响某個模塊 如登入模塊、首頁模塊 、用户管理模塊等等
 #
-#subject: 用来简要描述本次改动，概述就好了
+#subject: 用来簡要描述本次改动，概述就好了
 # 
-#body: 具体的修改信息 應该尽量詳詳
+#body: 具体的修改信息 應該尽量詳詳
 # 
 #footer: 放置写备注啥的，如果是 bug ，可以把bug id放入
 #

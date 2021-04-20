@@ -8,12 +8,12 @@ using System.Net.Http;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// 邮件日誌扩展方法
+    /// 郵件日誌擴展方法
     /// </summary>
     public static class CloudLoggerExtensions
     {
         /// <summary>
-        /// 注册邮件日誌方法
+        /// 注册郵件日誌方法
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
@@ -37,7 +37,7 @@ namespace Microsoft.Extensions.DependencyInjection
         private CloudLoggerOption option;
 
         /// <summary>
-        /// 构造函数
+        /// 構造函数
         /// </summary>
         public CloudLoggerProvider(IOptionsMonitor<CloudLoggerOption> options) : base(null, new Func<string, LogLevel, bool>((name, logLevel) => logLevel >= LogLevel.Error))
         {

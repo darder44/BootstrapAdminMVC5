@@ -56,7 +56,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected IJSRuntime? JSRuntime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 选中的样式項
+        /// 獲得/設置 选中的樣式項
         /// </summary>
         protected SelectedItem SelectedTheme { get; set; } = new SelectedItem();
 
@@ -71,7 +71,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected IEnumerable<SelectedItem> Apps { get; set; } = new SelectedItem[0];
 
         /// <summary>
-        /// 獲得/設置 網站样式集合
+        /// 獲得/設置 網站樣式集合
         /// </summary>
         protected IEnumerable<SelectedItem> Themes { get; set; } = new SelectedItem[0];
 
@@ -88,7 +88,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected override void OnInitialized()
         {
             Model = new ProfilesModel(RootLayout?.UserName);
-            Themes = new SelectedItem[] { new SelectedItem() { Text = "預設样式" } }.Union(Model.Themes.Select(t => new SelectedItem() { Text = t.Name, Value = t.Code }));
+            Themes = new SelectedItem[] { new SelectedItem() { Text = "預設樣式" } }.Union(Model.Themes.Select(t => new SelectedItem() { Text = t.Name, Value = t.Code }));
             Apps = Model.Applications.Select(t => new SelectedItem() { Text = t.Value, Value = t.Key });
 
             SelectedTheme = Themes.First();
@@ -97,7 +97,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             var user = UserHelper.RetrieveUserByUserName(Model?.UserName);
             if (user != null) User = user;
 
-            // 直接绑定 User.DisplayName 導致未保存時 UI 的顯示名稱也會变化
+            // 直接绑定 User.DisplayName 導致未保存時 UI 的顯示名稱也會變化
             DisplayName = User.DisplayName;
         }
 
@@ -146,7 +146,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 保存網站样式方法
+        /// 保存網站樣式方法
         /// </summary>
         protected void SaveTheme()
         {
@@ -154,7 +154,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
 
             // 彈窗提示是否保存成功
             var result = ret ? "成功" : "失败";
-            ShowMessage($"保存網站样式{result}", ret);
+            ShowMessage($"保存網站樣式{result}", ret);
         }
 
         /// <summary>

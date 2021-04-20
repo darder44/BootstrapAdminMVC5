@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// HttpClient 扩展操作類
+    /// HttpClient 擴展操作類
     /// </summary>
     public static class HttpClientExtensions
     {
         /// <summary>
-        /// LoginAsync 异步方法
+        /// LoginAsync 異步方法
         /// </summary>
         /// <param name="client"></param>
         /// <param name="userName"></param>

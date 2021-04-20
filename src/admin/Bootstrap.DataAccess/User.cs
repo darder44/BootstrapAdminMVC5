@@ -44,13 +44,13 @@ namespace Bootstrap.DataAccess
         public DateTime RegisterTime { get; set; } = DateTime.Now;
 
         /// <summary>
-        /// 獲得/設置 用户被批复時間
+        /// 獲得/設置 用户被批復時間
         /// </summary>
         [DisplayName("授權時間")]
         public DateTime? ApprovedTime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 用户批复人
+        /// 獲得/設置 用户批復人
         /// </summary>
         [DisplayName("授權人")]
         public string? ApprovedBy { get; set; }
@@ -58,11 +58,11 @@ namespace Bootstrap.DataAccess
         /// <summary>
         /// 獲得/設置 用户的申請理由
         /// </summary>
-        [DisplayName("说明")]
+        [DisplayName("說明")]
         public string Description { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 用户當前狀態 0 表示管理员注册用户 1 表示用户注册 2 表示更改密碼 3 表示更改個人皮肤 4 表示更改顯示名稱 5 批复新用户注册操作
+        /// 獲得/設置 用户當前狀態 0 表示管理员注册用户 1 表示用户注册 2 表示更改密碼 3 表示更改個人皮肤 4 表示更改顯示名稱 5 批復新用户注册操作
         /// </summary>
         [ResultColumn]
         public UserStates UserStatus { get; set; }
@@ -87,7 +87,7 @@ namespace Bootstrap.DataAccess
         public int IsReset { get; set; }
 
         /// <summary>
-        /// 驗證用户登錄账号与密碼正确
+        /// 驗證用户登錄账号與密碼正确
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
@@ -329,7 +329,7 @@ namespace Bootstrap.DataAccess
             try
             {
                 db.BeginTransaction();
-                //刪除用户角色表该角色所有的用户
+                //刪除用户角色表該角色所有的用户
                 db.Execute("delete from UserRole where RoleID = @0", roleId);
                 db.InsertBatch("UserRole", userIds.Select(g => new { UserID = g, RoleID = roleId }));
                 db.CompleteTransaction();
@@ -367,7 +367,7 @@ namespace Bootstrap.DataAccess
             try
             {
                 db.BeginTransaction();
-                //刪除用户角色表该角色所有的用户
+                //刪除用户角色表該角色所有的用户
                 db.Execute("delete from UserGroup where GroupID = @0", groupId);
                 db.InsertBatch("UserGroup", userIds.Select(g => new { UserID = g, GroupID = groupId }));
                 db.CompleteTransaction();
@@ -444,7 +444,7 @@ namespace Bootstrap.DataAccess
         /// </summary>
         ChangePassword,
         /// <summary>
-        /// 更改样式
+        /// 更改樣式
         /// </summary>
         ChangeTheme,
         /// <summary>

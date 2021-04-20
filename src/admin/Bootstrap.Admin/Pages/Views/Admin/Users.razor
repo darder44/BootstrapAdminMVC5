@@ -39,7 +39,7 @@
                 <RequiredValidator />
                 <StringLengthValidator Length="16" />
             </LgbInputText>
-            <LgbInputText InputType="password" @bind-Value="@context.NewPassword" autocomplete="off" placeholder="与登入密碼一致" maxlength="16">
+            <LgbInputText InputType="password" @bind-Value="@context.NewPassword" autocomplete="off" placeholder="與登入密碼一致" maxlength="16">
                 <RequiredValidator />
                 <StringLengthValidator Length="16" />
                 <EqualToValidator @bind-Value="@context.Password" />

@@ -8,7 +8,7 @@ using System.Collections.Concurrent;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// 顯示名稱扩展方法類
+    /// 顯示名稱擴展方法類
     /// </summary>
     public static class DisplayNamesExtensions
     {
@@ -50,7 +50,7 @@ namespace Microsoft.Extensions.DependencyInjection
             _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.Value)), "缓存值");
             _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.Interval)), "缓存時長（秒）");
             _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.ElapsedSeconds)), "已過時長（秒）");
-            _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.Desc)), "缓存说明");
+            _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.Desc)), "缓存說明");
 
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.ConnectionId)), "會话Id");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.UserName)), "登入名稱");
@@ -58,9 +58,9 @@ namespace Microsoft.Extensions.DependencyInjection
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.FirstAccessTime)), "登入時間");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.LastAccessTime)), "訪問時間");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Method)), "請求方式");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Ip)), "主机");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Ip)), "主機");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Location)), "登入地点");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Browser)), "浏览器");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Browser)), "瀏覽器");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.OS)), "操作系統");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.RequestUrl)), "訪問地址");
 
