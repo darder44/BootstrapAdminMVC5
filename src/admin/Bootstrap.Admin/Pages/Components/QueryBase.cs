@@ -8,7 +8,7 @@ namespace Bootstrap.Admin.Pages.Components
     /// </summary>
     public class QueryBase<TItem> : ComponentBase
     {
-        private readonly string _defaultTitle = "查詢条件";
+        private readonly string _defaultTitle = "查詢條件";
         private readonly string _defaultText = "查詢";
 
         /// <summary>
@@ -18,7 +18,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string Id { get; set; } = "";
 
         /// <summary>
-        /// 查詢組件標題 預設為 查詢条件
+        /// 查詢組件標題 預設為 查詢條件
         /// </summary>
         [Parameter]
         public string Title { get; set; } = "";

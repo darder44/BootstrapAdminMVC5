@@ -10,17 +10,17 @@ namespace Bootstrap.Admin.Query
     public class QuerySQLOption : PaginationOption
     {
         /// <summary>
-        /// 獲得/設置 用户登录名
+        /// 獲得/設置 用户登入名
         /// </summary>
         public string? UserName { get; set; }
 
         /// <summary>
-        /// 獲得/設置 开始时间
+        /// 獲得/設置 开始時间
         /// </summary>
         public DateTime? OperateTimeStart { get; set; }
 
         /// <summary>
-        /// 獲得/設置 结束时间
+        /// 獲得/設置 结束時间
         /// </summary>
         public DateTime? OperateTimeEnd { get; set; }
 

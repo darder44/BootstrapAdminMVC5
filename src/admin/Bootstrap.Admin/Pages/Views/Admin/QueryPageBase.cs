@@ -55,7 +55,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected abstract bool Save(TItem item);
 
         /// <summary>
-        /// 删除方法
+        /// 刪除方法
         /// </summary>
         /// <param name="items"></param>
         protected abstract bool Delete(IEnumerable<TItem> items);

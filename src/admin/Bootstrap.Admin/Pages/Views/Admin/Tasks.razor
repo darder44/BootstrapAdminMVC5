@@ -8,7 +8,7 @@
             <p>1. 預設任务 (立即执行，仅执行一次)</p>
             <p>
                 <code>
-                    TaskServicesManager.GetOrAdd("简单任务", token => Task.Delay(1000));
+                    TaskServicesManager.GetOrAdd("简單任务", token => Task.Delay(1000));
                 </code>
             </p>
             <p>2. 周期性任务 (1 分钟後间隔 5 秒执行 2 次任务)</p>
@@ -36,7 +36,7 @@
     <div class="card-body">
         <ConditionComponent>
             <div class="alert alert-danger" role="alert">
-                <span>演示系统禁止修改定时後台任务</span>
+                <span>演示系統禁止修改定時後台任务</span>
             </div>
         </ConditionComponent>
         <Table Id="task" TItem="DefaultScheduler" ShowToolBar="true" ShowRefresh="true" ShowExtendButtons="true" EditModel="DataContext" OnQuery="Query">
@@ -62,7 +62,7 @@
                 <div class='btn-group'>
                     <button class='pause btn btn-sm btn-danger' asp-auth="pause"><i class='fa fa-pause-circle'></i><span>暂停</span></button>
                     <button class='run btn btn-sm btn-success' asp-auth="pause"><i class='fa fa-play-circle'></i><span>运行</span></button>
-                    <button class='info btn btn-sm btn-info' asp-auth="info"><i class='fa fa-info-circle'></i><span>日志</span></button>
+                    <button class='info btn btn-sm btn-info' asp-auth="info"><i class='fa fa-info-circle'></i><span>日誌</span></button>
                 </div>
             </ButtonTemplate>
         </Table>

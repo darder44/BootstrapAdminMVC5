@@ -75,7 +75,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 输出窗口大小样式
+        /// 輸出窗口大小样式
         /// </summary>
         /// <returns></returns>
         protected string RenderModalSize()

@@ -6,12 +6,12 @@ using System.Linq;
 namespace Bootstrap.Admin.Query
 {
     /// <summary>
-    /// 用户維護查詢条件類
+    /// 用户維護查詢條件類
     /// </summary>
     public class QueryUserOption : PaginationOption
     {
         /// <summary>
-        /// 獲得/設置 用户登录名稱
+        /// 獲得/設置 用户登入名稱
         /// </summary>
         public string? Name { get; set; }
 

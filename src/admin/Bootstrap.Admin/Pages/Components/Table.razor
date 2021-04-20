@@ -10,8 +10,8 @@
                     @if (ShowDefaultButtons)
                     {
                         <TableToolbarButton class="btn btn-success" Icon="fa fa-plus" Title="新增" OnClick="Add" />
-                        <TableToolbarButton class="btn btn-danger" Icon="fa fa-remove" Title="删除" OnClick="Delete" />
-                        <TableToolbarButton class="btn btn-primary" Icon="fa fa-pencil" Title="编辑" OnClick="Edit" />
+                        <TableToolbarButton class="btn btn-danger" Icon="fa fa-remove" Title="刪除" OnClick="Delete" />
+                        <TableToolbarButton class="btn btn-primary" Icon="fa fa-pencil" Title="編輯" OnClick="Edit" />
                     }
                     @TableToolbarTemplate
                 </TableToolbar>
@@ -28,18 +28,18 @@
             {
                 <div class="float-right search btn-group">
                     <div class="input-group">
-                        <input class="form-control search-input" type="text" placeholder="搜索" @bind="SearchText" />
+                        <input class="form-control search-input" type="text" placeholder="查詢" @bind="SearchText" />
                         <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button" title="搜索" @onclick="SearchClick">
-                                <i class="fa fa-search"></i><span>搜索</span>
+                            <button class="btn btn-secondary" type="button" title="查詢" @onclick="SearchClick">
+                                <i class="fa fa-search"></i><span>查詢</span>
                             </button>
-                            <button class="btn btn-secondary" type="button" title="清空過滤" @onclick="ClearSearchClick">
-                                <i class="fa fa-trash"></i> <span>清空過滤</span>
+                            <button class="btn btn-secondary" type="button" title="清空過濾" @onclick="ClearSearchClick">
+                                <i class="fa fa-trash"></i> <span>清空過濾</span>
                             </button>
                             @if (ShowAdvancedSearch)
                             {
-                                <button class="btn btn-secondary" type="button" title="高級搜索" @onclick="AdvancedSearchClick">
-                                    <i class="fa fa-search-plus"></i><span>高級搜索</span>
+                                <button class="btn btn-secondary" type="button" title="高級查詢" @onclick="AdvancedSearchClick">
+                                    <i class="fa fa-search-plus"></i><span>高級查詢</span>
                                 </button>
                             }
                         </div>
@@ -180,14 +180,14 @@
 
 @if (OnDelete != null)
 {
-    <Modal @ref="ConfirmModal" Id="@($"{Id}_confirm")" Title="資料删除">
+    <Modal @ref="ConfirmModal" Id="@($"{Id}_confirm")" Title="資料刪除">
         <ModalBody>
-            <div class="modal-confirm-body">您確定要删除选中的所有資料吗？</div>
+            <div class="modal-confirm-body">您確定要刪除选中的所有資料吗？</div>
         </ModalBody>
         <ModalFooter>
             <button type="button" class="btn btn-danger" @onclick="Confirm">
                 <i class="fa fa-trash-o"></i>
-                <span>我要删除</span>
+                <span>我要刪除</span>
             </button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">
                 <i class="fa fa-times"></i>
@@ -208,7 +208,7 @@
 
 @if (ShowSearch && ShowAdvancedSearch)
 {
-    <Modal @ref="SearchModal" Id="@($"{Id}_search")" Title="查詢条件">
+    <Modal @ref="SearchModal" Id="@($"{Id}_search")" Title="查詢條件">
         <ModalBody>
             <LgbEditForm class="form-inline" Id="@Id" Model="QueryModel">
                 <div class="row">

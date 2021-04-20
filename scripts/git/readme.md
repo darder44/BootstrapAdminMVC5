@@ -15,16 +15,16 @@ Windows 版本的 Fork 提供了提交模板 （commit message template）功能
     template = /Users/argo/.commit_msg_template.txt
 ```
 
-注意原始文件不是 . 开頭拷贝到跟目录下為 . 开頭文件名（点号开頭文件默認為隐藏文件）
+注意原始文件不是 . 开頭拷贝到跟目录下為 . 开頭文件名（点号开頭文件預設為隐藏文件）
 
 #### Fork 配置步骤
 
 1. 打开要配置的仓庫
-2. 点击菜单欄第二个 **仓庫** 菜单（Repository）
-3. 下拉菜单中选中最后一个菜单項 **仓庫设置** 子菜单（Settings for this repository）
+2. 点击菜單欄第二個 **仓庫** 菜單（Repository）
+3. 下拉菜單中选中最后一個菜單項 **仓庫設置** 子菜單（Settings for this repository）
 
 如下图所示  
-![输入图片说明](https://images.gitee.com/uploads/images/2020/0327/123310_1b9b4af3_554725.png "Screen Shot 2020-03-27 at 12.30.38.png")
+![輸入图片说明](https://images.gitee.com/uploads/images/2020/0327/123310_1b9b4af3_554725.png "Screen Shot 2020-03-27 at 12.30.38.png")
 
 4. 切换到 **提交模板** 面板（Commit Template）
 5. 勾选使用 **全局配置文件** （Use global git configuration file）

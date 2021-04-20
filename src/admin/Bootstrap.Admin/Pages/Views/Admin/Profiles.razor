@@ -6,13 +6,13 @@
         <div class="card-body">
             <ConditionComponent>
                 <div class="alert alert-danger" role="alert">
-                    <span>演示系统禁止更改管理员顯示名称</span>
+                    <span>演示系統禁止更改管理员顯示名稱</span>
                 </div>
             </ConditionComponent>
             <LgbEditForm class="form-inline" Id="Profile" Model="User" OnValidSubmit="SaveDisplayName">
                 <div class="row">
                     <div class="form-group col-sm-6 col-md-auto">
-                        <label class="control-label" for="userName">登录名称</label>
+                        <label class="control-label" for="userName">登入名稱</label>
                         <input type="text" class="form-control ignore" value="@Model?.UserName" readonly />
                     </div>
                     <LgbInputText ColumnClass="col-sm-6 col-md-auto" @bind-Value="@DisplayName" placeholder="不可為空，16字以内" maxlength="16">
@@ -32,26 +32,26 @@
 <ConditionComponent Condition="@(Model?.External ?? false)" Inverse="true">
     <ConditionComponent AuthKey="savePassword">
         <div class="card">
-            <div class="card-header">修改密码</div>
+            <div class="card-header">修改密碼</div>
             <div class="card-body">
                 <ConditionComponent>
                     <div class="alert alert-danger" role="alert">
-                        <span>演示系统禁止更改管理员密码</span>
+                        <span>演示系統禁止更改管理员密碼</span>
                     </div>
                 </ConditionComponent>
                 <LgbEditForm class="form-inline" Id="Profile" Model="Password" OnValidSubmit="SavePassword">
                     <div class="row">
-                        <LgbInputText InputType="password" ColumnClass="col-sm-6 col-md-auto" @bind-Value="@Password.Password" autocomplete="off" placeholder="原密码" maxlength="16">
+                        <LgbInputText InputType="password" ColumnClass="col-sm-6 col-md-auto" @bind-Value="@Password.Password" autocomplete="off" placeholder="原密碼" maxlength="16">
                             <RequiredValidator />
                             <StringLengthValidator Length="16" />
                         </LgbInputText>
                     </div>
                     <div class="row">
-                        <LgbInputText InputType="password" ColumnClass="col-sm-6 col-md-auto" @bind-Value="@Password.NewPassword" autocomplete="off" placeholder="新密码" maxlength="16">
+                        <LgbInputText InputType="password" ColumnClass="col-sm-6 col-md-auto" @bind-Value="@Password.NewPassword" autocomplete="off" placeholder="新密碼" maxlength="16">
                             <RequiredValidator />
                             <StringLengthValidator Length="16" />
                         </LgbInputText>
-                        <LgbInputText InputType="password" ColumnClass="col-sm-6 col-md-auto" @bind-Value="@Password.ConfirmPassword" autocomplete="off" placeholder="与新密码一致" maxlength="16">
+                        <LgbInputText InputType="password" ColumnClass="col-sm-6 col-md-auto" @bind-Value="@Password.ConfirmPassword" autocomplete="off" placeholder="与新密碼一致" maxlength="16">
                             <RequiredValidator />
                             <StringLengthValidator Length="16" />
                             <EqualToValidator @bind-Value="@Password.NewPassword" />

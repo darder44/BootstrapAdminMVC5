@@ -8,12 +8,12 @@ using System.Net.Http;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// 邮件日志扩展方法
+    /// 邮件日誌扩展方法
     /// </summary>
     public static class CloudLoggerExtensions
     {
         /// <summary>
-        /// 注册邮件日志方法
+        /// 注册邮件日誌方法
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
@@ -27,7 +27,7 @@ namespace Microsoft.Extensions.DependencyInjection
     }
 
     /// <summary>
-    /// 云日志提供類
+    /// 云日誌提供類
     /// </summary>
     [ProviderAlias("Cloud")]
     public class CloudLoggerProvider : LoggerProvider
@@ -76,12 +76,12 @@ namespace Microsoft.Extensions.DependencyInjection
     }
 
     /// <summary>
-    /// 云日志配置類
+    /// 云日誌配置類
     /// </summary>
     public class CloudLoggerOption
     {
         /// <summary>
-        /// 獲得/設置 云日志地址
+        /// 獲得/設置 云日誌地址
         /// </summary>
         public string Url { get; set; } = "";
     }

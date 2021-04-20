@@ -24,7 +24,7 @@ namespace Bootstrap.Admin.Api
         [InlineData("", "")]
         public async void Get_Ok(string query, string order)
         {
-            // 選單 系统選單 系统使用条件
+            // 選單 系統選單 系統使用條件
             var qd = await Client.GetAsJsonAsync<QueryData<BootstrapDict>>($"?sort={query}&order={order}&offset=0&limit=20&category=%E8%8F%9C%E5%8D%95&name=%E7%B3%BB%E7%BB%9F%E8%8F%9C%E5%8D%95&define=0&_=1547608210979");
             Assert.Single(qd.rows);
         }
@@ -35,7 +35,7 @@ namespace Bootstrap.Admin.Api
         [InlineData("api")]
         public async void Search_Ok(string search)
         {
-            // 選單 系统選單 系统使用条件
+            // 選單 系統選單 系統使用條件
             var qd = await Client.GetAsJsonAsync<QueryData<BootstrapDict>>($"?search={search}&sort=&order=&offset=0&limit=20&category=&name=&define=0&_=1547608210979");
             Assert.NotEmpty(qd.rows);
         }

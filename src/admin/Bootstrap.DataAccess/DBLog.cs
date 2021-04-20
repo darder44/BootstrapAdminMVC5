@@ -30,7 +30,7 @@ namespace Bootstrap.DataAccess
         public string SQL { get; set; } = "";
 
         /// <summary>
-        /// 獲取/設置 用户角色关联狀態 checked 標示已经关联 '' 標示未关联
+        /// 獲取/設置 用户角色關联狀態 checked 標示已经關联 '' 標示未關联
         /// </summary>
         [DisplayName("執行時間")]
         public DateTime LogTime { get; set; }
@@ -59,7 +59,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 删除日誌訊息
+        /// 刪除日誌訊息
         /// </summary>
         /// <returns></returns>
         private static void DeleteLogAsync()

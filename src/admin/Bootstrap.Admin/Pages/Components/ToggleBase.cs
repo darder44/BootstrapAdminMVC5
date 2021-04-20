@@ -14,13 +14,13 @@ namespace Bootstrap.Admin.Pages.Components
         public int Width { get; set; } = 120;
 
         /// <summary>
-        /// 獲得/設置 組件 On 时顯示文本
+        /// 獲得/設置 組件 On 時顯示文本
         /// </summary>
         [Parameter]
         public string OnText { get; set; } = "展开";
 
         /// <summary>
-        /// 獲得/設置 組件 Off 时顯示文本
+        /// 獲得/設置 組件 Off 時顯示文本
         /// </summary>
         [Parameter]
         public string OffText { get; set; } = "收缩";
@@ -32,13 +32,13 @@ namespace Bootstrap.Admin.Pages.Components
         public bool Value { get; set; } = false;
 
         /// <summary>
-        /// 獲得/設置 Value 值改变时回調事件
+        /// 獲得/設置 Value 值改变時回調事件
         /// </summary>
         [Parameter]
         public EventCallback<bool> ValueChanged { get; set; }
 
         /// <summary>
-        /// 獲得/設置 Value 值改变时回調事件
+        /// 獲得/設置 Value 值改变時回調事件
         /// </summary>
         protected void ToggleClick()
         {

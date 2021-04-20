@@ -16,17 +16,17 @@ namespace Bootstrap.Admin.Api
         [InlineData("RoleName", "desc")]
         public async void Get_Ok(string query, string order)
         {
-            // 選單 系统選單 系统使用条件
+            // 選單 系統選單 系統使用條件
             var qd = await Client.GetAsJsonAsync<QueryData<Role>>($"?sort={query}&order={order}&offset=0&limit=20&roleName=Administrators&description=%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%98&_=1547625202230");
             Assert.Single(qd.rows);
         }
 
         [Theory()]
         [InlineData("Administrators")]
-        [InlineData("系统管理员")]
+        [InlineData("系統管理员")]
         public async void Search_Ok(string search)
         {
-            // 選單 系统選單 系统使用条件
+            // 選單 系統選單 系統使用條件
             var qd = await Client.GetAsJsonAsync<QueryData<Role>>($"?search={search}&sort=&order=&offset=0&limit=20&category=&name=&define=0&_=1547608210979");
             Assert.NotEmpty(qd.rows);
         }

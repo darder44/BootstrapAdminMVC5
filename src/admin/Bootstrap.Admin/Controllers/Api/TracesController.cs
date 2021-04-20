@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// 在线用户跟踪控制器
+    /// 線上用户跟踪控制器
     /// </summary>
     [Route("api/[controller]")]
     [Authorize]
@@ -16,7 +16,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class TracesController : ControllerBase
     {
         /// <summary>
-        /// 客户端脚本獲取在线用户資料
+        /// 客户端脚本獲取線上用户資料
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -27,7 +27,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 在线用户访问保存方法，前台系统調用
+        /// 線上用户訪問保存方法，前台系統調用
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>

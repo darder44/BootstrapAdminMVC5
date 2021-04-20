@@ -84,7 +84,7 @@ namespace Bootstrap.DataAccess
             UserHelper.SaveByRoleId(id, UserHelper.Retrieves().Select(u => u.Id));
             Assert.NotEmpty(RoleHelper.RetrievesByUserName("Admin"));
 
-            // 新建用户 默認角色為 Default
+            // 新建用户 預設角色為 Default
             var user = new User { UserName = "UserForRoleTest", Password = "123", DisplayName = "DisplayName", ApprovedBy = "System", ApprovedTime = DateTime.Now, Description = "Desc", Icon = "" };
             Assert.True(UserHelper.Save(user));
             Assert.Single(RoleHelper.RetrievesByUserName(user.UserName));

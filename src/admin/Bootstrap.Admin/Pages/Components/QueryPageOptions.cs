@@ -1,7 +1,7 @@
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 查詢条件實體類
+    /// 查詢條件實體類
     /// </summary>
     public class QueryPageOptions
     {
@@ -21,12 +21,12 @@ namespace Bootstrap.Admin.Pages.Components
         public SortOrder SortOrder { get; set; }
 
         /// <summary>
-        /// 獲得/設置 當前頁码 首頁為 第一頁
+        /// 獲得/設置 當前頁碼 首頁為 第一頁
         /// </summary>
         public int PageIndex { get; set; } = 1;
 
         /// <summary>
-        /// 獲得/設置 每頁条目数量
+        /// 獲得/設置 每頁條目数量
         /// </summary>
         public int PageItems { get; set; } = 20;
     }

@@ -3,7 +3,7 @@
 <CascadingValue Value="this">
     <nav class="nav align-items-center" aria-label="分頁組件">
         <div class="pagination-bar">
-            顯示第 <span>@((PageIndex - 1) * PageItems + 1)</span> 到第 <span>@(Math.Min(PageIndex * PageItems, TotalCount))</span> 条记录，总共 <span>@TotalCount</span> 条记录
+            顯示第 <span>@((PageIndex - 1) * PageItems + 1)</span> 到第 <span>@(Math.Min(PageIndex * PageItems, TotalCount))</span> 條紀錄，總共 <span>@TotalCount</span> 條紀錄
             @if(PageCount > 1)
             {
                 <span>每頁顯示</span>
@@ -16,7 +16,7 @@
                         }
                     </div>
                 </div>
-                <span>条记录</span>
+                <span>條紀錄</span>
             }
         </div>
         <ul class="@(PageCount  > 1 ? "pagination" : "pagination d-none")">

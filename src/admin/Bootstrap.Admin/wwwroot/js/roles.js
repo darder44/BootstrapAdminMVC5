@@ -84,7 +84,7 @@ $(function () {
                         callback: function (result) {
                             var htmlTemplate = this.htmlTemplate;
                             var html = $.map(result, function (element, index) {
-                                return $.format(htmlTemplate, element.Id, element.AppName, element.Checked, "應用程序名称");
+                                return $.format(htmlTemplate, element.Id, element.AppName, element.Checked, "應用程式名稱");
                             }).join('');
                             $dialogAppHeader.text($.format('{0}-應用授權窗口', row.RoleName));
                             $dialogAppForm.html(html).find('[data-toggle="tooltip"]').each(function (index, label) {
@@ -129,7 +129,7 @@ $(function () {
             sortName: 'RoleName',
             queryParams: function (params) { return $.extend(params, { roleName: $("#txt_search_name").val(), description: $("#txt_role_desc").val() }); },           //传递参数（*）
             columns: [
-                { title: "角色名称", field: "RoleName", sortable: true },
+                { title: "角色名稱", field: "RoleName", sortable: true },
                 { title: "角色描述", field: "Description", sortable: false }
             ],
             exportOptions: {
@@ -149,7 +149,7 @@ $(function () {
                 child.find(':checkbox').prop('checked', val);
             }
 
-            // 子节点全部取消时父級選單也取消
+            // 子节点全部取消時父級選單也取消
             $this.parents('ol.dd-list').each(function (index, p) {
                 var $menuType = $this.parents('.dd3-item').attr('data-resource');
                 if ($menuType === "0") {
@@ -162,7 +162,7 @@ $(function () {
         }).children('.radio').hide();
     });
 
-    // 選單弹窗過滤条件
+    // 選單弹窗過濾條件
     $('.modal-footer > .flex-fill.d-none').addClass('d-sm-block');
     $('.custom-radio').on('click', ':radio', function (e) {
         var filter = $(this).val();
@@ -187,7 +187,7 @@ $(function () {
         });
     };
 
-    // 用户列表過滤
+    // 用户列表過濾
     var $userFilter = $('#useFilter')
         .on('input', 'input', userFilterFunc)
         .on('click', 'button', function (e) { $(this).parent().prev().trigger('input'); });

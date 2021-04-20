@@ -1,6 +1,6 @@
 ﻿@inherits UsersBase
 
-<EditPage @ref="EditPage" Id="user" FixedHeader="@FixedHeader" TItem="Bootstrap.DataAccess.User" SubmitModalTitle="用户编辑窗口" QueryModel="QueryModel" OnQuery="Query" OnAdd="Add" OnDelete="Delete" OnSave="Save" OnResetSearch="ResetSearch">
+<EditPage @ref="EditPage" Id="user" FixedHeader="@FixedHeader" TItem="Bootstrap.DataAccess.User" SubmitModalTitle="用户編輯窗口" QueryModel="QueryModel" OnQuery="Query" OnAdd="Add" OnDelete="Delete" OnSave="Save" OnResetSearch="ResetSearch">
     <QueryBody>
         <LgbInputText ColumnClass="col-sm-auto" @bind-Value="@context.UserName" maxlength="50" />
         <LgbInputText ColumnClass="col-sm-auto" @bind-Value="@context.DisplayName" maxlength="50" />
@@ -39,7 +39,7 @@
                 <RequiredValidator />
                 <StringLengthValidator Length="16" />
             </LgbInputText>
-            <LgbInputText InputType="password" @bind-Value="@context.NewPassword" autocomplete="off" placeholder="与登录密码一致" maxlength="16">
+            <LgbInputText InputType="password" @bind-Value="@context.NewPassword" autocomplete="off" placeholder="与登入密碼一致" maxlength="16">
                 <RequiredValidator />
                 <StringLengthValidator Length="16" />
                 <EqualToValidator @bind-Value="@context.Password" />

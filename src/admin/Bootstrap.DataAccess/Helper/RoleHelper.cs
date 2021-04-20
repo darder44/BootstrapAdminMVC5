@@ -16,15 +16,15 @@ namespace Bootstrap.DataAccess
         /// </summary>
         public const string RetrieveRolesDataKey = "RoleHelper-RetrieveRoles";
         /// <summary>
-        /// 通过用户 ID 獲取相关角色集合鍵值 RoleHelper-RetrieveRolesByUserId
+        /// 通过用户 ID 獲取相關角色集合鍵值 RoleHelper-RetrieveRolesByUserId
         /// </summary>
         public const string RetrieveRolesByUserIdDataKey = "RoleHelper-RetrieveRolesByUserId";
         /// <summary>
-        /// 通过選單 ID 獲得相关角色集合鍵值 RoleHelper-RetrieveRolesByMenuId
+        /// 通过選單 ID 獲得相關角色集合鍵值 RoleHelper-RetrieveRolesByMenuId
         /// </summary>
         public const string RetrieveRolesByMenuIdDataKey = "RoleHelper-RetrieveRolesByMenuId";
         /// <summary>
-        /// 通过部门 ID 獲得相关角色集合鍵值 RoleHelper-RetrieveRolesByGroupId
+        /// 通过部门 ID 獲得相關角色集合鍵值 RoleHelper-RetrieveRolesByGroupId
         /// </summary>
         public const string RetrieveRolesByGroupIdDataKey = "RoleHelper-RetrieveRolesByGroupId";
 
@@ -64,7 +64,7 @@ namespace Bootstrap.DataAccess
         public static IEnumerable<Role> RetrievesByUserId(string userId) => CacheManager.GetOrAdd($"{RetrieveRolesByUserIdDataKey}-{userId}", key => DbContextManager.Create<Role>()?.RetrievesByUserId(userId), RetrieveRolesByUserIdDataKey) ?? new Role[0];
 
         /// <summary>
-        /// 删除角色表
+        /// 刪除角色表
         /// </summary>
         /// <param name="value"></param>
         public static bool Delete(IEnumerable<string> value)
@@ -117,14 +117,14 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 根據GroupId查詢和该Group有关的所有Roles
+        /// 根據GroupId查詢和该Group有關的所有Roles
         /// </summary>
         /// <param name="groupId"></param>
         /// <returns></returns>
         public static IEnumerable<Role> RetrievesByGroupId(string groupId) => CacheManager.GetOrAdd(string.Format("{0}-{1}", RetrieveRolesByGroupIdDataKey, groupId), key => DbContextManager.Create<Role>()?.RetrievesByGroupId(groupId), RetrieveRolesByGroupIdDataKey) ?? new Role[0];
 
         /// <summary>
-        /// 根據GroupId更新Roles訊息，删除旧的Roles訊息，插入新的Roles訊息
+        /// 根據GroupId更新Roles訊息，刪除旧的Roles訊息，插入新的Roles訊息
         /// </summary>
         /// <param name="groupId"></param>
         /// <param name="roleIds"></param>
@@ -147,7 +147,7 @@ namespace Bootstrap.DataAccess
         /// 通过指定 Url 地址獲得授權角色集合
         /// </summary>
         /// <param name="url">請求 Url 地址</param>
-        /// <param name="appId">應用程序Id</param>
+        /// <param name="appId">應用程式Id</param>
         /// <returns>角色名稱集合</returns>
         public static IEnumerable<string> RetrievesByUrl(string url, string appId) => CacheManager.GetOrAdd(string.Format("{0}-{1}-{2}", DbHelper.RetrieveRolesByUrlDataKey, url, appId), key => DbContextManager.Create<Role>()?.RetrievesByUrl(url, appId), DbHelper.RetrieveRolesByUrlDataKey) ?? new string[0];
     }

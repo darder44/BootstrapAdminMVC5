@@ -6,13 +6,13 @@
     };
 
     var swalDeleteOptions = {
-        title: "删除資料",
-        html: '您確定要删除选中的所有資料吗',
+        title: "刪除資料",
+        html: '您確定要刪除选中的所有資料吗',
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: '#dc3545',
         cancelButtonColor: '#6c757d',
-        confirmButtonText: "我要删除",
+        confirmButtonText: "我要刪除",
         cancelButtonText: "取消"
     };
 
@@ -81,7 +81,7 @@
 
     DataTable = function (options) {
         var that = this;
-        this.options = $.extend(true, { delTitle: "删除資料", saveTitle: "保存資料" }, DataTable.settings, options);
+        this.options = $.extend(true, { delTitle: "刪除資料", saveTitle: "保存資料" }, DataTable.settings, options);
         this.dataEntity = new DataEntity(options.map);
 
         // handler click event
@@ -100,11 +100,11 @@
                 if (options.bootstrapTable !== null) {
                     var arrselections = options.bootstrapTable.bootstrapTable('getSelections');
                     if (arrselections.length === 0) {
-                        lgbSwal({ title: '请选择要编辑的資料', type: "warning" });
+                        lgbSwal({ title: '请选择要編輯的資料', type: "warning" });
                         return;
                     }
                     else if (arrselections.length > 1) {
-                        lgbSwal({ title: '只能选择一項要编辑的資料', type: "warning" });
+                        lgbSwal({ title: '只能选择一項要編輯的資料', type: "warning" });
                         return;
                     }
                     else {
@@ -128,8 +128,8 @@
                     if (options.advancedSearchModal) {
                         $(options.advancedSearchModal).modal('hide');
                     }
-                    // fix bug: 翻頁後再更改查詢条件导致頁码未更改資料為空
-                    // 更改頁码為 1 即可
+                    // fix bug: 翻頁後再更改查詢條件導致頁碼未更改資料為空
+                    // 更改頁碼為 1 即可
                     // https://gitee.com/dotnetchina/BootstrapAdmin/issues/I1A739
                     var options = this.options.bootstrapTable.data('bootstrap.table').options;
                     options.pageNumber = 1;
@@ -168,11 +168,11 @@
                 if (options.bootstrapTable !== null) {
                     var arrselections = options.bootstrapTable.bootstrapTable('getSelections');
                     if (arrselections.length === 0) {
-                        lgbSwal({ title: '请选择要编辑的資料', type: "warning" });
+                        lgbSwal({ title: '请选择要編輯的資料', type: "warning" });
                         return;
                     }
                     else if (arrselections.length > 1) {
-                        lgbSwal({ title: '只能选择一項要编辑的資料', type: "warning" });
+                        lgbSwal({ title: '只能选择一項要編輯的資料', type: "warning" });
                         return;
                     }
                     else {
@@ -189,7 +189,7 @@
                 if (options.bootstrapTable !== null) {
                     var arrselections = options.bootstrapTable.bootstrapTable('getSelections');
                     if (arrselections.length === 0) {
-                        lgbSwal({ title: '请选择要删除的資料', type: "warning" });
+                        lgbSwal({ title: '请选择要刪除的資料', type: "warning" });
                         return;
                     }
                     else {
@@ -247,7 +247,7 @@
                 'click .del': function (e, value, row, index) {
                     var displayName = "本項目";
                     if (row.Name) displayName = " <span class='text-danger font-weight-bold'>" + row.Name + "</span> ";
-                    var text = "您確定要删除" + displayName + "吗？";
+                    var text = "您確定要刪除" + displayName + "吗？";
                     var data = $.extend({}, row);
                     data = [data];
 
@@ -263,7 +263,7 @@
                             $.each(nodes, function (index, element) {
                                 data.push($.extend({}, element));
                             });
-                            text = "本删除項含有級联子項目</br>您確定要删除 <span class='text-danger font-weight-bold'>" + row.Name + "</span> 以及子項目吗？";
+                            text = "本刪除項含有級联子項目</br>您確定要刪除 <span class='text-danger font-weight-bold'>" + row.Name + "</span> 以及子項目吗？";
                         }
                     }
                     swal($.extend({}, swalDeleteOptions, { html: text })).then(function (result) {
@@ -273,7 +273,7 @@
                                 return element[idField];
                             });
                             $.bc({
-                                url: op.url, data: iDs, method: 'delete', title: '删除資料', logData: data,
+                                url: op.url, data: iDs, method: 'delete', title: '刪除資料', logData: data,
                                 callback: function (result) {
                                     if (result) op.table.bootstrapTable('refresh');
                                     handlerCallback.call(op.src, null, e, { oper: 'del', success: result, data: data });

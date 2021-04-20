@@ -18,7 +18,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <div class="dropdown-arrow arrow-primary"></div>
-                        <div id="msgHeaderTaskContent" class="dropdown-header bg-primary">您有 <span id="msgHeaderTask">0</span> 个未完成的任务</div>
+                        <div id="msgHeaderTaskContent" class="dropdown-header bg-primary">您有 <span id="msgHeaderTask">0</span> 個未完成的任务</div>
                         <div class="dropdown-footer">
                             <a href="@("~/Admin/Tasks".ToBlazorMenuUrl())">查看所有任务</a>
                         </div>
@@ -33,7 +33,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <div class="dropdown-arrow arrow-info"></div>
-                        <div id="msgHeaderMsgContent" class="dropdown-header bg-info">您有 <span id="msgHeaderMsg">0</span> 个未读的消息</div>
+                        <div id="msgHeaderMsgContent" class="dropdown-header bg-info">您有 <span id="msgHeaderMsg">0</span> 個未读的消息</div>
                         <div class="dropdown-footer">
                             <a href="@("~/Admin/Messages".ToBlazorMenuUrl())">查看所有消息</a>
                         </div>
@@ -48,7 +48,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <div class="dropdown-arrow arrow-success"></div>
-                        <div id="msgHeaderUserContent" class="dropdown-header bg-success">您有 <span id="msgHeaderUser">0</span> 条新用户通知</div>
+                        <div id="msgHeaderUserContent" class="dropdown-header bg-success">您有 <span id="msgHeaderUser">0</span> 條新用户通知</div>
                         <div class="dropdown-footer">
                             <a href="@("~/Admin/Notifications".ToBlazorMenuUrl())">查看所有通知</a>
                         </div>
@@ -63,7 +63,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <div class="dropdown-arrow arrow-warning"></div>
-                        <div id="msgHeaderAppContent" class="dropdown-header bg-warning">您有 <span id="msgHeaderApp">0</span> 条程序异常通知</div>
+                        <div id="msgHeaderAppContent" class="dropdown-header bg-warning">您有 <span id="msgHeaderApp">0</span> 條程式异常通知</div>
                         <div class="dropdown-footer">
                             <a href="@("~/Admin/Exceptions".ToBlazorMenuUrl())">查看所有异常</a>
                         </div>
@@ -78,7 +78,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <div class="dropdown-arrow arrow-danger"></div>
-                        <div id="msgHeaderDbContent" class="dropdown-header bg-danger">您有 <span id="msgHeaderDb">0</span> 条資料庫异常通知</div>
+                        <div id="msgHeaderDbContent" class="dropdown-header bg-danger">您有 <span id="msgHeaderDb">0</span> 條資料庫异常通知</div>
                         <div class="dropdown-footer">
                             <a href="@("~/Admin/Exceptions".ToBlazorMenuUrl())">查看所有异常</a>
                         </div>
@@ -86,7 +86,7 @@
                 </div>
                 <!-- db dropdown end -->
                 <div class="dropdown">
-                    <a class="shadow-success" href="@("~/Account/Lock".ToBlazorMenuUrl())" data-toggle="tooltip" title="系统锁屏">
+                    <a class="shadow-success" href="@("~/Account/Lock".ToBlazorMenuUrl())" data-toggle="tooltip" title="系統锁屏">
                         <i class="fa fa-tv"></i>
                     </a>
                 </div>
@@ -108,12 +108,12 @@
                         <img src="@Icon.ToBlazorLink()">
                         <div class="flex-fill">
                             <div class="username text-truncate">@DisplayName</div>
-                            <div>登录名：@RootLayout?.UserName</div>
+                            <div>登入名：@RootLayout?.UserName</div>
                         </div>
                     </div>
                 </div>
                 <div class="dropdown-item">
-                    <a href="@("~/Admin/Profiles".ToBlazorMenuUrl())"><i class=" fa fa-suitcase"></i>个人中心</a>
+                    <a href="@("~/Admin/Profiles".ToBlazorMenuUrl())"><i class=" fa fa-suitcase"></i>個人中心</a>
                     <a href="@("~/Admin/Index".ToBlazorMenuUrl())"><i class="fa fa-cog"></i>設置</a>
                     <a href="@("~/Admin/Notifications".ToBlazorMenuUrl())"><i class="fa fa-bell"></i>通知<span id="logoutNoti" class="badge badge-pill badge-success"></span></a>
                 </div>

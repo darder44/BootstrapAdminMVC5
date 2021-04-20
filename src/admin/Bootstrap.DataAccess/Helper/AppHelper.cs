@@ -19,7 +19,7 @@ namespace Bootstrap.DataAccess
         /// </summary>
         public const string RetrieveAppsByUserNameDataKey = DbHelper.RetrieveAppsByUserNameDataKey;
         /// <summary>
-        /// 根據角色ID指派應用程序
+        /// 根據角色ID指派應用程式
         /// </summary>
         /// <param name="roleId"></param>
         /// <returns></returns>
@@ -39,7 +39,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 根據指定用户名獲得授權應用程序集合
+        /// 根據指定用户名獲得授權應用程式集合
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>

@@ -17,12 +17,12 @@ namespace Bootstrap.Admin.Models
         }
 
         /// <summary>
-        /// 验证码圖床地址
+        /// 驗證碼圖床地址
         /// </summary>
         public string ImageLibUrl { get; protected set; }
 
         /// <summary>
-        /// 是否登录認证失败 為真时客户端弹出滑块验证码
+        /// 是否登入認證失败 為真時客户端弹出滑块驗證碼
         /// </summary>
         public bool AuthFailed { get; set; }
     }

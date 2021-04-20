@@ -58,26 +58,26 @@ namespace Bootstrap.Admin.Pages.Components
         [Parameter] public EventCallback<EditContext> OnInvalidSubmit { get; set; }
 
         /// <summary>
-        /// 验证組件缓存 静態全局提高性能
+        /// 驗證組件缓存 静態全局提高性能
         /// </summary>
         private static ConcurrentDictionary<(LgbEditFormBase EditForm, Type ModelType, string FieldName), IValidateComponent> _validatorCache = new ConcurrentDictionary<(LgbEditFormBase, Type, string), IValidateComponent>();
 
         /// <summary>
-        /// 添加資料验证組件到 EditForm 中
+        /// 添加資料驗證組件到 EditForm 中
         /// </summary>
         /// <param name="key"></param>
         /// <param name="comp"></param>
         public void AddValidator((LgbEditFormBase EditForm, Type ModelType, string FieldName) key, IValidateComponent comp) => _validatorCache.AddOrUpdate(key, k => comp, (k, c) => c = comp);
 
         /// <summary>
-        /// EditModel 資料模型验证方法
+        /// EditModel 資料模型驗證方法
         /// </summary>
         /// <param name="model"></param>
         /// <param name="context"></param>
         /// <param name="results"></param>
         public void ValidateObject(object model, ValidationContext context, List<ValidationResult> results)
         {
-            // 遍历所有可验证組件进行資料验证
+            // 遍历所有可驗證組件進行資料驗證
             foreach (var key in _validatorCache)
             {
                 if (key.Key.EditForm == this && key.Key.ModelType == context.ObjectType)
@@ -90,7 +90,7 @@ namespace Bootstrap.Admin.Pages.Components
 
                         var validator = _validatorCache[key.Key];
 
-                        // 資料验证
+                        // 資料驗證
                         validator.ValidateProperty(propertyValue, context, results);
                         validator.ToggleMessage(results, false);
                     }
@@ -99,7 +99,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 字段验证方法
+        /// 字段驗證方法
         /// </summary>
         /// <param name="propertyValue"></param>
         /// <param name="context"></param>

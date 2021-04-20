@@ -26,7 +26,7 @@ namespace Bootstrap.Admin.Controllers
     {
         private const string MobileSchema = "Mobile";
         /// <summary>
-        /// 系统锁屏界面
+        /// 系統锁屏界面
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -46,7 +46,7 @@ namespace Bootstrap.Admin.Controllers
         }
 
         /// <summary>
-        /// 系统登录方法
+        /// 系統登入方法
         /// </summary>
         /// <param name="appId"></param>
         /// <param name="view"></param>

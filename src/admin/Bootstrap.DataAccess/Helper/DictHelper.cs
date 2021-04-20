@@ -39,10 +39,10 @@ namespace Bootstrap.DataAccess
         /// <returns></returns>
         public static string RetrieveWebIcon(string appId)
         {
-            // 獲取應用程序 logo
+            // 獲取應用程式 logo
             var ret = "~/favicon.ico";
             var ditcs = RetrieveDicts();
-            var platName = ditcs.FirstOrDefault(d => d.Category == "應用程序" && d.Code == appId)?.Name;
+            var platName = ditcs.FirstOrDefault(d => d.Category == "應用程式" && d.Code == appId)?.Name;
             if (!string.IsNullOrEmpty(platName))
             {
                 var pathBase = ditcs.FirstOrDefault(d => d.Category == "應用首頁" && d.Name == appId)?.Code;
@@ -62,10 +62,10 @@ namespace Bootstrap.DataAccess
         /// <returns></returns>
         public static string RetrieveWebLogo(string appId)
         {
-            // 獲取應用程序 logo
+            // 獲取應用程式 logo
             var ret = "~/favicon.png";
             var ditcs = RetrieveDicts();
-            var platName = ditcs.FirstOrDefault(d => d.Category == "應用程序" && d.Code == appId)?.Name;
+            var platName = ditcs.FirstOrDefault(d => d.Category == "應用程式" && d.Code == appId)?.Name;
             if (!string.IsNullOrEmpty(platName))
             {
                 var pathBase = ditcs.FirstOrDefault(d => d.Category == "應用首頁" && d.Name == appId)?.Code;
@@ -79,15 +79,15 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 删除字典中的資料
+        /// 刪除字典中的資料
         /// </summary>
-        /// <param name="value">需要删除的IDs</param>
+        /// <param name="value">需要刪除的IDs</param>
         /// <returns></returns>
         public static bool Delete(IEnumerable<string> value)
         {
             if (!value.Any()) return true;
 
-            // 禁止删除系统資料与測試平台資料
+            // 禁止刪除系統資料与測試平台資料
             if (RetrieveSystemModel() && RetrieveProtectedDicts().Any(d => value.Any(v => v == d.Id))) return true;
             var ret = DbContextManager.Create<Dict>()?.Delete(value) ?? false;
             if (ret) CacheCleanUtility.ClearCache(dictIds: value);
@@ -155,13 +155,13 @@ namespace Bootstrap.DataAccess
                 ["SMS"] = "短信驗證碼登錄",
                 ["AutoLock"] = "自動锁屏",
                 ["AutoLockPeriod"] = "自動锁屏時長",
-                ["DefaultApp"] = "默認應用程序",
+                ["DefaultApp"] = "預設應用程式",
                 ["Blazor"] = "Blazor",
                 ["IPLocator"] = "IP地理位置接口",
-                ["ErrLog"] = "程序異常保留時長",
+                ["ErrLog"] = "程式異常保留時長",
                 ["OpLog"] = "操作日誌保留時長",
                 ["LogLog"] = "登錄日誌保留時長",
-                ["TraceLog"] = "访问日誌保留時長",
+                ["TraceLog"] = "訪問日誌保留時長",
                 ["CookiePeriod"] = "Cookie保留時長",
                 ["IPCachePeriod"] = "IP請求快取時長",
                 ["AppPath"] = "後台地址",
@@ -200,7 +200,7 @@ namespace Bootstrap.DataAccess
         public static string RetrieveWebFooter(string appId) => DbContextManager.Create<Dict>()?.RetrieveWebFooter(appId) ?? string.Empty;
 
         /// <summary>
-        /// 獲得系统中配置的可以使用的網站样式
+        /// 獲得系統中配置的可以使用的網站样式
         /// </summary>
         /// <returns></returns>
         public static IEnumerable<BootstrapDict> RetrieveThemes() => DbContextManager.Create<Dict>()?.RetrieveThemes() ?? new BootstrapDict[0];
@@ -218,39 +218,39 @@ namespace Bootstrap.DataAccess
         public static string RetrieveIconFolderPath() => DbContextManager.Create<Dict>()?.RetrieveIconFolderPath() ?? "~/images/uploader/";
 
         /// <summary>
-        /// 獲得默認的前台首頁地址，默認為 ~/Home/Index
+        /// 獲得預設的前台首頁地址，預設為 ~/Home/Index
         /// </summary>
         /// <param name="userName">登錄用户名</param>
-        /// <param name="appId">默認應用程序编碼</param>
+        /// <param name="appId">預設應用程式編碼</param>
         /// <returns></returns>
         public static string RetrieveHomeUrl(string? userName, string appId) => DbContextManager.Create<Dict>()?.RetrieveHomeUrl(userName, appId) ?? "~/Home/Index";
 
         /// <summary>
-        /// 獲取所有應用程序資料方法
+        /// 獲取所有應用程式資料方法
         /// </summary>
         /// <returns></returns>
         public static IEnumerable<KeyValuePair<string, string>> RetrieveApps() => DbContextManager.Create<Dict>()?.RetrieveApps() ?? new KeyValuePair<string, string>[0];
 
         /// <summary>
-        /// 程序異常時長 默認 1 個月
+        /// 程式異常時長 預設 1 個月
         /// </summary>
         /// <returns></returns>
         public static int RetrieveExceptionsLogPeriod() => DbContextManager.Create<Dict>()?.RetrieveExceptionsLogPeriod() ?? 1;
 
         /// <summary>
-        /// 獲得操作日誌保留時長 默認 12 個月
+        /// 獲得操作日誌保留時長 預設 12 個月
         /// </summary>
         /// <returns></returns>
         public static int RetrieveLogsPeriod() => DbContextManager.Create<Dict>()?.RetrieveLogsPeriod() ?? 12;
 
         /// <summary>
-        /// 獲得登錄日誌保留時長 默認 12 個月
+        /// 獲得登錄日誌保留時長 預設 12 個月
         /// </summary>
         /// <returns></returns>
         public static int RetrieveLoginLogsPeriod() => DbContextManager.Create<Dict>()?.RetrieveLoginLogsPeriod() ?? 12;
 
         /// <summary>
-        /// 獲取登錄認證Cookie保留時長 默認 7 天
+        /// 獲取登錄認證Cookie保留時長 預設 7 天
         /// </summary>
         /// <returns></returns>
         public static int RetrieveCookieExpiresPeriod() => DbContextManager.Create<Dict>()?.RetrieveCookieExpiresPeriod() ?? 7;
@@ -275,19 +275,19 @@ namespace Bootstrap.DataAccess
         public static int RetrieveLocaleIPSvrCachePeriod() => DbContextManager.Create<Dict>()?.RetrieveLocaleIPSvrCachePeriod() ?? 10;
 
         /// <summary>
-        /// 访问日誌保留時長 默認 1 個月
+        /// 訪問日誌保留時長 預設 1 個月
         /// </summary>
         /// <returns></returns>
         public static int RetrieveAccessLogPeriod() => DbContextManager.Create<Dict>()?.RetrieveAccessLogPeriod() ?? 1;
 
         /// <summary>
-        /// 獲得 是否為演示系统 默認為 false 不是演示系统
+        /// 獲得 是否為演示系統 預設為 false 不是演示系統
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveSystemModel() => DbContextManager.Create<Dict>()?.RetrieveSystemModel() ?? true;
 
         /// <summary>
-        /// 設置 系统是否為演示系统 默認為 false 不是演示系统
+        /// 設置 系統是否為演示系統 預設為 false 不是演示系統
         /// </summary>
         /// <returns></returns>
         public static bool UpdateSystemModel(bool isDemo, string authKey)
@@ -345,31 +345,31 @@ namespace Bootstrap.DataAccess
         public static bool RetrieveOAuthLogin() => DbContextManager.Create<Dict>()?.RetrieveOAuthLogin() ?? false;
 
         /// <summary>
-        /// 獲得自動锁屏時長 默認 30 秒
+        /// 獲得自動锁屏時長 預設 30 秒
         /// </summary>
         /// <returns></returns>
         public static int RetrieveAutoLockScreenPeriod() => DbContextManager.Create<Dict>()?.RetrieveAutoLockScreenPeriod() ?? 30;
 
         /// <summary>
-        /// 獲得自動锁屏 默認关閉
+        /// 獲得自動锁屏 預設關閉
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveAutoLockScreen() => DbContextManager.Create<Dict>()?.RetrieveAutoLockScreen() ?? false;
 
         /// <summary>
-        /// 獲得是否开启默認應用功能 默認关閉
+        /// 獲得是否开啟預設應用功能 預設關閉
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveDefaultApp() => DbContextManager.Create<Dict>()?.RetrieveDefaultApp() ?? false;
 
         /// <summary>
-        /// 獲得是否开启 Blazor 功能 默認关閉
+        /// 獲得是否开啟 Blazor 功能 預設關閉
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveEnableBlazor() => DbContextManager.Create<Dict>()?.RetrieveEnableBlazor() ?? false;
 
         /// <summary>
-        /// 獲得是否开启 固定表頭 默認开启
+        /// 獲得是否开啟 固定表頭 預設开啟
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveFixedTableHeader() => DbContextManager.Create<Dict>()?.RetrieveFixedTableHeader() ?? false;
@@ -387,7 +387,7 @@ namespace Bootstrap.DataAccess
         public static string RetrievePathBase() => DbContextManager.Create<Dict>()?.RetrievePathBase() ?? "";
 
         /// <summary>
-        /// 獲得字典表健康檢查是否开启
+        /// 獲得字典表健康檢查是否开啟
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveHealth() => DbContextManager.Create<Dict>()?.RetrieveHealth() ?? true;
@@ -399,7 +399,7 @@ namespace Bootstrap.DataAccess
         public static IEnumerable<BootstrapDict> RetrieveLogins() => DbContextManager.Create<Dict>()?.RetrieveLogins() ?? new BootstrapDict[0];
 
         /// <summary>
-        /// 獲得使用中的登錄视圖名稱
+        /// 獲得使用中的登錄視圖名稱
         /// </summary>
         /// <returns></returns>
         public static string RetrieveLoginView() => DbContextManager.Create<Dict>()?.RetrieveLoginView() ?? "Login";
@@ -463,7 +463,7 @@ namespace Bootstrap.DataAccess
             {
                 ret = Save(new BootstrapDict()
                 {
-                    Category = "應用程序",
+                    Category = "應用程式",
                     Name = option.AppName,
                     Code = option.AppCode,
                     Define = 0
@@ -499,14 +499,14 @@ namespace Bootstrap.DataAccess
                 if (ret) ret = Save(new BootstrapDict()
                 {
                     Category = option.AppName,
-                    Name = "系统設置地址",
+                    Name = "系統設置地址",
                     Code = "/Admin/Index",
                     Define = 1
                 });
                 if (ret) ret = Save(new BootstrapDict()
                 {
                     Category = option.AppName,
-                    Name = "系统通知地址",
+                    Name = "系統通知地址",
                     Code = "/Admin/Notifications",
                     Define = 1
                 });
@@ -529,14 +529,14 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 删除指定前台應用
+        /// 刪除指定前台應用
         /// </summary>
         /// <param name="dict"></param>
         /// <returns></returns>
         public static bool DeleteApp(BootstrapDict dict)
         {
             var ids = new List<string>();
-            ids.AddRange(RetrieveDicts().Where(d => d.Category == "應用程序" && d.Name == dict.Name && d.Code == dict.Code).Select(d => d.Id ?? ""));
+            ids.AddRange(RetrieveDicts().Where(d => d.Category == "應用程式" && d.Name == dict.Name && d.Code == dict.Code).Select(d => d.Id ?? ""));
             ids.AddRange(RetrieveDicts().Where(d => d.Category == "應用首頁" && d.Name == dict.Code).Select(d => d.Id ?? ""));
             ids.AddRange(RetrieveDicts().Where(d => d.Category == dict.Name).Select(d => d.Id ?? ""));
 

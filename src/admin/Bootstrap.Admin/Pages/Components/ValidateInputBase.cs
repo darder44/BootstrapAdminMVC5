@@ -12,7 +12,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 内置验证組件基類
+    /// 内置驗證組件基類
     /// </summary>
     public abstract class ValidateInputBase<TItem> : InputBase<TItem>, IValidateComponent, IRules
     {
@@ -92,13 +92,13 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 獲得 資料验证方法集合
+        /// 獲得 資料驗證方法集合
         /// </summary>
         public ICollection<ValidatorComponentBase> Rules { get; } = new HashSet<ValidatorComponentBase>();
 
         private string _tooltipMethod = "";
         /// <summary>
-        /// 属性验证方法
+        /// 属性驗證方法
         /// </summary>
         /// <param name="propertyValue"></param>
         /// <param name="context"></param>
@@ -109,10 +109,10 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 顯示/隐藏验证结果方法
+        /// 顯示/隐藏驗證结果方法
         /// </summary>
         /// <param name="results"></param>
-        /// <param name="validProperty">是否对本属性进行資料验证</param>
+        /// <param name="validProperty">是否对本属性進行資料驗證</param>
         public void ToggleMessage(IEnumerable<ValidationResult> results, bool validProperty)
         {
             if (Rules.Any())
@@ -123,9 +123,9 @@ namespace Bootstrap.Admin.Pages.Components
                     ErrorMessage = messages.First().ErrorMessage ?? string.Empty;
                     ValidCss = "is-invalid";
 
-                    // 控件自身資料验证时顯示 tooltip
-                    // EditForm 資料验证时調用 tooltip('enable') 保证 tooltip 組件生成
-                    // 調用 tooltip('hide') 後導致鼠標悬停时 tooltip 无法正常顯示
+                    // 控件自身資料驗證時顯示 tooltip
+                    // EditForm 資料驗證時調用 tooltip('enable') 保證 tooltip 組件生成
+                    // 調用 tooltip('hide') 後導致鼠標悬停時 tooltip 无法正常顯示
                     _tooltipMethod = validProperty ? "show" : "enable";
                 }
                 else

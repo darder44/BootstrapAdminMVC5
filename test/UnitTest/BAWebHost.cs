@@ -13,7 +13,7 @@ using Xunit;
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// 未登录
+    /// 未登入
     /// </summary>
     [CollectionDefinition("BA-Logout")]
     public class BootstrapAdminLogoutContext : ICollectionFixture<BAWebHost>
@@ -27,7 +27,7 @@ namespace Bootstrap.Admin
     public class BAWebHost : WebApplicationFactory<Startup>
     {
         /// <summary>
-        /// 獲得已经登录的HttpClient
+        /// 獲得已经登入的HttpClient
         /// </summary>
         /// <param name="baseAddress"></param>
         /// <returns></returns>
@@ -53,7 +53,7 @@ namespace Bootstrap.Admin
             config.AddEnvironmentVariables();
             var con = config.Build();
 
-            // 增加单元測試本身的配置文件
+            // 增加單元測試本身的配置文件
             builder.ConfigureAppConfiguration(app => app.AddJsonFile(TestHelper.RetrievePath($"UnitTest{Path.DirectorySeparatorChar}appsettings.json"), false, true));
             if (con.GetValue("Appveyor", false))
             {

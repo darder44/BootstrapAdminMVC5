@@ -1,6 +1,6 @@
 @model NavigatorBarModel
 @{
-    ViewBag.Title = "程序异常";
+    ViewBag.Title = "程式异常";
 }
 @section css {
     <environment include="Development">
@@ -34,13 +34,13 @@
 <div id="toolbar" class="d-none">
     <div class="toolbar btn-group">
         <button id="btn_view" type="button" class="btn btn-danger" asp-auth="log">
-            <i class="fa fa-file-text-o" aria-hidden="true"></i><span>服务器日志</span>
+            <i class="fa fa-file-text-o" aria-hidden="true"></i><span>服务器日誌</span>
         </button>
     </div>
     <div class="gear btn-group dropdown">
         <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button"><i class="fa fa-gear"></i></button>
         <div class="dropdown-menu">
-            <a id="tb_view" href="#" title="查看明细" asp-auth="log"><i class="fa fa-file-text-o"></i></a>
+            <a id="tb_view" href="#" title="查看明詳" asp-auth="log"><i class="fa fa-file-text-o"></i></a>
         </div>
     </div>
 </div>
@@ -56,7 +56,7 @@
     <div id="errorList" class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabel">程序异常日志窗口</h5>
+                <h5 class="modal-title" id="myModalLabel">程式异常日誌窗口</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
@@ -73,7 +73,7 @@
 </div>
 <div id="errorDetail" class="modal-content icon-content">
     <div class="modal-header">
-        <h5 class="modal-title" id="myDetailModalLabel">程序异常日志窗口</h5>
+        <h5 class="modal-title" id="myDetailModalLabel">程式异常日誌窗口</h5>
         <button type="button" class="close" aria-hidden="true">&times;</button>
     </div>
     <div class="modal-body">
@@ -98,14 +98,14 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="mySearchModalLabel">查詢条件</h5>
+                <h5 class="modal-title" id="mySearchModalLabel">查詢條件</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body modal-query">
                 <form class="form-inline">
                     <div class="row">
                         <div class="form-group col-12">
-                            <label class="control-label" for="txt_operate_start">起始时间</label>
+                            <label class="control-label" for="txt_operate_start">起始時间</label>
                             <div class="input-group date">
                                 <input id="txt_operate_start" class="form-control" size="16" type="text" value="" readonly>
                                 <div class="input-group-append input-group-addon">
@@ -117,7 +117,7 @@
                             </div>
                         </div>
                         <div class="form-group col-12">
-                            <label class="control-label" for="txt_operate_end">终止时间</label>
+                            <label class="control-label" for="txt_operate_end">终止時间</label>
                             <div class="input-group date">
                                 <input id="txt_operate_end" class="form-control" size="16" type="text" value="" readonly>
                                 <div class="input-group-append input-group-addon">

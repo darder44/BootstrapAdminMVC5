@@ -45,7 +45,7 @@ namespace Bootstrap.Admin.Api
             var resp = await Client.PutAsJsonAsync<User, bool>("UnitTest", user);
             Assert.False(resp);
 
-            // 重置Admin密码
+            // 重置Admin密碼
             await Client.PutAsJsonAsync<ResetUser, bool>("", new ResetUser { UserName = "Admin", DisplayName = "Administrator", Reason = "UnitTest" });
             resp = await Client.PutAsJsonAsync<User, bool>("Admin", new User() { Password = "123789" });
             Assert.True(resp);

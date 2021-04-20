@@ -75,7 +75,7 @@ namespace Bootstrap.DataAccess
             Assert.Equal($"{user.UserName} ({user.DisplayName})", user.ToString());
             Assert.True(UserHelper.Save(user));
 
-            // 二次保存时返回 false
+            // 二次保存時返回 false
             user.Id = null;
             Assert.False(UserHelper.Save(user));
             Assert.True(UserHelper.Delete(UserHelper.Retrieves().Where(usr => usr.UserName == user.UserName).Select(usr => usr.Id)));
@@ -142,7 +142,7 @@ namespace Bootstrap.DataAccess
             var usr = UserHelper.RetrieveUserByUserName("Admin");
             Assert.Equal("Administrator", usr.DisplayName);
 
-            // 新建用户 默認角色為 Default
+            // 新建用户 預設角色為 Default
             var user = new User { UserName = "UnitTest_ICON", Password = "123", DisplayName = "DisplayName", ApprovedBy = "System", ApprovedTime = DateTime.Now, Description = "Desc", Icon = "" };
             Assert.True(UserHelper.Save(user));
             var u = UserHelper.RetrieveUserByUserName(user.UserName);

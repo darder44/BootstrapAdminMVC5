@@ -14,18 +14,18 @@ namespace Bootstrap.DataAccess
     public class Group : BootstrapGroup
     {
         /// <summary>
-        /// 獲得/設置 群组描述
+        /// 獲得/設置 群組描述
         /// </summary>
         public string? Description { get; set; }
 
         /// <summary>
-        /// 獲取/設置 用户群组关联狀態 checked 標示已经关联 '' 標示未关联
+        /// 獲取/設置 用户群組關联狀態 checked 標示已经關联 '' 標示未關联
         /// </summary>
         [ResultColumn]
         public string Checked { get; set; } = "";
 
         /// <summary>
-        /// 查詢所有群组訊息
+        /// 查詢所有群組訊息
         /// </summary>
         /// <returns></returns>
         public virtual IEnumerable<Group> Retrieves()
@@ -35,7 +35,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 删除群组訊息
+        /// 刪除群組訊息
         /// </summary>
         /// <param name="value"></param>
         public virtual bool Delete(IEnumerable<string> value)
@@ -61,7 +61,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 保存新建/更新的群组訊息
+        /// 保存新建/更新的群組訊息
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
@@ -107,7 +107,7 @@ namespace Bootstrap.DataAccess
             try
             {
                 db.BeginTransaction();
-                //删除用户部门表中该用户所有的部门關係
+                //刪除用户部门表中该用户所有的部门關係
                 db.Execute("delete from UserGroup where UserID = @0", userId);
                 db.InsertBatch("UserGroup", groupIds.Select(g => new { UserID = userId, GroupID = g }));
                 db.CompleteTransaction();
@@ -134,7 +134,7 @@ namespace Bootstrap.DataAccess
             try
             {
                 db.BeginTransaction();
-                //删除角色部门表该角色所有的部门
+                //刪除角色部门表该角色所有的部门
                 db.Execute("delete from RoleGroup where RoleID = @0", roleId);
                 db.InsertBatch("RoleGroup", groupIds.Select(g => new { RoleID = roleId, GroupID = g }));
                 db.CompleteTransaction();

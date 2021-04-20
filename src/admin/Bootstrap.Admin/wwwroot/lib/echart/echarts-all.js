@@ -2149,7 +2149,7 @@ define('zrender/zrender', [
                 show: false,
                 title: {
                     mark: '辅助线开關',
-                    markUndo: '删除辅助线',
+                    markUndo: '刪除辅助线',
                     markClear: '清空辅助线'
                 },
                 lineStyle: {
@@ -2167,10 +2167,10 @@ define('zrender/zrender', [
             },
             dataView: {
                 show: false,
-                title: '資料视圖',
+                title: '資料視圖',
                 readOnly: false,
                 lang: [
-                    '資料视圖',
+                    '資料視圖',
                     '關闭',
                     '刷新'
                 ]
@@ -2182,7 +2182,7 @@ define('zrender/zrender', [
                     bar: '柱形圖切换',
                     stack: '堆积',
                     tiled: '平铺',
-                    force: '力导向布局圖切换',
+                    force: '力導向布局圖切换',
                     chord: '和弦圖切换',
                     pie: '饼圖切换',
                     funnel: '漏斗圖切换'
@@ -36464,7 +36464,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '5224',
                 'properties': {
-                    'name': '毕节地区',
+                    'name': '畢节地区',
                     'cp': [
                         105.1611,
                         27.0648

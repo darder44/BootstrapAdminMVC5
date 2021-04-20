@@ -11,7 +11,7 @@ using System.Threading;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// 在线用户接口
+    /// 線上用户接口
     /// </summary>
     [Route("api/[controller]")]
     [Authorize]
@@ -19,7 +19,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class OnlineUsersController : ControllerBase
     {
         /// <summary>
-        /// 獲取所有在线用户資料
+        /// 獲取所有線上用户資料
         /// </summary>
         /// <returns></returns>
         [HttpGet()]
@@ -29,7 +29,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 獲取指定会话的在线用户請求地址明细資料
+        /// 獲取指定會话的線上用户請求地址明詳資料
         /// </summary>
         /// <param name="id"></param>
         /// <param name="onlineUSers"></param>
@@ -42,9 +42,9 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 登录頁面檢查調用
+        /// 登入頁面檢查調用
         /// </summary>
-        /// <returns>返回真时 启用行為验证码</returns>
+        /// <returns>返回真時 啟用行為驗證碼</returns>
         [HttpPut]
         [AllowAnonymous]
         public bool Put()

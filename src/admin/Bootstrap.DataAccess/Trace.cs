@@ -7,7 +7,7 @@ using System.ComponentModel;
 namespace Bootstrap.DataAccess
 {
     /// <summary>
-    /// 用户访问資料實體類別
+    /// 用户訪問資料實體類別
     /// </summary>
     [TableName("Traces")]
     public class Trace
@@ -48,9 +48,9 @@ namespace Bootstrap.DataAccess
         public string Browser { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 客户端操作系统
+        /// 獲得/設置 客户端操作系統
         /// </summary>
-        [DisplayName("操作系统")]
+        [DisplayName("操作系統")]
         public string OS { get; set; } = "";
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Bootstrap.DataAccess
         public string Referer { get; set; } = "";
 
         /// <summary>
-        /// 保存用户访问資料历史記錄
+        /// 保存用户訪問資料历史記錄
         /// </summary>
         /// <param name="p"></param>
         public virtual bool Save(Trace p)
@@ -84,7 +84,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 查詢用户访问分頁資料
+        /// 查詢用户訪問分頁資料
         /// </summary>
         /// <param name="po"></param>
         /// <param name="startTime"></param>

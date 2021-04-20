@@ -3,7 +3,7 @@
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// 正常系统
+    /// 正常系統
     /// </summary>
     [CollectionDefinition("Login")]
     public class BootstrapAdminContext : ICollectionFixture<BALoginWebHost>

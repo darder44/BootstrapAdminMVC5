@@ -96,7 +96,7 @@ namespace Bootstrap.Admin.Controllers
             content = await r.Content.ReadAsStringAsync();
             Assert.Contains("登 录", content);
 
-            // 空密码登陆
+            // 空密碼登陆
             view = await r.Content.ReadAsStringAsync();
             tokenTag = "<input name=\"__RequestVerificationToken\" type=\"hidden\" value=\"";
             index = view.IndexOf(tokenTag);
@@ -134,9 +134,9 @@ namespace Bootstrap.Admin.Controllers
             var r = await client.GetAsync("/Account/Lock");
             Assert.True(r.IsSuccessStatusCode);
             var content = await r.Content.ReadAsStringAsync();
-            Assert.Contains("系统锁屏", content);
+            Assert.Contains("系統锁屏", content);
 
-            // 第二次調用 跳转到登录页面
+            // 第二次調用 跳转到登入页面
             r = await client.GetAsync("/Account/Lock");
             Assert.True(r.IsSuccessStatusCode);
             content = await r.Content.ReadAsStringAsync();

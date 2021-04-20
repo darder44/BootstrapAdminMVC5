@@ -39,7 +39,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 删除部門方法
+        /// 刪除部門方法
         /// </summary>
         /// <param name="value"></param>
         [HttpDelete]

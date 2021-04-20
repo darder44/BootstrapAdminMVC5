@@ -13,7 +13,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
     public class ExceptionsBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 编辑類型實例
+        /// 獲得/設置 編輯類型實例
         /// </summary>
         protected Bootstrap.DataAccess.Exceptions DataContext { get; set; } = new Bootstrap.DataAccess.Exceptions();
 
@@ -23,12 +23,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected Bootstrap.DataAccess.Exceptions QueryModel { get; set; } = new Bootstrap.DataAccess.Exceptions();
 
         /// <summary>
-        /// 獲得/設置 开始时间
+        /// 獲得/設置 开始時间
         /// </summary>
         protected DateTime? StartTime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 开始时间
+        /// 獲得/設置 开始時间
         /// </summary>
         protected DateTime? EndTime { get; set; }
 
@@ -44,13 +44,13 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 獲得 错误日志文件集合
+        /// 獲得 错误日誌文件集合
         /// </summary>
         protected IEnumerable<string> Items { get; set; } = new string[0];
 
         private bool show;
         /// <summary>
-        /// 顯示异常明细方法
+        /// 顯示异常明詳方法
         /// </summary>
         protected void ShowDetail()
         {
@@ -77,7 +77,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected ModalBase? Modal { get; set; }
 
         /// <summary>
-        /// 顯示指定文件内容明细
+        /// 顯示指定文件内容明詳
         /// </summary>
         protected void ShowLog(string fileName)
         {

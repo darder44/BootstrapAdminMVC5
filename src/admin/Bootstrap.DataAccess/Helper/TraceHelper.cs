@@ -14,7 +14,7 @@ namespace Bootstrap.DataAccess
     public static class TraceHelper
     {
         /// <summary>
-        /// 保存访问历史記錄
+        /// 保存訪問历史記錄
         /// </summary>
         /// <param name="context"></param>
         /// <param name="v"></param>
@@ -24,7 +24,7 @@ namespace Bootstrap.DataAccess
             {
                 var user = UserHelper.RetrieveUserByUserName(context.User.Identity.Name);
 
-                // user == null 以前登錄过客户端保留了 Cookie 但是用户名可能被系统删除
+                // user == null 以前登錄过客户端保留了 Cookie 但是用户名可能被系統刪除
                 // link bug: https://gitee.com/dotnetchina/BootstrapAdmin/issues/I123MH
                 if (user != null)
                 {
@@ -47,7 +47,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 进入在线跟踪的地址过滤方法
+        /// 進入線上跟踪的地址过濾方法
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -58,7 +58,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 獲得指定IP历史访问記錄
+        /// 獲得指定IP历史訪問記錄
         /// </summary>
         /// <param name="po"></param>
         /// <param name="startTime"></param>
@@ -68,7 +68,7 @@ namespace Bootstrap.DataAccess
         public static Page<Trace> Retrieves(PaginationOption po, DateTime? startTime, DateTime? endTime, string? ip) => DbContextManager.Create<Trace>()?.RetrievePages(po, startTime, endTime, ip) ?? new Page<Trace>() { Items = new List<Trace>() };
 
         /// <summary>
-        /// 獲得指定IP历史访问記錄
+        /// 獲得指定IP历史訪問記錄
         /// </summary>
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>

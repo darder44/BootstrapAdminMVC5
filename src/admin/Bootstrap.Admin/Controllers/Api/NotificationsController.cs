@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// 系统通知控制器
+    /// 系統通知控制器
     /// </summary>
     [Route("api/[controller]")]
     [Authorize]
@@ -16,7 +16,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class NotificationsController : ControllerBase
     {
         /// <summary>
-        /// 後台 Header 狀態条調用
+        /// 後台 Header 狀態條調用
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -34,7 +34,7 @@ namespace Bootstrap.Admin.Controllers.Api
                 var ts = DateTime.Now - n.RegisterTime;
                 if (ts.TotalMinutes < 5) n.Period = "刚刚";
                 else if (ts.Days > 0) n.Period = string.Format("{0}天", ts.Days);
-                else if (ts.Hours > 0) n.Period = string.Format("{0}小时", ts.Hours);
+                else if (ts.Hours > 0) n.Period = string.Format("{0}小時", ts.Hours);
                 else if (ts.Minutes > 0) n.Period = string.Format("{0}分钟", ts.Minutes);
             });
 
@@ -60,7 +60,7 @@ namespace Bootstrap.Admin.Controllers.Api
                 var ts = DateTime.Now - n.LogTime;
                 if (ts.TotalMinutes < 5) n.Period = "刚刚";
                 else if (ts.Days > 0) n.Period = string.Format("{0}天", ts.Days);
-                else if (ts.Hours > 0) n.Period = string.Format("{0}小时", ts.Hours);
+                else if (ts.Hours > 0) n.Period = string.Format("{0}小時", ts.Hours);
                 else if (ts.Minutes > 0) n.Period = string.Format("{0}分钟", ts.Minutes);
             });
 
@@ -74,7 +74,7 @@ namespace Bootstrap.Admin.Controllers.Api
                 var ts = DateTime.Now - n.LogTime;
                 if (ts.TotalMinutes < 5) n.Period = "刚刚";
                 else if (ts.Days > 0) n.Period = string.Format("{0}天", ts.Days);
-                else if (ts.Hours > 0) n.Period = string.Format("{0}小时", ts.Hours);
+                else if (ts.Hours > 0) n.Period = string.Format("{0}小時", ts.Hours);
                 else if (ts.Minutes > 0) n.Period = string.Format("{0}分钟", ts.Minutes);
             });
 

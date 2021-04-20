@@ -28,7 +28,7 @@ namespace Bootstrap.Admin.Pages.Components
         public int PageItems { get; set; }
 
         /// <summary>
-        /// 獲得/設置 頁码总数
+        /// 獲得/設置 頁碼總数
         /// </summary>
         public int PageCount
         {
@@ -109,7 +109,7 @@ namespace Bootstrap.Admin.Pages.Components
         /// </summary>
         protected override void OnParametersSet()
         {
-            // 计算 分頁开始頁码与结束頁码
+            // 计算 分頁开始頁碼与结束頁碼
             StartPageIndex = Math.Max(1, PageIndex - 4);
             EndPageIndex = Math.Min(PageCount, PageIndex + 5);
         }

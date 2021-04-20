@@ -5,7 +5,7 @@ using System;
 namespace Bootstrap.Admin.Query
 {
     /// <summary>
-    /// 登录日志查詢条件 
+    /// 登入日誌查詢條件 
     /// </summary>
     public class QueryLoginOption : PaginationOption
     {
@@ -20,7 +20,7 @@ namespace Bootstrap.Admin.Query
         public DateTime? EndTime { get; set; }
 
         /// <summary>
-        /// 登录IP地址
+        /// 登入IP地址
         /// </summary>
         public string? LoginIP { get; set; }
 

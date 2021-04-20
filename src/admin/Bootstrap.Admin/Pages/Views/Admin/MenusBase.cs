@@ -31,7 +31,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         /// </summary>
         protected List<SelectedItem> QueryCategory { get; set; } = new List<SelectedItem>(new SelectedItem[] {
             new SelectedItem() { Text = "全部", Value = "", Active = true },
-            new SelectedItem() { Text = "系统選單", Value = "0" },
+            new SelectedItem() { Text = "系統選單", Value = "0" },
             new SelectedItem() { Text = "外部選單", Value = "1" }
         });
 
@@ -57,7 +57,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         /// 獲得/設置 選單類别
         /// </summary>
         protected List<SelectedItem> DefineCategory { get; set; } = new List<SelectedItem>(new SelectedItem[] {
-            new SelectedItem() { Text = "系统選單", Value = "0" },
+            new SelectedItem() { Text = "系統選單", Value = "0" },
             new SelectedItem() { Text = "外部選單", Value = "1" }
         });
 
@@ -86,7 +86,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         };
 
         /// <summary>
-        /// 獲得/設置 用户登录名
+        /// 獲得/設置 用户登入名
         /// </summary>
         protected string? UserName { get; set; }
 
@@ -157,12 +157,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected override bool Save(BootstrapMenu item) => MenuHelper.Save(item);
 
         /// <summary>
-        /// 删除方法
+        /// 刪除方法
         /// </summary>
         protected override bool Delete(IEnumerable<BootstrapMenu> items) => MenuHelper.Delete(items.Select(item => item.Id ?? ""));
 
         /// <summary>
-        /// 重置搜索方法
+        /// 重置查詢方法
         /// </summary>
         protected void ResetSearch()
         {
@@ -213,7 +213,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 选择框点击时調用此方法
+        /// 选择框点击時調用此方法
         /// </summary>
         /// <param name="item"></param>
         /// <param name="check"></param>

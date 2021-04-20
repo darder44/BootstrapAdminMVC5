@@ -38,7 +38,7 @@ namespace Bootstrap.Admin.Api
         [InlineData("首页")]
         public async void Search_Ok(string search)
         {
-            // 選單 系统選單 系统使用条件
+            // 選單 系統選單 系統使用條件
             var qd = await Client.GetAsJsonAsync<QueryData<object>>($"?search={search}&sort=&order=&offset=0&limit=20&category=&name=&define=0&_=1547608210979");
             Assert.NotEmpty(qd.rows);
         }

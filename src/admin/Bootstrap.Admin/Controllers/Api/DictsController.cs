@@ -38,7 +38,7 @@ namespace Bootstrap.Admin.Controllers.Api
             return DictHelper.Save(value);
         }
         /// <summary>
-        /// 删除字典項方法
+        /// 刪除字典項方法
         /// </summary>
         /// <param name="value"></param>
         [HttpDelete]

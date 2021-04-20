@@ -44,12 +44,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected override bool Save(Role item) => RoleHelper.Save(item);
 
         /// <summary>
-        /// 删除方法
+        /// 刪除方法
         /// </summary>
         protected override bool Delete(IEnumerable<Role> items) => RoleHelper.Delete(items.Select(item => item.Id ?? ""));
 
         /// <summary>
-        /// 重置搜索方法
+        /// 重置查詢方法
         /// </summary>
         protected void ResetSearch()
         {
@@ -102,7 +102,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 选择框点击时調用此方法
+        /// 选择框点击時調用此方法
         /// </summary>
         /// <param name="item"></param>
         /// <param name="check"></param>
@@ -175,7 +175,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 选择框点击时調用此方法
+        /// 选择框点击時調用此方法
         /// </summary>
         /// <param name="item"></param>
         /// <param name="check"></param>
@@ -204,7 +204,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             {
                 if (EditPage.SelectedItems.Count() != 1)
                 {
-                    ShowMessage("應用程序授權", "請选择一個角色", ToastCategory.Information);
+                    ShowMessage("應用程式授權", "請选择一個角色", ToastCategory.Information);
                 }
                 else
                 {
@@ -230,11 +230,11 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
                 var appIds = apps.Where(r => r.Checked == "checked").Select(r => r.Id ?? "");
                 if (!string.IsNullOrEmpty(roleId)) ret = AppHelper.SaveByRoleId(roleId, appIds);
             }
-            ShowMessage("應用程序授權", ret ? "保存成功" : "保存失败", ret ? ToastCategory.Success : ToastCategory.Error);
+            ShowMessage("應用程式授權", ret ? "保存成功" : "保存失败", ret ? ToastCategory.Success : ToastCategory.Error);
         }
 
         /// <summary>
-        /// 选择框点击时調用此方法
+        /// 选择框点击時調用此方法
         /// </summary>
         /// <param name="item"></param>
         /// <param name="check"></param>

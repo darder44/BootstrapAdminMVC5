@@ -48,7 +48,7 @@
                 Id = id,
                 Title = "服务器内部错误",
                 Content = "服务器内部错误",
-                Detail = "相關错误信息已经记录到日志中，請登录服务器或後台管理中查看",
+                Detail = "相關错误信息已经紀錄到日誌中，請登入服务器或後台管理中查看",
                 Image = "~/images/error_icon.png",
                 ReturnUrl = "~/Admin/Index"
             };
@@ -65,8 +65,8 @@
                     break;
                 case 403:
                     model.Title = "未授權請求";
-                    model.Content = "您的访问受限！";
-                    model.Detail = "服务器拒绝處理您的請求！您可能没有访问此操作的權限";
+                    model.Content = "您的訪問受限！";
+                    model.Detail = "服务器拒绝處理您的請求！您可能没有訪問此操作的權限";
                     break;
             }
             return model;

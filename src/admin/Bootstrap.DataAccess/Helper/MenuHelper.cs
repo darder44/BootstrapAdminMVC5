@@ -15,7 +15,7 @@ namespace Bootstrap.DataAccess
     public static class MenuHelper
     {
         /// <summary>
-        /// 通过指定角色ID相关選單快取鍵值
+        /// 通过指定角色ID相關選單快取鍵值
         /// </summary>
         public const string RetrieveMenusByRoleIdDataKey = "MenuHelper-RetrieveMenusByRoleId";
 
@@ -31,23 +31,23 @@ namespace Bootstrap.DataAccess
         /// <returns></returns>
         public static bool Save(BootstrapMenu p)
         {
-            // 不允许保存系统選單与前台演示系统的默認選單
+            // 不允许保存系統選單与前台演示系統的預設選單
             if (DictHelper.RetrieveSystemModel())
             {
                 if (p.Category == "0") return true;
 
-                // 查找原有資料比对是否為系统選單与演示選單
+                // 查找原有資料比对是否為系統選單与演示選單
                 if (!string.IsNullOrEmpty(p.Id))
                 {
 
-                    // 系统選單
+                    // 系統選單
                     var menus = RetrieveAllMenus("Admin");
 #pragma warning disable CS8602 // 取消引用可能出现的空引用。
                     var menu = menus.FirstOrDefault(m => m.Id.Equals(p.Id, System.StringComparison.OrdinalIgnoreCase));
 #pragma warning restore CS8602 // 取消引用可能出现的空引用。
                     if (menu != null && menu.Category == "0") return true;
 
-                    // 演示系统
+                    // 演示系統
                     var appMenus = BootstrapAppContext.Configuration.GetSection("AppMenus").Get<ICollection<string>>();
                     if (appMenus.Any(m => m.Equals(menu?.Name, StringComparison.OrdinalIgnoreCase))) return true;
                 }
@@ -59,7 +59,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 删除選單
+        /// 刪除選單
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -67,12 +67,12 @@ namespace Bootstrap.DataAccess
         {
             if (DictHelper.RetrieveSystemModel())
             {
-                // 不允许删除系统選單与前台演示系统的默認選單
+                // 不允许刪除系統選單与前台演示系統的預設選單
                 var systemMenus = RetrieveAllMenus("Admin").Where(m => m.Category == "0");
                 value = value.Where(v => !systemMenus.Any(m => m.Id == v));
                 if (!value.Any()) return true;
 
-                // 演示系统
+                // 演示系統
                 var appMenus = BootstrapAppContext.Configuration.GetSection("AppMenus").Get<ICollection<string>>();
                 var appIds = RetrieveAllMenus("Admin").Where(m => appMenus.Any(app => m.Name.Equals(app, System.StringComparison.OrdinalIgnoreCase))).Select(m => m.Id);
 #pragma warning disable CS8602 // 取消引用可能出现的空引用。
@@ -93,7 +93,7 @@ namespace Bootstrap.DataAccess
         public static IEnumerable<BootstrapMenu> RetrieveMenusByUserName(string? userName) => RetrieveAllMenus(userName);
 
         /// <summary>
-        /// 通过角色獲取相关選單集合
+        /// 通过角色獲取相關選單集合
         /// </summary>
         /// <param name="roleId"></param>
         /// <returns></returns>
@@ -113,7 +113,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 獲取指定用户的應用程序選單
+        /// 獲取指定用户的應用程式選單
         /// </summary>
         /// <param name="appId"></param>
         /// <param name="userName"></param>
@@ -132,7 +132,7 @@ namespace Bootstrap.DataAccess
         /// 通过當前用户名獲得後台選單，层次化後集合
         /// </summary>
         /// <param name="userName">當前登錄的用户名</param>
-        /// <param name="activeUrl">當前访问選單</param>
+        /// <param name="activeUrl">當前訪問選單</param>
         /// <returns></returns>
         public static IEnumerable<BootstrapMenu> RetrieveSystemMenus(string userName, string? activeUrl = null)
         {

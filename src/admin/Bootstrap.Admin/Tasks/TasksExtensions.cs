@@ -37,13 +37,13 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns></returns>
         protected override Task ExecuteAsync(CancellationToken stoppingToken) => Task.Run(() =>
         {
-            TaskServicesManager.GetOrAdd("单次任務", token => Task.Delay(1000));
+            TaskServicesManager.GetOrAdd("單次任務", token => Task.Delay(1000));
             TaskServicesManager.GetOrAdd("周期任務", token => Task.Delay(1000), TriggerBuilder.Default.WithInterval(10000).Build());
             TaskServicesManager.GetOrAdd("Cron 任務", token => Task.Delay(1000), TriggerBuilder.Build(Cron.Secondly(5)));
-            TaskServicesManager.GetOrAdd("超时任務", token => Task.Delay(2000), TriggerBuilder.Default.WithTimeout(1000).WithInterval(1000).WithRepeatCount(2).Build());
+            TaskServicesManager.GetOrAdd("超時任務", token => Task.Delay(2000), TriggerBuilder.Default.WithTimeout(1000).WithInterval(1000).WithRepeatCount(2).Build());
 
-            // 本机調試时此處会抛出异常，配置文件中預設开启了任務持久化到物理文件，此處异常只有首次加载时会抛出
-            // 此處异常是示例自定义任務内部未进行捕獲异常时任務仍然能继续运行，不会導致整個进程崩溃退出
+            // 本机調試時此處會抛出异常，配置文件中預設开啟了任務持久化到物理文件，此處异常只有首次加载時會抛出
+            // 此處异常是示例自定义任務内部未進行捕獲异常時任務仍然能继续运行，不會導致整個進程崩溃退出
             // 此處程式碼可注释掉
             //TaskServicesManager.GetOrAdd("故障任務", token => throw new Exception("故障任務"));
             TaskServicesManager.GetOrAdd("取消任務", token => Task.Delay(1000)).Triggers.First().Enabled = false;
@@ -51,10 +51,10 @@ namespace Microsoft.Extensions.DependencyInjection
             // 創建任務并禁用
             TaskServicesManager.GetOrAdd("禁用任務", token => Task.Delay(1000)).Status = SchedulerStatus.Disabled;
 
-            // 真實任務负责批次写入資料執行脚本到日志中
-            TaskServicesManager.GetOrAdd<DBLogTask>("SQL日志", TriggerBuilder.Build(Cron.Minutely()));
+            // 真實任務负责批次写入資料執行脚本到日誌中
+            TaskServicesManager.GetOrAdd<DBLogTask>("SQL日誌", TriggerBuilder.Build(Cron.Minutely()));
 
-            // 真實人物负责周期性設置健康檢查结果开關為开启
+            // 真實人物负责周期性設置健康檢查结果开關為开啟
             TaskServicesManager.GetOrAdd("健康檢查", token => Task.FromResult(DictHelper.SaveSettings(new BootstrapDict[] {
                 new BootstrapDict() {
                     Category = "網站設置",

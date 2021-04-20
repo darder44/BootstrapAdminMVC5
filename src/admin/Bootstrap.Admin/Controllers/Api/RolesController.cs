@@ -51,7 +51,7 @@ namespace Bootstrap.Admin.Controllers.Api
         /// </summary>
         /// <param name="id">角色ID</param>
         /// <param name="values">选中的ID集合</param>
-        /// <param name="type">type=menu时，選單維護頁面对角色授權弹框保存按钮調用</param>
+        /// <param name="type">type=menu時，選單維護頁面对角色授權弹框保存按钮調用</param>
         /// <returns></returns>
         [HttpPut("{id}")]
         [ButtonAuthorize(Url = "~/Admin/Roles", Auth = "assignUser,assignGroup,assignMenu,assignApp")]
@@ -74,7 +74,7 @@ namespace Bootstrap.Admin.Controllers.Api
             return RoleHelper.Save(value);
         }
         /// <summary>
-        /// 删除角色方法
+        /// 刪除角色方法
         /// </summary>
         /// <param name="value"></param>
         [HttpDelete]

@@ -1,11 +1,11 @@
 $(function () {
     var swalDeleteOptions = {
-        title: "删除前台站点配置",
+        title: "刪除前台站点配置",
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: '#dc3545',
         cancelButtonColor: '#6c757d',
-        confirmButtonText: "我要删除",
+        confirmButtonText: "我要刪除",
         cancelButtonText: "取消"
     };
 
@@ -81,7 +81,7 @@ $(function () {
                     url: Settings.url, data: [
                         { name: 'OAuth', code: oauth },
                         { name: 'SMS', code: mobile }
-                    ], title: '登录設置', method: "post"
+                    ], title: '登入設置', method: "post"
                 });
                 break;
             case 'saveAutoLock':
@@ -101,7 +101,7 @@ $(function () {
             case 'saveDefaultApp':
                 var defaultApp = $('#defaultApp').prop('checked') ? "1" : "0";
                 $.bc({
-                    url: Settings.url, data: [{ name: 'DefaultApp', code: defaultApp }], title: '保存預設應用程序設置', method: "post"
+                    url: Settings.url, data: [{ name: 'DefaultApp', code: defaultApp }], title: '保存預設應用程式設置', method: "post"
                 });
                 break;
             case 'saveBlazor':
@@ -139,14 +139,14 @@ $(function () {
                         { name: 'TraceLog', code: traceLog },
                         { name: 'CookiePeriod', code: cookiePeriod },
                         { name: 'IPCachePeriod', code: ipCachePeriod }
-                    ], title: '保存日志缓存設置', method: "post"
+                    ], title: '保存日誌缓存設置', method: "post"
                 });
                 break;
             case 'saveDemo':
                 var demo = $('#demo').prop('checked') ? "1" : "0";
                 var authKey = $('#authKey').val();
                 $.bc({
-                    url: Settings.url + '/Demo', data: { name: authKey, code: demo }, title: '演示系统設置', method: "post",
+                    url: Settings.url + '/Demo', data: { name: authKey, code: demo }, title: '演示系統設置', method: "post",
                     callback: function (result) {
                         if (result) {
                             window.setTimeout(function () { window.location.reload(true); }, 1000);
@@ -188,7 +188,7 @@ $(function () {
 
                             if (appId === 'new') {
                                 // 保存成功创建新 dom
-                                var segment = $.format('<div class="form-group col-12 app" data-key="{0}"><label class="control-label" for="{0}">{1}</label><div class="input-group flex-fill"><input id="{0}" class="form-control" placeholder="请输入應用首頁，2000字以内" value="{2}" maxlength="2000" data-valid="true" /><div class="input-group-append"><button class="btn btn-danger" type="button" data-key="{0}" data-method="delApp"><i class="fa fa-trash-o"></i><span>删除</span></button><button class="btn btn-primary" type="button" data-key="{0}" data-method="editApp"><i class="fa fa fa-pencil"></i><span>编辑</span></button></div></div></div>', appKey, appName, appPath);
+                                var segment = $.format('<div class="form-group col-12 app" data-key="{0}"><label class="control-label" for="{0}">{1}</label><div class="input-group flex-fill"><input id="{0}" class="form-control" placeholder="请輸入應用首頁，2000字以内" value="{2}" maxlength="2000" data-valid="true" /><div class="input-group-append"><button class="btn btn-danger" type="button" data-key="{0}" data-method="delApp"><i class="fa fa-trash-o"></i><span>刪除</span></button><button class="btn btn-primary" type="button" data-key="{0}" data-method="editApp"><i class="fa fa fa-pencil"></i><span>編輯</span></button></div></div></div>', appKey, appName, appPath);
 
                                 // append dom
                                 $('#appList').append($(segment));
@@ -226,10 +226,10 @@ $(function () {
                 var appKey = $(this).attr('data-key');
                 var appName = $(this).parents('.input-group').prev().text();
                 var $this = $(this);
-                swal($.extend({}, swalDeleteOptions, { html: "您確定要删除" + appName + "前台站点配置吗" })).then(function (result) {
+                swal($.extend({}, swalDeleteOptions, { html: "您確定要刪除" + appName + "前台站点配置吗" })).then(function (result) {
                     if (result.value) {
                         $.bc({
-                            url: Settings.url + '/AppPath', data: { name: appName, code: appKey }, title: "删除" + appName, method: "delete",
+                            url: Settings.url + '/AppPath', data: { name: appName, code: appKey }, title: "刪除" + appName, method: "delete",
                             callback: function (result) {
                                 // remove dom
                                 $this.parents('.form-group').remove();
@@ -241,7 +241,7 @@ $(function () {
             case 'saveLoginView':
                 var logView = $('#loginView').val();
                 $.bc({
-                    url: Settings.url, data: [{ name: 'Login', code: logView }], title: '保存登录界面設置', method: "post"
+                    url: Settings.url, data: [{ name: 'Login', code: logView }], title: '保存登入界面設置', method: "post"
                 });
                 break;
         }

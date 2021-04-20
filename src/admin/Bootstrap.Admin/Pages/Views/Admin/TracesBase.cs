@@ -12,7 +12,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
     public class TracesBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 编辑類型實例
+        /// 獲得/設置 編輯類型實例
         /// </summary>
         protected Trace DataContext { get; set; } = new Trace();
 
@@ -22,12 +22,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected Trace QueryModel { get; set; } = new Trace();
 
         /// <summary>
-        /// 獲得/設置 开始时间
+        /// 獲得/設置 开始時间
         /// </summary>
         protected DateTime? StartTime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 开始时间
+        /// 獲得/設置 开始時间
         /// </summary>
         protected DateTime? EndTime { get; set; }
 
@@ -43,7 +43,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 重置搜索方法
+        /// 重置查詢方法
         /// </summary>
         protected void ResetSearch()
         {

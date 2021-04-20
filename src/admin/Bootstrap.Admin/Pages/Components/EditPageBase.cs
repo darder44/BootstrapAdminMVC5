@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 可编辑頁面組件包含查詢与資料表格
+    /// 可編輯頁面組件包含查詢与資料表格
     /// </summary>
     public class EditPageBase<TItem> : ComponentBase
     {
@@ -96,7 +96,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected Table<TItem>? Table { get; set; }
 
         /// <summary>
-        /// 编辑資料弹窗 Title
+        /// 編輯資料弹窗 Title
         /// </summary>
         [Parameter]
         public string SubmitModalTitle { get; set; } = "";
@@ -114,13 +114,13 @@ namespace Bootstrap.Admin.Pages.Components
         public Func<TItem, bool> OnSave { get; set; } = item => false;
 
         /// <summary>
-        /// 重置搜索条件回調方法
+        /// 重置查詢條件回調方法
         /// </summary>
         [Parameter]
         public Action OnResetSearch { get; set; } = () => { };
 
         /// <summary>
-        /// 删除按钮回調方法
+        /// 刪除按钮回調方法
         /// </summary>
         [Parameter]
         public Func<IEnumerable<TItem>, bool> OnDelete { get; set; } = item => false;
@@ -134,7 +134,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 資料表格内删除按钮方法
+        /// 資料表格内刪除按钮方法
         /// </summary>
         /// <param name="item"></param>
         protected void Delete(TItem item)
@@ -148,7 +148,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 编辑方法
+        /// 編輯方法
         /// </summary>
         protected void Edit(TItem item)
         {

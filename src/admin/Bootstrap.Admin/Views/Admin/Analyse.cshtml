@@ -51,12 +51,12 @@
     <script src="~/js/analyse.js" asp-append-version="true"></script>
 }
 <div class="card d-none">
-    <div class="card-header">查詢条件</div>
+    <div class="card-header">查詢條件</div>
     <div class="card-body">
         <form class="form-inline">
             <div class="row">
                 <div class="form-group col-sm-auto">
-                    <label class="control-label" for="txt_operate_start">起始时间</label>
+                    <label class="control-label" for="txt_operate_start">起始時间</label>
                     <div class="input-group date">
                         <input id="txt_operate_start" class="form-control" size="16" type="text" value="@DateTime.Today.ToString("yyyy-MM-dd")" readonly>
                         <div class="input-group-append input-group-addon">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="form-group col-sm-auto">
-                    <label class="control-label" for="txt_operate_end">终止时间</label>
+                    <label class="control-label" for="txt_operate_end">终止時间</label>
                     <div class="input-group date">
                         <input id="txt_operate_end" class="form-control" size="16" type="text" value="@DateTime.Today.ToString("yyyy-MM-dd")" readonly>
                         <div class="input-group-append input-group-addon">
@@ -92,7 +92,7 @@
 </div>
 <div class="card">
     <div class="card-header">
-        访问日志
+        訪問日誌
     </div>
     <div class="card-body">
         <div id="trace" class="spark"></div>
@@ -103,7 +103,7 @@
 </div>
 <div class="card">
     <div class="card-header">
-        登录日志
+        登入日誌
     </div>
     <div class="card-body">
         <div id="login" class="spark"></div>
@@ -114,7 +114,7 @@
 </div>
 <div class="card">
     <div class="card-header">
-        操作日志
+        操作日誌
     </div>
     <div class="card-body">
         <div id="log" class="spark"></div>

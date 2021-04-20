@@ -12,7 +12,7 @@ namespace Bootstrap.Admin.Controllers
         [Fact]
         public async void SystemMode_Test()
         {
-            var dict = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站设置" && d.Name == "演示系统");
+            var dict = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "演示系統");
             dict.Code = "1";
             DictHelper.Save(dict);
 
@@ -23,7 +23,7 @@ namespace Bootstrap.Admin.Controllers
             db.Execute("Update Dicts Set Code = @0 Where Id = @1", "0", dict.Id);
             Assert.Equal(HttpStatusCode.OK, r.StatusCode);
             var source = await r.Content.ReadAsStringAsync();
-            Assert.Contains("演示系统", source);
+            Assert.Contains("演示系統", source);
         }
 
         [Fact]

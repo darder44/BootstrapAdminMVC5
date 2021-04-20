@@ -19,11 +19,11 @@ namespace Bootstrap.Admin.Controllers.Api
     public class ProfilesController : ControllerBase
     {
         /// <summary>
-        /// 删除頭像按钮調用
+        /// 刪除頭像按钮調用
         /// </summary>
         /// <param name="id">Delete</param>
         /// <param name="env"></param>
-        /// <param name="files">表单資料集合</param>
+        /// <param name="files">表單資料集合</param>
         /// <returns></returns>
         [HttpPost("{id}")]
         [ButtonAuthorize(Url = "~/Admin/Profiles", Auth = "saveIcon")]
@@ -54,7 +54,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 待删除文件集合類
+        /// 待刪除文件集合類
         /// </summary>
         public class DeleteFileCollection
         {

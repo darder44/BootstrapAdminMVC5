@@ -17,7 +17,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class RegisterController : ControllerBase
     {
         /// <summary>
-        /// 登录頁面注册新用户remote validate調用
+        /// 登入頁面注册新用户remote validate調用
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
@@ -28,7 +28,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 登录頁面注册新用户提交按钮調用
+        /// 登入頁面注册新用户提交按钮調用
         /// </summary>
         /// <param name="hub"></param>
         /// <param name="user"></param>
@@ -42,7 +42,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 重置密码調用
+        /// 重置密碼調用
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="user"></param>
@@ -50,7 +50,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public bool Put(string userName, [FromBody]User user) => UserHelper.ResetPassword(userName, user.Password);
 
         /// <summary>
-        /// 忘记密码調用
+        /// 忘记密碼調用
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>

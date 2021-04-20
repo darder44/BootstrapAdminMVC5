@@ -68,7 +68,7 @@ namespace Bootstrap.Admin.Pages.Shared
         public bool IsAdmin { get; set; }
 
         /// <summary>
-        /// 獲得/設置 系统首頁
+        /// 獲得/設置 系統首頁
         /// </summary>
         public string HomeUrl { get; protected set; } = "Pages";
 
@@ -138,7 +138,7 @@ namespace Bootstrap.Admin.Pages.Shared
         }
 
         /// <summary>
-        /// 顯示名稱变化时方法
+        /// 顯示名稱变化時方法
         /// </summary>
         public void OnDisplayNameChanged(string displayName)
         {
@@ -148,7 +148,7 @@ namespace Bootstrap.Admin.Pages.Shared
         }
 
         /// <summary>
-        /// 網站標題变化时触发此方法
+        /// 網站標題变化時触發此方法
         /// </summary>
         /// <param name="title"></param>
         public void OnWebTitleChanged(string title)
@@ -164,7 +164,7 @@ namespace Bootstrap.Admin.Pages.Shared
         public string WebFooter { get; set; } = "";
 
         /// <summary>
-        /// 網站頁脚文字变化是触发此方法
+        /// 網站頁脚文字变化是触發此方法
         /// </summary>
         /// <param name="text"></param>
         public void OnWebFooterChanged(string text) => Footer?.TextChanged.InvokeAsync(text);

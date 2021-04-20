@@ -41,14 +41,14 @@
         <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button"><i class="fa fa-gear"></i></button>
         <div class="dropdown-menu">
             <a id="tb_add" href="#" title="新增" asp-auth="add"><i class="fa fa-plus"></i></a>
-            <a id="tb_delete" href="#" title="删除" asp-auth="del"><i class="fa fa-remove"></i></a>
-            <a id="tb_edit" href="#" title="编辑" asp-auth="edit"><i class="fa fa-pencil"></i></a>
+            <a id="tb_delete" href="#" title="刪除" asp-auth="del"><i class="fa fa-remove"></i></a>
+            <a id="tb_edit" href="#" title="編輯" asp-auth="edit"><i class="fa fa-pencil"></i></a>
         </div>
     </div>
     <div class="toolbar btn-group">
         <button id="btn_add" type="button" class="btn btn-success" asp-auth="add"><i class="fa fa-plus" aria-hidden="true"></i><span>新增</span></button>
-        <button id="btn_delete" type="button" class="btn btn-danger" asp-auth="del"><i class="fa fa-remove" aria-hidden="true"></i><span>删除</span></button>
-        <button id="btn_edit" type="button" class="btn btn-primary" asp-auth="edit"><i class="fa fa-pencil" aria-hidden="true"></i><span>编辑</span></button>
+        <button id="btn_delete" type="button" class="btn btn-danger" asp-auth="del"><i class="fa fa-remove" aria-hidden="true"></i><span>刪除</span></button>
+        <button id="btn_edit" type="button" class="btn btn-primary" asp-auth="edit"><i class="fa fa-pencil" aria-hidden="true"></i><span>編輯</span></button>
     </div>
 </div>
 <div class="card">
@@ -57,30 +57,30 @@
     </div>
     <div class="card-body">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-            <span>演示系统禁止修改内置後台任務</span>
+            <span>演示系統禁止修改内置後台任務</span>
         </div>
         <table id='table'></table>
     </div>
 </div>
 <div id="tableButtons" class="d-none">
     <div class='btn-group'>
-        <button class='edit btn btn-sm btn-success' asp-auth="edit"><i class='fa fa-edit'></i><span>编辑</span></button>
-        <button class='del btn btn-sm btn-danger' asp-auth="del"><i class='fa fa-remove'></i><span>删除</span></button>
+        <button class='edit btn btn-sm btn-success' asp-auth="edit"><i class='fa fa-edit'></i><span>編輯</span></button>
+        <button class='del btn btn-sm btn-danger' asp-auth="del"><i class='fa fa-remove'></i><span>刪除</span></button>
         <button class='pause btn btn-sm btn-warning' asp-auth="pause"><i class='fa fa-pause-circle'></i><span>暂停</span></button>
         <button class='run btn btn-sm btn-success' asp-auth="pause"><i class='fa fa-play-circle'></i><span>运行</span></button>
-        <button class='info btn btn-sm btn-info' asp-auth="info"><i class='fa fa-info-circle'></i><span>日志</span></button>
+        <button class='info btn btn-sm btn-info' asp-auth="info"><i class='fa fa-info-circle'></i><span>日誌</span></button>
     </div>
 </div>
 <div class="modal fade" id="dialogNew" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content" data-toggle="LgbValidate" data-valid-button="#btnSubmit" data-valid-modal="#dialogNew">
             <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabel">任務编辑窗口</h5>
+                <h5 class="modal-title" id="myModalLabel">任務編輯窗口</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-                    <span>演示系统禁止修改内置後台任務</span>
+                    <span>演示系統禁止修改内置後台任務</span>
                 </div>
                 <form class="form-inline">
                     <div class="row">
@@ -128,7 +128,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="taskModalLabel">任務日志窗口</h5>
+                <h5 class="modal-title" id="taskModalLabel">任務日誌窗口</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body" style="background-color: #174482; color: #fff;">

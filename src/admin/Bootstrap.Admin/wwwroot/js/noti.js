@@ -11,10 +11,10 @@
         showColumns: false,
         showAdvancedSearchButton: false,
         columns: [
-            { title: "登录名称", field: "UserName" },
-            { title: "顯示名称", field: "DisplayName" },
+            { title: "登入名稱", field: "UserName" },
+            { title: "顯示名稱", field: "DisplayName" },
             { title: "说明信息", field: "Description" },
-            { title: "注册时间", field: "RegisterTime" },
+            { title: "注册時间", field: "RegisterTime" },
             {
                 title: "操作", field: "Id", formatter: function (value, row, index, field) {
                     return $.format('<div class="btn-group"><button class="btn btn-success" data-toggle="tooltip" data-id="{0}" data-result="ApproveUser" title="同意授權"><i class="fa fa-check"></i><span>同意</span></button><button class="btn btn-danger" data-toggle="tooltip" data-id="{0}" data-result="RejectUser" title="拒绝授權"><i class="fa fa-remove"></i><span>拒绝</span></button></div>', value);

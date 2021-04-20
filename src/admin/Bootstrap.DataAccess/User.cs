@@ -32,7 +32,7 @@ namespace Bootstrap.DataAccess
         public string PassSalt { get; set; } = "";
 
         /// <summary>
-        /// 獲取/設置 角色用户关联狀態 checked 標示已经关联 '' 標示未关联
+        /// 獲取/設置 角色用户關联狀態 checked 標示已经關联 '' 標示未關联
         /// </summary>
         [ResultColumn]
         public string Checked { get; set; } = "";
@@ -101,7 +101,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 保存默認應用方法
+        /// 保存預設應用方法
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="app"></param>
@@ -154,7 +154,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 删除用户
+        /// 刪除用户
         /// </summary>
         /// <param name="value"></param>
         public virtual bool Delete(IEnumerable<string> value)
@@ -251,7 +251,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// User List 视圖保存按钮調用
+        /// User List 視圖保存按钮調用
         /// </summary>
         /// <param name="id"></param>
         /// <param name="password"></param>
@@ -320,7 +320,7 @@ namespace Bootstrap.DataAccess
         /// 通过角色ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="roleId">角色ID</param>
-        /// <param name="userIds">用户ID数组</param>
+        /// <param name="userIds">用户ID数組</param>
         /// <returns></returns>
         public virtual bool SaveByRoleId(string roleId, IEnumerable<string> userIds)
         {
@@ -329,7 +329,7 @@ namespace Bootstrap.DataAccess
             try
             {
                 db.BeginTransaction();
-                //删除用户角色表该角色所有的用户
+                //刪除用户角色表该角色所有的用户
                 db.Execute("delete from UserRole where RoleID = @0", roleId);
                 db.InsertBatch("UserRole", userIds.Select(g => new { UserID = g, RoleID = roleId }));
                 db.CompleteTransaction();
@@ -358,7 +358,7 @@ namespace Bootstrap.DataAccess
         /// 通过部门ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="groupId">GroupID</param>
-        /// <param name="userIds">用户ID数组</param>
+        /// <param name="userIds">用户ID数組</param>
         /// <returns></returns>
         public virtual bool SaveByGroupId(string groupId, IEnumerable<string> userIds)
         {
@@ -367,7 +367,7 @@ namespace Bootstrap.DataAccess
             try
             {
                 db.BeginTransaction();
-                //删除用户角色表该角色所有的用户
+                //刪除用户角色表该角色所有的用户
                 db.Execute("delete from UserGroup where GroupID = @0", groupId);
                 db.InsertBatch("UserGroup", userIds.Select(g => new { UserID = g, GroupID = groupId }));
                 db.CompleteTransaction();
@@ -460,7 +460,7 @@ namespace Bootstrap.DataAccess
         /// </summary>
         RejectUser,
         /// <summary>
-        /// 保存默認應用
+        /// 保存預設應用
         /// </summary>
         SaveApp
     }

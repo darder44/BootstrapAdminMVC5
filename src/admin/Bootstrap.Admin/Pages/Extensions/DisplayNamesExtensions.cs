@@ -16,7 +16,7 @@ namespace Microsoft.Extensions.DependencyInjection
         private static readonly ConcurrentDictionary<(Type ModelType, string FieldName), string> _displayNameCache = new ConcurrentDictionary<(Type, string), string>();
 
         /// <summary>
-        /// 向系统中加入實體類顯示名稱字典
+        /// 向系統中加入實體類顯示名稱字典
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
@@ -27,10 +27,10 @@ namespace Microsoft.Extensions.DependencyInjection
             _displayNameCache.TryAdd((typeof(BootstrapDict), nameof(BootstrapDict.Code)), "字典程式碼");
             _displayNameCache.TryAdd((typeof(BootstrapDict), nameof(BootstrapDict.Define)), "字典類型");
 
-            _displayNameCache.TryAdd((typeof(User), nameof(User.UserName)), "登录名稱");
+            _displayNameCache.TryAdd((typeof(User), nameof(User.UserName)), "登入名稱");
             _displayNameCache.TryAdd((typeof(User), nameof(User.DisplayName)), "顯示名稱");
 
-            _displayNameCache.TryAdd((typeof(Group), nameof(Group.GroupCode)), "部門编码");
+            _displayNameCache.TryAdd((typeof(Group), nameof(Group.GroupCode)), "部門編碼");
             _displayNameCache.TryAdd((typeof(Group), nameof(Group.GroupName)), "部門名稱");
             _displayNameCache.TryAdd((typeof(Group), nameof(Group.Description)), "部門描述");
 
@@ -48,21 +48,21 @@ namespace Microsoft.Extensions.DependencyInjection
             // 缓存顯示名稱
             _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.Key)), "缓存 Key");
             _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.Value)), "缓存值");
-            _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.Interval)), "缓存时長（秒）");
-            _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.ElapsedSeconds)), "已過时長（秒）");
+            _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.Interval)), "缓存時長（秒）");
+            _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.ElapsedSeconds)), "已過時長（秒）");
             _displayNameCache.TryAdd((typeof(CacheItem), nameof(CacheItem.Desc)), "缓存说明");
 
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.ConnectionId)), "会话Id");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.UserName)), "登录名稱");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.ConnectionId)), "會话Id");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.UserName)), "登入名稱");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.DisplayName)), "顯示名稱");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.FirstAccessTime)), "登录时间");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.LastAccessTime)), "访问时间");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.FirstAccessTime)), "登入時间");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.LastAccessTime)), "訪問時间");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Method)), "請求方式");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Ip)), "主机");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Location)), "登录地点");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Location)), "登入地点");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Browser)), "浏览器");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.OS)), "操作系统");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.RequestUrl)), "访问地址");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.OS)), "操作系統");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.RequestUrl)), "訪問地址");
 
             return services;
         }

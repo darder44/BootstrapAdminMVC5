@@ -94,7 +94,7 @@ $(function () {
             },
             columns: [
                 {
-                    title: "選單名称", field: "Name", sortable: true, formatter: function (value, row, index) {
+                    title: "選單名稱", field: "Name", sortable: true, formatter: function (value, row, index) {
                         return $.format('<span class="menu">{0}</span>', value);
                     },
                     events: {
@@ -375,6 +375,6 @@ $(function () {
             var id = $("#menuID").val();
             var check = id === "" || value === "選單" || $.remoteValidate('api/Category/ValidateMenuBySubMenu/' + id);
             return check;
-        }, "拥有子選單时選單類型不可更改為资源或者按钮");
+        }, "拥有子選單時選單類型不可更改為资源或者按钮");
     }
 });

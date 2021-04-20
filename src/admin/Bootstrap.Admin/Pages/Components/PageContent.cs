@@ -34,7 +34,7 @@ namespace Bootstrap.Admin.Pages.Components
                 else
                 {
                     builder.OpenElement(0, "h6");
-                    builder.AddContent(1, "正在玩命开发中... 敬請期待");
+                    builder.AddContent(1, "正在玩命开發中... 敬請期待");
                     builder.CloseElement();
                 }
             }

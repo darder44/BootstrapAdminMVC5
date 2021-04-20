@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Bootstrap.DataAccess
 {
     /// <summary>
-    /// 操作日誌相关操作類別
+    /// 操作日誌相關操作類別
     /// </summary>
     public static class LogHelper
     {

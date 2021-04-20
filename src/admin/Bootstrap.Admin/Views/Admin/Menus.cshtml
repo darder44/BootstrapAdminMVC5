@@ -46,7 +46,7 @@
                 <input class="form-control" data-toggle="lgbSelect" data-default-val="" />
                 <select data-toggle="lgbSelect" class="d-none" id="sel_menus_category">
                     <option value="">全部</option>
-                    <option value="0">系统選單</option>
+                    <option value="0">系統選單</option>
                     <option value="1">外部選單</option>
                 </select>
             </div>
@@ -84,12 +84,12 @@
 }
 @section cardbody {
     <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-        <span>演示系统禁止修改系统選單，可修改外部選單</span>
+        <span>演示系統禁止修改系統選單，可修改外部選單</span>
     </div>
 }
 @section modal {
     <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">選單编辑窗口</h5>
+        <h5 class="modal-title" id="myModalLabel">選單編輯窗口</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -172,7 +172,7 @@
                 <div class="form-group col-sm-6">
                     <label class="control-label" for="category">選單類别</label>
                     <select data-toggle="lgbSelect" class="d-none" disabled data-default-val="1" id="category">
-                        <option value="0">系统選單</option>
+                        <option value="0">系統選單</option>
                         <option value="1">外部選單</option>
                     </select>
                 </div>

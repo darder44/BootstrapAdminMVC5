@@ -26,7 +26,7 @@ namespace Bootstrap.Admin.Pages.Components
         public ICollection<ITableHeader> Headers { get; } = new HashSet<ITableHeader>();
 
         /// <summary>
-        /// 点击表頭排序是触发此回調函数
+        /// 点击表頭排序是触發此回調函数
         /// </summary>
         [Parameter]
         public Action<string, SortOrder>? OnSort { get; set; }

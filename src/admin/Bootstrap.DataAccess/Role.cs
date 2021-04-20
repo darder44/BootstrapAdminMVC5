@@ -31,7 +31,7 @@ namespace Bootstrap.DataAccess
         public string Description { get; set; } = "";
 
         /// <summary>
-        /// 獲取/設置 用户角色关联狀態 checked 標示已经关联 '' 標示未关联
+        /// 獲取/設置 用户角色關联狀態 checked 標示已经關联 '' 標示未關联
         /// </summary>
         [ResultColumn]
         public string Checked { get; set; } = "";
@@ -84,7 +84,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 删除角色表
+        /// 刪除角色表
         /// </summary>
         /// <param name="value"></param>
         public virtual bool Delete(IEnumerable<string> value)
@@ -179,7 +179,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 根據GroupId查詢和该Group有关的所有Roles
+        /// 根據GroupId查詢和该Group有關的所有Roles
         /// </summary>
         /// <param name="groupId"></param>
         /// <returns></returns>
@@ -190,7 +190,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 根據GroupId更新Roles訊息，删除旧的Roles訊息，插入新的Roles訊息
+        /// 根據GroupId更新Roles訊息，刪除旧的Roles訊息，插入新的Roles訊息
         /// </summary>
         /// <param name="groupId"></param>
         /// <param name="roleIds"></param>

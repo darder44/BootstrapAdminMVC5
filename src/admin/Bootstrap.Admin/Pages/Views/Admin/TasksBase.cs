@@ -15,7 +15,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
     public class TasksBase : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 编辑類型實例
+        /// 獲得/設置 編輯類型實例
         /// </summary>
         protected DefaultScheduler DataContext { get; set; } = new DefaultScheduler();
 
@@ -74,7 +74,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
                 TriggerResult.Success => ("success", "成功"),
                 TriggerResult.Error => ("danger", "故障"),
                 TriggerResult.Cancelled => ("info", "取消"),
-                TriggerResult.Timeout => ("warning", "超时"),
+                TriggerResult.Timeout => ("warning", "超時"),
                 _ => ("info", "未設置")
             };
             return new MarkupString($"<button class=\"btn btn-sm btn-{content.Item1}\"><span>{content.Item2}<span></button>");
@@ -101,13 +101,13 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         /// <summary>
         ///
         /// </summary>
-        [DisplayName("下次執行时间")]
+        [DisplayName("下次執行時间")]
         public DateTimeOffset? NextRuntime { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [DisplayName("上次執行时间")]
+        [DisplayName("上次執行時间")]
         public DateTimeOffset? LastRuntime { get; set; }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         /// <summary>
         ///
         /// </summary>
-        [DisplayName("創建时间")]
+        [DisplayName("創建時间")]
         public DateTimeOffset CreatedTime { get; set; }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         /// <summary>
         ///
         /// </summary>
-        [DisplayName("触发条件")]
+        [DisplayName("触發條件")]
         public string TriggerExpression { get; set; } = "";
     }
 

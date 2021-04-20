@@ -56,7 +56,7 @@ namespace Bootstrap.Admin.Api
             op = await Client.GetAsJsonAsync<QueryAppOption>(data.AppCode);
             Assert.Equal(data.AppUrl, op.AppUrl);
 
-            // 删除
+            // 刪除
             resp = await Client.DeleteAsJsonAsync<BootstrapDict, bool>("AppPath", new BootstrapDict()
             {
                 Category = data.AppName,

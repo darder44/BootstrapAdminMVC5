@@ -19,7 +19,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class LoginController : ControllerBase
     {
         /// <summary>
-        /// 獲得登录历史记录
+        /// 獲得登入历史紀錄
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -28,7 +28,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public QueryData<LoginUser> Get([FromQuery]QueryLoginOption value) => value.RetrieveData();
 
         /// <summary>
-        /// JWT 登陆認证接口
+        /// JWT 登陆認證接口
         /// </summary>
         /// <param name="config"></param>
         /// <param name="user"></param>
@@ -55,7 +55,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 下发手机短信方法
+        /// 下發手机短信方法
         /// </summary>
         /// <param name="provider"></param>
         /// <param name="phone"></param>

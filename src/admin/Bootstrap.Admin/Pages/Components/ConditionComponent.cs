@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Components.Rendering;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// 条件输出組件
+    /// 條件輸出組件
     /// </summary>
     public class ConditionComponent : ComponentBase
     {
@@ -25,7 +25,7 @@ namespace Bootstrap.Admin.Pages.Components
         public bool Inverse { get; set; }
 
         /// <summary>
-        /// 獲得/設置 授權码
+        /// 獲得/設置 授權碼
         /// </summary>
         [Parameter]
         public string AuthKey { get; set; } = "";
@@ -54,7 +54,7 @@ namespace Bootstrap.Admin.Pages.Components
         /// <param name="builder"></param>
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
-            // 授權码赋值时使用 IButtonAuthorization 服务进行判斷
+            // 授權碼赋值時使用 IButtonAuthorization 服务進行判斷
             var render = false;
             if (!string.IsNullOrEmpty(AuthKey))
             {

@@ -39,7 +39,7 @@
     <div class="login-container">
         <section class="login-form">
             <div class="login-form-header">
-                <h2>登录</h2>
+                <h2>登入</h2>
                 <span class="flex-self-end">
                     没有帐号？
                     <a href="#">点此注册</a>
@@ -50,31 +50,31 @@
                     <div class="login-wrap" data-toggle="LgbValidate" data-valid-button="button[type='submit']">
                         <div id="loginUser" class="form-group">
                             <input type="text" name="userName" class="form-control" data-toggle="tooltip" placeholder="用户名"
-                                    maxlength="16" data-required-msg="請输入用户名" value="" autofocus data-valid="true" />
+                                    maxlength="16" data-required-msg="請輸入用户名" value="" autofocus data-valid="true" />
                         </div>
                         <div id="loginPwd" class="form-group">
                             <input type="password" name="password" class="form-control" value="" data-toggle="tooltip"
-                                    placeholder="密码" maxlength="16" autocomplete="off" data-required-msg="請输入密码" data-valid="true" />
+                                    placeholder="密碼" maxlength="16" autocomplete="off" data-required-msg="請輸入密碼" data-valid="true" />
                         </div>
                         <div class="d-flex justify-content-between">
                             <div class="form-group rememberPwd" onselectstart="return false">
                                 <i class="fa fa-square-o"></i>
-                                <span>记住密码自動登录</span>
+                                <span>记住密碼自動登入</span>
                                 <input id="remember" name="remember" type="hidden" value="false" />
                             </div>
                             <div asp-condition="@Model.AllowMobile">
-                                <a id="loginType" data-value="username" href="#" class="">短信验证登陆</a>
+                                <a id="loginType" data-value="username" href="#" class="">短信驗證登陆</a>
                             </div>
                         </div>
                         <button class="btn btn-lg btn-login btn-block" data-oauth="@Model.AllowOAuth" data-toggle="tooltip"
-                            title="不填写密码預設使用 Gitee 認证" type="submit">登 录</button>
+                            title="不填写密碼預設使用 Gitee 認證" type="submit">登 录</button>
                         <div class="d-flex justify-content-center">
-                            <a class="forget-password" href="#">已有帐号，忘记密码？</a>
+                            <a class="forget-password" href="#">已有帐号，忘记密碼？</a>
                         </div>
                         <div asp-condition="@Model.AllowOAuth">
                             <div class="login-other">
                                 <span class="text-white">
-                                    其他方式登录
+                                    其他方式登入
                                 </span>
                             </div>
                             <div class="login-list">
@@ -101,14 +101,14 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="userName">登录名稱：</label>
+                    <label for="userName">登入名稱：</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
                                 <span class="fa fa-user-plus"></span>
                             </div>
                         </div>
-                        <input type="text" id="userName" autocomplete="off" class="form-control" placeholder="登录账号不可為空" userName="true" minlength="4" maxlength="16" remote="api/Register" data-remote-msg="此用户已存在" data-valid="true" />
+                        <input type="text" id="userName" autocomplete="off" class="form-control" placeholder="登入账号不可為空" userName="true" minlength="4" maxlength="16" remote="api/Register" data-remote-msg="此用户已存在" data-valid="true" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -123,25 +123,25 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="password">密码：</label>
+                    <label for="password">密碼：</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
                                 <span class="fa fa-lock"></span>
                             </div>
                         </div>
-                        <input type="password" id="password" class="form-control" value="" placeholder="密码不可為空" maxlength="16" data-valid="true" autocomplete="off" />
+                        <input type="password" id="password" class="form-control" value="" placeholder="密碼不可為空" maxlength="16" data-valid="true" autocomplete="off" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="assurePassword">確認密码：</label>
+                    <label for="assurePassword">確認密碼：</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
                                 <span class="fa fa-lock"></span>
                             </div>
                         </div>
-                        <input type="password" id="assurePassword" class="form-control" value="" placeholder="確認密码" maxlength="16" equalTo="#password" data-valid="true" autocomplete="off" />
+                        <input type="password" id="assurePassword" class="form-control" value="" placeholder="確認密碼" maxlength="16" equalTo="#password" data-valid="true" autocomplete="off" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -160,7 +160,7 @@
                 </button>
                 <div class="slidercaptcha forgot reg card">
                     <div class="card-header">
-                        <span>請完成安全验证</span>
+                        <span>請完成安全驗證</span>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="card-body"><div id="regcap"></div></div>
@@ -173,19 +173,19 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content" data-toggle="LgbValidate" data-valid-button="#btnForgot" data-valid-modal="#dialogForgot">
             <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabelForgot">忘记密码</h5>
+                <h5 class="modal-title" id="myModalLabelForgot">忘记密碼</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="f_userName">登录账号：</label>
+                    <label for="f_userName">登入账号：</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
                                 <span class="fa fa-user-plus"></span>
                             </div>
                         </div>
-                        <input type="text" id="f_userName" autocomplete="off" class="form-control" placeholder="登录账号不可為空" minlength="4" maxlength="16" data-valid="true" />
+                        <input type="text" id="f_userName" autocomplete="off" class="form-control" placeholder="登入账号不可為空" minlength="4" maxlength="16" data-valid="true" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -201,7 +201,7 @@
                 </div>
                 <div class="form-group">
                     <label for="f_desc">申請理由：</label>
-                    <textarea id="f_desc" class="form-control" placeholder="申請理由，500字以内" rows="3" maxlength="500" data-valid="true">我是用户XXX，我的手机号是XXXXXX，由于密码忘记，請将密码重置為123，登录後我自行更改，谢谢管理员</textarea>
+                    <textarea id="f_desc" class="form-control" placeholder="申請理由，500字以内" rows="3" maxlength="500" data-valid="true">我是用户XXX，我的手机号是XXXXXX，由于密碼忘记，請将密碼重置為123，登入後我自行更改，谢谢管理员</textarea>
                 </div>
             </div>
             <div class="modal-footer">
@@ -215,7 +215,7 @@
                 </button>
                 <div class="slidercaptcha forgot card">
                     <div class="card-header">
-                        <span>請完成安全验证</span>
+                        <span>請完成安全驗證</span>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="card-body"><div id="forgotcap"></div></div>

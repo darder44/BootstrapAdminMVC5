@@ -104,12 +104,12 @@
             }
         });
         if (this.options.modal) {
-            // 關闭 modal 时移除所有验证信息
+            // 關闭 modal 時移除所有驗證信息
             $(this.options.modal).on('show.bs.modal', function (e) {
                 that.reset();
             });
 
-            // bs bug 弹窗内控件值更改後再次点击關闭按钮是 hide.bs.modal 事件不被触发
+            // bs bug 弹窗内控件值更改後再次点击關闭按钮是 hide.bs.modal 事件不被触發
             // 兼容 鍵盘事件 ESC
             var dismissTooltip = function (e) {
                 // 移除残留 tooltip
@@ -318,15 +318,15 @@
 
             $.validator.addMethod("radioGroup", function (value, element) {
                 return $(element).find(':checked').length === 1;
-            }, "请选择一个选項");
+            }, "请选择一個选項");
 
             $.validator.addMethod("checkGroup", function (value, element) {
                 return $(element).parents('[data-toggle="LgbValidate"]').find(':checked').length >= 1;
-            }, "请选择一个选項");
+            }, "请选择一個选項");
 
             $.validator.addMethod("userName", function (value, element) {
                 return this.optional(element) || /^[a-zA-Z0-9_@.]*$/.test(value);
-            }, "登录名称不可以包含非法字符");
+            }, "登入名稱不可以包含非法字符");
 
             $.validator.addMethod("greaterThan", function (value, element, target) {
                 return this.optional(element) || $(target).val() <= value;

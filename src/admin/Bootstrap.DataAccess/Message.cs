@@ -27,7 +27,7 @@ namespace Bootstrap.DataAccess
         public string Content { get; set; } = "";
 
         /// <summary>
-        /// 发訊息人
+        /// 發訊息人
         /// </summary>
         public string From { get; set; } = "";
 
@@ -37,12 +37,12 @@ namespace Bootstrap.DataAccess
         public string To { get; set; } = "";
 
         /// <summary>
-        /// 訊息发送時間
+        /// 訊息發送時間
         /// </summary>
         public DateTime SendTime { get; set; }
 
         /// <summary>
-        /// 訊息狀態：0-未读，1-已读 和Dict表的通知訊息关联
+        /// 訊息狀態：0-未读，1-已读 和Dict表的通知訊息關联
         /// </summary>
         public string Status { get; set; } = "0";
 
@@ -52,12 +52,12 @@ namespace Bootstrap.DataAccess
         public int Flag { get; set; }
 
         /// <summary>
-        /// 删除狀態：0-未删除，1-已删除
+        /// 刪除狀態：0-未刪除，1-已刪除
         /// </summary>
         public int IsDelete { get; set; }
 
         /// <summary>
-        /// 訊息標簽：0-一般，1-紧要 和Dict表的訊息標簽关联
+        /// 訊息標簽：0-一般，1-紧要 和Dict表的訊息標簽關联
         /// </summary>
         public string Label { get; set; } = "0";
 
@@ -74,19 +74,19 @@ namespace Bootstrap.DataAccess
         public string Period { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 发件人頭像
+        /// 獲得/設置 發件人頭像
         /// </summary>
         [ResultColumn]
         public string FromIcon { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 发件人昵稱
+        /// 獲得/設置 發件人昵稱
         /// </summary>
         [ResultColumn]
         public string FromDisplayName { get; set; } = "";
 
         /// <summary>
-        /// 所有有关userName所有訊息列表
+        /// 所有有關userName所有訊息列表
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
@@ -109,7 +109,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 发件箱
+        /// 發件箱
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>

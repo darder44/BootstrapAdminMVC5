@@ -9,7 +9,7 @@ using System.Net;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// 操作日志控制器
+    /// 操作日誌控制器
     /// </summary>
     [Route("api/[controller]")]
     [Authorize]
@@ -17,7 +17,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class LogsController : ControllerBase
     {
         /// <summary>
-        /// 前台獲取操作日志資料調用
+        /// 前台獲取操作日誌資料調用
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -28,7 +28,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 操作日志记录方法
+        /// 操作日誌紀錄方法
         /// </summary>
         /// <param name="ipLocator"></param>
         /// <param name="value"></param>

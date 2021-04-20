@@ -15,9 +15,9 @@ namespace Bootstrap.DataAccess
     public class Dict : BootstrapDict
     {
         /// <summary>
-        /// 删除字典中的資料
+        /// 刪除字典中的資料
         /// </summary>
-        /// <param name="value">需要删除的IDs</param>
+        /// <param name="value">需要刪除的IDs</param>
         /// <returns></returns>
         public virtual bool Delete(IEnumerable<string> value)
         {
@@ -64,33 +64,31 @@ namespace Bootstrap.DataAccess
         public virtual IEnumerable<string> RetrieveCategories() => DictHelper.RetrieveDicts().OrderBy(d => d.Category).Select(d => d.Category).Distinct();
 
         /// <summary>
-        /// 獲取系统網站標題
+        /// 獲取系統網站標題
         /// </summary>
         /// <param name="appId"></param>
         /// <returns></returns>
         public virtual string RetrieveWebTitle(string appId)
         {
-            // 优先查找配置的應用程序網站標題
-            var code = DbHelper.RetrieveTitle(appId);
-            if (code == "网站标题未设置") code = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Name == "網站標題" && d.Category == "網站設置" && d.Define == 0)?.Code ?? "後台管理系统";
+            // 优先查找配置的應用程式網站標題
+            var code = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Name == "網站標題" && d.Category == "網站設置" && d.Define == 0)?.Code ?? "後台管理系統";
             return code;
         }
 
         /// <summary>
-        /// 獲取系统網站頁脚
+        /// 獲取系統網站頁脚
         /// </summary>
         /// <param name="appId"></param>
         /// <returns></returns>
         public virtual string RetrieveWebFooter(string appId)
         {
-            // 优先查找配置的應用程序網站標題
-            var code = DbHelper.RetrieveFooter(appId);
-            if (code == "网站页脚未设置") code = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Name == "網站頁脚" && d.Category == "網站設置" && d.Define == 0)?.Code ?? "2021 © 通用後台管理系统";
+            // 优先查找配置的應用程式網站標題
+            var code = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Name == "網站頁脚" && d.Category == "網站設置" && d.Define == 0)?.Code ?? "2021 © 通用後台管理系統";
             return code;
         }
 
         /// <summary>
-        /// 獲得系统中配置的可以使用的網站样式
+        /// 獲得系統中配置的可以使用的網站样式
         /// </summary>
         /// <returns></returns>
         public virtual IEnumerable<BootstrapDict> RetrieveThemes() => DictHelper.RetrieveDicts().Where(d => d.Category == "網站样式");
@@ -112,10 +110,10 @@ namespace Bootstrap.DataAccess
         public virtual string? RetrieveIconFolderPath() => DictHelper.RetrieveDicts().FirstOrDefault(d => d.Name == "頭像路徑" && d.Category == "頭像地址" && d.Define == 0)?.Code;
 
         /// <summary>
-        /// 獲得默認的前台首頁地址，默認為~/Home/Index
+        /// 獲得預設的前台首頁地址，預設為~/Home/Index
         /// </summary>
         /// <param name="userName">登錄用户名</param>
-        /// <param name="appId">默認應用程序编碼</param>
+        /// <param name="appId">預設應用程式編碼</param>
         /// <returns></returns>
         public virtual string RetrieveHomeUrl(string? userName, string appId)
         {
@@ -131,14 +129,14 @@ namespace Bootstrap.DataAccess
             }
             else if (appId.Equals("BA", StringComparison.OrdinalIgnoreCase))
             {
-                // 使用配置項設置是否启用默認第一個應用是默認應用
-                var defaultApp = (dicts.FirstOrDefault(d => d.Name == "默認應用程序" && d.Category == "網站設置" && d.Define == 0)?.Code ?? "0") == "1";
+                // 使用配置項設置是否啟用預設第一個應用是預設應用
+                var defaultApp = (dicts.FirstOrDefault(d => d.Name == "預設應用程式" && d.Category == "網站設置" && d.Define == 0)?.Code ?? "0") == "1";
                 if (defaultApp)
                 {
                     var app = AppHelper.RetrievesByUserName(userName).FirstOrDefault(key => !key.Equals("BA", StringComparison.OrdinalIgnoreCase)) ?? "";
                     if (!string.IsNullOrEmpty(app))
                     {
-                        // 指定應用程序的首頁
+                        // 指定應用程式的首頁
                         var appUrl = RetrieveDefaultHomeUrlByApp(dicts, app);
                         if (!string.IsNullOrEmpty(appUrl)) url = appUrl;
                     }
@@ -146,7 +144,7 @@ namespace Bootstrap.DataAccess
             }
             else
             {
-                // 指定應用程序的首頁
+                // 指定應用程式的首頁
                 var appUrl = RetrieveDefaultHomeUrlByApp(dicts, appId);
                 if (!string.IsNullOrEmpty(appUrl)) url = appUrl;
             }
@@ -165,10 +163,10 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 獲得字典表中配置的所有應用程序
+        /// 獲得字典表中配置的所有應用程式
         /// </summary>
         /// <returns></returns>
-        public virtual IEnumerable<KeyValuePair<string, string>> RetrieveApps() => DictHelper.RetrieveDicts().Where(d => d.Category == "應用程序" && d.Define == 0).Select(d => new KeyValuePair<string, string>(d.Code, d.Name)).OrderBy(d => d.Key);
+        public virtual IEnumerable<KeyValuePair<string, string>> RetrieveApps() => DictHelper.RetrieveDicts().Where(d => d.Category == "應用程式" && d.Define == 0).Select(d => new KeyValuePair<string, string>(d.Code, d.Name)).OrderBy(d => d.Key);
 
         /// <summary>
         /// 通过資料庫獲得所有字典表配置訊息，快取Key=DictHelper-RetrieveDicts
@@ -177,25 +175,25 @@ namespace Bootstrap.DataAccess
         public virtual IEnumerable<BootstrapDict> RetrieveDicts() => DbHelper.RetrieveDicts();
 
         /// <summary>
-        /// 程序異常時長 默認1月
+        /// 程式異常時長 預設1月
         /// </summary>
         /// <returns></returns>
-        public int RetrieveExceptionsLogPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "程序異常保留時長" && d.Define == 0)?.Code, 1);
+        public int RetrieveExceptionsLogPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "程式異常保留時長" && d.Define == 0)?.Code, 1);
 
         /// <summary>
-        /// 操作日誌時長 默認12月
+        /// 操作日誌時長 預設12月
         /// </summary>
         /// <returns></returns>
         public int RetrieveLogsPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "操作日誌保留時長" && d.Define == 0)?.Code, 12);
 
         /// <summary>
-        /// 登錄日誌時長 默認12月
+        /// 登錄日誌時長 預設12月
         /// </summary>
         /// <returns></returns>
         public int RetrieveLoginLogsPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "登錄日誌保留時長" && d.Define == 0)?.Code, 12);
 
         /// <summary>
-        /// Cookie保存時長 默認7天
+        /// Cookie保存時長 預設7天
         /// </summary>
         /// <returns></returns>
         public int RetrieveCookieExpiresPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "Cookie保留時長" && d.Define == 0)?.Code, 7);
@@ -219,31 +217,31 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 獲得 項目是否獲取登錄地点 默認為false
+        /// 獲得 項目是否獲取登錄地点 預設為false
         /// </summary>
         /// <param name="ipSvr">服务提供名稱</param>
         /// <returns></returns>
         public string? RetrieveLocaleIPSvrUrl(string ipSvr) => DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "地理位置" && d.Name == ipSvr && d.Define == 0)?.Code;
 
         /// <summary>
-        /// 獲得 访问日誌保留時長 默認為1個月
+        /// 獲得 訪問日誌保留時長 預設為1個月
         /// </summary>
         /// <returns></returns>
-        public int RetrieveAccessLogPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "访问日誌保留時長" && d.Define == 0)?.Code, 1);
+        public int RetrieveAccessLogPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "訪問日誌保留時長" && d.Define == 0)?.Code, 1);
 
         /// <summary>
-        /// 獲得 是否為演示系统 默認為 false 不是演示系统
+        /// 獲得 是否為演示系統 預設為 false 不是演示系統
         /// </summary>
         /// <returns></returns>
-        public bool RetrieveSystemModel() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "演示系统" && d.Define == 0)?.Code, "0") == "1";
+        public bool RetrieveSystemModel() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "演示系統" && d.Define == 0)?.Code, "0") == "1";
 
         /// <summary>
-        /// 獲得 是否為演示系统 默認為 false 不是演示系统
+        /// 獲得 是否為演示系統 預設為 false 不是演示系統
         /// </summary>
         /// <returns></returns>
         public bool UpdateSystemModel(bool isDemo)
         {
-            var dict = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "演示系统" && d.Define == 0);
+            var dict = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "演示系統" && d.Define == 0);
             dict!.Code = isDemo ? "1" : "0";
             return Save(dict);
         }
@@ -279,31 +277,31 @@ namespace Bootstrap.DataAccess
         public bool RetrieveOAuthLogin() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "OAuth 認證登錄" && d.Define == 0)?.Code ?? "1") == "1";
 
         /// <summary>
-        /// 獲得自動锁屏時長 默認 30 秒
+        /// 獲得自動锁屏時長 預設 30 秒
         /// </summary>
         /// <returns></returns>
         public int RetrieveAutoLockScreenPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "自動锁屏時長" && d.Define == 0)?.Code, 30);
 
         /// <summary>
-        /// 獲得自動锁屏是否开启 默認关閉
+        /// 獲得自動锁屏是否开啟 預設關閉
         /// </summary>
         /// <returns></returns>
         public bool RetrieveAutoLockScreen() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "自動锁屏" && d.Define == 0)?.Code ?? "0") == "1";
 
         /// <summary>
-        /// 獲得默認應用是否开启 默認关閉
+        /// 獲得預設應用是否开啟 預設關閉
         /// </summary>
         /// <returns></returns>
-        public bool RetrieveDefaultApp() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "默認應用程序" && d.Define == 0)?.Code ?? "0") == "1";
+        public bool RetrieveDefaultApp() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "預設應用程式" && d.Define == 0)?.Code ?? "0") == "1";
 
         /// <summary>
-        /// 獲得是否开启 Blazor 功能 默認关閉
+        /// 獲得是否开啟 Blazor 功能 預設關閉
         /// </summary>
         /// <returns></returns>
         public bool RetrieveEnableBlazor() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "Blazor" && d.Define == 0)?.Code ?? "0") == "1";
 
         /// <summary>
-        /// 獲得是否开启 固定表頭 功能 默認开启
+        /// 獲得是否开啟 固定表頭 功能 預設开啟
         /// </summary>
         /// <returns></returns>
         public bool RetrieveFixedTableHeader() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "固定表頭" && d.Define == 0)?.Code ?? "1") == "1";
@@ -321,7 +319,7 @@ namespace Bootstrap.DataAccess
         public string RetrievePathBase() => DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "後台地址" && d.Define == 0)?.Code ?? "";
 
         /// <summary>
-        /// 獲得字典表健康檢查是否开启
+        /// 獲得字典表健康檢查是否开啟
         /// </summary>
         /// <returns></returns>
         public bool RetrieveHealth() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "健康檢查" && d.Define == 0)?.Code ?? "0") == "1";
@@ -330,10 +328,10 @@ namespace Bootstrap.DataAccess
         /// 獲得字典表登錄界面資料
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<BootstrapDict> RetrieveLogins() => DictHelper.RetrieveDicts().Where(d => d.Category == "系统首頁" && d.Define == 1);
+        public IEnumerable<BootstrapDict> RetrieveLogins() => DictHelper.RetrieveDicts().Where(d => d.Category == "系統首頁" && d.Define == 1);
 
         /// <summary>
-        /// 獲得使用中的登錄视圖名稱
+        /// 獲得使用中的登錄視圖名稱
         /// </summary>
         /// <returns></returns>
         public string? RetrieveLoginView() => DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "登錄界面" && d.Define == 1)?.Code;

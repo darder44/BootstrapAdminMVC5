@@ -26,8 +26,8 @@ namespace Bootstrap.Admin.Pages.Components
                 // 渲染 Toolbar 按钮
                 //<div class="toolbar btn-group">
                 //  <button type="button" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i><span>新增</span></button>
-                //  <button type="button" class="btn btn-danger"><i class="fa fa-remove" aria-hidden="true"></i><span>删除</span></button>
-                //  <button type="button" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i><span>编辑</span></button>
+                //  <button type="button" class="btn btn-danger"><i class="fa fa-remove" aria-hidden="true"></i><span>刪除</span></button>
+                //  <button type="button" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i><span>編輯</span></button>
                 //</div>
                 var index = 0;
                 builder.OpenElement(index++, "div");
@@ -60,8 +60,8 @@ namespace Bootstrap.Admin.Pages.Components
                 //  <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button"><i class="fa fa-gear"></i></button>
                 //  <div class="dropdown-menu">
                 //      <div class="dropdown-item" title="新增" @onclick="Add" asp-auth="add"><i class="fa fa-plus"></i></div>
-                //      <div class="dropdown-item" title="删除" @onclick="Delete" asp-auth="del"><i class="fa fa-remove"></i></div>
-                //      <div class="dropdown-item" title="编辑" @onclick="Edit" asp-auth="edit"><i class="fa fa-pencil"></i></div>
+                //      <div class="dropdown-item" title="刪除" @onclick="Delete" asp-auth="del"><i class="fa fa-remove"></i></div>
+                //      <div class="dropdown-item" title="編輯" @onclick="Edit" asp-auth="edit"><i class="fa fa-pencil"></i></div>
                 //  </div>
                 //</div>
                 builder.OpenElement(index++, "div");

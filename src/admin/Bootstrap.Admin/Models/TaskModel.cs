@@ -30,12 +30,12 @@ namespace Bootstrap.Admin.Models
         }
 
         /// <summary>
-        /// 獲得 系统内置的所有任務
+        /// 獲得 系統内置的所有任務
         /// </summary>
         public IDictionary<string, string> TaskExecutors { get; }
 
         /// <summary>
-        /// 獲得 系统内置触发器集合
+        /// 獲得 系統内置触發器集合
         /// </summary>
         /// <value></value>
         public IDictionary<string, string> TaskTriggers { get; }

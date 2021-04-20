@@ -49,7 +49,7 @@
         <div class="card-body">
             <form id="login" method="post" class="form-signin" data-demo="@Model.IsDemo">
                 <div class="" data-auth="@Model.AuthFailed" data-toggle="LgbValidate" data-valid-button="button[type='submit']">
-                    <div class="alert alert-danger d-none" asp-condition="@Model.AuthFailed">用户名或密码错误！</div>
+                    <div class="alert alert-danger d-none" asp-condition="@Model.AuthFailed">用户名或密碼错误！</div>
                     <div id="loginUser" class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend" data-toggle="tooltip" title="用户名">
@@ -57,40 +57,40 @@
                                     <span class="fa fa-user"></span>
                                 </div>
                             </div>
-                            <input type="text" name="userName" class="form-control" data-toggle="tooltip" placeholder="用户名" maxlength="16" data-required-msg="請输入用户名" value="" autofocus data-valid="true" />
+                            <input type="text" name="userName" class="form-control" data-toggle="tooltip" placeholder="用户名" maxlength="16" data-required-msg="請輸入用户名" value="" autofocus data-valid="true" />
                         </div>
                     </div>
                     <div id="loginPwd" class="form-group">
                         <div class="input-group">
-                            <div class="input-group-prepend" data-toggle="tooltip" title="密码">
+                            <div class="input-group-prepend" data-toggle="tooltip" title="密碼">
                                 <div class="input-group-text">
                                     <span class="fa fa-lock"></span>
                                 </div>
                             </div>
-                            <input type="password" name="password" class="form-control" value="" data-toggle="tooltip" placeholder="密码" maxlength="16" autocomplete="off" data-required-msg="請输入密码" data-valid="true" />
+                            <input type="password" name="password" class="form-control" value="" data-toggle="tooltip" placeholder="密碼" maxlength="16" autocomplete="off" data-required-msg="請輸入密碼" data-valid="true" />
                         </div>
                     </div>
                     <div asp-condition="@Model.AllowMobile">
                         <div id="loginMobile" class="form-group d-none">
                             <div class="input-group">
-                                <div class="input-group-prepend" data-toggle="tooltip" title="手机号码">
+                                <div class="input-group-prepend" data-toggle="tooltip" title="手机号碼">
                                     <div class="input-group-text">
                                         <span class="fa fa-phone"></span>
                                     </div>
                                 </div>
-                                <input type="tel" id="phone" name="phone" class="form-control digits" data-toggle="tooltip" placeholder="手机号码" minlength="11" maxlength="11" data-required-msg="請输入手机号码" value="" data-valid="true" />
+                                <input type="tel" id="phone" name="phone" class="form-control digits" data-toggle="tooltip" placeholder="手机号碼" minlength="11" maxlength="11" data-required-msg="請輸入手机号碼" value="" data-valid="true" />
                             </div>
                         </div>
                         <div id="loginSMS" class="form-group d-none">
                             <div class="input-group">
-                                <div class="input-group-prepend" data-toggle="tooltip" title="验证码">
+                                <div class="input-group-prepend" data-toggle="tooltip" title="驗證碼">
                                     <div class="input-group-text">
                                         <span class="fa fa-key"></span>
                                     </div>
                                 </div>
-                                <input type="number" id="code" name="code" class="form-control digits" data-toggle="tooltip" disabled value="" placeholder="验证码" maxlength="4" data-required-msg="請输入验证码" data-valid="true" />
+                                <input type="number" id="code" name="code" class="form-control digits" data-toggle="tooltip" disabled value="" placeholder="驗證碼" maxlength="4" data-required-msg="請輸入驗證碼" data-valid="true" />
                                 <div class="input-group-append">
-                                    <button type="button" id="btnSendCode" class="btn btn-sms" data-toggle="tooltip" title="点击发送验证码">发送验证码</button>
+                                    <button type="button" id="btnSendCode" class="btn btn-sms" data-toggle="tooltip" title="点击發送驗證碼">發送驗證碼</button>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                         <div class="col">
                             <div class="rememberPwd" onselectstart="return false">
                                 <i class="fa fa-square-o"></i>
-                                <span>记住密码自動登录</span>
+                                <span>记住密碼自動登入</span>
                                 <input id="remember" name="remember" type="hidden" value="false" />
                             </div>
                         </div>
@@ -107,21 +107,21 @@
                     <button class="btn btn-login btn-block" data-oauth="@Model.AllowOAuth" type="submit">登 录</button>
                     <div class="d-flex justify-content-between">
                         <a href="#" data-method="register">申請账号</a>
-                        <a href="#" data-method="forgot">忘记密码</a>
+                        <a href="#" data-method="forgot">忘记密碼</a>
                     </div>
                     <div asp-condition="@Model.AllowOAuth">
                         <div class="login-other">
                             <span class="text-muted">
-                                其他方式登录
+                                其他方式登入
                             </span>
                         </div>
                         <div class="d-flex justify-content-between">
                             <div asp-condition="@Model.AllowMobile">
-                                <a id="loginType" data-value="username" href="#" class="">短信验证登录</a>
+                                <a id="loginType" data-value="username" href="#" class="">短信驗證登入</a>
                             </div>
                             <div class="login-list">
                                 <div class="item ml-1 mr-1">
-                                    <a href="#" data-toggle="tooltip" title="使用微信扫描登录">
+                                    <a href="#" data-toggle="tooltip" title="使用微信扫描登入">
                                         <img class="item" src="~/images/weixin-2.svg" />
                                     </a>
                                 </div>
@@ -131,7 +131,7 @@
                     </div>
                     <div class="slidercaptcha @(Model.ShowOAuth ? "card oauth" : "card")">
                         <div class="card-header">
-                            <span>請完成安全验证</span>
+                            <span>請完成安全驗證</span>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         </div>
                         <div class="card-body"><div id="captcha"></div></div>
@@ -153,14 +153,14 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="userName">登录名稱：</label>
+                    <label for="userName">登入名稱：</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
                                 <span class="fa fa-user-plus"></span>
                             </div>
                         </div>
-                        <input type="text" id="userName" autocomplete="off" class="form-control" placeholder="登录账号不可為空" userName="true" minlength="4" maxlength="16" remote="api/Register" data-remote-msg="此用户已存在" data-valid="true" />
+                        <input type="text" id="userName" autocomplete="off" class="form-control" placeholder="登入账号不可為空" userName="true" minlength="4" maxlength="16" remote="api/Register" data-remote-msg="此用户已存在" data-valid="true" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -175,25 +175,25 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="password">密码：</label>
+                    <label for="password">密碼：</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
                                 <span class="fa fa-lock"></span>
                             </div>
                         </div>
-                        <input type="password" id="password" class="form-control" value="" placeholder="密码不可為空" maxlength="16" data-valid="true" autocomplete="off" />
+                        <input type="password" id="password" class="form-control" value="" placeholder="密碼不可為空" maxlength="16" data-valid="true" autocomplete="off" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="assurePassword">確認密码：</label>
+                    <label for="assurePassword">確認密碼：</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
                                 <span class="fa fa-lock"></span>
                             </div>
                         </div>
-                        <input type="password" id="assurePassword" class="form-control" value="" placeholder="確認密码" maxlength="16" equalTo="#password" data-valid="true" autocomplete="off" />
+                        <input type="password" id="assurePassword" class="form-control" value="" placeholder="確認密碼" maxlength="16" equalTo="#password" data-valid="true" autocomplete="off" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -212,7 +212,7 @@
                 </button>
                 <div class="slidercaptcha forgot reg card">
                     <div class="card-header">
-                        <span>請完成安全验证</span>
+                        <span>請完成安全驗證</span>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="card-body"><div id="regcap"></div></div>
@@ -225,19 +225,19 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content" data-toggle="LgbValidate" data-valid-button="#btnForgot" data-valid-modal="#dialogForgot">
             <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabelForgot">忘记密码</h5>
+                <h5 class="modal-title" id="myModalLabelForgot">忘记密碼</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="f_userName">登录账号：</label>
+                    <label for="f_userName">登入账号：</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
                                 <span class="fa fa-user-plus"></span>
                             </div>
                         </div>
-                        <input type="text" id="f_userName" autocomplete="off" class="form-control" placeholder="登录账号不可為空" minlength="4" maxlength="16" data-valid="true" />
+                        <input type="text" id="f_userName" autocomplete="off" class="form-control" placeholder="登入账号不可為空" minlength="4" maxlength="16" data-valid="true" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -253,7 +253,7 @@
                 </div>
                 <div class="form-group">
                     <label for="f_desc">申請理由：</label>
-                    <textarea id="f_desc" class="form-control" placeholder="申請理由，500字以内" rows="3" maxlength="500" data-valid="true">我是用户XXX，我的手机号是XXXXXX，由于密码忘记，請将密码重置為123，登录後我自行更改，谢谢管理员</textarea>
+                    <textarea id="f_desc" class="form-control" placeholder="申請理由，500字以内" rows="3" maxlength="500" data-valid="true">我是用户XXX，我的手机号是XXXXXX，由于密碼忘记，請将密碼重置為123，登入後我自行更改，谢谢管理员</textarea>
                 </div>
             </div>
             <div class="modal-footer">
@@ -267,7 +267,7 @@
                 </button>
                 <div class="slidercaptcha forgot card">
                     <div class="card-header">
-                        <span>請完成安全验证</span>
+                        <span>請完成安全驗證</span>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="card-body"><div id="forgotcap"></div></div>

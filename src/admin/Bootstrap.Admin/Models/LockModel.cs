@@ -1,7 +1,7 @@
 ﻿namespace Bootstrap.Admin.Models
 {
     /// <summary>
-    /// 系统锁屏資料模型
+    /// 系統锁屏資料模型
     /// </summary>
     public class LockModel : HeaderBarModel
     {
@@ -20,7 +20,7 @@
         public string? ReturnUrl { get; set; }
 
         /// <summary>
-        /// 獲得/設置 認证方式 Cookie Mobile Gitee GitHub
+        /// 獲得/設置 認證方式 Cookie Mobile Gitee GitHub
         /// </summary>
         public string? AuthenticationType { get; set; }
     }

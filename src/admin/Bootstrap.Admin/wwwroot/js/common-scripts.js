@@ -74,7 +74,7 @@
                     $('#msgHeaderTask').text(result.TasksCount);
                     var resultFormat = {
                         "Success": '<span class="badge badge-pill badge-success badge-task"><i class="fa fa-check-circle"></i><span>成功</span></span>',
-                        "Timeout": '<span class="badge badge-pill badge-warning badge-task"><i class="fa fa-exclamation-circle"></i><span>超时</span></span>'
+                        "Timeout": '<span class="badge badge-pill badge-warning badge-task"><i class="fa fa-exclamation-circle"></i><span>超時</span></span>'
                     };
                     var htmlUserTemplate = '<a class="dropdown-item position-relative" href="{0}"><span class="label label-primary"><i class="fa fa-thumb-tack"></i></span><div class="content">{1}</div><div class="small italic content-task">{2}</div>{3}</a>';
                     var html = result.Tasks.map(function (u) {
@@ -209,7 +209,7 @@ $(function () {
     // custom scrollbar
     $sidebar = $('.sidebar').addNiceScroll().autoScrollSidebar({ target: arch.parent(), offsetTop: arch.parent().innerHeight() / 2 });
 
-    // 大于 768 时考虑網站設置 收缩側邊欄
+    // 大于 768 時考虑網站設置 收缩側邊欄
     if ($(window).width() > 768) {
         var $ele = $('aside');
         var collapsed = $ele.hasClass('collapsed');
@@ -258,7 +258,7 @@ $(function () {
     // Exceptions
     window.Exceptions = {
         url: 'api/Exceptions',
-        title: "程序异常日志"
+        title: "程式异常日誌"
     };
 
     // Dicts
@@ -302,13 +302,13 @@ $(function () {
             var msg = result.Message;
             switch (cate) {
                 case "DB":
-                    toastr.error(msg, "資料庫操作发生异常");
+                    toastr.error(msg, "資料庫操作發生异常");
                     break;
                 case "Users":
                     toastr.success(msg, "新用户注册");
                     break;
                 case "App":
-                    toastr.warning(msg, "應用程序发生异常");
+                    toastr.warning(msg, "應用程式發生异常");
                     break;
             }
             if (result) this.reloadWidget();

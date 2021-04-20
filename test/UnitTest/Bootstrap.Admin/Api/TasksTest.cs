@@ -26,11 +26,11 @@ namespace Bootstrap.Admin.Api
         [Fact]
         public async void Put_Ok()
         {
-            var resp = await Client.PutAsJsonAsync<string, bool>("/api/Tasks/SQL日志?operType=pause", "");
+            var resp = await Client.PutAsJsonAsync<string, bool>("/api/Tasks/SQL日誌?operType=pause", "");
             Assert.True(resp);
 
             // receive log
-            var recv = await Client.PutAsJsonAsync<string, bool>("/api/Tasks/SQL日志?operType=run", "");
+            var recv = await Client.PutAsJsonAsync<string, bool>("/api/Tasks/SQL日誌?operType=run", "");
             Assert.True(recv);
         }
 
@@ -82,10 +82,10 @@ namespace Bootstrap.Admin.Api
         {
             var widget = new TaskWidget();
             widget.CronExpression = Longbow.Tasks.Cron.Secondly(5);
-            widget.Name = "单次任務";
+            widget.Name = "單次任務";
             widget.TaskExecutorName = "Bootstrap.Admin.DefaultTaskExecutor";
 
-            // 演示模式下禁止移除系统内置任務
+            // 演示模式下禁止移除系統内置任務
             var resp = await client.PostAsJsonAsync<TaskWidget, bool>("/api/Tasks", widget);
             Assert.False(resp);
 

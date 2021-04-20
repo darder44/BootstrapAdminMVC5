@@ -14,15 +14,15 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         /// <summary>
         /// 獲得/設置 字典類别集合
         /// </summary>
-        protected List<SelectedItem> DefineItems { get; set; } = new List<SelectedItem>(new SelectedItem[] { new SelectedItem() { Text = "系统使用", Value = "0" }, new SelectedItem() { Text = "自定义", Value = "1" } });
+        protected List<SelectedItem> DefineItems { get; set; } = new List<SelectedItem>(new SelectedItem[] { new SelectedItem() { Text = "系統使用", Value = "0" }, new SelectedItem() { Text = "自定义", Value = "1" } });
 
         /// <summary>
-        /// 獲得/設置 查詢条件集合
+        /// 獲得/設置 查詢條件集合
         /// </summary>
-        protected List<SelectedItem> QueryDefine { get; set; } = new List<SelectedItem>(new SelectedItem[] { new SelectedItem() { Text = "全部", Value = "-1", Active = true }, new SelectedItem() { Text = "系统使用", Value = "0" }, new SelectedItem() { Text = "自定义", Value = "1" } });
+        protected List<SelectedItem> QueryDefine { get; set; } = new List<SelectedItem>(new SelectedItem[] { new SelectedItem() { Text = "全部", Value = "-1", Active = true }, new SelectedItem() { Text = "系統使用", Value = "0" }, new SelectedItem() { Text = "自定义", Value = "1" } });
 
         /// <summary>
-        /// 獲得/設置 查詢条件集合
+        /// 獲得/設置 查詢條件集合
         /// </summary>
         protected override void OnInitialized()
         {
@@ -62,12 +62,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected override bool Save(BootstrapDict dict) => DataAccess.DictHelper.Save(dict);
 
         /// <summary>
-        /// 删除方法
+        /// 刪除方法
         /// </summary>
         protected override bool Delete(IEnumerable<BootstrapDict> items) => DataAccess.DictHelper.Delete(items.Select(item => item.Id ?? ""));
 
         /// <summary>
-        /// 重置搜索方法
+        /// 重置查詢方法
         /// </summary>
         protected void ResetSearch()
         {

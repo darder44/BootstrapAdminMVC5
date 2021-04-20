@@ -25,7 +25,7 @@ namespace Bootstrap.Admin.Models
                 Css = user.Css;
                 ActiveCss = string.IsNullOrEmpty(Css) ? Theme : Css;
 
-                // 當前用户未設置應用程序时 使用當前配置 appId
+                // 當前用户未設置應用程式時 使用當前配置 appId
                 if (AppId.IsNullOrEmpty()) AppId = BootstrapAppContext.AppId;
 
                 // 通過 AppCode 獲取用户預設應用的標題
@@ -33,7 +33,7 @@ namespace Bootstrap.Admin.Models
                 Footer = DictHelper.RetrieveWebFooter(AppId);
 
                 // feat: https://gitee.com/LongbowEnterprise/dashboard/issues?id=I12VKZ
-                // 後台系统網站圖標跟随個人中心設置的預設應用站点的展示
+                // 後台系統網站圖標跟随個人中心設置的預設應用站点的展示
                 WebSiteIcon = DictHelper.RetrieveWebIcon(AppId);
                 WebSiteLogo = DictHelper.RetrieveWebLogo(AppId);
             }
@@ -41,7 +41,7 @@ namespace Bootstrap.Admin.Models
         }
 
         /// <summary>
-        /// 獲得 當前用户登录名
+        /// 獲得 當前用户登入名
         /// </summary>
         public string UserName { get; } = "";
 
@@ -71,7 +71,7 @@ namespace Bootstrap.Admin.Models
         public string ActiveCss { get; } = "";
 
         /// <summary>
-        /// 獲得 是否开启 Blazor
+        /// 獲得 是否开啟 Blazor
         /// </summary>
         public bool EnableBlazor { get; }
     }

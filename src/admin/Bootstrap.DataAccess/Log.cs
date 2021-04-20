@@ -66,7 +66,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 删除日誌訊息
+        /// 刪除日誌訊息
         /// </summary>
         /// <returns></returns>
         private static void DeleteLogAsync()

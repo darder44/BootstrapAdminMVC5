@@ -35,7 +35,7 @@ namespace Bootstrap.Admin.Models
             EnableHealth = DictHelper.RetrieveHealth();
             Logins = DictHelper.RetrieveLogins();
             var view = DictHelper.RetrieveLoginView();
-            var viewName = Logins.FirstOrDefault(d => d.Code == view)?.Name ?? "系统預設";
+            var viewName = Logins.FirstOrDefault(d => d.Code == view)?.Name ?? "系統預設";
             LoginView = new KeyValuePair<string, string>(view, viewName);
 
             var dicts = DictHelper.RetrieveDicts();
@@ -53,7 +53,7 @@ namespace Bootstrap.Admin.Models
         }
 
         /// <summary>
-        /// 獲得 系统配置的所有样式表
+        /// 獲得 系統配置的所有样式表
         /// </summary>
         public IEnumerable<BootstrapDict> Themes { get; }
 
@@ -68,47 +68,47 @@ namespace Bootstrap.Admin.Models
         public string IPLocatorSvr { get; }
 
         /// <summary>
-        /// 獲得 是否开启自動锁屏
+        /// 獲得 是否开啟自動锁屏
         /// </summary>
         public bool AutoLockScreen { get; }
 
         /// <summary>
-        /// 獲得 是否开启自動锁屏
+        /// 獲得 是否开啟自動锁屏
         /// </summary>
         public bool DefaultApp { get; }
 
         /// <summary>
-        /// 程序异常日志保留时長
+        /// 程式异常日誌保留時長
         /// </summary>
         public int ErrorLogPeriod { get; }
 
         /// <summary>
-        /// 操作日志保留时長
+        /// 操作日誌保留時長
         /// </summary>
         public int OpLog { get; }
 
         /// <summary>
-        /// 登录日志保留时長
+        /// 登入日誌保留時長
         /// </summary>
         public int LogLog { get; }
 
         /// <summary>
-        /// 访问日志保留时長
+        /// 訪問日誌保留時長
         /// </summary>
         public int TraceLog { get; }
 
         /// <summary>
-        /// Cookie保留时長
+        /// Cookie保留時長
         /// </summary>
         public int CookiePeriod { get; }
 
         /// <summary>
-        /// IP請求缓存时長
+        /// IP請求缓存時長
         /// </summary>
         public int IPCachePeriod { get; }
 
         /// <summary>
-        /// 獲得/設置 是否為演示系统
+        /// 獲得/設置 是否為演示系統
         /// </summary>
         public bool EnableDemo { get; set; }
 
@@ -118,22 +118,22 @@ namespace Bootstrap.Admin.Models
         public string AdminPathBase { get; set; }
 
         /// <summary>
-        /// 獲得/設置 系统應用程序集合
+        /// 獲得/設置 系統應用程式集合
         /// </summary>
         public IEnumerable<(string Key, string Name, string Url)> Apps { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否开启健康檢查
+        /// 獲得/設置 是否开啟健康檢查
         /// </summary>
         public bool EnableHealth { get; set; }
 
         /// <summary>
-        /// 獲得/設置 字典表中登录首頁集合
+        /// 獲得/設置 字典表中登入首頁集合
         /// </summary>
         public IEnumerable<BootstrapDict> Logins { get; set; }
 
         /// <summary>
-        /// 獲得/設置 登录视圖名稱 預設是 Login
+        /// 獲得/設置 登入視圖名稱 預設是 Login
         /// </summary>
         public KeyValuePair<string, string> LoginView { get; set; }
 

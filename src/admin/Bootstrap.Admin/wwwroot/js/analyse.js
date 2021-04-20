@@ -75,10 +75,10 @@ $(function () {
         callback: function (result) {
             $('#login').lgbSparkline('val', result.Polylines.join(' '));
             var op = $.extend(true, {}, option, {
-                legend: { data: ["登录数量"] },
+                legend: { data: ["登入数量"] },
                 series: [
                     {
-                        name: "登录数量",
+                        name: "登入数量",
                         data: result.Datas.map(function (val, index) {
                             return val.Value;
                         })
@@ -132,10 +132,10 @@ $(function () {
         callback: function (result) {
             $('#trace').lgbSparkline('val', result.Polylines.join(' '));
             var op = $.extend(true, {}, option, {
-                legend: { data: ["访问数量"] },
+                legend: { data: ["訪問数量"] },
                 series: [
                     {
-                        name: "访问数量",
+                        name: "訪問数量",
                         data: result.Datas.map(function (val, index) {
                             return val.Value;
                         })
@@ -164,7 +164,7 @@ $(function () {
             trigger: 'axis'
         },
         legend: {
-            data: ['日访问量']
+            data: ['日訪問量']
         },
         toolbox: {
             show: true,
@@ -204,7 +204,7 @@ $(function () {
         ],
         series: [
             {
-                name: '日访问量',
+                name: '日訪問量',
                 type: 'line',
                 data: function () {
                     var list = [];

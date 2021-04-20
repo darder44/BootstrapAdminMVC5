@@ -16,7 +16,7 @@ namespace Bootstrap.Admin.Api
             var log = new Log() { CRUD = "UnitTest", Browser = "UnitTest", OS = "UnitTest", City = "本地连接", Ip = "::1", RequestUrl = "~/UnitTest", UserName = "UnitTest", LogTime = DateTime.Now };
             log.Save(log);
 
-            // 選單 系统選單 系统使用条件
+            // 選單 系統選單 系統使用條件
             var query = "?sort=LogTime&order=desc&offset=0&limit=20&operateType=&OperateTimeStart=&OperateTimeEnd=&_=1547617573596";
             var qd = await Client.GetAsJsonAsync<QueryData<Log>>(query);
             Assert.NotEmpty(qd.rows);

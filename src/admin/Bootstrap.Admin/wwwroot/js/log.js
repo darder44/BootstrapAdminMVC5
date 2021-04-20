@@ -29,25 +29,25 @@
                 this.log({ crud: '分配選單' });
             },
             '#btnReset': function () {
-                this.log({ crud: '重置密码' });
+                this.log({ crud: '重置密碼' });
             },
             '#btnSaveDisplayName': function () {
-                this.log({ crud: '設置顯示名称' });
+                this.log({ crud: '設置顯示名稱' });
             },
             '#btnSavePassword': function () {
-                this.log({ crud: '修改密码' });
+                this.log({ crud: '修改密碼' });
             },
             '#btnSaveApp': function () {
                 this.log({ crud: '設置預設應用' });
             },
             '#btnSaveCss': function () {
-                this.log({ crud: '設置个人样式' });
+                this.log({ crud: '設置個人样式' });
             },
             'a.btn.fileinput-upload-button': function () {
                 this.log({ crud: '設置頭像' });
             },
             'button.kv-file-remove': function () {
-                this.log({ crud: '删除頭像' });
+                this.log({ crud: '刪除頭像' });
             },
             'button[data-method="title"]': function () {
                 this.log({ crud: '保存網站標題' });
@@ -62,7 +62,7 @@
                 this.log({ crud: '保存網站設置' });
             },
             'button[data-method="LoginSettings"]': function () {
-                this.log({ crud: '保存登录設置' });
+                this.log({ crud: '保存登入設置' });
             }
         }
     };
@@ -90,7 +90,7 @@
     });
     $.logData = [];
     $.logData.log = function () {
-        $.logPlugin().log({ crud: '删除資料' });
+        $.logPlugin().log({ crud: '刪除資料' });
     };
 })(jQuery);
 

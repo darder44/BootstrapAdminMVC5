@@ -105,7 +105,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
                 Text = d.Name
             });
             var view = DictHelper.RetrieveLoginView();
-            var viewName = Model.Logins.FirstOrDefault(d => d.Value == view)?.Text ?? "系统預設";
+            var viewName = Model.Logins.FirstOrDefault(d => d.Value == view)?.Text ?? "系統預設";
             Model.SelectedLogin = new SelectedItem() {  Value = view, Text = viewName };
             Model.AdminPathBase = DictHelper.RetrievePathBase();
 
@@ -176,10 +176,10 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected void SaveLogin()
         {
             var ret = DictHelper.SaveSettings(new BootstrapDict[]{
-                 new BootstrapDict() { Category = "網站設置", Name = "OAuth 認证登录", Code = Model.ShowOAuth ? "1" : "0" },
-                 new BootstrapDict() { Category = "網站設置", Name = "短信验证码登录", Code = Model.ShowMobile ? "1" : "0" }
+                 new BootstrapDict() { Category = "網站設置", Name = "OAuth 認證登入", Code = Model.ShowOAuth ? "1" : "0" },
+                 new BootstrapDict() { Category = "網站設置", Name = "短信驗證碼登入", Code = Model.ShowMobile ? "1" : "0" }
             });
-            ShowMessage("保存登录設置", ret);
+            ShowMessage("保存登入設置", ret);
         }
 
         /// <summary>
@@ -227,36 +227,36 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 保存網站日志保留时長配置信息
+        /// 保存網站日誌保留時長配置信息
         /// </summary>
         protected void SaveLogSettings()
         {
             var items = new BootstrapDict[]{
-                new BootstrapDict() { Category = "網站設置", Name="程序异常保留时長", Code = Model.ErrorLogPeriod.ToString(), Define = 0 },
-                new BootstrapDict() { Category = "網站設置", Name="操作日志保留时長", Code = Model.OpLog.ToString(), Define = 0 },
-                new BootstrapDict() { Category = "網站設置", Name="登录日志保留时長", Code = Model.LogLog.ToString(), Define = 0 },
-                new BootstrapDict() { Category = "網站設置", Name="访问日志保留时長", Code = Model.TraceLog.ToString(), Define = 0 },
-                new BootstrapDict() { Category = "網站設置", Name="Cookie保留时長", Code = Model.CookiePeriod.ToString(), Define = 0 },
-                new BootstrapDict() { Category = "網站設置", Name="IP請求缓存时長", Code = Model.IPCachePeriod.ToString(), Define = 0 }
+                new BootstrapDict() { Category = "網站設置", Name="程式异常保留時長", Code = Model.ErrorLogPeriod.ToString(), Define = 0 },
+                new BootstrapDict() { Category = "網站設置", Name="操作日誌保留時長", Code = Model.OpLog.ToString(), Define = 0 },
+                new BootstrapDict() { Category = "網站設置", Name="登入日誌保留時長", Code = Model.LogLog.ToString(), Define = 0 },
+                new BootstrapDict() { Category = "網站設置", Name="訪問日誌保留時長", Code = Model.TraceLog.ToString(), Define = 0 },
+                new BootstrapDict() { Category = "網站設置", Name="Cookie保留時長", Code = Model.CookiePeriod.ToString(), Define = 0 },
+                new BootstrapDict() { Category = "網站設置", Name="IP請求缓存時長", Code = Model.IPCachePeriod.ToString(), Define = 0 }
             };
             var ret = DictHelper.SaveSettings(items);
-            ShowMessage("保存日志缓存設置", ret);
+            ShowMessage("保存日誌缓存設置", ret);
         }
 
         /// <summary>
-        /// 保存是否开启預設應用設置
+        /// 保存是否开啟預設應用設置
         /// </summary>
         protected void SaveDefaultApp()
         {
             var ret = DictHelper.SaveSettings(new BootstrapDict[]{
                 new BootstrapDict() {
                     Category = "網站設置",
-                    Name = "預設應用程序",
+                    Name = "預設應用程式",
                     Code = Model.DefaultApp ? "1" : "0"
                 }
             });
             RootLayout?.OnWebFooterChanged(Model.Footer);
-            ShowMessage("保存預設應用程序", ret);
+            ShowMessage("保存預設應用程式", ret);
         }
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected async System.Threading.Tasks.Task SaveSystemModel()
         {
             var ret = DictHelper.UpdateSystemModel(Model.EnableDemo, Model.AuthKey);
-            ShowMessage("保存演示系统設置", ret);
+            ShowMessage("保存演示系統設置", ret);
             if (ret)
             {
                 await System.Threading.Tasks.Task.Delay(500);
@@ -274,7 +274,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 網站設置编辑模型實體類
+        /// 網站設置編輯模型實體類
         /// </summary>
         protected class EditModel
         {
@@ -339,7 +339,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             public bool FixedTableHeader { get; set; }
 
             /// <summary>
-            /// 獲得/設置 系统样式集合
+            /// 獲得/設置 系統样式集合
             /// </summary>
             public IEnumerable<BootstrapDict> Themes { get; set; } = new HashSet<BootstrapDict>();
 
@@ -354,57 +354,57 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             public SelectedItem SelectedIPLocator { get; set; } = new SelectedItem();
 
             /// <summary>
-            /// 程序异常日志保留时長
+            /// 程式异常日誌保留時長
             /// </summary>
             public int ErrorLogPeriod { get; set; }
 
             /// <summary>
-            /// 操作日志保留时長
+            /// 操作日誌保留時長
             /// </summary>
             public int OpLog { get; set; }
 
             /// <summary>
-            /// 登录日志保留时長
+            /// 登入日誌保留時長
             /// </summary>
             public int LogLog { get; set; }
 
             /// <summary>
-            /// 访问日志保留时長
+            /// 訪問日誌保留時長
             /// </summary>
             public int TraceLog { get; set; }
 
             /// <summary>
-            /// Cookie保留时長
+            /// Cookie保留時長
             /// </summary>
             public int CookiePeriod { get; set; }
 
             /// <summary>
-            /// IP請求缓存时長
+            /// IP請求缓存時長
             /// </summary>
             public int IPCachePeriod { get; set; }
 
             /// <summary>
-            /// 獲得/設置 授權码
+            /// 獲得/設置 授權碼
             /// </summary>
             public string AuthKey { get; set; } = "";
 
             /// <summary>
-            /// 獲得 系统是否為演示模式
+            /// 獲得 系統是否為演示模式
             /// </summary>
             public bool EnableDemo { get; set; }
 
             /// <summary>
-            /// 獲得 系统是否允许健康檢查
+            /// 獲得 系統是否允许健康檢查
             /// </summary>
             public bool EnableHealth { get; set; }
 
             /// <summary>
-            /// 獲得/設置 字典表中登录首頁集合
+            /// 獲得/設置 字典表中登入首頁集合
             /// </summary>
             public IEnumerable<SelectedItem> Logins { get; set; } = new SelectedItem[0];
 
             /// <summary>
-            /// 獲得/設置 登录视圖名稱 預設是 Login
+            /// 獲得/設置 登入視圖名稱 預設是 Login
             /// </summary>
             public SelectedItem SelectedLogin { get; set; } = new SelectedItem();
 
@@ -414,7 +414,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             public string AdminPathBase { get; set; } = "";
 
             /// <summary>
-            /// 獲得/設置 系统應用程序集合
+            /// 獲得/設置 系統應用程式集合
             /// </summary>
             public IEnumerable<(string Key, string Name, string Url)> Apps { get; set; } = new List<(string, string, string)>();
         }

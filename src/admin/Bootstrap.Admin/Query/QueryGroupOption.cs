@@ -6,7 +6,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Query
 {
     /// <summary>
-    /// 部門查詢条件類
+    /// 部門查詢條件類
     /// </summary>
     public class QueryGroupOption : PaginationOption
     {

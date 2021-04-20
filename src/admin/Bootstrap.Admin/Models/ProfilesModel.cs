@@ -24,11 +24,11 @@ namespace Bootstrap.Admin.Models
         /// <summary>
         /// 獲得 是否為第三方用户
         /// </summary>
-        /// <remarks>第三方用户不允许修改密码</remarks>
+        /// <remarks>第三方用户不允许修改密碼</remarks>
         public bool External { get; }
 
         /// <summary>
-        /// 獲得 當前用户預設應用程序名稱
+        /// 獲得 當前用户預設應用程式名稱
         /// </summary>
         public string AppName { get; }
 

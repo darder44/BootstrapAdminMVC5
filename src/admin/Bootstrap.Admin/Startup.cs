@@ -18,7 +18,7 @@ using System;
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// Startup 启動配置文件
+    /// Startup 啟動配置文件
     /// </summary>
     public class Startup
     {
@@ -34,12 +34,12 @@ namespace Bootstrap.Admin
         }
 
         /// <summary>
-        /// 獲得 當前运行时环境
+        /// 獲得 當前运行時环境
         /// </summary>
         public IWebHostEnvironment Enviroment { get; }
 
         /// <summary>
-        /// 獲得 系统配置項 Iconfiguration 實例
+        /// 獲得 系統配置項 Iconfiguration 實例
         /// </summary>
         public IConfiguration Configuration { get; }
 

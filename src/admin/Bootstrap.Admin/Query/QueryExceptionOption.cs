@@ -6,17 +6,17 @@ using System.Linq;
 namespace Bootstrap.Admin.Query
 {
     /// <summary>
-    /// 程序异常查詢条件類
+    /// 程式异常查詢條件類
     /// </summary>
     public class QueryExceptionOption : PaginationOption
     {
         /// <summary>
-        /// 獲得/設置 开始时间
+        /// 獲得/設置 开始時间
         /// </summary>
         public DateTime? StartTime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 结束时间
+        /// 獲得/設置 结束時间
         /// </summary>
         public DateTime? EndTime { get; set; }
 

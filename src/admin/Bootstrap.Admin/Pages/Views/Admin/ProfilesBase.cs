@@ -29,7 +29,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected ProfilesModel? Model { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否為演示系统
+        /// 獲得/設置 是否為演示系統
         /// </summary>
         protected bool IsDemo { get; set; } = false;
 
@@ -61,12 +61,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected SelectedItem SelectedTheme { get; set; } = new SelectedItem();
 
         /// <summary>
-        /// 獲得/設置 选中的應用程序
+        /// 獲得/設置 选中的應用程式
         /// </summary>
         protected SelectedItem SelectedApp { get; set; } = new SelectedItem();
 
         /// <summary>
-        /// 獲得/設置 應用程序集合
+        /// 獲得/設置 應用程式集合
         /// </summary>
         protected IEnumerable<SelectedItem> Apps { get; set; } = new SelectedItem[0];
 
@@ -97,7 +97,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             var user = UserHelper.RetrieveUserByUserName(Model?.UserName);
             if (user != null) User = user;
 
-            // 直接绑定 User.DisplayName 導致未保存时 UI 的顯示名稱也会变化
+            // 直接绑定 User.DisplayName 導致未保存時 UI 的顯示名稱也會变化
             DisplayName = User.DisplayName;
         }
 
@@ -122,7 +122,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 保存密码方法
+        /// 保存密碼方法
         /// </summary>
         protected void SavePassword(EditContext context)
         {
@@ -130,7 +130,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
 
             // 弹窗提示是否保存成功
             var result = ret ? "成功" : "失败";
-            ShowMessage($"更新密码{result}", ret);
+            ShowMessage($"更新密碼{result}", ret);
         }
 
         /// <summary>
@@ -158,26 +158,26 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 密码保存實體類
+        /// 密碼保存實體類
         /// </summary>
         protected class PasswordModel
         {
             /// <summary>
-            /// 獲得/設置 原密码
+            /// 獲得/設置 原密碼
             /// </summary>
-            [DisplayName("原密码")]
+            [DisplayName("原密碼")]
             public string Password { get; set; } = "";
 
             /// <summary>
-            /// 獲得/設置 新密码
+            /// 獲得/設置 新密碼
             /// </summary>
-            [DisplayName("新密码")]
+            [DisplayName("新密碼")]
             public string NewPassword { get; set; } = "";
 
             /// <summary>
-            /// 獲得/設置 確認密码
+            /// 獲得/設置 確認密碼
             /// </summary>
-            [DisplayName("確認密码")]
+            [DisplayName("確認密碼")]
             public string ConfirmPassword { get; set; } = "";
         }
     }

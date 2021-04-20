@@ -18,12 +18,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected AuthenticationStateProvider? AuthenticationStateProvider { get; set; }
 
         /// <summary>
-        /// 獲得/設置 编辑類型實例
+        /// 獲得/設置 編輯類型實例
         /// </summary>
         protected User DataContext { get; set; } = new User();
 
         /// <summary>
-        /// 獲得/設置 用户登录名
+        /// 獲得/設置 用户登入名
         /// </summary>
         protected string? UserName { get; set; }
 

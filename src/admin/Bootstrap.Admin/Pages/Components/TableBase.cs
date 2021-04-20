@@ -88,13 +88,13 @@ namespace Bootstrap.Admin.Pages.Components
         public bool AutoHeight { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否顯示搜索框 預設為 false 不顯示搜索框
+        /// 獲得/設置 是否顯示查詢框 預設為 false 不顯示查詢框
         /// </summary>
         [Parameter]
         public bool ShowSearch { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否顯示高級搜索按钮 預設顯示
+        /// 獲得/設置 是否顯示高級查詢按钮 預設顯示
         /// </summary>
         [Parameter]
         public bool ShowAdvancedSearch { get; set; } = true;
@@ -176,7 +176,7 @@ namespace Bootstrap.Admin.Pages.Components
         public Func<TItem>? OnAdd { get; set; }
 
         /// <summary>
-        /// 编辑按钮回調方法
+        /// 編輯按钮回調方法
         /// </summary>
         [Parameter]
         public Action<TItem>? OnEdit { get; set; }
@@ -188,13 +188,13 @@ namespace Bootstrap.Admin.Pages.Components
         public Func<TItem, bool>? OnSave { get; set; }
 
         /// <summary>
-        /// 表頭排序时回調方法
+        /// 表頭排序時回調方法
         /// </summary>
         [Parameter]
         public Action<string, SortOrder> OnSort { get; set; } = new Action<string, SortOrder>((name, order) => { });
 
         /// <summary>
-        /// 删除按钮回調方法
+        /// 刪除按钮回調方法
         /// </summary>
         [Parameter]
         public Func<IEnumerable<TItem>, bool>? OnDelete { get; set; }
@@ -220,18 +220,18 @@ namespace Bootstrap.Admin.Pages.Components
 #nullable restore
 
         /// <summary>
-        /// 编辑資料弹窗 Title
+        /// 編輯資料弹窗 Title
         /// </summary>
         [Parameter]
         public string SubmitModalTitle { get; set; } = "";
 
         /// <summary>
-        /// 编辑資料弹窗
+        /// 編輯資料弹窗
         /// </summary>
         protected SubmitModal<TItem>? EditModal { get; set; }
 
         /// <summary>
-        /// 確認删除弹窗
+        /// 確認刪除弹窗
         /// </summary>
         protected Modal? ConfirmModal { get; set; }
 
@@ -241,12 +241,12 @@ namespace Bootstrap.Admin.Pages.Components
         protected Modal? SearchModal { get; set; }
 
         /// <summary>
-        /// 獲得/設置 資料总条目
+        /// 獲得/設置 資料總條目
         /// </summary>
         protected int TotalCount { get; set; }
 
         /// <summary>
-        /// 獲得/設置 當前頁码
+        /// 獲得/設置 當前頁碼
         /// </summary>
         protected int PageIndex { get; set; } = 1;
 
@@ -289,7 +289,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 点击頁码調用此方法
+        /// 点击頁碼調用此方法
         /// </summary>
         /// <param name="pageIndex"></param>
         /// <param name="pageItems"></param>
@@ -304,7 +304,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 每頁记录条数变化是調用此方法
+        /// 每頁紀錄條数变化是調用此方法
         /// </summary>
         protected void PageItemsChange(int pageItems)
         {
@@ -317,7 +317,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 选择框点击时調用此方法
+        /// 选择框点击時調用此方法
         /// </summary>
         /// <param name="item"></param>
         /// <param name="check"></param>
@@ -369,7 +369,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected void ShowMessage(string title, string text, ToastCategory cate = ToastCategory.Success) => JSRuntime?.ShowToast(title, text, cate);
 
         /// <summary>
-        /// 编辑按钮方法
+        /// 編輯按钮方法
         /// </summary>
         public void Edit()
         {
@@ -382,7 +382,7 @@ namespace Bootstrap.Admin.Pages.Components
             }
             else
             {
-                ShowMessage("编辑資料", "請选择一個要编辑的資料", ToastCategory.Information);
+                ShowMessage("編輯資料", "請选择一個要編輯的資料", ToastCategory.Information);
             }
         }
 
@@ -425,7 +425,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 删除按钮方法
+        /// 刪除按钮方法
         /// </summary>
         public void Delete()
         {
@@ -435,12 +435,12 @@ namespace Bootstrap.Admin.Pages.Components
             }
             else
             {
-                ShowMessage("删除資料", "請选择要删除的資料", ToastCategory.Information);
+                ShowMessage("刪除資料", "請选择要刪除的資料", ToastCategory.Information);
             }
         }
 
         /// <summary>
-        /// 確認删除方法
+        /// 確認刪除方法
         /// </summary>
         public void Confirm()
         {
@@ -450,7 +450,7 @@ namespace Bootstrap.Admin.Pages.Components
                 ConfirmModal?.Toggle();
                 Query();
             }
-            ShowMessage("删除資料", "删除資料" + (result ? "成功" : "失败"), result ? ToastCategory.Success : ToastCategory.Error);
+            ShowMessage("刪除資料", "刪除資料" + (result ? "成功" : "失败"), result ? ToastCategory.Success : ToastCategory.Error);
         }
 
         /// <summary>
@@ -459,7 +459,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected string RetrieveId() => $"{Id}_table";
 
         /// <summary>
-        /// 重置搜索按钮回調方法
+        /// 重置查詢按钮回調方法
         /// </summary>
         [Parameter]
         public Action? OnResetSearch { get; set; }
@@ -478,13 +478,13 @@ namespace Bootstrap.Admin.Pages.Components
         /// </summary>
         protected void SearchClick()
         {
-            // 查詢控件按钮触发此事件
+            // 查詢控件按钮触發此事件
             PageIndex = 1;
             Query();
         }
 
         /// <summary>
-        /// 高級查詢按钮点击时調用此方法
+        /// 高級查詢按钮点击時調用此方法
         /// </summary>
         protected void AdvancedSearchClick()
         {
@@ -493,19 +493,19 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 獲得/設置 搜索關鍵字
+        /// 獲得/設置 查詢關鍵字
         /// </summary>
         [Parameter]
         public string SearchText { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 搜索關鍵字改变事件
+        /// 獲得/設置 查詢關鍵字改变事件
         /// </summary>
         [Parameter]
         public EventCallback<string> SearchTextChanged { get; set; }
 
         /// <summary>
-        /// 重置搜索按钮調用此方法
+        /// 重置查詢按钮調用此方法
         /// </summary>
         protected void ClearSearchClick()
         {

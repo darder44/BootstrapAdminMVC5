@@ -28,13 +28,13 @@ namespace Bootstrap.DataAccess
         public const string RetrieveGroupsByUserNameDataKey = DbHelper.RetrieveGroupsByUserNameDataKey;
 
         /// <summary>
-        /// 查詢所有群组訊息
+        /// 查詢所有群組訊息
         /// </summary>
         /// <returns></returns>
         public static IEnumerable<Group> Retrieves() => CacheManager.GetOrAdd(RetrieveGroupsDataKey, key => DbContextManager.Create<Group>()?.Retrieves()) ?? new Group[0];
 
         /// <summary>
-        /// 删除群组訊息
+        /// 刪除群組訊息
         /// </summary>
         /// <param name="values"></param>
         public static bool Delete(IEnumerable<string> values)
@@ -45,7 +45,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 保存新建/更新的群组訊息
+        /// 保存新建/更新的群組訊息
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>

@@ -5,18 +5,18 @@ using System;
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// BootstrapAdminDataAnnotationsValidator 验证組件
+    /// BootstrapAdminDataAnnotationsValidator 驗證組件
     /// </summary>
     public class BootstrapAdminDataAnnotationsValidator : ComponentBase
     {
         /// <summary>
-        /// 獲得/設置 當前编辑資料上下文
+        /// 獲得/設置 當前編輯資料上下文
         /// </summary>
         [CascadingParameter]
         EditContext? CurrentEditContext { get; set; }
 
         /// <summary>
-        /// 獲得/設置 當前编辑窗體上下文
+        /// 獲得/設置 當前編輯窗體上下文
         /// </summary>
         [CascadingParameter]
         public LgbEditFormBase? EditForm { get; set; }

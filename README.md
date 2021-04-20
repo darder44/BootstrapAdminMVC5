@@ -49,7 +49,7 @@ Departments Authorize Users
 10. Built-in data memory caching mechanism, page fast response
 11. Built-in Data **Operation Log** and User **Log on**  
 
-[Update log](https://gitee.com/dotnetchina/BootstrapAdmin/wikis/更新日志)
+[Update log](https://gitee.com/dotnetchina/BootstrapAdmin/wikis/更新日誌)
 
 ### Advantage
 1. The front-end system does not need to write login, authorization and authentication modules; it is only responsible for writing business modules.

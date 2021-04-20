@@ -20,7 +20,7 @@ namespace Bootstrap.Admin.Api
             var excep = new Exceptions();
             Assert.True(excep.Log(new Exception("UnitTest"), null));
 
-            // 選單 系统選單 系统使用条件
+            // 選單 系統選單 系統使用條件
             var query = "?sort=LogTime&order=desc&offset=0&limit=20&StartTime=&EndTime=&_=1547610349796";
             var qd = await Client.GetAsJsonAsync<QueryData<Exceptions>>(query);
             Assert.NotEmpty(qd.rows);

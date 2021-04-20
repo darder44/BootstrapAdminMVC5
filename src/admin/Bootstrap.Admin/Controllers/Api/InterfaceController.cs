@@ -56,7 +56,7 @@ namespace Bootstrap.Admin.Controllers
         }
 
         /// <summary>
-        /// 通過指定条件獲得應用程序選單
+        /// 通過指定條件獲得應用程式選單
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>

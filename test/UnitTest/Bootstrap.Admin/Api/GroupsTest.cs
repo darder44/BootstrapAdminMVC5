@@ -14,7 +14,7 @@ namespace Bootstrap.Admin.Api
         [Fact]
         public async void Get_Ok()
         {
-            // 選單 系统選單 系统使用条件
+            // 選單 系統選單 系統使用條件
             var query = "?sort=GroupName&order=asc&offset=0&limit=20&groupName=Admin&description=%E7%B3%BB%E7%BB%9F%E9%BB%98%E8%AE%A4%E7%BB%84&_=1547614230481";
             var qd = await Client.GetAsJsonAsync<QueryData<Group>>(query);
             query = "?sort=GroupName&order=desc&offset=0&limit=20&groupName=Admin&description=%E7%B3%BB%E7%BB%9F%E9%BB%98%E8%AE%A4%E7%BB%84&_=1547614230481";
@@ -24,7 +24,7 @@ namespace Bootstrap.Admin.Api
 
         [Theory()]
         [InlineData("Admin")]
-        [InlineData("系统默認")]
+        [InlineData("系統預設")]
         public async void Search_Ok(string search)
         {
             var qd = await Client.GetAsJsonAsync<QueryData<Group>>($"?search={search}&sort=&order=&offset=0&limit=20&category=&name=&define=0&_=1547608210979");

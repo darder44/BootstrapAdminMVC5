@@ -9,7 +9,7 @@ namespace Bootstrap.Admin.Pages.Components
     public interface IValidateComponent
     {
         /// <summary>
-        /// 資料验证方法
+        /// 資料驗證方法
         /// </summary>
         /// <param name="propertyValue"></param>
         /// <param name="context"></param>

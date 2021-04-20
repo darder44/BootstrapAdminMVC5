@@ -44,12 +44,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected override bool Save(Group group) => GroupHelper.Save(group);
 
         /// <summary>
-        /// 删除方法
+        /// 刪除方法
         /// </summary>
         protected override bool Delete(IEnumerable<Group> groups) => GroupHelper.Delete(groups.Select(item => item.Id ?? ""));
 
         /// <summary>
-        /// 重置搜索方法
+        /// 重置查詢方法
         /// </summary>
         protected void ResetSearch()
         {
@@ -102,7 +102,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 选择框点击时調用此方法
+        /// 选择框点击時調用此方法
         /// </summary>
         /// <param name="item"></param>
         /// <param name="check"></param>
@@ -175,7 +175,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 选择框点击时調用此方法
+        /// 选择框点击時調用此方法
         /// </summary>
         /// <param name="item"></param>
         /// <param name="check"></param>

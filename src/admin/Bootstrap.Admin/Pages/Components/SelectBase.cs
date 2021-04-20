@@ -64,7 +64,7 @@ namespace Bootstrap.Admin.Pages.Components
         public Action<SelectedItem>? SelectedItemChanged { get; set; }
 
         /// <summary>
-        /// 下拉框項被选中时調用此方法
+        /// 下拉框項被选中時調用此方法
         /// </summary>
         public void ItemClickCallback(SelectedItem item)
         {

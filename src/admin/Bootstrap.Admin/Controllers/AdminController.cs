@@ -49,25 +49,25 @@ namespace Bootstrap.Admin.Controllers
         public ActionResult Menus() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// 操作日志
+        /// 操作日誌
         /// </summary>
         /// <returns></returns>
         public ActionResult Logs() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// 脚本日志
+        /// 脚本日誌
         /// </summary>
         /// <returns></returns>
         public ActionResult SQL() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// 访问日志
+        /// 訪問日誌
         /// </summary>
         /// <returns></returns>
         public ActionResult Traces() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// 登录日志
+        /// 登入日誌
         /// </summary>
         /// <returns></returns>
         public ActionResult Logins() => View(new NavigatorBarModel(this));
@@ -85,7 +85,7 @@ namespace Bootstrap.Admin.Controllers
         public ActionResult Healths() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// 圖標视圖
+        /// 圖標視圖
         /// </summary>
         /// <returns></returns>
         [AllowAnonymous]
@@ -93,10 +93,10 @@ namespace Bootstrap.Admin.Controllers
         public PartialViewResult IconView() => PartialView("IconView");
 
         /// <summary>
-        /// 側邊欄局部视圖
+        /// 側邊欄局部視圖
         /// </summary>
         /// <returns></returns>
-        /// <remark>選單維護頁面增删選單时局部刷新时調用</remark>
+        /// <remark>選單維護頁面增刪選單時局部刷新時調用</remark>
         public PartialViewResult Sidebar() => PartialView("Sidebar", new NavigatorBarModel(this));
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace Bootstrap.Admin.Controllers
         public ActionResult Profiles([FromServices]IWebHostEnvironment host) => View(new ProfilesModel(this, host));
 
         /// <summary>
-        /// 程序异常
+        /// 程式异常
         /// </summary>
         /// <returns></returns>
         public ActionResult Exceptions() => View(new NavigatorBarModel(this));
@@ -143,13 +143,13 @@ namespace Bootstrap.Admin.Controllers
         public ActionResult Mobile() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// 在线用户
+        /// 線上用户
         /// </summary>
         /// <returns></returns>
         public ActionResult Online() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// 網站分析统计
+        /// 網站分析統计
         /// </summary>
         /// <returns></returns>
         public ActionResult Analyse() => View(new NavigatorBarModel(this));

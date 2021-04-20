@@ -36,7 +36,7 @@ namespace Bootstrap.Admin.Api
             var cates = await client.GetStringAsync("/Healths");
             Assert.Contains("TotalDuration", cates);
 
-            // 測試資料庫不能加载时健康检查
+            // 測試資料庫不能加载時健康检查
             var config = HealthCheckStartup.Configuration;
             config["DB:0:Enabled"] = "false";
             config["DB:4:Enabled"] = "true";
@@ -74,7 +74,7 @@ namespace Bootstrap.Admin.Api
         }
 
         /// <summary>
-        /// 獲得 系统配置項 Iconfiguration 实例
+        /// 獲得 系統配置項 Iconfiguration 实例
         /// </summary>
         public static IConfiguration Configuration { get; private set; }
 

@@ -14,7 +14,7 @@ namespace Bootstrap.DataAccess
     public class Menu : BootstrapMenu
     {
         /// <summary>
-        /// 删除選單訊息
+        /// 刪除選單訊息
         /// </summary>
         /// <param name="value"></param>
         public virtual bool Delete(IEnumerable<string> value)

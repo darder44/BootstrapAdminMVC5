@@ -18,7 +18,7 @@ namespace Bootstrap.Admin.Api
             var resp = await Client.GetAsJsonAsync<IEnumerable<object>>();
             Assert.NotEmpty(resp);
 
-            // 删除新用户
+            // 刪除新用户
             DeleteUnitTestUser();
         }
 
@@ -33,7 +33,7 @@ namespace Bootstrap.Admin.Api
             var resp = await Client.PutAsJsonAsync<User, bool>("", nusr);
             Assert.True(resp);
 
-            // 删除新用户
+            // 刪除新用户
             UserHelper.Delete(new string[] { nusr.Id });
 
             // Reject
@@ -42,7 +42,7 @@ namespace Bootstrap.Admin.Api
             resp = await Client.PutAsJsonAsync<User, bool>("", nusr);
             Assert.True(resp);
 
-            // 删除新用户
+            // 刪除新用户
             DeleteUnitTestUser();
         }
 

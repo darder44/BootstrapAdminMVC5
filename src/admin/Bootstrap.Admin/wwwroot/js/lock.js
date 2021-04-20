@@ -36,7 +36,7 @@
             url: apiUrl,
             method: 'PUT',
             callback: function (result) {
-                $this.attr('data-original-title', result ? "发送成功" : "发送失败").tooltip('show');
+                $this.attr('data-original-title', result ? "發送成功" : "發送失败").tooltip('show');
                 var handler = setTimeout(function () {
                     clearTimeout(handler);
                     $this.tooltip('hide').tooltip('disable');
@@ -45,17 +45,17 @@
                 if (result) {
                     // send success
                     $('#smscode').removeAttr('disabled');
-                    $this.text('已发送').attr('data-method', 'submit');
+                    $this.text('已發送').attr('data-method', 'submit');
                     timeHanlder = setTimeout(function () {
                         clearTimeout(timeHanlder);
                         var count = 299;
                         timeHanlder = setInterval(function () {
                             if (count === 0) {
                                 clearInterval(timeHanlder);
-                                $this.text('发送验证码').attr('data-method', 'send').attr('data-original-title', "点击发送验证码").tooltip('enable');
+                                $this.text('發送驗證碼').attr('data-method', 'send').attr('data-original-title', "点击發送驗證碼").tooltip('enable');
                                 return;
                             }
-                            $this.text('登录 (' + count-- + 's)');
+                            $this.text('登入 (' + count-- + 's)');
                         }, 1000);
                     }, 1000);
                 }

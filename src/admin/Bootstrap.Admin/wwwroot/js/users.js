@@ -70,7 +70,7 @@ $(function () {
                     $.bc({ id: userId, url: User.url, method: 'put', data: groupIds, query: { type: "group" }, title: Group.title, modal: '#dialogGroup' });
                 },
                 '#btnReset': function (row) {
-                    $.bc({ id: row.UserName, url: 'api/Register', method: 'put', data: { password: $('#resetPassword').val() }, modal: "#dialogReset", title: "重置密码", callback: function (result) { if (result) $table.bootstrapTable('refresh'); } });
+                    $.bc({ id: row.UserName, url: 'api/Register', method: 'put', data: { password: $('#resetPassword').val() }, modal: "#dialogReset", title: "重置密碼", callback: function (result) { if (result) $table.bootstrapTable('refresh'); } });
                 }
             },
             callback: function (data) {
@@ -90,10 +90,10 @@ $(function () {
             sortOrder: "desc",
             queryParams: function (params) { return $.extend(params, { name: $("#txt_search_name").val(), displayName: $('#txt_display_name').val() }); },           //传递参数（*）
             columns: [
-                { title: "登录名称", field: "UserName", sortable: true },
-                { title: "顯示名称", field: "DisplayName", sortable: true },
-                { title: "注册时间", field: "RegisterTime", sortable: true },
-                { title: "授權时间", field: "ApprovedTime", sortable: true },
+                { title: "登入名稱", field: "UserName", sortable: true },
+                { title: "顯示名稱", field: "DisplayName", sortable: true },
+                { title: "注册時间", field: "RegisterTime", sortable: true },
+                { title: "授權時间", field: "ApprovedTime", sortable: true },
                 { title: "授權人", field: "ApprovedBy", sortable: true },
                 { title: "说明", field: "Description", sortable: false }
             ],
@@ -102,7 +102,7 @@ $(function () {
                     'click .reset': function (e, value, row, index) {
                         $table.bootstrapTable('uncheckAll');
                         $table.bootstrapTable('check', index);
-                        $dialogResetHeader.text($.format("{0} - 重置密码窗口", row.UserName));
+                        $dialogResetHeader.text($.format("{0} - 重置密碼窗口", row.UserName));
                         $.bc({
                             id: row.UserName, url: User.url, method: 'post', query: { type: "reset" }, callback: function (result) {
                                 if ($.isArray(result)) {

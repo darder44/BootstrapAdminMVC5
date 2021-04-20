@@ -8,7 +8,7 @@ namespace Bootstrap.DataAccess
     public static class DbContextManager
     {
         /// <summary>
-        /// 創建資料庫實體類別時发生異常實例
+        /// 創建資料庫實體類別時發生異常實例
         /// </summary>
         public static Exception? Exception { get; private set; }
 

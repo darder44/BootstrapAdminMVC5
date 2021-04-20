@@ -32,7 +32,7 @@
                 <input class="form-control" data-toggle="lgbSelect" data-default-val="" />
                 <select data-toggle="lgbSelect" class="d-none" id="txt_dict_define">
                     <option value="">全部</option>
-                    <option value="0">系统使用</option>
+                    <option value="0">系統使用</option>
                     <option value="1">自定义</option>
                 </select>
             </div>
@@ -41,12 +41,12 @@
 }
 @section cardbody {
     <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-        <span>演示系统禁止修改系统使用字典配置項</span>
+        <span>演示系統禁止修改系統使用字典配置項</span>
     </div>
 }
 @section modal {
     <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">字典编辑窗口</h5>
+        <h5 class="modal-title" id="myModalLabel">字典編輯窗口</h5>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
     </div>
     <div class="modal-body">
@@ -61,7 +61,7 @@
                     <label class="control-label" for="dictDefine">字典類型</label>
                     <input class="form-control" data-toggle="lgbSelect" />
                     <select data-toggle="lgbSelect" class="d-none" data-default-val="1" id="dictDefine">
-                        <option value="0">系统使用</option>
+                        <option value="0">系統使用</option>
                         <option value="1">自定义</option>
                     </select>
                 </div>

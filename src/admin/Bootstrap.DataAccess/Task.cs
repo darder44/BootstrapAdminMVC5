@@ -42,7 +42,7 @@ namespace Bootstrap.DataAccess
         public int TaskTime { get; set; }
 
         /// <summary>
-        /// 獲取/設置  任務进度
+        /// 獲取/設置  任務進度
         /// </summary>
         public double TaskProgress { get; set; }
 

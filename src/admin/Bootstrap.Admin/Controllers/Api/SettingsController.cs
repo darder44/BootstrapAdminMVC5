@@ -26,7 +26,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public bool Post([FromBody]IEnumerable<BootstrapDict> values) => DictHelper.SaveUISettings(values);
 
         /// <summary>
-        /// 保存網站是否為演示系统时調用
+        /// 保存網站是否為演示系統時調用
         /// </summary>
         /// <returns></returns>
         [HttpPost("{id}")]
@@ -37,7 +37,7 @@ namespace Bootstrap.Admin.Controllers.Api
         };
 
         /// <summary>
-        /// 保存前台應用时調用
+        /// 保存前台應用時調用
         /// </summary>
         /// <returns></returns>
         [HttpPut()]
@@ -57,7 +57,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public QueryAppOption Get(string key) => QueryAppOption.RetrieveByKey(key);
 
         /// <summary>
-        /// 删除指定鍵值的前台應用配置信息
+        /// 刪除指定鍵值的前台應用配置信息
         /// </summary>
         /// <param name="id"></param>
         /// <param name="dict"></param>

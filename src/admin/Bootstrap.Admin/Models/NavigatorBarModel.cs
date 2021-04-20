@@ -8,7 +8,7 @@ using System.Linq;
 namespace Bootstrap.Admin.Models
 {
     /// <summary>
-    /// 側邊欄導航条 Model
+    /// 側邊欄導航條 Model
     /// </summary>
     public class NavigatorBarModel : HeaderBarModel
     {
@@ -39,7 +39,7 @@ namespace Bootstrap.Admin.Models
         public IEnumerable<BootstrapMenu> Navigations { get; private set; }
 
         /// <summary>
-        /// 獲得 網站應用程序
+        /// 獲得 網站應用程式
         /// </summary>
         public IEnumerable<KeyValuePair<string, string>> Applications { get; private set; }
     }

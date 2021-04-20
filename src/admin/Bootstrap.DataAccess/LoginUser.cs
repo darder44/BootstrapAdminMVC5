@@ -42,9 +42,9 @@ namespace Bootstrap.DataAccess
         public string Browser { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 登錄操作系统
+        /// 獲得/設置 登錄操作系統
         /// </summary>
-        [DisplayName("操作系统")]
+        [DisplayName("操作系統")]
         public string OS { get; set; } = "";
 
         /// <summary>

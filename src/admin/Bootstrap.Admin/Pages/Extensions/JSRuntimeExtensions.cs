@@ -20,21 +20,21 @@ namespace Microsoft.JSInterop
         }
 
         /// <summary>
-        /// 導航条前移一個 Tab
+        /// 導航條前移一個 Tab
         /// </summary>
         /// <param name="jSRuntime"></param>
         /// <returns></returns>
         public static async ValueTask<string> MovePrevTabAsync(this IJSRuntime? jSRuntime) => jSRuntime == null ? "" : await jSRuntime.InvokeAsync<string>("$.movePrevTab");
 
         /// <summary>
-        /// 導航条後移一個 Tab
+        /// 導航條後移一個 Tab
         /// </summary>
         /// <param name="jSRuntime"></param>
         /// <returns></returns>
         public static async ValueTask<string> MoveNextTabAsync(this IJSRuntime? jSRuntime) => jSRuntime == null ? "" : await jSRuntime.InvokeAsync<string>("$.moveNextTab");
 
         /// <summary>
-        /// 移除指定 ID 的導航条
+        /// 移除指定 ID 的導航條
         /// </summary>
         /// <param name="jSRuntime"></param>
         /// <param name="tabId"></param>
@@ -42,7 +42,7 @@ namespace Microsoft.JSInterop
         public static async ValueTask<string> RemoveTabAsync(this IJSRuntime? jSRuntime, string? tabId) => string.IsNullOrEmpty(tabId) || jSRuntime == null ? "" : await jSRuntime.InvokeAsync<string>("$.removeTab", tabId);
 
         /// <summary>
-        /// 启用動画
+        /// 啟用動画
         /// </summary>
         /// <param name="jSRuntime"></param>
         public static void InitDocument(this IJSRuntime? jSRuntime) => jSRuntime?.InvokeVoidAsync("$.initDocument");

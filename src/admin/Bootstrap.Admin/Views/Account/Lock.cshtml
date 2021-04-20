@@ -1,6 +1,6 @@
 ﻿@model LockModel
 @{
-    ViewBag.Title = "系统锁屏";
+    ViewBag.Title = "系統锁屏";
     Layout = "_Layout";
 }
 @section css {
@@ -29,13 +29,13 @@
         <div id="time"></div>
         <img alt="lock avatar" src="@Url.Content(Model.Icon)" />
         <h1>@Model.DisplayName</h1>
-        <span class="locked">系统已锁定</span>
+        <span class="locked">系統已锁定</span>
         <form role="form" class="form-inline justify-content-center @Model.AuthenticationType" method="post" autocomplete="off" action="?ReturnUrl=@Model.ReturnUrl">
             <input type="hidden" name="username" value="@Model.UserName" />
             <input type="hidden" name="authType" value="@Model.AuthenticationType" />
             <div class="form-group Cookies">
                 <div class="input-group">
-                    <input type="password" name="password" class="form-control" value="" autocomplete="off" placeholder="密码" />
+                    <input type="password" name="password" class="form-control" value="" autocomplete="off" placeholder="密碼" />
                     <div class="input-group-append">
                         <button class="btn btn-lock" type="submit">
                             <i class="fa fa-arrow-right"></i>
@@ -50,14 +50,14 @@
                             <span class="fa fa-lock"></span>
                         </div>
                     </div>
-                    <input type="text" id="smscode" class="form-control" data-toggle="tooltip" disabled value="" placeholder="验证码" maxlength="4" title="請输入验证码" />
+                    <input type="text" id="smscode" class="form-control" data-toggle="tooltip" disabled value="" placeholder="驗證碼" maxlength="4" title="請輸入驗證碼" />
                     <div class="input-group-append">
-                        <button type="button" id="btnSendCode" class="btn btn-lock btn-sms" data-method="send" data-toggle="tooltip" title="点击发送验证码">发送验证码</button>
+                        <button type="button" id="btnSendCode" class="btn btn-lock btn-sms" data-method="send" data-toggle="tooltip" title="点击發送驗證碼">發送驗證碼</button>
                     </div>
                 </div>
             </div>
             <div class="form-group OAuth">
-                <a href="~/Account/Login" class="btn btn-login">重新登录</a>
+                <a href="~/Account/Login" class="btn btn-login">重新登入</a>
             </div>
         </form>
     </div>

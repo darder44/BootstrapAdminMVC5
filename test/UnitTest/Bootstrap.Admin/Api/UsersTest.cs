@@ -34,7 +34,7 @@ namespace Bootstrap.Admin.Api
         [InlineData("ApprovedBy", "desc")]
         public async void Get_Ok(string query, string order)
         {
-            // 選單 系统選單 系统使用条件
+            // 選單 系統選單 系統使用條件
             var qd = await Client.GetAsJsonAsync<QueryData<object>>($"?sort={query}&order={order}&offset=0&limit=20&name=Admin&displayName=Administrator&_=1547628247338");
             Assert.Single(qd.rows);
         }
@@ -42,10 +42,10 @@ namespace Bootstrap.Admin.Api
         [Theory()]
         [InlineData("Administrator")]
         [InlineData("Admin")]
-        [InlineData("系统默認創建")]
+        [InlineData("系統預設創建")]
         public async void Search_Ok(string search)
         {
-            // 選單 系统選單 系统使用条件
+            // 選單 系統選單 系統使用條件
             var qd = await Client.GetAsJsonAsync<QueryData<object>>($"?search={search}&sort=&order=&offset=0&limit=20&category=&name=&define=0&_=1547608210979");
             Assert.NotEmpty(qd.rows);
         }

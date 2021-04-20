@@ -13,7 +13,7 @@ namespace Microsoft.AspNetCore.Http
     public static class HttpContextExtensions
     {
         /// <summary>
-        /// 保存访问日志方法
+        /// 保存訪問日誌方法
         /// </summary>
         public static void SaveOnlineUser(this HttpContext context, string url)
         {

@@ -1,6 +1,6 @@
 ﻿$(function () {
     var $imgUrl = $('#imgUrl');
-    $('[data-oauth="False"]').attr("data-original-title", "点击登录系统");
+    $('[data-oauth="False"]').attr("data-original-title", "点击登入系統");
     $(".container").autoCenter();
 
     $("a[data-method]").on('click', function () {
@@ -21,7 +21,7 @@
                 url: "api/OnlineUsers",
                 method: "put",
                 callback: function (result) {
-                    // 返回真时表示三次验证需要滑块验证码
+                    // 返回真時表示三次驗證需要滑块驗證碼
                     if (result) captcha.addClass('d-block');
                     else success();
                 }
@@ -31,7 +31,7 @@
             return $(window).width() < 768 ? 256 : 272;
         },
         capHeight: function () {
-            // 如果關闭 oAuth 認证 高度要缩小
+            // 如果關闭 oAuth 認證 高度要缩小
             var height = 150;
             if ($(window).width() < 768) height = $('.slidercaptcha:first').hasClass('oauth') ? 96 : 150;
             return height;
@@ -55,7 +55,7 @@
                 modal: '#dialogForgot',
                 method: "put",
                 callback: function (result) {
-                    var title = result ? "提交成功<br/>等待管理员重置密码" : "提交失败";
+                    var title = result ? "提交成功<br/>等待管理员重置密碼" : "提交失败";
                     lgbSwal({ timer: 1500, title: title, type: result ? "success" : "error" });
                 }
             });
@@ -164,8 +164,8 @@
                 $loginSMS.removeClass('d-none');
                 $loginMobile.removeClass('d-none');
 
-                $this.attr('data-value', 'sms').text('用户名密码登陆');
-                $loginButton.attr('data-original-title', '请输入手机号码并点击发送验证码');
+                $this.attr('data-value', 'sms').text('用户名密碼登陆');
+                $loginButton.attr('data-original-title', '请輸入手机号碼并点击發送驗證碼');
             }
             else {
                 // sms model
@@ -174,8 +174,8 @@
                 $loginSMS.addClass('d-none');
                 $loginMobile.addClass('d-none');
 
-                $this.attr('data-value', 'username').text('短信验证登陆');
-                $loginButton.attr('data-original-title', '不填写密码預設使用 Gitee 認证');
+                $this.attr('data-value', 'username').text('短信驗證登陆');
+                $loginButton.attr('data-original-title', '不填写密碼預設使用 Gitee 認證');
             }
         });
     }
@@ -197,20 +197,20 @@
             url: apiUrl,
             method: 'PUT',
             callback: function (result) {
-                $this.attr('data-original-title', result.Result ? "发送成功" : "短信登录體验活动结束").tooltip('show');
+                $this.attr('data-original-title', result.Result ? "發送成功" : "短信登入體啟活动结束").tooltip('show');
                 var handler = setTimeout(function () {
                     clearTimeout(handler);
-                    $this.tooltip('hide').attr('data-original-title', "点击发送验证码");
+                    $this.tooltip('hide').attr('data-original-title', "点击發送驗證碼");
                 }, 2000);
 
                 if (result.Result) {
                     // send success
-                    $this.text('已发送').attr('disabled', true);
+                    $this.text('已發送').attr('disabled', true);
                     $('#code').removeAttr('disabled');
-                    if (result.Data === null) $loginButton.attr('data-original-title', '请输入验证码');
+                    if (result.Data === null) $loginButton.attr('data-original-title', '请輸入驗證碼');
                     else {
                         $('#code').val(result.Data);
-                        $loginButton.attr('data-original-title', '点击登录系统');
+                        $loginButton.attr('data-original-title', '点击登入系統');
                     }
 
                     timeHanlder = setTimeout(function () {
@@ -219,10 +219,10 @@
                         timeHanlder = setInterval(function () {
                             if (count === 0) {
                                 clearInterval(timeHanlder);
-                                $this.text('发送验证码').removeAttr('disabled');
+                                $this.text('發送驗證碼').removeAttr('disabled');
                                 return;
                             }
-                            $this.text(count-- + ' 秒後可重发');
+                            $this.text(count-- + ' 秒後可重發');
                         }, 1000);
                     }, 1000);
                 }

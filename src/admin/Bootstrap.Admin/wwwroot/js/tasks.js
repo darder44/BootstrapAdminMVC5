@@ -28,7 +28,7 @@
             content = $.format(template, 'info', '取消');
         }
         else if (value === "Timeout") {
-            content = $.format(template, 'warning', '超时');
+            content = $.format(template, 'warning', '超時');
         }
         return content;
     };
@@ -50,18 +50,18 @@
             showAdvancedSearchButton: false,
             queryParams: function (params) { return $.extend(params, { operateType: $("#txt_operate_type").val(), OperateTimeStart: $("#txt_operate_start").val(), OperateTimeEnd: $("#txt_operate_end").val() }); },
             columns: [
-                { title: "名称", field: "Name", sortable: true },
-                { title: "创建时间", field: "CreatedTime", sortable: true },
-                { title: "上次执行时间", field: "LastRuntime", sortable: true },
-                { title: "下次执行时间", field: "NextRuntime", sortable: true },
-                { title: "触发条件", field: "TriggerExpression", sortable: false },
+                { title: "名稱", field: "Name", sortable: true },
+                { title: "创建時间", field: "CreatedTime", sortable: true },
+                { title: "上次执行時间", field: "LastRuntime", sortable: true },
+                { title: "下次执行時间", field: "NextRuntime", sortable: true },
+                { title: "触發條件", field: "TriggerExpression", sortable: false },
                 { title: "执行结果", field: "LastRunResult", sortable: false, align: 'center', formatter: resultFormatter },
                 { title: "狀態", field: "Status", sortable: true, align: 'center', formatter: stateFormatter }
             ],
             editButtons: {
                 events: {
                     'click .info': function (e, value, row, index) {
-                        $taskLogModelTitle.html(row.Name + ' - 任务日志窗口(最新50条)');
+                        $taskLogModelTitle.html(row.Name + ' - 任务日誌窗口(最新50條)');
                         $('#dialogLog').modal('show').on('hide.bs.modal', function () {
                             // close hub
                             if ($taskMsg.hub) $taskMsg.hub.stop();

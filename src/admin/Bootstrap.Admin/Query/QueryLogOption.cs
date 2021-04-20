@@ -5,7 +5,7 @@ using System;
 namespace Bootstrap.Admin.Query
 {
     /// <summary>
-    /// 操作日志查詢条件類
+    /// 操作日誌查詢條件類
     /// </summary>
     public class QueryLogOption : PaginationOption
     {
@@ -15,12 +15,12 @@ namespace Bootstrap.Admin.Query
         public string? OperateType { get; set; }
 
         /// <summary>
-        /// 獲得/設置 开始时间
+        /// 獲得/設置 开始時间
         /// </summary>
         public DateTime? OperateTimeStart { get; set; }
 
         /// <summary>
-        /// 獲得/設置 结束时间
+        /// 獲得/設置 结束時间
         /// </summary>
         public DateTime? OperateTimeEnd { get; set; }
 

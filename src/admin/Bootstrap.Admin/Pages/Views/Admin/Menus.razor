@@ -1,6 +1,6 @@
 ﻿@inherits MenusBase
 
-<EditPage @ref="EditPage" Id="menu" FixedHeader="@FixedHeader" TItem="Bootstrap.Security.BootstrapMenu" SubmitModalTitle="選單编辑窗口" QueryModel="QueryModel" OnQuery="Query" OnAdd="Add" OnDelete="Delete" OnSave="Save" OnResetSearch="ResetSearch">
+<EditPage @ref="EditPage" Id="menu" FixedHeader="@FixedHeader" TItem="Bootstrap.Security.BootstrapMenu" SubmitModalTitle="選單編輯窗口" QueryModel="QueryModel" OnQuery="Query" OnAdd="Add" OnDelete="Delete" OnSave="Save" OnResetSearch="ResetSearch">
     <QueryBody>
         <LgbInputText ColumnClass="col-sm-auto" @bind-Value="@context.Name" maxlength="50" />
         <LgbInputText ColumnClass="col-sm-auto" @bind-Value="@context.ParentName" maxlength="50" />
@@ -13,7 +13,7 @@
     </TableToolbarTemplate>
     <TableInfoTemplate>
         <div class="alert alert-info" role="alert">
-            <span>演示系统禁止修改系统選單，可修改外部選單</span>
+            <span>演示系統禁止修改系統選單，可修改外部選單</span>
         </div>
     </TableInfoTemplate>
     <TableHeader>

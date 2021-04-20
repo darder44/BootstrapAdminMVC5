@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// 任務日志控制器
+    /// 任務日誌控制器
     /// </summary>
     [Route("api/[controller]")]
     [Authorize]
@@ -16,7 +16,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class TasksLogController : ControllerBase
     {
         /// <summary>
-        /// 任務管理頁面日志按钮調用此方法
+        /// 任務管理頁面日誌按钮調用此方法
         /// </summary>
         /// <param name="name"></param>
         /// <param name="hub"></param>

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// 應用程序控制器
+    /// 應用程式控制器
     /// </summary>
     [Route("api/[controller]")]
     [Authorize]
@@ -14,7 +14,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class AppsController : ControllerBase
     {
         /// <summary>
-        /// 通過角色ID獲取其授權的所有應用程序集合
+        /// 通過角色ID獲取其授權的所有應用程式集合
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

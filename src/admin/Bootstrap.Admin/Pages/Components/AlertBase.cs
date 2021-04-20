@@ -26,13 +26,13 @@ namespace Bootstrap.Admin.Pages.Components
         public bool AutoClose { get; set; } = true;
 
         /// <summary>
-        /// 獲得/設置 自動關閉时長 預設 1500 毫秒
+        /// 獲得/設置 自動關閉時長 預設 1500 毫秒
         /// </summary>
         [Parameter]
         public int Interval { get; set; } = 1500;
 
         /// <summary>
-        /// 控件渲染完毕後回調方法
+        /// 控件渲染完畢後回調方法
         /// </summary>
         /// <param name="firstRender"></param>
         protected override void OnAfterRender(bool firstRender)

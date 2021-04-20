@@ -15,7 +15,7 @@ namespace Bootstrap.Admin.Pages.Components
         /// </summary>
         public EqualToValidator()
         {
-            ErrorMessage = "你的输入不相同";
+            ErrorMessage = "你的輸入不相同";
         }
 
         /// <summary>

@@ -21,7 +21,7 @@ namespace Bootstrap.DataAccess
         public static IEnumerable<Message> Inbox(string? userName) => string.IsNullOrEmpty(userName) ? new Message[0] : DbContextManager.Create<Message>()?.Inbox(userName) ?? new Message[0];
 
         /// <summary>
-        /// 发件箱
+        /// 發件箱
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>

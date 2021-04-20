@@ -289,7 +289,7 @@
     };
 
     _proto.verify = function () {
-        var arr = this.trail; // 拖动时y轴的移动距离
+        var arr = this.trail; // 拖动時y轴的移动距离
         var left = parseInt(this.block.style.left);
         var verified = false;
         if (this.options.remoteUrl !== null) {

@@ -89,7 +89,7 @@ namespace Bootstrap.DataAccess
                     if (!string.IsNullOrEmpty(uid)) user.Delete(new string[] { uid });
                     if (user.Save(newUser))
                     {
-                        // 根據配置文件設置默認角色
+                        // 根據配置文件設置預設角色
                         var role = DbContextManager.Create<Role>();
                         if (role != null)
                         {

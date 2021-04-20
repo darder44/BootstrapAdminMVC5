@@ -53,9 +53,9 @@ INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設�
 
 -- 時長單位 月
 INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'程式異常保留時長', '1', 0)
-INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'操作日志保留時長', '12', 0)
-INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'登錄日志保留時長', '12', 0)
-INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'訪問日志保留時長', '1', 0)
+INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'操作日誌保留時長', '12', 0)
+INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'登錄日誌保留時長', '12', 0)
+INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'訪問日誌保留時長', '1', 0)
 
 -- 時長單位 天
 INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'Cookie保留時長', '7', 0)
@@ -144,17 +144,17 @@ INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'站內訊息', 100, N'fa fa-envelope', N'~/Admin/Messages', N'0')
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'任務管理', 110, N'fa fa fa-tasks', N'~/Admin/Tasks', N'0')
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (@@Identity, N'暫停', 10, 'fa fa-fa', 'pause', '0', 2);
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (@@Identity - 1, N'日志', 20, 'fa fa-fa', 'info', '0', 2);
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (@@Identity - 1, N'日誌', 20, 'fa fa-fa', 'info', '0', 2);
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'通知管理', 120, N'fa fa-bell', N'~/Admin/Notifications', N'0')
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'日志管理', 130, N'fa fa-gears', N'#', N'0')
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (@@Identity, N'操作日志', 10, N'fa fa-edit', N'~/Admin/Logs', N'0')
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (@@Identity - 1, N'登錄日志', 20, N'fa fa-user-circle-o', N'~/Admin/Logins', N'0')
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (@@Identity - 2, N'訪問日志', 30, N'fa fa-bars', N'~/Admin/Traces', N'0')
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (@@Identity - 3, N'SQL日志', 40, N'fa fa-database', N'~/Admin/SQL', N'0')
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'日誌管理', 130, N'fa fa-gears', N'#', N'0')
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (@@Identity, N'操作日誌', 10, N'fa fa-edit', N'~/Admin/Logs', N'0')
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (@@Identity - 1, N'登錄日誌', 20, N'fa fa-user-circle-o', N'~/Admin/Logins', N'0')
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (@@Identity - 2, N'訪問日誌', 30, N'fa fa-bars', N'~/Admin/Traces', N'0')
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (@@Identity - 3, N'SQL日誌', 40, N'fa fa-database', N'~/Admin/SQL', N'0')
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'在線用戶', 140, N'fa fa-users', N'~/Admin/Online', N'0')
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'網站分析', 145, N'fa fa-line-chart', N'~/Admin/Analyse', N'0')
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'程式異常', 150, N'fa fa-cubes', N'~/Admin/Exceptions', N'0')
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (@@Identity, N'服務器日志', 10, N'fa fa-fa', N'log', N'0', 2)
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (@@Identity, N'服務器日誌', 10, N'fa fa-fa', N'log', N'0', 2)
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'健康檢查', 155, N'fa fa-heartbeat', N'~/Admin/Healths', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'工具集合', 160, N'fa fa-gavel', N'#', N'0')
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (@@Identity, N'客戶端測試', 10, N'fa fa-wrench', N'~/Admin/Mobile', N'0')

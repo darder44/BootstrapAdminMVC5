@@ -18,7 +18,7 @@ namespace Bootstrap.DataAccess
         public string AppName { get; set; } = "";
 
         /// <summary>
-        /// 應用编碼
+        /// 應用編碼
         /// </summary>
         public string AppCode { get; set; } = "";
 
@@ -66,7 +66,7 @@ namespace Bootstrap.DataAccess
         {
             var ret = new QueryAppOption() { AppCode = key };
             var dicts = DictHelper.RetrieveDicts();
-            ret.AppName = dicts.FirstOrDefault(d => d.Category == "應用程序" && d.Code == key)?.Name ?? "";
+            ret.AppName = dicts.FirstOrDefault(d => d.Category == "應用程式" && d.Code == key)?.Name ?? "";
             ret.AppUrl = dicts.FirstOrDefault(d => d.Category == "應用首頁" && d.Name == key)?.Code ?? "";
             ret.AppTitle = dicts.FirstOrDefault(d => d.Category == ret.AppName && d.Name == "網站標題")?.Code ?? "";
             ret.AppFooter = dicts.FirstOrDefault(d => d.Category == ret.AppName && d.Name == "網站頁脚")?.Code ?? "";

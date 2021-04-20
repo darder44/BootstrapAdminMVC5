@@ -10,7 +10,7 @@
     <form class="form-inline">
         <div class="row">
             <div class="form-group col-12">
-                <label class="control-label" for="txt_search_name">登录名稱</label>
+                <label class="control-label" for="txt_search_name">登入名稱</label>
                 <input type="text" class="form-control" id="txt_search_name" maxlength="16" data-default-val="" />
             </div>
             <div class="form-group col-12">
@@ -37,12 +37,12 @@
 }
 @section cardbody {
     <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-        <span>演示系统禁止修改系统内置账户（Admin、User）</span>
+        <span>演示系統禁止修改系統内置账户（Admin、User）</span>
     </div>
 }
 @section modal {
     <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">用户编辑窗口</h5>
+        <h5 class="modal-title" id="myModalLabel">用户編輯窗口</h5>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
     </div>
     <div class="modal-body">
@@ -50,7 +50,7 @@
             <input type="hidden" id="userID" />
             <div class="row">
                 <div class="form-group col-sm-6">
-                    <label class="control-label" for="userName">登录名稱</label>
+                    <label class="control-label" for="userName">登入名稱</label>
                     <input type="text" class="form-control" id="userName" placeholder="不可為空，16字以内" minlength="3" maxlength="16" userName="true" remote="api/Register" data-remote-msg="此用户已存在" data-valid="true" />
                 </div>
                 <div class="form-group col-sm-6">
@@ -58,12 +58,12 @@
                     <input type="text" class="form-control" id="displayName" placeholder="不可為空，20字以内" maxlength="20" data-valid="true" />
                 </div>
                 <div class="form-group col-sm-6">
-                    <label class="control-label" for="password">登录密码</label>
+                    <label class="control-label" for="password">登入密碼</label>
                     <input type="password" class="form-control" id="password" placeholder="不可為空，16字以内" maxlength="16" autocomplete="off" data-valid="true" />
                 </div>
                 <div class="form-group col-sm-6">
-                    <label class="control-label" for="confirm">確認密码</label>
-                    <input type="password" class="form-control" id="confirm" placeholder="与登录密码一致" maxlength="16" equalTo="#password" autocomplete="off" data-valid="true" />
+                    <label class="control-label" for="confirm">確認密碼</label>
+                    <input type="password" class="form-control" id="confirm" placeholder="与登入密碼一致" maxlength="16" equalTo="#password" autocomplete="off" data-valid="true" />
                 </div>
             </div>
         </form>
@@ -75,19 +75,19 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content" data-toggle="LgbValidate" data-valid-button="#btnReset" data-valid-modal="#dialogReset">
             <div class="modal-header">
-                <h5 class="modal-title" id="myResetModalLabel">重置密码窗口</h5>
+                <h5 class="modal-title" id="myResetModalLabel">重置密碼窗口</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
                 <form class="form-inline">
                     <div class="form-row" id="resetForm">
                         <div class="form-group col-sm-6">
-                            <label class="control-label" for="password">登录密码</label>
+                            <label class="control-label" for="password">登入密碼</label>
                             <input type="password" class="form-control" id="resetPassword" placeholder="不可為空，16字以内" maxlength="16" data-valid="true" />
                         </div>
                         <div class="form-group col-sm-6">
-                            <label class="control-label" for="confirm">確認密码</label>
-                            <input type="password" class="form-control" id="resetConfirm" placeholder="与登录密码一致" maxlength="16" equalTo="#resetPassword" data-valid="true" />
+                            <label class="control-label" for="confirm">確認密碼</label>
+                            <input type="password" class="form-control" id="resetConfirm" placeholder="与登入密碼一致" maxlength="16" equalTo="#resetPassword" data-valid="true" />
                         </div>
                         <div class="form-group col-sm-12">
                             <label class="control-label" for="resetReason">重置原因</label>

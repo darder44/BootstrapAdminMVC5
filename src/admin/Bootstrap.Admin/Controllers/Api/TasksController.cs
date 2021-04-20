@@ -38,8 +38,8 @@ namespace Bootstrap.Admin.Controllers.Api
             var sche = TaskServicesManager.Get(scheName);
             if (sche != null) sche.Status = operType == "pause" ? SchedulerStatus.Disabled : SchedulerStatus.Running;
 
-            // SQL 日志任務特殊處理
-            if (scheName == "SQL日志")
+            // SQL 日誌任務特殊處理
+            if (scheName == "SQL日誌")
             {
                 if (operType == "pause") DBLogTask.Pause();
                 else DBLogTask.Run();
@@ -57,8 +57,8 @@ namespace Bootstrap.Admin.Controllers.Api
             // 判斷 Cron 表达式
             if (string.IsNullOrEmpty(widget.CronExpression)) return false;
 
-            // 系统内置任務禁止更改
-            // 演示模式下禁止删除内置任務
+            // 系統内置任務禁止更改
+            // 演示模式下禁止刪除内置任務
             if (DictHelper.RetrieveSystemModel() && _tasks.Any(t => t.Equals(widget.Name, StringComparison.OrdinalIgnoreCase))) return false;
 
             // 加载任務執行體
@@ -73,27 +73,27 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         private static IEnumerable<string> _tasks = new string[] {
-            "单次任務",
+            "單次任務",
             "周期任務",
             "Cron 任務",
-            "超时任務",
+            "超時任務",
             "取消任務",
             "禁用任務",
-            "SQL日志",
+            "SQL日誌",
             "健康檢查"
         };
         /// <summary>
-        /// 删除任務方法
+        /// 刪除任務方法
         /// </summary>
         /// <param name="ids"></param>
         /// <returns></returns>
         [HttpDelete]
         public bool Delete([FromBody]IEnumerable<string> ids)
         {
-            // 演示模式下禁止删除内置任務
+            // 演示模式下禁止刪除内置任務
             if (DictHelper.RetrieveSystemModel() && _tasks.Any(t => ids.Any(id => id.Equals(t, StringComparison.OrdinalIgnoreCase)))) return false;
 
-            // 循环删除任務
+            // 循环刪除任務
             ids.ToList().ForEach(id => TaskServicesManager.Remove(id));
             return true;
         }

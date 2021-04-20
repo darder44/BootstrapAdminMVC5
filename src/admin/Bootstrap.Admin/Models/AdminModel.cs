@@ -47,7 +47,7 @@ namespace Bootstrap.Admin.Models
         public string Theme { get; protected set; }
 
         /// <summary>
-        /// 是否為演示系统
+        /// 是否為演示系統
         /// </summary>
         public bool IsDemo { get; protected set; }
 
@@ -62,32 +62,32 @@ namespace Bootstrap.Admin.Models
         public bool ShowSideBar { get; protected set; }
 
         /// <summary>
-        /// 獲得 是否允许短信验证码登录
+        /// 獲得 是否允许短信驗證碼登入
         /// </summary>
         public bool AllowMobile { get; }
 
         /// <summary>
-        /// 獲得 是否允许第三方 OAuth 認证登录
+        /// 獲得 是否允许第三方 OAuth 認證登入
         /// </summary>
         public bool AllowOAuth { get; }
 
         /// <summary>
-        /// 獲得 是否允许短信验证码登录
+        /// 獲得 是否允许短信驗證碼登入
         /// </summary>
         public bool ShowMobile { get; }
 
         /// <summary>
-        /// 獲得 是否允许第三方 OAuth 認证登录
+        /// 獲得 是否允许第三方 OAuth 認證登入
         /// </summary>
         public bool ShowOAuth { get; }
 
         /// <summary>
-        /// 獲得 自動锁屏时長 預設 1 分钟 字典表中配置
+        /// 獲得 自動锁屏時長 預設 1 分钟 字典表中配置
         /// </summary>
         public int LockScreenPeriod { get; }
 
         /// <summary>
-        /// 獲得 自動锁屏功能是否自動开启 預設關閉
+        /// 獲得 自動锁屏功能是否自動开啟 預設關閉
         /// </summary>
         public bool EnableAutoLockScreen { get; }
 

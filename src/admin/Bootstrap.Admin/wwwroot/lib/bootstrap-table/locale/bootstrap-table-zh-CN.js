@@ -659,13 +659,13 @@
 	    return "\u603B\u5171 ".concat(totalRows, " \u6761\u8BB0\u5F55");
 	  },
 	  formatClearSearch: function formatClearSearch() {
-	    return '清空過滤';
+	    return '清空過濾';
 	  },
 	  formatSearch: function formatSearch() {
-	    return '搜索';
+	    return '查詢';
 	  },
 	  formatNoMatches: function formatNoMatches() {
-	    return '没有找到匹配的记录';
+	    return '没有找到匹配的紀錄';
 	  },
 	  formatPaginationSwitch: function formatPaginationSwitch() {
 	    return '隐藏/顯示分頁';
@@ -683,10 +683,10 @@
 	    return '切换';
 	  },
 	  formatToggleOn: function formatToggleOn() {
-	    return '顯示卡片视圖';
+	    return '顯示卡片視圖';
 	  },
 	  formatToggleOff: function formatToggleOff() {
-	    return '隐藏卡片视圖';
+	    return '隐藏卡片視圖';
 	  },
 	  formatColumns: function formatColumns() {
 	    return '列';
@@ -704,13 +704,13 @@
 	    return '自动刷新';
 	  },
 	  formatExport: function formatExport() {
-	    return '导出資料';
+	    return '導出資料';
 	  },
 	  formatJumpTo: function formatJumpTo() {
 	    return '跳转';
 	  },
 	  formatAdvancedSearch: function formatAdvancedSearch() {
-	    return '高級搜索';
+	    return '高級查詢';
 	  },
 	  formatAdvancedCloseButton: function formatAdvancedCloseButton() {
 	    return '關闭';

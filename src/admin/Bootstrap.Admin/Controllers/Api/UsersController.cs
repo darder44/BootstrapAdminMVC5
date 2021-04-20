@@ -90,7 +90,7 @@ namespace Bootstrap.Admin.Controllers.Api
         };
 
         /// <summary>
-        /// 删除用户操作
+        /// 刪除用户操作
         /// </summary>
         /// <param name="value"></param>
         [HttpDelete]

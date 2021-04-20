@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 namespace Bootstrap.DataAccess
 {
     /// <summary>
-    /// 用户表相关操作類別
+    /// 用户表相關操作類別
     /// </summary>
     public static class UserHelper
     {
@@ -71,7 +71,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 删除用户
+        /// 刪除用户
         /// </summary>
         /// <param name="value"></param>
         public static bool Delete(IEnumerable<string> value)
@@ -85,7 +85,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 保存用户默認App
+        /// 保存用户預設App
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="app"></param>
@@ -213,7 +213,7 @@ namespace Bootstrap.DataAccess
         /// 通过角色ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="roleId">角色ID</param>
-        /// <param name="userIds">用户ID数组</param>
+        /// <param name="userIds">用户ID数組</param>
         /// <returns></returns>
         public static bool SaveByRoleId(string roleId, IEnumerable<string> userIds)
         {
@@ -244,7 +244,7 @@ namespace Bootstrap.DataAccess
         /// 通过部门ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="groupId">GroupID</param>
-        /// <param name="userIds">用户ID数组</param>
+        /// <param name="userIds">用户ID数組</param>
         /// <returns></returns>
         public static bool SaveByGroupId(string groupId, IEnumerable<string> userIds)
         {

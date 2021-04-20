@@ -1,6 +1,6 @@
 ﻿@model NavigatorBarModel
 @{
-    ViewBag.Title = "SQL日志";
+    ViewBag.Title = "SQL日誌";
 }
 @section css {
     <environment include="Development">
@@ -31,12 +31,12 @@
     <script src="~/js/sql.js" asp-append-version="true"></script>
 }
 <div class="card">
-    <div class="card-header">查詢条件</div>
+    <div class="card-header">查詢條件</div>
     <div class="card-body">
         <form class="form-inline">
             <div class="row">
                 <div class="form-group col-sm-6 col-lg-auto">
-                    <label class="control-label" for="txt_operate_start">起始时间</label>
+                    <label class="control-label" for="txt_operate_start">起始時间</label>
                     <div class="input-group date">
                         <input id="txt_operate_start" class="form-control" size="16" type="text" value="@DateTime.Today.ToString("yyyy-MM-dd")" readonly>
                         <div class="input-group-append input-group-addon">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="form-group col-sm-6 col-lg-auto">
-                    <label class="control-label" for="txt_operate_end">终止时间</label>
+                    <label class="control-label" for="txt_operate_end">终止時间</label>
                     <div class="input-group date">
                         <input id="txt_operate_end" class="form-control" size="16" type="text" value="" readonly>
                         <div class="input-group-append input-group-addon">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="form-group col-sm-6 col-lg-auto">
-                    <label class="control-label" for="txt_username">登录用户</label>
+                    <label class="control-label" for="txt_username">登入用户</label>
                     <input type="text" class="form-control" id="txt_username" />
                 </div>
                 <div class="form-group col-sm-6 col-lg-auto flex-sm-fill justify-content-sm-end align-self-sm-end">

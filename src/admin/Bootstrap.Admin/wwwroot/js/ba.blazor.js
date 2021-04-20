@@ -75,7 +75,7 @@
             return activeTabId;
         },
         resetTab: function (tabId) {
-            // 通過计算 Tab 宽度控制滚动条顯示完整 Tab
+            // 通過计算 Tab 宽度控制滚动條顯示完整 Tab
             var $tab = $('#' + tabId);
             if ($tab.length === 0) return;
 
@@ -141,7 +141,7 @@
             toastTemplate += '<div class="toast-progress"></div>';
             toastTemplate += '</div>';
 
-            // 利用 js 生成一个临时 toast 弹窗後自我销毁
+            // 利用 js 生成一個临時 toast 弹窗後自我销毁
             var $toast = $(toastTemplate).appendTo('body');
             var handler = window.setTimeout(function () {
                 window.clearTimeout(handler);
@@ -233,11 +233,11 @@
                 if ($search.length === 1) {
                     $searchInput = $search.find('.search-input').tooltip({
                         sanitize: false,
-                        title: '<div class="search-input-tooltip">输入任意字符串全局搜索 </br> <kbd>Enter</kbd> 搜索 <kbd>ESC</kbd> 清除搜索</div>',
+                        title: '<div class="search-input-tooltip">輸入任意字符串全局查詢 </br> <kbd>Enter</kbd> 查詢 <kbd>ESC</kbd> 清除查詢</div>',
                         html: true
                     });
 
-                    // 支持鍵盘回车搜索
+                    // 支持鍵盘回车查詢
                     $searchInput.on('keyup', function (event) {
                         if (event.keyCode === 13 || event.keyCode === 27) {
                             // ENTER

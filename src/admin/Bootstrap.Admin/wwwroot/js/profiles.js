@@ -29,13 +29,13 @@
         if (key === "default.jpg") return true;
         return new Promise(function (resolve, reject) {
             var swalDeleteOptions = {
-                title: "您確定要删除吗？",
-                html: '您確定要删除选中的所有資料吗',
+                title: "您確定要刪除吗？",
+                html: '您確定要刪除选中的所有資料吗',
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: '#dc3545',
                 cancelButtonColor: '#6c757d',
-                confirmButtonText: "我要删除",
+                confirmButtonText: "我要刪除",
                 cancelButtonText: "取消"
             };
             swal(swalDeleteOptions).then(function (result) {
@@ -82,12 +82,12 @@
         switch ($this.attr('data-method')) {
             case 'password':
                 data.UserStatus = 'ChangePassword';
-                $.bc({ url: Profiles.url, method: "put", data: data, title: "更改密码" });
+                $.bc({ url: Profiles.url, method: "put", data: data, title: "更改密碼" });
                 break;
             case 'user':
                 data.UserStatus = 'ChangeDisplayName';
                 $.bc({
-                    url: Profiles.url, method: "put", data: data, title: "修改用户顯示名称",
+                    url: Profiles.url, method: "put", data: data, title: "修改用户顯示名稱",
                     callback: function (result) {
                         if (result) {
                             $('.username').text(data.DisplayName);

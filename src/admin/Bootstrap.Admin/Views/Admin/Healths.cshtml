@@ -41,7 +41,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabel">健康檢查明细窗口</h5>
+                <h5 class="modal-title" id="myModalLabel">健康檢查明詳窗口</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body nobar">
@@ -62,14 +62,14 @@
     </div>
     <div class="card-body nobar">
         <div class="alert alert-info" role="alert" asp-condition="@Model.IsDemo">
-            <p>本功能應用场景為发布後通過調用<b>健康檢查</b>进行系统自我檢测</p>
+            <p>本功能應用场景為發布後通過調用<b>健康檢查</b>進行系統自我檢测</p>
             <ol>
                 <li>健康檢查接口地址: <a href="~/healths">healths</a></li>
                 <li>健康檢查报表地址: <a href="~/healths-ui">healths-ui</a></li>
             </ol>
             <div>每項檢查结果為：<span class="badge badge-pill badge-success badge-md"><i class="fa fa-check-circle"></i><span>健康</span></span> <span class="badge badge-pill badge-warning badge-md"><i class="fa fa-exclamation-circle"></i><span>亚健康</span></span> <span class="badge badge-pill badge-danger badge-md"><i class="fa fa-times-circle"></i><span>不健康</span></span></div>
         </div>
-        <p>耗时：<span id="checkTotalEplsed">--</span></p>
+        <p>耗時：<span id="checkTotalEplsed">--</span></p>
         <table id="tbCheck"></table>
     </div>
 </div>

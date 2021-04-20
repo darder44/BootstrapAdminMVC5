@@ -12,17 +12,17 @@ namespace Bootstrap.DataAccess
     public class App
     {
         /// <summary>
-        /// 獲得/設置 應用程序主鍵ID
+        /// 獲得/設置 應用程式主鍵ID
         /// </summary>
         public string? Id { get; set; }
 
         /// <summary>
-        /// 獲得/設置 群组名稱
+        /// 獲得/設置 群組名稱
         /// </summary>
         public string AppName { get; set; } = "未設置";
 
         /// <summary>
-        /// 獲取/設置 用户群组关联狀態 checked 標示已经关联 '' 標示未关联
+        /// 獲取/設置 用户群組關联狀態 checked 標示已经關联 '' 標示未關联
         /// </summary>
         public string Checked { get; set; } = "";
 
@@ -34,7 +34,7 @@ namespace Bootstrap.DataAccess
         public virtual IEnumerable<App> RetrievesByRoleId(string roleId)
         {
             using var db = DbManager.Create();
-            var ret = db.Fetch<App>($"select d.Code as Id, d.Name as AppName, case ra.AppId when d.Code then 'checked' else '' end Checked from Dicts d left join RoleApp ra on d.Code = ra.AppId and ra.RoleId = @1 where d.Category = @0", "應用程序", roleId);
+            var ret = db.Fetch<App>($"select d.Code as Id, d.Name as AppName, case ra.AppId when d.Code then 'checked' else '' end Checked from Dicts d left join RoleApp ra on d.Code = ra.AppId and ra.RoleId = @1 where d.Category = @0", "應用程式", roleId);
 
             // 判斷是否為Administrators
             var role = RoleHelper.Retrieves().FirstOrDefault(r => r.Id == roleId);
@@ -46,7 +46,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 根據指定用户名獲得授權應用程序集合
+        /// 根據指定用户名獲得授權應用程式集合
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
@@ -68,7 +68,7 @@ namespace Bootstrap.DataAccess
             try
             {
                 db.BeginTransaction();
-                //删除角色應用表该角色所有的應用
+                //刪除角色應用表该角色所有的應用
                 db.Execute("delete from RoleApp where RoleID = @0", roleId);
                 db.InsertBatch("RoleApp", appIds.Select(g => new { RoleID = roleId, AppID = g }));
                 db.CompleteTransaction();

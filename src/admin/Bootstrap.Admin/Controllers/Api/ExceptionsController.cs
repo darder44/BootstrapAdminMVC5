@@ -31,7 +31,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 异常程序頁面点击服务器日志按钮獲取所有物理日志文件列表方法
+        /// 异常程式頁面点击服务器日誌按钮獲取所有物理日誌文件列表方法
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -72,7 +72,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 查詢服务器端日志文件参数類
+        /// 查詢服务器端日誌文件参数類
         /// </summary>
         public class ExceptionFileQuery
         {

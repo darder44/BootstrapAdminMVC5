@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// SQL 语句執行日志 webapi
+    /// SQL 语句執行日誌 webapi
     /// </summary>
     [Route("api/[controller]")]
     [Authorize]
@@ -15,7 +15,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class SQLController : ControllerBase
     {
         /// <summary>
-        /// 獲取執行日志資料
+        /// 獲取執行日誌資料
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>

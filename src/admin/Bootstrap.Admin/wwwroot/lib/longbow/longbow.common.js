@@ -83,7 +83,7 @@
                 iPhone: u.indexOf('iPhone') > -1, //是否為iPhone或者QQHD浏览器
                 iPod: u.indexOf('iPod') > -1, //是否為iPod或者QQHD浏览器
                 iPad: u.indexOf('iPad') > -1, //是否iPad
-                webApp: u.indexOf('Safari') === -1 //是否web應该程序，没有頭部与底部
+                webApp: u.indexOf('Safari') === -1 //是否web應该程式，没有頭部与底部
             };
         }(),
         language: (navigator.browserLanguage || navigator.language).toLowerCase()
@@ -225,7 +225,7 @@
                     }
                     if (window.toastr) {
                         if (errorThrown === '') errorThrown = url;
-                        toastr.error(XMLHttpRequest.status === 500 ? '後台應用程序错误' : errorThrown, '程序错误');
+                        toastr.error(XMLHttpRequest.status === 500 ? '後台應用程式错误' : errorThrown, '程式错误');
                     }
                     success(false);
                 }
@@ -256,7 +256,7 @@
             var op = $.extend({ header: "header", content: "body > section:first", ele: 'footer' }, options);
             var $ele = $(op.ele);
 
-            // 增加 1px 修复 IE11 下由于小数点导致頁脚消失bug
+            // 增加 1px 修复 IE11 下由于小数点導致頁脚消失bug
             return $(op.header).outerHeight() + $(op.content).outerHeight() + $ele.outerHeight() > $(window).height() + 1 ? $ele.removeClass('position-fixed') : $ele.addClass('position-fixed');
         },
         formatUrl: function (url) {
@@ -344,13 +344,13 @@
         },
         smartTable: function (options) {
             var settings = $.extend({
-                toolbar: '#toolbar',                //工具按钮用哪个容器
-                cache: false,                       //是否使用缓存，預設為true，所以一般情况下需要設置一下这个属性（*）
+                toolbar: '#toolbar',                //工具按钮用哪個容器
+                cache: false,                       //是否使用缓存，預設為true，所以一般情况下需要設置一下这個属性（*）
                 pagination: true,                   //是否顯示分頁（*）
                 sortOrder: "asc",                   //排序方式
                 sidePagination: "server",           //分頁方式：client客户端分頁，server服务端分頁（*）
                 pageNumber: 1,                      //初始化加载第一頁，預設第一頁
-                pageSize: 20,                       //每頁的记录行数（*）
+                pageSize: 20,                       //每頁的紀錄行数（*）
                 pageList: [20, 40, 80, 120],        //可供选择的每頁的行数（*）
                 showExport: true,
                 exportTypes: ['csv', 'txt', 'excel'],
@@ -365,14 +365,14 @@
                 showSearchClearButton: true,
                 showAdvancedSearchButton: true,
                 showButtonText: true,
-                showSearchButton: true,             //是否顯示搜索按钮
+                showSearchButton: true,             //是否顯示查詢按钮
                 showColumns: true,                  //是否顯示所有的列
                 showRefresh: true,                  //是否顯示刷新按钮
-                showToggle: true,                   //是否顯示详细视圖和列表视圖的切换按钮
-                cardView: $(window).width() < 768,  //是否顯示详细视圖
+                showToggle: true,                   //是否顯示詳詳視圖和列表視圖的切换按钮
+                cardView: $(window).width() < 768,  //是否顯示詳詳視圖
                 queryButton: '#btn_query',
                 onLoadSuccess: function (data) {
-                    // 設置 資料庫 滚动条
+                    // 設置 資料庫 滚动條
                     if (settings.height !== undefined) {
                         $('.bootstrap-table .fixed-table-body').overlayScrollbars({
                             className: 'os-theme-dark',
@@ -415,7 +415,7 @@
                     return $.extend({}, queryParams(params), { search: $('.bootstrap-table .fixed-table-toolbar .search-input').val() });
                 }
 
-                // 支持鍵盘回车搜索
+                // 支持鍵盘回车查詢
                 $(document).on('keyup', '.bootstrap-table .fixed-table-toolbar .search-input', this, function (event) {
                     if (event.keyCode === 13) {
                         // ENTER
@@ -425,7 +425,7 @@
                             $search.trigger('click');
                         }
                         else {
-                            // 无搜索按钮是使用 refresh 方法
+                            // 无查詢按钮是使用 refresh 方法
                             event.data.bootstrapTable('refresh');
                         }
                     }
@@ -491,7 +491,7 @@
             // 加载資料
             this.bootstrapTable(settings);
 
-            // 如果固定表頭 禁止容器滚动条出现
+            // 如果固定表頭 禁止容器滚动條出现
             if (fixHeader && $tabContainer.length > 0) {
                 $tabContainer.addClass('overflow-hidden');
             }
@@ -506,8 +506,8 @@
             });
             if (settings.queryButton) {
                 $(settings.queryButton).on('click', this, function (e) {
-                    // fix bug: 翻頁後再更改查詢条件导致頁码未更改資料為空
-                    // 更改頁码為 1 即可
+                    // fix bug: 翻頁後再更改查詢條件導致頁碼未更改資料為空
+                    // 更改頁碼為 1 即可
                     // https://gitee.com/dotnetchina/BootstrapAdmin/issues/I1A739
                     var options = e.data.data('bootstrap.table').options;
                     options.pageNumber = 1;
@@ -519,20 +519,20 @@
             if (settings.search) {
                 $('.bootstrap-table .fixed-table-toolbar .search-input').tooltip({
                     sanitize: false,
-                    title: '<div class="search-input-tooltip">输入任意字符串全局搜索 </br> <kbd>Enter</kbd> 搜索 <kbd>ESC</kbd> 清除搜索</div>',
+                    title: '<div class="search-input-tooltip">輸入任意字符串全局查詢 </br> <kbd>Enter</kbd> 查詢 <kbd>ESC</kbd> 清除查詢</div>',
                     html: true
                 });
 
                 // 生成高級查詢按钮
                 if (settings.showAdvancedSearchButton) {
                     // template
-                    var $advancedSearchButtonHtml = $('<button class="btn btn-secondary" type="button" name="advancedSearch" title="高級搜索"><i class="fa fa-search-plus"></i><span>高級搜索</span></button>');
+                    var $advancedSearchButtonHtml = $('<button class="btn btn-secondary" type="button" name="advancedSearch" title="高級查詢"><i class="fa fa-search-plus"></i><span>高級查詢</span></button>');
                     $advancedSearchButtonHtml.insertAfter($('.bootstrap-table .fixed-table-toolbar .search [name="clearSearch"]')).on('click', function () {
                         // 弹出高級查詢对话框
                         $(settings.advancedSearchModal).modal('show');
                     });
 
-                    // 高級搜索有值时颜色為红色
+                    // 高級查詢有值時颜色為红色
                     $(settings.advancedSearchModal).on('hide.bs.modal', function () {
                         var $modal = $(this)
                         var hasValue = false;
@@ -701,13 +701,13 @@
             // argo at 2020-01-18
             $.extend($.fn.bootstrapTable.defaults, {
                 formatClearSearch: function formatClearSearch() {
-                    return '<span>清空過滤</span>';
+                    return '<span>清空過濾</span>';
                 },
                 formatSearch: function formatSearch() {
-                    return '搜索';
+                    return '查詢';
                 },
                 formatNoMatches: function formatNoMatches() {
-                    return '<span>没有找到匹配的记录</span>';
+                    return '<span>没有找到匹配的紀錄</span>';
                 },
                 formatPaginationSwitch: function formatPaginationSwitch() {
                     return '<span>隐藏/顯示分頁</span>';
@@ -725,10 +725,10 @@
                     return '<span>切换</span>';
                 },
                 formatToggleOn: function formatToggleOn() {
-                    return '<span>顯示卡片视圖</span>';
+                    return '<span>顯示卡片視圖</span>';
                 },
                 formatToggleOff: function formatToggleOff() {
-                    return '<span>隐藏卡片视圖</span>';
+                    return '<span>隐藏卡片視圖</span>';
                 },
                 formatColumns: function formatColumns() {
                     return '<span>列</span>';
@@ -746,13 +746,13 @@
                     return '<span>自动刷新</span>';
                 },
                 formatExport: function formatExport() {
-                    return '<span>导出資料</span>';
+                    return '<span>導出資料</span>';
                 },
                 formatJumpTo: function formatJumpTo() {
                     return '<span>跳转</span>';
                 },
                 formatAdvancedSearch: function formatAdvancedSearch() {
-                    return '<span>高級搜索</span>';
+                    return '<span>高級查詢</span>';
                 },
                 formatAdvancedCloseButton: function formatAdvancedCloseButton() {
                     return '<span>關闭</span>';

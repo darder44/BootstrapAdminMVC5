@@ -36,7 +36,7 @@ namespace Bootstrap.DataAccess
             var menu2 = MenuHelper.RetrieveMenus("Admin").FirstOrDefault(m => m.Id == menu.Id);
             Assert.NotNull(menu2);
 
-            // 保护模式下，正常選單可以删除
+            // 保护模式下，正常選單可以刪除
             var poco = new BootstrapMenu()
             {
                 Name = "UnitTest",
@@ -93,7 +93,7 @@ namespace Bootstrap.DataAccess
             {
                 IP = "182.148.123.196"
             };
-            var dict = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站设置" && d.Name == "IP地理位置接口" && d.Define == 0);
+            var dict = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "IP地理位置接口" && d.Define == 0);
             Assert.NotNull(dict);
             dict.Code = "JuheIPSvr";
 
