@@ -1,6 +1,6 @@
 ﻿@model LockModel
 @{
-    ViewBag.Title = "系統锁屏";
+    ViewBag.Title = "系統鎖屏";
     Layout = "_Layout";
 }
 @section css {
@@ -29,7 +29,7 @@
         <div id="time"></div>
         <img alt="lock avatar" src="@Url.Content(Model.Icon)" />
         <h1>@Model.DisplayName</h1>
-        <span class="locked">系統已锁定</span>
+        <span class="locked">系統已鎖定</span>
         <form role="form" class="form-inline justify-content-center @Model.AuthenticationType" method="post" autocomplete="off" action="?ReturnUrl=@Model.ReturnUrl">
             <input type="hidden" name="username" value="@Model.UserName" />
             <input type="hidden" name="authType" value="@Model.AuthenticationType" />

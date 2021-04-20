@@ -42,14 +42,14 @@
     </div>
 </div>
 <div class="card" asp-auth="saveFooter">
-    <div class="card-header">網站頁脚設置</div>
+    <div class="card-header">網站頁腳設置</div>
     <div class="card-body" data-toggle="LgbValidate" data-valid-button="[data-method='footer']">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-            <span>演示系統禁止更改網站頁脚</span>
+            <span>演示系統禁止更改網站頁腳</span>
         </div>
         <div class="form-group">
             <div class="input-group">
-                <input type="text" class="form-control" id="sysFoot" placeholder="請輸入網站頁脚，50字以内" value="@Model.WebSiteFooter" maxlength="50" data-valid="true" />
+                <input type="text" class="form-control" id="sysFoot" placeholder="請輸入網站頁腳，50字以内" value="@Model.WebSiteFooter" maxlength="50" data-valid="true" />
                 <div class="input-group-append" asp-condition="!@Model.IsDemo">
                     <button class="btn btn-secondary" type="button" data-method="footer">保存</button>
                 </div>
@@ -197,16 +197,16 @@
     </div>
 </div>
 <div class="card" asp-auth="lockScreen">
-    <div class="card-header">自動锁屏設置</div>
+    <div class="card-header">自動鎖屏設置</div>
     <div class="card-body">
         <div class="form-inline">
             <div class="row">
                 <div class="form-group col-6">
-                    <label class="control-label" for="lockScreen">自動锁屏</label>
+                    <label class="control-label" for="lockScreen">自動鎖屏</label>
                     <input id="lockScreen" hidden type="checkbox" data-default-val="@Model.AutoLockScreen" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="开啟" data-off="關閉" />
                 </div>
                 <div class="form-group col-6">
-                    <label class="control-label" for="lockPeriod">時長间隔(秒)</label>
+                    <label class="control-label" for="lockPeriod">時長間隔(秒)</label>
                     <input id="lockPeriod" type="number" class="form-control" min="30" value="@Model.LockScreenPeriod" />
                 </div>
             </div>
@@ -370,7 +370,7 @@
                             <input type="text" class="form-control flex-fill" id="appTitle" placeholder="不可為空，50字以内" maxlength="50" data-valid="true" />
                         </div>
                         <div class="form-group col-sm-12">
-                            <label class="control-label" for="appFooter">網站頁脚</label>
+                            <label class="control-label" for="appFooter">網站頁腳</label>
                             <input type="text" class="form-control flex-fill" id="appFooter" placeholder="不可為空，50字以内" maxlength="50" data-valid="true" />
                         </div>
                         <div class="form-group col-sm-12">

@@ -1,7 +1,7 @@
 ﻿namespace Bootstrap.Admin.Models
 {
     /// <summary>
-    /// 系統锁屏資料模型
+    /// 系統鎖屏資料模型
     /// </summary>
     public class LockModel : HeaderBarModel
     {

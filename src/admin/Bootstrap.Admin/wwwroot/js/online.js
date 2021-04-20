@@ -22,8 +22,8 @@ $(function () {
             },
             { title: "登入名稱", field: "UserName" },
             { title: "顯示名稱", field: "DisplayName" },
-            { title: "登入時间", field: "FirstAccessTime" },
-            { title: "訪問時间", field: "LastAccessTime" },
+            { title: "登入時間", field: "FirstAccessTime" },
+            { title: "訪問時間", field: "LastAccessTime" },
             { title: "请求方式", field: "Method" },
             { title: "主机", field: "Ip" },
             { title: "登入地点", field: "Location" },
@@ -49,7 +49,7 @@ $(function () {
             }).join('');
             content = content === '' ?
                 '已断开' :
-                $.format("<div class='bootstrap-table' style='margin: 4px 0;'><div class='fixed-table-container'><div class='fixed-table-body'><table class='table table-bordered table-hover'><thead><tr><th class='p-1'><b>訪問時间</b></th><th class='p-1'>訪問地址</th></tr></thead><tbody>{0}</tbody></table></div></div></div>", content);
+                $.format("<div class='bootstrap-table' style='margin: 4px 0;'><div class='fixed-table-container'><div class='fixed-table-body'><table class='table table-bordered table-hover'><thead><tr><th class='p-1'><b>訪問時間</b></th><th class='p-1'>訪問地址</th></tr></thead><tbody>{0}</tbody></table></div></div></div>", content);
             $this.popover({ content: content, sanitize: false, placement: $(window).width() < 768 ? 'top' : 'left' });
             $this.popover('show');
         }

@@ -101,13 +101,13 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         /// <summary>
         ///
         /// </summary>
-        [DisplayName("下次執行時间")]
+        [DisplayName("下次執行時間")]
         public DateTimeOffset? NextRuntime { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [DisplayName("上次執行時间")]
+        [DisplayName("上次執行時間")]
         public DateTimeOffset? LastRuntime { get; set; }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         /// <summary>
         ///
         /// </summary>
-        [DisplayName("創建時间")]
+        [DisplayName("創建時間")]
         public DateTimeOffset CreatedTime { get; set; }
 
         /// <summary>

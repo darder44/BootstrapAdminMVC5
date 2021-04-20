@@ -55,7 +55,7 @@ namespace Bootstrap.Admin.Controllers
         public ActionResult Logs() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// 脚本日誌
+        /// 腳本日誌
         /// </summary>
         /// <returns></returns>
         public ActionResult SQL() => View(new NavigatorBarModel(this));

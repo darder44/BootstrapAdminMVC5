@@ -92,8 +92,8 @@ $(function () {
             columns: [
                 { title: "登入名稱", field: "UserName", sortable: true },
                 { title: "顯示名稱", field: "DisplayName", sortable: true },
-                { title: "注册時间", field: "RegisterTime", sortable: true },
-                { title: "授權時间", field: "ApprovedTime", sortable: true },
+                { title: "注册時間", field: "RegisterTime", sortable: true },
+                { title: "授權時間", field: "ApprovedTime", sortable: true },
                 { title: "授權人", field: "ApprovedBy", sortable: true },
                 { title: "说明", field: "Description", sortable: false }
             ],

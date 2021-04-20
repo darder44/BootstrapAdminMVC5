@@ -24,16 +24,16 @@
 </ConditionComponent>
 <ConditionComponent AuthKey="saveFooter">
     <div class="card">
-        <div class="card-header">網站頁脚設置</div>
+        <div class="card-header">網站頁腳設置</div>
         <div class="card-body">
             <ConditionComponent>
                 <div class="alert alert-danger" role="alert">
-                    <span>演示系統禁止更改網站頁脚</span>
+                    <span>演示系統禁止更改網站頁腳</span>
                 </div>
             </ConditionComponent>
             <div class="form-group">
                 <div class="input-group">
-                    <input type="text" class="form-control" id="sysFoot" placeholder="请輸入網站頁脚，50字以内" @bind-value="@Model.Footer" />
+                    <input type="text" class="form-control" id="sysFoot" placeholder="请輸入網站頁腳，50字以内" @bind-value="@Model.Footer" />
                     <ConditionComponent Inverse="true">
                         <div class="input-group-append">
                             <button class="btn btn-secondary" type="button" @onclick="SaveWebFooter">保存</button>
@@ -197,16 +197,16 @@
 </ConditionComponent>
 <ConditionComponent AuthKey="lockScreen">
     <div class="card">
-        <div class="card-header">自动锁屏設置</div>
+        <div class="card-header">自动鎖屏設置</div>
         <div class="card-body">
             <div class="form-inline">
                 <div class="row">
                     <div class="form-group col-6">
-                        <label class="control-label" for="lockScreen">自动锁屏</label>
+                        <label class="control-label" for="lockScreen">自动鎖屏</label>
                         <Toggle @bind-Value="@Model.AutoLockScreen" OnText="开啟" OffText="關闭"></Toggle>
                     </div>
                     <div class="form-group col-6">
-                        <label class="control-label" for="lockPeriod">時长间隔(秒)</label>
+                        <label class="control-label" for="lockPeriod">時长間隔(秒)</label>
                         <input id="lockPeriod" type="number" class="form-control" @bind-value="@Model.LockScreenPeriod" />
                     </div>
                 </div>

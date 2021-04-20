@@ -13,7 +13,7 @@
         columns: [
             { title: "操作類型", field: "CRUD", sortable: true },
             { title: "用户名稱", field: "UserName", sortable: true },
-            { title: "操作時间", field: "LogTime", sortable: true },
+            { title: "操作時間", field: "LogTime", sortable: true },
             { title: "登入主机", field: "Ip", sortable: true },
             { title: "操作地点", field: "City" },
             { title: "浏览器", field: "Browser" },

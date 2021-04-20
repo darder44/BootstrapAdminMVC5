@@ -211,19 +211,19 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 保存網站頁脚
+        /// 保存網站頁腳
         /// </summary>
         protected void SaveWebFooter()
         {
             var ret = DictHelper.SaveSettings(new BootstrapDict[]{
                 new BootstrapDict() {
                     Category = "網站設置",
-                    Name = "網站頁脚",
+                    Name = "網站頁腳",
                     Code = Model.Footer
                 }
             });
             RootLayout?.OnWebFooterChanged(Model.Footer);
-            ShowMessage("保存網站頁脚", ret);
+            ShowMessage("保存網站頁腳", ret);
         }
 
         /// <summary>

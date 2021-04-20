@@ -158,13 +158,13 @@ namespace Bootstrap.Admin.Pages.Shared
         }
 
         /// <summary>
-        /// 獲得/設置 網站頁脚文字
+        /// 獲得/設置 網站頁腳文字
         /// </summary>
         /// <value></value>
         public string WebFooter { get; set; } = "";
 
         /// <summary>
-        /// 網站頁脚文字变化是触發此方法
+        /// 網站頁腳文字变化是触發此方法
         /// </summary>
         /// <param name="text"></param>
         public void OnWebFooterChanged(string text) => Footer?.TextChanged.InvokeAsync(text);

@@ -68,11 +68,11 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 執行建庫脚本
+        /// 執行建庫腳本
         /// </summary>
         protected void GenerateDB(string folder)
         {
-            // 檢查 install.ps1 脚本
+            // 檢查 install.ps1 腳本
             var file = Path.Combine(folder, $"install.ps1");
             if (File.Exists(file))
             {

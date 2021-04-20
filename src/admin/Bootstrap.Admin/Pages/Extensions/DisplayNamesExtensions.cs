@@ -55,8 +55,8 @@ namespace Microsoft.Extensions.DependencyInjection
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.ConnectionId)), "會话Id");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.UserName)), "登入名稱");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.DisplayName)), "顯示名稱");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.FirstAccessTime)), "登入時间");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.LastAccessTime)), "訪問時间");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.FirstAccessTime)), "登入時間");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.LastAccessTime)), "訪問時間");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Method)), "請求方式");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Ip)), "主机");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Location)), "登入地点");

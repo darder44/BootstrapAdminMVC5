@@ -37,7 +37,7 @@ namespace Bootstrap.Admin.Api
                 AppCode = "UnitTest_Put",
                 AppUrl = "http://localhost",
                 AppTitle = "網站標題",
-                AppFooter = "網站页脚"
+                AppFooter = "網站頁腳"
             };
 
             var resp = await Client.PutAsJsonAsync<QueryAppOption, bool>("", data);

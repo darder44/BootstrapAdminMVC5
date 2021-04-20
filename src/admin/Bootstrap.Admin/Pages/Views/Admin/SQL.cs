@@ -22,12 +22,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected DBLog QueryModel { get; set; } = new DBLog();
 
         /// <summary>
-        /// 獲得/設置 开始時间
+        /// 獲得/設置 开始時間
         /// </summary>
         protected DateTime? StartTime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 开始時间
+        /// 獲得/設置 开始時間
         /// </summary>
         protected DateTime? EndTime { get; set; }
 

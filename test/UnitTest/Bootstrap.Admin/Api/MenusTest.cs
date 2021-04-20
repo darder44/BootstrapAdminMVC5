@@ -35,7 +35,7 @@ namespace Bootstrap.Admin.Api
 
         [Theory()]
         [InlineData("個人中心")]
-        [InlineData("首页")]
+        [InlineData("首頁")]
         public async void Search_Ok(string search)
         {
             // 選單 系統選單 系統使用條件

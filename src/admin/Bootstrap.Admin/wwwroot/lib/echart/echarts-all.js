@@ -1371,7 +1371,7 @@ define('echarts/echarts', [
             'emptyDiamond'
         ],
         loadingEffect: 'spin',
-        loadingText: '資料读取中...',
+        loadingText: '資料讀取中...',
         noDataEffect: 'bubble',
         noDataText: '暂无資料',
         calculable: false,

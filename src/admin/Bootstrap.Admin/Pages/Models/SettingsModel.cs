@@ -26,12 +26,12 @@ namespace Bootstrap.Admin.Pages.Models
         public IEnumerable<BootstrapDict> Themes { get; }
 
         /// <summary>
-        /// 獲得 是否开啟自動锁屏
+        /// 獲得 是否开啟自動鎖屏
         /// </summary>
         public bool AutoLockScreen { get; }
 
         /// <summary>
-        /// 獲得 是否开啟自動锁屏
+        /// 獲得 是否开啟自動鎖屏
         /// </summary>
         public bool DefaultApp { get; }
 

@@ -51,9 +51,9 @@
             queryParams: function (params) { return $.extend(params, { operateType: $("#txt_operate_type").val(), OperateTimeStart: $("#txt_operate_start").val(), OperateTimeEnd: $("#txt_operate_end").val() }); },
             columns: [
                 { title: "名稱", field: "Name", sortable: true },
-                { title: "创建時间", field: "CreatedTime", sortable: true },
-                { title: "上次执行時间", field: "LastRuntime", sortable: true },
-                { title: "下次执行時间", field: "NextRuntime", sortable: true },
+                { title: "创建時間", field: "CreatedTime", sortable: true },
+                { title: "上次执行時間", field: "LastRuntime", sortable: true },
+                { title: "下次执行時間", field: "NextRuntime", sortable: true },
                 { title: "触發條件", field: "TriggerExpression", sortable: false },
                 { title: "执行结果", field: "LastRunResult", sortable: false, align: 'center', formatter: resultFormatter },
                 { title: "狀態", field: "Status", sortable: true, align: 'center', formatter: stateFormatter }

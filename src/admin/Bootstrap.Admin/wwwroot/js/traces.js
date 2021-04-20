@@ -10,7 +10,7 @@ $(function () {
         queryParams: function (params) { return $.extend(params, { OperateTimeStart: $("#txt_operate_start").val(), OperateTimeEnd: $("#txt_operate_end").val(), AccessIP: $('#txt_ip').val() }); },
         columns: [
             { title: "用户名稱", field: "UserName", sortable: true },
-            { title: "操作時间", field: "LogTime", sortable: true },
+            { title: "操作時間", field: "LogTime", sortable: true },
             { title: "登入主机", field: "Ip", sortable: true },
             { title: "操作地点", field: "City", sortable: true },
             { title: "浏览器", field: "Browser", sortable: true },

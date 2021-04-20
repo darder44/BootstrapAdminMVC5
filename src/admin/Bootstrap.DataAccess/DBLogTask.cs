@@ -8,7 +8,7 @@ using System.Threading;
 namespace Bootstrap.DataAccess
 {
     /// <summary>
-    /// 資料庫脚本執行日誌任務實體類別
+    /// 資料庫腳本執行日誌任務實體類別
     /// </summary>
     public class DBLogTask : ITask
     {
@@ -27,12 +27,12 @@ namespace Bootstrap.DataAccess
 
         private static bool _pause;
         /// <summary>
-        /// 暂停接收脚本執行日誌
+        /// 暂停接收腳本執行日誌
         /// </summary>
         public static void Pause() => _pause = true;
 
         /// <summary>
-        /// 开始接收脚本執行日誌
+        /// 开始接收腳本執行日誌
         /// </summary>
         public static void Run() => _pause = false;
 

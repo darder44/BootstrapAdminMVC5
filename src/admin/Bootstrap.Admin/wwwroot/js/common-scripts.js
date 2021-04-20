@@ -173,7 +173,7 @@ $(function () {
         window.location = $.formatUrl("Pages" + path + search);
     });
 
-    // 自动锁屏功能
+    // 自动鎖屏功能
     var mousePosition = { screenX: 0, screenY: 0 };
     var count = 1;
     var lockScreenPeriod = parseInt($('#lockScreenPeriod').val());

@@ -13,7 +13,7 @@
         search: false,
         queryParams: function (params) { return $.extend(params, { StartTime: $("#txt_operate_start").val(), EndTime: $("#txt_operate_end").val() }); },
         columns: [
-            { title: "紀錄時间", field: "LogTime", sortable: true },
+            { title: "紀錄時間", field: "LogTime", sortable: true },
             { title: "请求網址", field: "ErrorPage", sortable: true },
             { title: "用户名", field: "UserId", sortable: true },
             { title: "登入主机", field: "UserIp", sortable: true },

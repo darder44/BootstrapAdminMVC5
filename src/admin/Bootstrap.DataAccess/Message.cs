@@ -42,7 +42,7 @@ namespace Bootstrap.DataAccess
         public DateTime SendTime { get; set; }
 
         /// <summary>
-        /// 訊息狀態：0-未读，1-已读 和Dict表的通知訊息關联
+        /// 訊息狀態：0-未讀，1-已讀 和Dict表的通知訊息關联
         /// </summary>
         public string Status { get; set; } = "0";
 

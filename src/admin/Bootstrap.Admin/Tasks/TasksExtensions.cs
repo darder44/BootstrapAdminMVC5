@@ -51,7 +51,7 @@ namespace Microsoft.Extensions.DependencyInjection
             // 創建任務并禁用
             TaskServicesManager.GetOrAdd("禁用任務", token => Task.Delay(1000)).Status = SchedulerStatus.Disabled;
 
-            // 真實任務负责批次写入資料執行脚本到日誌中
+            // 真實任務负责批次写入資料執行腳本到日誌中
             TaskServicesManager.GetOrAdd<DBLogTask>("SQL日誌", TriggerBuilder.Build(Cron.Minutely()));
 
             // 真實人物负责周期性設置健康檢查结果开關為开啟

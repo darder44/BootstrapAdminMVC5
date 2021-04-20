@@ -6,7 +6,7 @@ using System.ComponentModel;
 namespace Bootstrap.DataAccess
 {
     /// <summary>
-    /// 後台資料庫脚本執行日誌實體類別
+    /// 後台資料庫腳本執行日誌實體類別
     /// </summary>
     [TableName("DBLogs")]
     public class DBLog
@@ -24,9 +24,9 @@ namespace Bootstrap.DataAccess
         public string? UserName { get; set; }
 
         /// <summary>
-        /// 獲得/設置 資料庫執行脚本
+        /// 獲得/設置 資料庫執行腳本
         /// </summary>
-        [DisplayName("脚本内容")]
+        [DisplayName("腳本内容")]
         public string SQL { get; set; } = "";
 
         /// <summary>

@@ -37,7 +37,7 @@ namespace Bootstrap.Admin.Models
         public string Title { get; protected set; }
 
         /// <summary>
-        /// 獲取 網站頁脚
+        /// 獲取 網站頁腳
         /// </summary>
         public string Footer { get; protected set; }
 
@@ -82,12 +82,12 @@ namespace Bootstrap.Admin.Models
         public bool ShowOAuth { get; }
 
         /// <summary>
-        /// 獲得 自動锁屏時長 預設 1 分钟 字典表中配置
+        /// 獲得 自動鎖屏時長 預設 1 分钟 字典表中配置
         /// </summary>
         public int LockScreenPeriod { get; }
 
         /// <summary>
-        /// 獲得 自動锁屏功能是否自動开啟 預設關閉
+        /// 獲得 自動鎖屏功能是否自動开啟 預設關閉
         /// </summary>
         public bool EnableAutoLockScreen { get; }
 

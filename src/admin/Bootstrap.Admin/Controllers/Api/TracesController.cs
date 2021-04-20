@@ -16,7 +16,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class TracesController : ControllerBase
     {
         /// <summary>
-        /// 客户端脚本獲取線上用户資料
+        /// 客户端腳本獲取線上用户資料
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>

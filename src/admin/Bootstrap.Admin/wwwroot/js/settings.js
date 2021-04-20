@@ -25,7 +25,7 @@ $(function () {
                 $.bc({
                     url: Settings.url, data: [
                         { name: 'SaveWebFooter', code: data.Footer }
-                    ], title: '保存網站頁脚', method: "post",
+                    ], title: '保存網站頁腳', method: "post",
                     callback: function (result) {
                         if (result) $('#websiteFooter').text(data.Footer);
                     }
@@ -90,7 +90,7 @@ $(function () {
                     url: Settings.url, data: [
                         { name: 'AutoLock', code: autoLock },
                         { name: 'AutoLockPeriod', code: $('#lockPeriod').val() }
-                    ], title: '保存自动锁屏設置', method: "post",
+                    ], title: '保存自动鎖屏設置', method: "post",
                     callback: function (result) {
                         if (result) {
                             window.setTimeout(function () { window.location.reload(true); }, 1000);

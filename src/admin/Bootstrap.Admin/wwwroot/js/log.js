@@ -53,7 +53,7 @@
                 this.log({ crud: '保存網站標題' });
             },
             'button[data-method="footer"]': function () {
-                this.log({ crud: '保存網站頁脚' });
+                this.log({ crud: '保存網站頁腳' });
             },
             'button[data-method="css"]': function () {
                 this.log({ crud: '設置網站样式' });

@@ -22,12 +22,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected LoginUser QueryModel { get; set; } = new LoginUser();
 
         /// <summary>
-        /// 獲得/設置 开始時间
+        /// 獲得/設置 开始時間
         /// </summary>
         protected DateTime? StartTime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 开始時间
+        /// 獲得/設置 开始時間
         /// </summary>
         protected DateTime? EndTime { get; set; }
 

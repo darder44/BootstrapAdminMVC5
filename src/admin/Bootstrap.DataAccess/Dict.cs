@@ -70,20 +70,20 @@ namespace Bootstrap.DataAccess
         /// <returns></returns>
         public virtual string RetrieveWebTitle(string appId)
         {
-            // 优先查找配置的應用程式網站標題
+            // 優先查找配置的應用程式網站標題
             var code = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Name == "網站標題" && d.Category == "網站設置" && d.Define == 0)?.Code ?? "後台管理系統";
             return code;
         }
 
         /// <summary>
-        /// 獲取系統網站頁脚
+        /// 獲取系統網站頁腳
         /// </summary>
         /// <param name="appId"></param>
         /// <returns></returns>
         public virtual string RetrieveWebFooter(string appId)
         {
-            // 优先查找配置的應用程式網站標題
-            var code = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Name == "網站頁脚" && d.Category == "網站設置" && d.Define == 0)?.Code ?? "2021 © 通用後台管理系統";
+            // 優先查找配置的應用程式網站標題
+            var code = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Name == "網站頁腳" && d.Category == "網站設置" && d.Define == 0)?.Code ?? "2021 © 通用後台管理系統";
             return code;
         }
 
@@ -277,16 +277,16 @@ namespace Bootstrap.DataAccess
         public bool RetrieveOAuthLogin() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "OAuth 認證登錄" && d.Define == 0)?.Code ?? "1") == "1";
 
         /// <summary>
-        /// 獲得自動锁屏時長 預設 30 秒
+        /// 獲得自動鎖屏時長 預設 30 秒
         /// </summary>
         /// <returns></returns>
-        public int RetrieveAutoLockScreenPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "自動锁屏時長" && d.Define == 0)?.Code, 30);
+        public int RetrieveAutoLockScreenPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "自動鎖屏時長" && d.Define == 0)?.Code, 30);
 
         /// <summary>
-        /// 獲得自動锁屏是否开啟 預設關閉
+        /// 獲得自動鎖屏是否开啟 預設關閉
         /// </summary>
         /// <returns></returns>
-        public bool RetrieveAutoLockScreen() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "自動锁屏" && d.Define == 0)?.Code ?? "0") == "1";
+        public bool RetrieveAutoLockScreen() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "自動鎖屏" && d.Define == 0)?.Code ?? "0") == "1";
 
         /// <summary>
         /// 獲得預設應用是否开啟 預設關閉

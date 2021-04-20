@@ -23,12 +23,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected Bootstrap.DataAccess.Exceptions QueryModel { get; set; } = new Bootstrap.DataAccess.Exceptions();
 
         /// <summary>
-        /// 獲得/設置 开始時间
+        /// 獲得/設置 开始時間
         /// </summary>
         protected DateTime? StartTime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 开始時间
+        /// 獲得/設置 开始時間
         /// </summary>
         protected DateTime? EndTime { get; set; }
 

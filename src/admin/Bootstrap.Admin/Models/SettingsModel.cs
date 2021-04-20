@@ -48,7 +48,7 @@ namespace Bootstrap.Admin.Models
             // 實际後台網站名稱
             WebSiteTitle = DictHelper.RetrieveWebTitle(BootstrapAppContext.AppId);
 
-            // 實际後台網站頁脚
+            // 實际後台網站頁腳
             WebSiteFooter = DictHelper.RetrieveWebFooter(BootstrapAppContext.AppId);
         }
 
@@ -68,12 +68,12 @@ namespace Bootstrap.Admin.Models
         public string IPLocatorSvr { get; }
 
         /// <summary>
-        /// 獲得 是否开啟自動锁屏
+        /// 獲得 是否开啟自動鎖屏
         /// </summary>
         public bool AutoLockScreen { get; }
 
         /// <summary>
-        /// 獲得 是否开啟自動锁屏
+        /// 獲得 是否开啟自動鎖屏
         /// </summary>
         public bool DefaultApp { get; }
 
@@ -143,7 +143,7 @@ namespace Bootstrap.Admin.Models
         public string WebSiteTitle { get; set; }
 
         /// <summary>
-        /// 獲得/設置 實际 BA 後台網站頁脚
+        /// 獲得/設置 實际 BA 後台網站頁腳
         /// </summary>
         public string WebSiteFooter { get; set; }
     }

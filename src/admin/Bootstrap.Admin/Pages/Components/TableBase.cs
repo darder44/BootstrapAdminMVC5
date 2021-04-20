@@ -128,7 +128,7 @@ namespace Bootstrap.Admin.Pages.Components
         public bool ShowDefaultButtons { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否顯示表脚 預設為 false
+        /// 獲得/設置 是否顯示表腳 預設為 false
         /// </summary>
         [Parameter]
         public bool ShowFooter { get; set; }
@@ -284,7 +284,7 @@ namespace Bootstrap.Admin.Pages.Components
         /// </summary>
         protected override void OnAfterRender(bool firstRender)
         {
-            // 調用客户端脚本
+            // 調用客户端腳本
             JSRuntime.InitTableAsync(RetrieveId(), firstRender);
         }
 

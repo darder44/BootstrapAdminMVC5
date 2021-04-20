@@ -146,15 +146,15 @@ namespace Bootstrap.DataAccess
             var cache = new Dictionary<string, string>()
             {
                 ["SaveWebTitle"] = "網站標題",
-                ["SaveWebFooter"] = "網站頁脚",
+                ["SaveWebFooter"] = "網站頁腳",
                 ["SaveTheme"] = "使用样式",
                 ["ShowCardTitle"] = "卡片標題狀態",
                 ["ShowSideBar"] = "側邊欄狀態",
                 ["FixedTableHeader"] = "固定表頭",
                 ["OAuth"] = "OAuth 認證登錄",
                 ["SMS"] = "短信驗證碼登錄",
-                ["AutoLock"] = "自動锁屏",
-                ["AutoLockPeriod"] = "自動锁屏時長",
+                ["AutoLock"] = "自動鎖屏",
+                ["AutoLockPeriod"] = "自動鎖屏時長",
                 ["DefaultApp"] = "預設應用程式",
                 ["Blazor"] = "Blazor",
                 ["IPLocator"] = "IP地理位置接口",
@@ -345,13 +345,13 @@ namespace Bootstrap.DataAccess
         public static bool RetrieveOAuthLogin() => DbContextManager.Create<Dict>()?.RetrieveOAuthLogin() ?? false;
 
         /// <summary>
-        /// 獲得自動锁屏時長 預設 30 秒
+        /// 獲得自動鎖屏時長 預設 30 秒
         /// </summary>
         /// <returns></returns>
         public static int RetrieveAutoLockScreenPeriod() => DbContextManager.Create<Dict>()?.RetrieveAutoLockScreenPeriod() ?? 30;
 
         /// <summary>
-        /// 獲得自動锁屏 預設關閉
+        /// 獲得自動鎖屏 預設關閉
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveAutoLockScreen() => DbContextManager.Create<Dict>()?.RetrieveAutoLockScreen() ?? false;
@@ -432,7 +432,7 @@ namespace Bootstrap.DataAccess
                     new BootstrapDict()
                     {
                         Category = option.AppName,
-                        Name = "網站頁脚",
+                        Name = "網站頁腳",
                         Code = option.AppFooter,
                         Define = 1
                     },
@@ -485,7 +485,7 @@ namespace Bootstrap.DataAccess
                 if (ret) ret = Save(new BootstrapDict()
                 {
                     Category = option.AppName,
-                    Name = "網站頁脚",
+                    Name = "網站頁腳",
                     Code = option.AppFooter,
                     Define = 1
                 });

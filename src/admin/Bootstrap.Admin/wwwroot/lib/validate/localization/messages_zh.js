@@ -26,8 +26,8 @@ $.extend( $.validator.messages, {
 	extension: "请輸入有效的後缀",
 	maxlength: $.validator.format( "最多可以輸入 {0} 個字符" ),
 	minlength: $.validator.format( "最少要輸入 {0} 個字符" ),
-	rangelength: $.validator.format( "请輸入长度在 {0} 到 {1} 之间的字符串" ),
-	range: $.validator.format( "请輸入范围在 {0} 到 {1} 之间的数值" ),
+	rangelength: $.validator.format( "请輸入长度在 {0} 到 {1} 之間的字符串" ),
+	range: $.validator.format( "请輸入范围在 {0} 到 {1} 之間的数值" ),
 	step: $.validator.format( "请輸入 {0} 的整数倍值" ),
 	max: $.validator.format( "请輸入不大於 {0} 的数值" ),
 	min: $.validator.format( "请輸入不小於 {0} 的数值" )

@@ -12,7 +12,7 @@ namespace Bootstrap.Admin
     internal static class SwaggerExtensions
     {
         /// <summary>
-        /// Swagger 中间件
+        /// Swagger 中間件
         /// </summary>
         /// <param name="app"></param>
         /// <param name="pathBase"></param>

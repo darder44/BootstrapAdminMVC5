@@ -243,7 +243,7 @@
                 swal($.extend({ showConfirmButton: false, showCancelButton: false, timer: 1000, title: '未設置', type: "success" }, options));
             }
             else {
-                window.log('缺少 swal 脚本引用');
+                window.log('缺少 swal 腳本引用');
             }
         },
         getUID: function (prefix) {
@@ -256,7 +256,7 @@
             var op = $.extend({ header: "header", content: "body > section:first", ele: 'footer' }, options);
             var $ele = $(op.ele);
 
-            // 增加 1px 修复 IE11 下由於小数点導致頁脚消失bug
+            // 增加 1px 修复 IE11 下由於小数点導致頁腳消失bug
             return $(op.header).outerHeight() + $(op.content).outerHeight() + $ele.outerHeight() > $(window).height() + 1 ? $ele.removeClass('position-fixed') : $ele.addClass('position-fixed');
         },
         formatUrl: function (url) {

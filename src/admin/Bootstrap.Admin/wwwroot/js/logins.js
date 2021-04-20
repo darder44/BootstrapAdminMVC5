@@ -20,7 +20,7 @@ $(function () {
                 }
             },
             { title: "登入名稱", field: "UserName" },
-            { title: "登入時间", field: "LoginTime" },
+            { title: "登入時間", field: "LoginTime" },
             { title: "主机", field: "Ip" },
             { title: "登入地点", field: "City" },
             { title: "浏览器", field: "Browser" },
