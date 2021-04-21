@@ -84,7 +84,7 @@
                         </div>
                         <input type="number" id="code" name="code" class="form-control digits" data-toggle="tooltip" disabled value="" placeholder="驗證碼" maxlength="4" data-required-msg="請輸入驗證碼" data-valid="true" />
                         <div class="input-group-append">
-                            <button type="button" id="btnSendCode" class="btn btn-sms" data-toggle="tooltip" title="点击發送驗證碼">發送驗證碼</button>
+                            <button type="button" id="btnSendCode" class="btn btn-sms" data-toggle="tooltip" title="點擊發送驗證碼">發送驗證碼</button>
                         </div>
                     </div>
                 </div>
@@ -92,17 +92,17 @@
             <div class="d-flex justify-content-between">
                 <div class="form-group rememberPwd" onselectstart="return false">
                     <i class="fa fa-square-o"></i>
-                    <span>记住密碼自動登入</span>
+                    <span>記住密碼自動登入</span>
                     <input id="remember" name="remember" type="hidden" value="false" />
                 </div>
                 <div asp-condition="@Model.AllowMobile">
-                    <a id="loginType" data-value="username" href="#" class="">短信驗證登陆</a>
+                    <a id="loginType" data-value="username" href="#" class="">簡訊驗證登錄</a>
                 </div>
             </div>
             <button class="btn btn-lg btn-login btn-block" data-oauth="@Model.AllowOAuth" data-toggle="tooltip" title="不填写密碼預設使用 Gitee 認證" type="submit">登 录</button>
             <div class="d-flex justify-content-between">
                 <a href="#" data-method="register">申請账号</a>
-                <a href="#" data-method="forgot">忘记密碼</a>
+                <a href="#" data-method="forgot">忘記密碼</a>
             </div>
             <div asp-condition="@Model.AllowOAuth">
                 <div class="login-other">
@@ -205,7 +205,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content" data-toggle="LgbValidate" data-valid-button="#btnForgot" data-valid-modal="#dialogForgot">
             <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabelForgot">忘记密碼</h5>
+                <h5 class="modal-title" id="myModalLabelForgot">忘記密碼</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
@@ -233,7 +233,7 @@
                 </div>
                 <div class="form-group">
                     <label for="f_desc">申請理由：</label>
-                    <textarea id="f_desc" class="form-control" placeholder="申請理由，500字以内" rows="3" maxlength="500" data-valid="true">我是用户XXX，我的手機号是XXXXXX，由於密碼忘记，請将密碼重置為123，登入後我自行更改，谢谢管理员</textarea>
+                    <textarea id="f_desc" class="form-control" placeholder="申請理由，500字以内" rows="3" maxlength="500" data-valid="true">我是用户XXX，我的手機号是XXXXXX，由於密碼忘記，請将密碼重置為123，登入後我自行更改，谢谢管理员</textarea>
                 </div>
             </div>
             <div class="modal-footer">

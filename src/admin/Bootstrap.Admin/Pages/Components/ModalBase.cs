@@ -41,7 +41,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string Title { get; set; } = "未設置";
 
         /// <summary>
-        /// 獲得/設置 是否允許点击後台關閉彈窗 預設為 false
+        /// 獲得/設置 是否允許點擊後台關閉彈窗 預設為 false
         /// </summary>
         [Parameter]
         public bool Backdrop { get; set; }

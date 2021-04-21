@@ -87,7 +87,7 @@ $(function () {
             pageSize: 100,
             pageList: [100, 200, 400],
             sortName: 'Order',
-            queryParams: function (params) { return $.extend(params, { parentName: $('#txt_parent_menus_name').val().trim(), name: $("#txt_menus_name").val().trim(), category: $('#sel_menus_category').val(), isresource: $('#sel_menus_res').val(), appId: $('#sel_app').val() }); },           //傳递参数（*）
+            queryParams: function (params) { return $.extend(params, { parentName: $('#txt_parent_menus_name').val().trim(), name: $("#txt_menus_name").val().trim(), category: $('#sel_menus_category').val(), isresource: $('#sel_menus_res').val(), appId: $('#sel_app').val() }); },           //傳递参數（*）
             exportOptions: {
                 fileName: "選單資料",
                 ignoreColumn: [0, 9]
@@ -109,7 +109,7 @@ $(function () {
                 },
                 { title: "選單序号", field: "Order", sortable: true },
                 {
-                    title: "選單圖標", field: "Icon", sortable: false, align: 'center', formatter: function (value, row, index) {
+                    title: "選單圖示", field: "Icon", sortable: false, align: 'center', formatter: function (value, row, index) {
                         return value ? $.format('<i class="text-info {0}"></i>', value) : "";
                     }
                 },
@@ -231,7 +231,7 @@ $(function () {
         showDialog();
     });
 
-    // 选择父节点按鈕
+    // 選擇父节點按鈕
     $('#btnMenuParent').on('click', function () {
         $btnSubmitMenu.data('type', 'parent');
         $nestMenuInput.find('label:last').find('input').show();

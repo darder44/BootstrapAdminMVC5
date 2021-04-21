@@ -1,6 +1,6 @@
 ﻿$(function () {
     var $imgUrl = $('#imgUrl');
-    $('[data-oauth="False"]').attr("data-original-title", "点击登入系統");
+    $('[data-oauth="False"]').attr("data-original-title", "點擊登入系統");
     $(".container").autoCenter();
 
     $("a[data-method]").on('click', function () {
@@ -164,8 +164,8 @@
                 $loginSMS.removeClass('d-none');
                 $loginMobile.removeClass('d-none');
 
-                $this.attr('data-value', 'sms').text('用户名密碼登陆');
-                $loginButton.attr('data-original-title', '請輸入手機号碼并点击發送驗證碼');
+                $this.attr('data-value', 'sms').text('用户名密碼登錄');
+                $loginButton.attr('data-original-title', '請輸入手機号碼并點擊發送驗證碼');
             }
             else {
                 // sms model
@@ -174,7 +174,7 @@
                 $loginSMS.addClass('d-none');
                 $loginMobile.addClass('d-none');
 
-                $this.attr('data-value', 'username').text('短信驗證登陆');
+                $this.attr('data-value', 'username').text('簡訊驗證登錄');
                 $loginButton.attr('data-original-title', '不填写密碼預設使用 Gitee 認證');
             }
         });
@@ -197,10 +197,10 @@
             url: apiUrl,
             method: 'PUT',
             callback: function (result) {
-                $this.attr('data-original-title', result.Result ? "發送成功" : "短信登入體啟活动结束").tooltip('show');
+                $this.attr('data-original-title', result.Result ? "發送成功" : "簡訊登入體啟活动结束").tooltip('show');
                 var handler = setTimeout(function () {
                     clearTimeout(handler);
-                    $this.tooltip('hide').attr('data-original-title', "点击發送驗證碼");
+                    $this.tooltip('hide').attr('data-original-title', "點擊發送驗證碼");
                 }, 2000);
 
                 if (result.Result) {
@@ -210,7 +210,7 @@
                     if (result.Data === null) $loginButton.attr('data-original-title', '請輸入驗證碼');
                     else {
                         $('#code').val(result.Data);
-                        $loginButton.attr('data-original-title', '点击登入系統');
+                        $loginButton.attr('data-original-title', '點擊登入系統');
                     }
 
                     timeHanlder = setTimeout(function () {

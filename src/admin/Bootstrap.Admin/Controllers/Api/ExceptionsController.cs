@@ -31,7 +31,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 異常程式頁面点击服務器日誌按鈕獲取所有物理日誌文件列表方法
+        /// 異常程式頁面點擊伺服器日誌按鈕獲取所有物理日誌文件列表方法
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -39,7 +39,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public IEnumerable<string> Post() => ExceptionsHelper.RetrieveLogFiles();
 
         /// <summary>
-        /// 选中指定文件查看其内容方法
+        /// 選中指定文件查看其内容方法
         /// </summary>
         /// <returns></returns>
         [HttpPut]
@@ -72,7 +72,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 查詢服務器端日誌文件参数類
+        /// 查詢伺服器端日誌文件参數類
         /// </summary>
         public class ExceptionFileQuery
         {

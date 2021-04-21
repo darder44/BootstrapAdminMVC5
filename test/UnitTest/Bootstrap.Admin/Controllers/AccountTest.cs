@@ -12,7 +12,7 @@ namespace Bootstrap.Admin.Controllers
         [Fact]
         public async void SystemMode_Test()
         {
-            var dict = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "演示系統");
+            var dict = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "Demo系統");
             dict.Code = "1";
             DictHelper.Save(dict);
 
@@ -23,7 +23,7 @@ namespace Bootstrap.Admin.Controllers
             db.Execute("Update Dicts Set Code = @0 Where Id = @1", "0", dict.Id);
             Assert.Equal(HttpStatusCode.OK, r.StatusCode);
             var source = await r.Content.ReadAsStringAsync();
-            Assert.Contains("演示系統", source);
+            Assert.Contains("Demo系統", source);
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace Bootstrap.Admin.Controllers
             var r = await Client.GetAsync("AccessDenied");
             Assert.True(r.IsSuccessStatusCode);
             var content = await r.Content.ReadAsStringAsync();
-            Assert.Contains("服務器拒绝處理您的請求", content);
+            Assert.Contains("伺服器拒绝處理您的請求", content);
         }
     }
 }

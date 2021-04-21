@@ -101,7 +101,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// api 握手协议
+        /// api 握手協議
         /// </summary>
         /// <returns></returns>
         [AllowAnonymous]

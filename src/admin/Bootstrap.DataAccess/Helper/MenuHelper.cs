@@ -31,12 +31,12 @@ namespace Bootstrap.DataAccess
         /// <returns></returns>
         public static bool Save(BootstrapMenu p)
         {
-            // 不允許保存系統選單與前台演示系統的預設選單
+            // 不允許保存系統選單與前台Demo系統的預設選單
             if (DictHelper.RetrieveSystemModel())
             {
                 if (p.Category == "0") return true;
 
-                // 查找原有資料比对是否為系統選單與演示選單
+                // 查找原有資料比对是否為系統選單與Demo選單
                 if (!string.IsNullOrEmpty(p.Id))
                 {
 
@@ -47,7 +47,7 @@ namespace Bootstrap.DataAccess
 #pragma warning restore CS8602 // 取消引用可能出现的空引用。
                     if (menu != null && menu.Category == "0") return true;
 
-                    // 演示系統
+                    // Demo系統
                     var appMenus = BootstrapAppContext.Configuration.GetSection("AppMenus").Get<ICollection<string>>();
                     if (appMenus.Any(m => m.Equals(menu?.Name, StringComparison.OrdinalIgnoreCase))) return true;
                 }
@@ -67,12 +67,12 @@ namespace Bootstrap.DataAccess
         {
             if (DictHelper.RetrieveSystemModel())
             {
-                // 不允許刪除系統選單與前台演示系統的預設選單
+                // 不允許刪除系統選單與前台Demo系統的預設選單
                 var systemMenus = RetrieveAllMenus("Admin").Where(m => m.Category == "0");
                 value = value.Where(v => !systemMenus.Any(m => m.Id == v));
                 if (!value.Any()) return true;
 
-                // 演示系統
+                // Demo系統
                 var appMenus = BootstrapAppContext.Configuration.GetSection("AppMenus").Get<ICollection<string>>();
                 var appIds = RetrieveAllMenus("Admin").Where(m => appMenus.Any(app => m.Name.Equals(app, System.StringComparison.OrdinalIgnoreCase))).Select(m => m.Id);
 #pragma warning disable CS8602 // 取消引用可能出现的空引用。

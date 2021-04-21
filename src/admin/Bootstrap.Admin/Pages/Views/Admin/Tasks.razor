@@ -19,10 +19,10 @@
                     TaskServicesManager.GetOrAdd("測試任務", token => Task.Delay(1000), trigger);
                 </code>
             </p>
-            <p>3. Cron 表达式任務 (間隔 5 秒循环执行任務)</p>
+            <p>3. Cron 表達式任務 (間隔 5 秒循环执行任務)</p>
             <div>
                 <code>
-                    TaskServicesManager.GetOrAdd("Cron 表达式任務", token => Task.Delay(1000), TriggerBuilder.Build("*/5 * * * * *"));
+                    TaskServicesManager.GetOrAdd("Cron 表達式任務", token => Task.Delay(1000), TriggerBuilder.Build("*/5 * * * * *"));
                 </code>
             </div>
         </div>
@@ -36,7 +36,7 @@
     <div class="card-body">
         <ConditionComponent>
             <div class="alert alert-danger" role="alert">
-                <span>演示系統禁止修改定時後台任務</span>
+                <span>Demo系統禁止修改定時後台任務</span>
             </div>
         </ConditionComponent>
         <Table Id="task" TItem="DefaultScheduler" ShowToolBar="true" ShowRefresh="true" ShowExtendButtons="true" EditModel="DataContext" OnQuery="Query">

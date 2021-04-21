@@ -65,7 +65,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected string ErrorMessage { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 資料合规樣式
+        /// 獲得/設置 資料合規樣式
         /// </summary>
         protected string ValidCss { get; set; } = "";
 

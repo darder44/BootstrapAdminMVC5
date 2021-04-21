@@ -26,12 +26,12 @@ $(function () {
             { title: "訪問時間", field: "LastAccessTime" },
             { title: "請求方式", field: "Method" },
             { title: "主機", field: "Ip" },
-            { title: "登入地点", field: "Location" },
+            { title: "登入地點", field: "Location" },
             { title: "瀏覽器", field: "Browser" },
             { title: "操作系統", field: "OS" },
             { title: "訪問地址", field: "RequestUrl" },
             {
-                title: "历史地址", field: "ConnectionId", formatter: function (value, row, index, field) {
+                title: "歷史地址", field: "ConnectionId", formatter: function (value, row, index, field) {
                     return $.format('<button type="button" class="btn btn-info" data-id="{0}" data-toggle="popover" data-trigger="focus" data-html="true" data-title="訪問紀錄"><i class="fa fa-info"></i><span>明詳</span></button>', value);
                 }
             }
@@ -48,7 +48,7 @@ $(function () {
                 return $.format("<tr><td>{0}</td><td>{1}</td></tr>", item.Key, item.Value);
             }).join('');
             content = content === '' ?
-                '已断开' :
+                '已断開' :
                 $.format("<div class='bootstrap-table' style='margin: 4px 0;'><div class='fixed-table-container'><div class='fixed-table-body'><table class='table table-bordered table-hover'><thead><tr><th class='p-1'><b>訪問時間</b></th><th class='p-1'>訪問地址</th></tr></thead><tbody>{0}</tbody></table></div></div></div>", content);
             $this.popover({ content: content, sanitize: false, placement: $(window).width() < 768 ? 'top' : 'left' });
             $this.popover('show');

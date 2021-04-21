@@ -58,7 +58,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected void ShowMessage(string text, bool ret = true) => JSRuntime?.ShowToast("網站設置", ret ? $"{text}成功" : $"{text}失败", ret ? ToastCategory.Success : ToastCategory.Error);
 
         /// <summary>
-        /// 設置参数方法
+        /// 設置参數方法
         /// </summary>
         protected override void OnInitialized()
         {
@@ -171,13 +171,13 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 保存 登陆設置
+        /// 保存 登錄設置
         /// </summary>
         protected void SaveLogin()
         {
             var ret = DictHelper.SaveSettings(new BootstrapDict[]{
                  new BootstrapDict() { Category = "網站設置", Name = "OAuth 認證登入", Code = Model.ShowOAuth ? "1" : "0" },
-                 new BootstrapDict() { Category = "網站設置", Name = "短信驗證碼登入", Code = Model.ShowMobile ? "1" : "0" }
+                 new BootstrapDict() { Category = "網站設置", Name = "簡訊驗證碼登入", Code = Model.ShowMobile ? "1" : "0" }
             });
             ShowMessage("保存登入設置", ret);
         }
@@ -244,7 +244,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 保存是否开啟預設應用設置
+        /// 保存是否開啟預設應用設置
         /// </summary>
         protected void SaveDefaultApp()
         {
@@ -260,12 +260,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 保存網站是否為演示模式
+        /// 保存網站是否為Demo模式
         /// </summary>
         protected async System.Threading.Tasks.Task SaveSystemModel()
         {
             var ret = DictHelper.UpdateSystemModel(Model.EnableDemo, Model.AuthKey);
-            ShowMessage("保存演示系統設置", ret);
+            ShowMessage("保存Demo系統設置", ret);
             if (ret)
             {
                 await System.Threading.Tasks.Task.Delay(500);
@@ -349,7 +349,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             public IEnumerable<SelectedItem> IPLocators { get; set; } = new SelectedItem[0];
 
             /// <summary>
-            /// 獲得/設置 选中的地理位置配置信息
+            /// 獲得/設置 選中的地理位置配置信息
             /// </summary>
             public SelectedItem SelectedIPLocator { get; set; } = new SelectedItem();
 
@@ -389,7 +389,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             public string AuthKey { get; set; } = "";
 
             /// <summary>
-            /// 獲得 系統是否為演示模式
+            /// 獲得 系統是否為Demo模式
             /// </summary>
             public bool EnableDemo { get; set; }
 

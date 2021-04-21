@@ -217,7 +217,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 獲得 項目是否獲取登錄地点 預設為false
+        /// 獲得 項目是否獲取登錄地點 預設為false
         /// </summary>
         /// <param name="ipSvr">服務提供名稱</param>
         /// <returns></returns>
@@ -230,18 +230,18 @@ namespace Bootstrap.DataAccess
         public int RetrieveAccessLogPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "訪問日誌保留時長" && d.Define == 0)?.Code, 1);
 
         /// <summary>
-        /// 獲得 是否為演示系統 預設為 false 不是演示系統
+        /// 獲得 是否為Demo系統 預設為 false 不是Demo系統
         /// </summary>
         /// <returns></returns>
-        public bool RetrieveSystemModel() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "演示系統" && d.Define == 0)?.Code, "0") == "1";
+        public bool RetrieveSystemModel() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "Demo系統" && d.Define == 0)?.Code, "0") == "1";
 
         /// <summary>
-        /// 獲得 是否為演示系統 預設為 false 不是演示系統
+        /// 獲得 是否為Demo系統 預設為 false 不是Demo系統
         /// </summary>
         /// <returns></returns>
         public bool UpdateSystemModel(bool isDemo)
         {
-            var dict = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "演示系統" && d.Define == 0);
+            var dict = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "Demo系統" && d.Define == 0);
             dict!.Code = isDemo ? "1" : "0";
             return Save(dict);
         }
@@ -265,10 +265,10 @@ namespace Bootstrap.DataAccess
         public bool RetrieveSidebarStatus() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "側邊欄狀態" && d.Define == 0)?.Code ?? "1") == "1";
 
         /// <summary>
-        /// 獲得是否允許短信驗證碼登錄
+        /// 獲得是否允許簡訊驗證碼登錄
         /// </summary>
         /// <returns></returns>
-        public bool RetrieveMobileLogin() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "短信驗證碼登錄" && d.Define == 0)?.Code ?? "1") == "1";
+        public bool RetrieveMobileLogin() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "簡訊驗證碼登錄" && d.Define == 0)?.Code ?? "1") == "1";
 
         /// <summary>
         /// 獲得是否允許 OAuth 認證登錄
@@ -283,25 +283,25 @@ namespace Bootstrap.DataAccess
         public int RetrieveAutoLockScreenPeriod() => LgbConvert.ReadValue(DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "自動鎖屏時長" && d.Define == 0)?.Code, 30);
 
         /// <summary>
-        /// 獲得自動鎖屏是否开啟 預設關閉
+        /// 獲得自動鎖屏是否開啟 預設關閉
         /// </summary>
         /// <returns></returns>
         public bool RetrieveAutoLockScreen() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "自動鎖屏" && d.Define == 0)?.Code ?? "0") == "1";
 
         /// <summary>
-        /// 獲得預設應用是否开啟 預設關閉
+        /// 獲得預設應用是否開啟 預設關閉
         /// </summary>
         /// <returns></returns>
         public bool RetrieveDefaultApp() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "預設應用程式" && d.Define == 0)?.Code ?? "0") == "1";
 
         /// <summary>
-        /// 獲得是否开啟 Blazor 功能 預設關閉
+        /// 獲得是否開啟 Blazor 功能 預設關閉
         /// </summary>
         /// <returns></returns>
         public bool RetrieveEnableBlazor() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "Blazor" && d.Define == 0)?.Code ?? "0") == "1";
 
         /// <summary>
-        /// 獲得是否开啟 固定表頭 功能 預設开啟
+        /// 獲得是否開啟 固定表頭 功能 預設開啟
         /// </summary>
         /// <returns></returns>
         public bool RetrieveFixedTableHeader() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "固定表頭" && d.Define == 0)?.Code ?? "1") == "1";
@@ -319,13 +319,13 @@ namespace Bootstrap.DataAccess
         public string RetrievePathBase() => DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "後台地址" && d.Define == 0)?.Code ?? "";
 
         /// <summary>
-        /// 獲得字典表健康檢查是否开啟
+        /// 獲得字典表健康檢查是否開啟
         /// </summary>
         /// <returns></returns>
         public bool RetrieveHealth() => (DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "健康檢查" && d.Define == 0)?.Code ?? "0") == "1";
 
         /// <summary>
-        /// 獲得字典表登錄界面資料
+        /// 獲得字典表登錄介面資料
         /// </summary>
         /// <returns></returns>
         public IEnumerable<BootstrapDict> RetrieveLogins() => DictHelper.RetrieveDicts().Where(d => d.Category == "系統首頁" && d.Define == 1);
@@ -334,6 +334,6 @@ namespace Bootstrap.DataAccess
         /// 獲得使用中的登錄視圖名稱
         /// </summary>
         /// <returns></returns>
-        public string? RetrieveLoginView() => DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "登錄界面" && d.Define == 1)?.Code;
+        public string? RetrieveLoginView() => DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "網站設置" && d.Name == "登錄介面" && d.Define == 1)?.Code;
     }
 }

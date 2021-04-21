@@ -13,7 +13,7 @@
     </TableToolbarTemplate>
     <TableInfoTemplate>
         <div class="alert alert-info" role="alert">
-            <span>演示系統禁止修改系統選單，可修改外部選單</span>
+            <span>Demo系統禁止修改系統選單，可修改外部選單</span>
         </div>
     </TableInfoTemplate>
     <TableHeader>
@@ -40,9 +40,9 @@
                 <RequiredValidator />
                 <StringLengthValidator Length="50" />
             </LgbInputText>
-            <LgbInputText @bind-Value="@context.ParentName" placeholder="請选择...(可為空)，50字以内" maxlength="50" />
+            <LgbInputText @bind-Value="@context.ParentName" placeholder="請選擇...(可為空)，50字以内" maxlength="50" />
             <LgbInput TItem="int" @bind-Value="@context.Order" placeholder="可為空，預設為10" InputType="number" maxlength="6" />
-            <LgbInputText @bind-Value="@context.Icon" placeholder="請选择...(可為空)，50字以内" maxlength="50" />
+            <LgbInputText @bind-Value="@context.Icon" placeholder="請選擇...(可為空)，50字以内" maxlength="50" />
             <LgbInputText @bind-Value="@context.Url" placeholder="不可為空，2000字以内" maxlength="2000" ColumnClass="col-12" class="flex-sm-fill">
                 <RequiredValidator />
                 <StringLengthValidator Length="2000" />

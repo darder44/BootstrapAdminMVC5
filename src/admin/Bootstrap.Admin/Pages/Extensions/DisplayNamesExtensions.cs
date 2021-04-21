@@ -37,7 +37,7 @@ namespace Microsoft.Extensions.DependencyInjection
             _displayNameCache.TryAdd((typeof(BootstrapMenu), nameof(BootstrapMenu.Name)), "選單名稱");
             _displayNameCache.TryAdd((typeof(BootstrapMenu), nameof(BootstrapMenu.ParentName)), "父級選單");
             _displayNameCache.TryAdd((typeof(BootstrapMenu), nameof(BootstrapMenu.Order)), "選單序号");
-            _displayNameCache.TryAdd((typeof(BootstrapMenu), nameof(BootstrapMenu.Icon)), "選單圖標");
+            _displayNameCache.TryAdd((typeof(BootstrapMenu), nameof(BootstrapMenu.Icon)), "選單圖示");
             _displayNameCache.TryAdd((typeof(BootstrapMenu), nameof(BootstrapMenu.Url)), "選單路徑");
             _displayNameCache.TryAdd((typeof(BootstrapMenu), nameof(BootstrapMenu.Category)), "選單類别");
             _displayNameCache.TryAdd((typeof(BootstrapMenu), nameof(BootstrapMenu.CategoryName)), "選單類别");
@@ -59,7 +59,7 @@ namespace Microsoft.Extensions.DependencyInjection
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.LastAccessTime)), "訪問時間");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Method)), "請求方式");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Ip)), "主機");
-            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Location)), "登入地点");
+            _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Location)), "登入地點");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.Browser)), "瀏覽器");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.OS)), "操作系統");
             _displayNameCache.TryAdd((typeof(OnlineUser), nameof(OnlineUser.RequestUrl)), "訪問地址");

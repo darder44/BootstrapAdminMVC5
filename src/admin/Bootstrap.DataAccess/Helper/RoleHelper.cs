@@ -42,7 +42,7 @@ namespace Bootstrap.DataAccess
         /// <returns></returns>
         public static bool SaveByUserId(string userId, IEnumerable<string> roleIds)
         {
-            // 演示模式時禁止修改 Admin 对 Administrators 角色的移除操作
+            // Demo模式時禁止修改 Admin 对 Administrators 角色的移除操作
             var ret = false;
             if (DictHelper.RetrieveSystemModel())
             {

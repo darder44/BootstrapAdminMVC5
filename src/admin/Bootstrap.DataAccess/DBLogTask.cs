@@ -32,7 +32,7 @@ namespace Bootstrap.DataAccess
         public static void Pause() => _pause = true;
 
         /// <summary>
-        /// 开始接收腳本執行日誌
+        /// 開始接收腳本執行日誌
         /// </summary>
         public static void Run() => _pause = false;
 

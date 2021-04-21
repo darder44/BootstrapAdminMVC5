@@ -57,7 +57,7 @@
     </div>
     <div class="card-body">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-            <span>演示系統禁止修改内置後台任務</span>
+            <span>Demo系統禁止修改内置後台任務</span>
         </div>
         <table id='table'></table>
     </div>
@@ -80,7 +80,7 @@
             </div>
             <div class="modal-body">
                 <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-                    <span>演示系統禁止修改内置後台任務</span>
+                    <span>Demo系統禁止修改内置後台任務</span>
                 </div>
                 <form class="form-inline">
                     <div class="row">
@@ -89,7 +89,7 @@
                             <input type="text" class="form-control flex-sm-fill" id="taskName" placeholder="不可為空，50字以内" maxlength="50" data-valid="true" />
                         </div>
                         <div class="form-group col-12">
-                            <label class="control-label" for="taskCron">Cron表达式</label>
+                            <label class="control-label" for="taskCron">Cron表達式</label>
                             <input class="form-control" data-toggle="lgbSelect" />
                             <select data-toggle="lgbSelect" class="d-none" id="taskCron" data-default-val="*/5 * * * * *">
                                 @foreach (var task in Model.TaskTriggers)

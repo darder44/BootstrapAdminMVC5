@@ -54,11 +54,11 @@ namespace Bootstrap.Admin.Controllers.Api
         [HttpPost]
         public bool Post([FromBody]TaskWidget widget)
         {
-            // 判斷 Cron 表达式
+            // 判斷 Cron 表達式
             if (string.IsNullOrEmpty(widget.CronExpression)) return false;
 
             // 系統内置任務禁止更改
-            // 演示模式下禁止刪除内置任務
+            // Demo模式下禁止刪除内置任務
             if (DictHelper.RetrieveSystemModel() && _tasks.Any(t => t.Equals(widget.Name, StringComparison.OrdinalIgnoreCase))) return false;
 
             // 加載任務執行體
@@ -90,7 +90,7 @@ namespace Bootstrap.Admin.Controllers.Api
         [HttpDelete]
         public bool Delete([FromBody]IEnumerable<string> ids)
         {
-            // 演示模式下禁止刪除内置任務
+            // Demo模式下禁止刪除内置任務
             if (DictHelper.RetrieveSystemModel() && _tasks.Any(t => ids.Any(id => id.Equals(t, StringComparison.OrdinalIgnoreCase)))) return false;
 
             // 循环刪除任務

@@ -29,7 +29,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected DefaultLayout? RootLayout { get; set; }
 
         /// <summary>
-        /// 獲得/設置 用户圖標
+        /// 獲得/設置 用户圖示
         /// </summary>
         [Parameter]
         public string Icon { get; set; } = "";
@@ -47,12 +47,12 @@ namespace Bootstrap.Admin.Pages.Components
         public EventCallback<string> DisplayNameChanged { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否顯示 Blazor MVC 切换圖標
+        /// 獲得/設置 是否顯示 Blazor MVC 切换圖示
         /// </summary>
         protected bool EnableBlazor { get; set; }
 
         /// <summary>
-        /// 参数赋值方法
+        /// 参數赋值方法
         /// </summary>
         public override System.Threading.Tasks.Task SetParametersAsync(ParameterView parameters)
         {

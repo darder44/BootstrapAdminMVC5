@@ -2148,9 +2148,9 @@ define('zrender/zrender', [
             mark: {
                 show: false,
                 title: {
-                    mark: '輔助线开關',
-                    markUndo: '刪除輔助线',
-                    markClear: '清空輔助线'
+                    mark: '輔助線開關',
+                    markUndo: '刪除輔助線',
+                    markClear: '清空輔助線'
                 },
                 lineStyle: {
                     width: 1,
@@ -2178,7 +2178,7 @@ define('zrender/zrender', [
             magicType: {
                 show: false,
                 title: {
-                    line: '折线圖切换',
+                    line: '折線圖切换',
                     bar: '柱形圖切换',
                     stack: '堆积',
                     tiled: '平铺',
@@ -2197,7 +2197,7 @@ define('zrender/zrender', [
                 show: false,
                 title: '保存為圖片',
                 type: 'png',
-                lang: ['点击保存']
+                lang: ['點擊保存']
             }
         }
     };
@@ -2820,7 +2820,7 @@ define('zrender/zrender', [
             var downloadLink = document.createElement('a');
             downloadLink.href = image;
             downloadLink.setAttribute('download', (saveOption.name ? saveOption.name : this.option.title && (this.option.title.text || this.option.title.subtext) ? this.option.title.text || this.option.title.subtext : 'ECharts') + '.' + imgType);
-            downloadLink.innerHTML = '<img style="vertical-align:middle" src="' + image + '" title="' + (!!window.ActiveXObject || 'ActiveXObject' in window ? '右鍵->圖片另存為' : saveOption.lang ? saveOption.lang[0] : '点击保存') + '"/>';
+            downloadLink.innerHTML = '<img style="vertical-align:middle" src="' + image + '" title="' + (!!window.ActiveXObject || 'ActiveXObject' in window ? '右鍵->圖片另存為' : saveOption.lang ? saveOption.lang[0] : '點擊保存') + '"/>';
             downloadDiv.appendChild(downloadLink);
             document.body.appendChild(downloadDiv);
             downloadLink = null;
@@ -34435,7 +34435,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '500234',
                 'properties': {
-                    'name': '开县',
+                    'name': '開县',
                     'cp': [
                         108.4131,
                         31.2561
@@ -37719,7 +37719,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '4102',
                 'properties': {
-                    'name': '开封市',
+                    'name': '開封市',
                     'cp': [
                         114.5764,
                         34.6124
@@ -41262,7 +41262,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '5117',
                 'properties': {
-                    'name': '达州市',
+                    'name': '達州市',
                     'cp': [
                         107.6111,
                         31.333
@@ -41914,7 +41914,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '120104',
                 'properties': {
-                    'name': '南开区',
+                    'name': '南開区',
                     'cp': [
                         117.1527,
                         39.1065
@@ -45430,7 +45430,7 @@ define('zrender/zrender', [
                 'type': 'Feature',
                 'id': '5423',
                 'properties': {
-                    'name': '日喀则地区',
+                    'name': '日喀則地区',
                     'cp': [
                         86.2427,
                         29.5093

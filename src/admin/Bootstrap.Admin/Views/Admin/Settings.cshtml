@@ -29,7 +29,7 @@
     <div class="card-header">網站名稱設置</div>
     <div class="card-body" data-toggle="LgbValidate" data-valid-button="[data-method='title']">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-            <span>演示系統禁止更改網站名稱</span>
+            <span>Demo系統禁止更改網站名稱</span>
         </div>
         <div class="form-group">
             <div class="input-group">
@@ -45,7 +45,7 @@
     <div class="card-header">網站頁腳設置</div>
     <div class="card-body" data-toggle="LgbValidate" data-valid-button="[data-method='footer']">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-            <span>演示系統禁止更改網站頁腳</span>
+            <span>Demo系統禁止更改網站頁腳</span>
         </div>
         <div class="form-group">
             <div class="input-group">
@@ -58,7 +58,7 @@
     </div>
 </div>
 <div class="card">
-    <div class="card-header"><label class="control-label" data-toggle="lgbinfo" data-content="通過此功能進行整個網站的登入界面設置">後台管理登入地址設置</label></div>
+    <div class="card-header"><label class="control-label" data-toggle="lgbinfo" data-content="通過此功能進行整個網站的登入介面設置">後台管理登入地址設置</label></div>
     <div class="card-body">
         <div class="form-group">
             <div class="form-group text-right">
@@ -82,7 +82,7 @@
     <div class="card-header"><label class="control-label" data-toggle="lgbinfo" data-content="此功能给前台網站拼接後台功能選單時使用">後台管理地址設置</label></div>
     <div class="card-body" data-toggle="LgbValidate" data-valid-button="[data-method='appPath']">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-            <span>演示系統禁止更改後台管理地址</span>
+            <span>Demo系統禁止更改後台管理地址</span>
         </div>
         <div class="form-group">
             <div class="input-group">
@@ -98,7 +98,7 @@
     <div class="card-header">前台應用設置</div>
     <div class="card-body">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-            <span>演示系統禁止更改前台應用設置</span>
+            <span>Demo系統禁止更改前台應用設置</span>
         </div>
         <div class="form-inline">
             <div class="row" id="appList">
@@ -152,7 +152,7 @@
             <div class="row">
                 <div class="form-group col-6">
                     <label class="control-label" for="sider">側邊欄設置</label>
-                    <input id="sider" hidden type="checkbox" data-default-val="@Model.ShowSideBar" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="展开" data-off="收縮" />
+                    <input id="sider" hidden type="checkbox" data-default-val="@Model.ShowSideBar" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="展開" data-off="收縮" />
                 </div>
                 <div class="form-group col-6">
                     <label class="control-label" for="cardTitle">標題設置</label>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="form-group col-6">
                     <label class="control-label" for="health">健康檢查</label>
-                    <input id="health" hidden type="checkbox" data-default-val="@Model.EnableHealth" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="开啟" data-off="關閉" />
+                    <input id="health" hidden type="checkbox" data-default-val="@Model.EnableHealth" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="開啟" data-off="關閉" />
                 </div>
             </div>
         </div>
@@ -177,7 +177,7 @@
     <div class="card-header">網站登入設置</div>
     <div class="card-body">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-            <span>演示系統禁止更改網站登入設置</span>
+            <span>Demo系統禁止更改網站登入設置</span>
         </div>
         <div class="form-inline">
             <div class="row">
@@ -203,7 +203,7 @@
             <div class="row">
                 <div class="form-group col-6">
                     <label class="control-label" for="lockScreen">自動鎖屏</label>
-                    <input id="lockScreen" hidden type="checkbox" data-default-val="@Model.AutoLockScreen" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="开啟" data-off="關閉" />
+                    <input id="lockScreen" hidden type="checkbox" data-default-val="@Model.AutoLockScreen" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="開啟" data-off="關閉" />
                 </div>
                 <div class="form-group col-6">
                     <label class="control-label" for="lockPeriod">時長間隔(秒)</label>
@@ -222,8 +222,8 @@
         <div class="form-inline">
             <div class="row">
                 <div class="form-group col-12">
-                    <label class="control-label" data-toggle="lgbinfo" data-content="开啟此功能後登入時預設導航到第一個已授權的前台應用" for="defaultApp">預設應用</label>
-                    <input id="defaultApp" hidden type="checkbox" data-default-val="@Model.DefaultApp" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="开啟" data-off="關閉" />
+                    <label class="control-label" data-toggle="lgbinfo" data-content="開啟此功能後登入時預設導航到第一個已授權的前台應用" for="defaultApp">預設應用</label>
+                    <input id="defaultApp" hidden type="checkbox" data-default-val="@Model.DefaultApp" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="開啟" data-off="關閉" />
                 </div>
             </div>
         </div>
@@ -238,8 +238,8 @@
         <div class="form-inline">
             <div class="row">
                 <div class="form-group col-6">
-                    <label class="control-label" data-toggle="lgbinfo" data-content="开啟此功能網站增加 Blazor 與 MVC 切换挂件" for="blazor">Blazor 切换</label>
-                    <input id="blazor" hidden type="checkbox" data-default-val="@Model.EnableBlazor" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="开啟" data-off="關閉" />
+                    <label class="control-label" data-toggle="lgbinfo" data-content="開啟此功能網站增加 Blazor 與 MVC 切换挂件" for="blazor">Blazor 切换</label>
+                    <input id="blazor" hidden type="checkbox" data-default-val="@Model.EnableBlazor" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="開啟" data-off="關閉" />
                 </div>
             </div>
         </div>
@@ -252,7 +252,7 @@
     <div class="card-header">地址位置信息</div>
     <div class="card-body">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-            <span>演示系統禁止更改地理信息配置</span>
+            <span>Demo系統禁止更改地理信息配置</span>
         </div>
         <div class="form-group">
             <div class="btn-group" role="group">
@@ -275,7 +275,7 @@
     <div class="card-header">日誌缓存設置</div>
     <div class="card-body">
         <div class="alert alert-danger" role="alert" asp-condition="@Model.IsDemo">
-            <span>演示系統禁止更改日誌缓存設置</span>
+            <span>Demo系統禁止更改日誌缓存設置</span>
         </div>
         <div class="form-inline">
             <div class="row">
@@ -311,13 +311,13 @@
     </div>
 </div>
 <div class="card" asp-auth="demo" data-toggle="LgbValidate" data-valid-button="[data-method='saveDemo']">
-    <div class="card-header">演示系統設置</div>
+    <div class="card-header">Demo系統設置</div>
     <div class="card-body">
         <div class="form-inline">
             <div class="row">
                 <div class="form-group col-6">
-                    <label class="control-label" data-toggle="lgbinfo" data-content="开啟此功能網站切换至演示系統">演示系統</label>
-                    <input id="demo" hidden type="checkbox" data-default-val="@Model.EnableDemo" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="开啟" data-off="關閉" />
+                    <label class="control-label" data-toggle="lgbinfo" data-content="開啟此功能網站切换至Demo系統">Demo系統</label>
+                    <input id="demo" hidden type="checkbox" data-default-val="@Model.EnableDemo" data-toggle="toggle" data-width="120" data-onstyle="success" data-on="開啟" data-off="關閉" />
                 </div>
                 <div class="form-group col-6">
                     <label class="control-label" for="authKey">授權碼</label>
@@ -335,7 +335,7 @@
         <div class="d-flex align-items-center">
             <span class="flex-fill">網站缓存設置</span>
             <a data-method="clear" href="#" class="fa fa-times-circle-o" title="全部清除" data-toggle="tooltip" data-placement="left" asp-auth="clearAllCache"></a>
-            <a data-method="refresh" href="#" class="fa fa-refresh ml-3" title="点击刷新" data-toggle="tooltip"></a>
+            <a data-method="refresh" href="#" class="fa fa-refresh ml-3" title="點擊刷新" data-toggle="tooltip"></a>
         </div>
     </div>
     <div class="card-body" id="sortable">
@@ -374,7 +374,7 @@
                             <input type="text" class="form-control flex-fill" id="appFooter" placeholder="不可為空，50字以内" maxlength="50" data-valid="true" />
                         </div>
                         <div class="form-group col-sm-12">
-                            <label class="control-label" for="appIcon">網站圖標</label>
+                            <label class="control-label" for="appIcon">網站圖示</label>
                             <input type="text" class="form-control flex-fill" id="appIcon" placeholder="不可為空，2000字以内" maxlength="2000" data-valid="true" />
                         </div>
                         <div class="form-group col-sm-12">

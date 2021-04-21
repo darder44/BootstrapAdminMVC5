@@ -3,7 +3,7 @@
 namespace Bootstrap.Admin.Pages.Components
 {
     /// <summary>
-    /// Toggle 开關組件
+    /// Toggle 開關組件
     /// </summary>
     public class ToggleBase : ComponentBase
     {
@@ -17,7 +17,7 @@ namespace Bootstrap.Admin.Pages.Components
         /// 獲得/設置 組件 On 時顯示文本
         /// </summary>
         [Parameter]
-        public string OnText { get; set; } = "展开";
+        public string OnText { get; set; } = "展開";
 
         /// <summary>
         /// 獲得/設置 組件 Off 時顯示文本

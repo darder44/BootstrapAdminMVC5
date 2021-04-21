@@ -37,7 +37,7 @@ namespace Microsoft.Extensions.DependencyInjection
         private CloudLoggerOption option;
 
         /// <summary>
-        /// 構造函数
+        /// 構造函數
         /// </summary>
         public CloudLoggerProvider(IOptionsMonitor<CloudLoggerOption> options) : base(null, new Func<string, LogLevel, bool>((name, logLevel) => logLevel >= LogLevel.Error))
         {

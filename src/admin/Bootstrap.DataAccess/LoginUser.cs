@@ -48,9 +48,9 @@ namespace Bootstrap.DataAccess
         public string OS { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 登錄地点
+        /// 獲得/設置 登錄地點
         /// </summary>
-        [DisplayName("登錄地点")]
+        [DisplayName("登錄地點")]
         public string City { get; set; } = "";
 
         /// <summary>

@@ -29,7 +29,7 @@ namespace Bootstrap.Admin.Controllers.Api
             return value.RetrieveData();
         }
         /// <summary>
-        /// 通過指定用户ID/部門ID/選單ID獲得所有角色集合，已经授權的有checked標记
+        /// 通過指定用户ID/部門ID/選單ID獲得所有角色集合，已经授權的有checked標記
         /// </summary>
         /// <param name="id">用户ID/部門ID/選單ID</param>
         /// <param name="type">類型</param>
@@ -50,7 +50,7 @@ namespace Bootstrap.Admin.Controllers.Api
         /// 保存角色授權方法
         /// </summary>
         /// <param name="id">角色ID</param>
-        /// <param name="values">选中的ID集合</param>
+        /// <param name="values">選中的ID集合</param>
         /// <param name="type">type=menu時，選單維護頁面对角色授權彈框保存按鈕調用</param>
         /// <returns></returns>
         [HttpPut("{id}")]

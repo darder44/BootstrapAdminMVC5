@@ -68,7 +68,7 @@ $(function () {
         },
         smartTable: {
             sortName: 'GroupName',
-            queryParams: function (params) { return $.extend(params, { groupName: $("#txt_search_name").val(), description: $("#txt_group_desc").val() }); },           //傳递参数（*）
+            queryParams: function (params) { return $.extend(params, { groupName: $("#txt_search_name").val(), description: $("#txt_group_desc").val() }); },           //傳递参數（*）
             columns: [
                 { title: "部門編碼", field: "GroupCode", sortable: true },
                 { title: "部門名稱", field: "GroupName", sortable: true },

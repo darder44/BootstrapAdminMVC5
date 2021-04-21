@@ -39,7 +39,7 @@ namespace Bootstrap.Admin.Api
         {
             var widget = new TaskWidget();
 
-            // widget Cron 表达式為 ”“
+            // widget Cron 表達式為 ”“
             var resp = await Client.PostAsJsonAsync<TaskWidget, bool>("/api/Tasks", widget);
             Assert.False(resp);
 
@@ -85,7 +85,7 @@ namespace Bootstrap.Admin.Api
             widget.Name = "單次任務";
             widget.TaskExecutorName = "Bootstrap.Admin.DefaultTaskExecutor";
 
-            // 演示模式下禁止移除系統内置任務
+            // Demo模式下禁止移除系統内置任務
             var resp = await client.PostAsJsonAsync<TaskWidget, bool>("/api/Tasks", widget);
             Assert.False(resp);
 

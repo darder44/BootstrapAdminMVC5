@@ -3,12 +3,12 @@
 namespace Bootstrap.Admin.Models
 {
     /// <summary>
-    /// 登陆頁面 Model
+    /// 登錄頁面 Model
     /// </summary>
     public class LoginModel : AdminModel
     {
         /// <summary>
-        /// 預設構造函数
+        /// 預設構造函數
         /// </summary>
         /// <param name="appId"></param>
         public LoginModel(string? appId = null) : base(appId)

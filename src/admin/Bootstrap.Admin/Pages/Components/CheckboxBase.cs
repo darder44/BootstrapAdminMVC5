@@ -24,12 +24,12 @@ namespace Bootstrap.Admin.Pages.Components
         public string Text { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 是否被选中
+        /// 獲得/設置 是否被選中
         /// </summary>
         protected bool Checked { get; set; }
 
         /// <summary>
-        /// 勾选回調方法
+        /// 勾選回調方法
         /// </summary>
         [Parameter]
         public Action<TItem, bool>? OnClick { get; set; }
@@ -50,7 +50,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 獲得/設置 选择框狀態
+        /// 獲得/設置 選擇框狀態
         /// </summary>
         [Parameter]
         public CheckBoxState State { get; set; }
@@ -77,7 +77,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 点击选择框方法
+        /// 點擊選擇框方法
         /// </summary>
         protected void ToggleClick()
         {

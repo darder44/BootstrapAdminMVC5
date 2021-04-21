@@ -10,7 +10,7 @@ namespace Bootstrap.Admin.Models
     public class HeaderBarModel : AdminModel
     {
         /// <summary>
-        /// 預設構造函数
+        /// 預設構造函數
         /// </summary>
         /// <param name="userName"></param>
         public HeaderBarModel(string? userName)
@@ -33,7 +33,7 @@ namespace Bootstrap.Admin.Models
                 Footer = DictHelper.RetrieveWebFooter(AppId);
 
                 // feat: https://gitee.com/LongbowEnterprise/dashboard/issues?id=I12VKZ
-                // 後台系統網站圖標跟隨個人中心設置的預設應用站点的展示
+                // 後台系統網站圖示跟隨個人中心設置的預設應用站點的展示
                 WebSiteIcon = DictHelper.RetrieveWebIcon(AppId);
                 WebSiteLogo = DictHelper.RetrieveWebLogo(AppId);
             }
@@ -71,7 +71,7 @@ namespace Bootstrap.Admin.Models
         public string ActiveCss { get; } = "";
 
         /// <summary>
-        /// 獲得 是否开啟 Blazor
+        /// 獲得 是否開啟 Blazor
         /// </summary>
         public bool EnableBlazor { get; }
     }

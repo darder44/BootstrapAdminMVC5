@@ -199,7 +199,7 @@ namespace Bootstrap.DataAccess
             Assert.Equal("http://localhost:49185", DictHelper.RetrieveHomeUrl("Admin", "Demo"));
             Assert.Equal("~/Home/Index", DictHelper.RetrieveHomeUrl("Admin", "BA"));
 
-            // 开啟預設程式功能
+            // 開啟預設程式功能
             DictHelper.SaveSettings(new BootstrapDict[] {
                 new BootstrapDict()
                 {

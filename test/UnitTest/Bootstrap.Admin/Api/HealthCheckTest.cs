@@ -65,7 +65,7 @@ namespace Bootstrap.Admin.Api
     public class HealthCheckStartup
     {
         /// <summary>
-        /// 構造函数
+        /// 構造函數
         /// </summary>
         /// <param name="configuration"></param>
         public HealthCheckStartup(IConfiguration configuration)

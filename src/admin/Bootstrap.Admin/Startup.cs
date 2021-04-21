@@ -23,7 +23,7 @@ namespace Bootstrap.Admin
     public class Startup
     {
         /// <summary>
-        /// 構造函数
+        /// 構造函數
         /// </summary>
         /// <param name="configuration"></param>
         /// <param name="env"></param>

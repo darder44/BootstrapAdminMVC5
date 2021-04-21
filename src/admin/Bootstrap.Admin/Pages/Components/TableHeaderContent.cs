@@ -16,19 +16,19 @@ namespace Bootstrap.Admin.Pages.Components
         protected TableHeaderBase? Header { get; set; }
 
         /// <summary>
-        /// 獲得/設置 升序圖標
+        /// 獲得/設置 升序圖示
         /// </summary>
         [Parameter]
         public string SortIconAsc { get; set; } = "fa fa-sort-asc";
 
         /// <summary>
-        /// 獲得/設置 降序圖標
+        /// 獲得/設置 降序圖示
         /// </summary>
         [Parameter]
         public string SortIconDesc { get; set; } = "fa fa-sort-desc";
 
         /// <summary>
-        /// 獲得/設置 預設圖標
+        /// 獲得/設置 預設圖示
         /// </summary>
         [Parameter]
         public string SortDefault { get; set; } = "fa fa-sort";

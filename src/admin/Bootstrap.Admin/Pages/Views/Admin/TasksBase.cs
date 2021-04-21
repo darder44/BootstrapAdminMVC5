@@ -54,7 +54,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         {
             var content = status switch
             {
-                SchedulerStatus.Ready => ("info", "fa", "未开始"),
+                SchedulerStatus.Ready => ("info", "fa", "未開始"),
                 SchedulerStatus.Running => ("success", "play-circle", "运行中"),
                 SchedulerStatus.Disabled => ("danger", "times-circle", "已停止"),
                 _ => ("info", "fa", "未設置")
@@ -140,7 +140,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         /// <summary>
         ///
         /// </summary>
-        [DisplayName("触發條件")]
+        [DisplayName("觸發條件")]
         public string TriggerExpression { get; set; } = "";
     }
 

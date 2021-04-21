@@ -36,9 +36,9 @@ namespace Bootstrap.DataAccess
         public string Ip { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 客户端地点
+        /// 獲得/設置 客户端地點
         /// </summary>
-        [DisplayName("操作地点")]
+        [DisplayName("操作地點")]
         public string City { get; set; } = "";
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Bootstrap.DataAccess
         public string Referer { get; set; } = "";
 
         /// <summary>
-        /// 保存用户訪問資料历史記錄
+        /// 保存用户訪問資料歷史記錄
         /// </summary>
         /// <param name="p"></param>
         public virtual bool Save(Trace p)

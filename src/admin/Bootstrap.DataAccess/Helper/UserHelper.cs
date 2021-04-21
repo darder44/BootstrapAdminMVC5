@@ -167,7 +167,7 @@ namespace Bootstrap.DataAccess
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
-        /// <remarks>用户使用忘記密碼功能後，管理员在用户管理頁面中可以点击重置按鈕</remarks>
+        /// <remarks>用户使用忘記密碼功能後，管理员在用户管理頁面中可以點擊重置按鈕</remarks>
         /// <returns></returns>
         public static bool ResetPassword(string userName, string password)
         {
@@ -213,11 +213,11 @@ namespace Bootstrap.DataAccess
         /// 通过角色ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="roleId">角色ID</param>
-        /// <param name="userIds">用户ID数組</param>
+        /// <param name="userIds">用户ID數組</param>
         /// <returns></returns>
         public static bool SaveByRoleId(string roleId, IEnumerable<string> userIds)
         {
-            // 演示模式時禁止修改 Admin 对 Administrators 角色的移除操作
+            // Demo模式時禁止修改 Admin 对 Administrators 角色的移除操作
             if (DictHelper.RetrieveSystemModel())
             {
                 var adminRole = RoleHelper.Retrieves().FirstOrDefault(r => r.RoleName.Equals("Administrators", StringComparison.OrdinalIgnoreCase))?.Id;
@@ -244,7 +244,7 @@ namespace Bootstrap.DataAccess
         /// 通过部门ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="groupId">GroupID</param>
-        /// <param name="userIds">用户ID数組</param>
+        /// <param name="userIds">用户ID數組</param>
         /// <returns></returns>
         public static bool SaveByGroupId(string groupId, IEnumerable<string> userIds)
         {

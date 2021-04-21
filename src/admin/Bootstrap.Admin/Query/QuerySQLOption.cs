@@ -15,7 +15,7 @@ namespace Bootstrap.Admin.Query
         public string? UserName { get; set; }
 
         /// <summary>
-        /// 獲得/設置 开始時間
+        /// 獲得/設置 開始時間
         /// </summary>
         public DateTime? OperateTimeStart { get; set; }
 

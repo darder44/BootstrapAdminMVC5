@@ -77,7 +77,7 @@ namespace Bootstrap.Admin.Pages.Components
         /// <param name="results"></param>
         public void ValidateObject(object model, ValidationContext context, List<ValidationResult> results)
         {
-            // 遍历所有可驗證組件進行資料驗證
+            // 遍歷所有可驗證組件進行資料驗證
             foreach (var key in _validatorCache)
             {
                 if (key.Key.EditForm == this && key.Key.ModelType == context.ObjectType)

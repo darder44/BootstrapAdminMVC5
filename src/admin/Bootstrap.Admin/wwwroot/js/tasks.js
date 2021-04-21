@@ -5,7 +5,7 @@
         var template = "<button class='btn btn-sm btn-{0}'><i class='fa fa-{1}'></i><span>{2}<span></button>";
         var content = "";
         if (value === "Ready") {
-            content = $.format(template, 'info', 'fa', '未开始');
+            content = $.format(template, 'info', 'fa', '未開始');
         }
         else if (value === "Running") {
             content = $.format(template, 'success', 'play-circle', '运行中');
@@ -54,7 +54,7 @@
                 { title: "創建時間", field: "CreatedTime", sortable: true },
                 { title: "上次执行時間", field: "LastRuntime", sortable: true },
                 { title: "下次执行時間", field: "NextRuntime", sortable: true },
-                { title: "触發條件", field: "TriggerExpression", sortable: false },
+                { title: "觸發條件", field: "TriggerExpression", sortable: false },
                 { title: "执行结果", field: "LastRunResult", sortable: false, align: 'center', formatter: resultFormatter },
                 { title: "狀態", field: "Status", sortable: true, align: 'center', formatter: stateFormatter }
             ],

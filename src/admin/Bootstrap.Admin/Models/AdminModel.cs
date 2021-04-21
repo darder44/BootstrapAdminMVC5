@@ -9,7 +9,7 @@ namespace Bootstrap.Admin.Models
     public class AdminModel : ModelBase
     {
         /// <summary>
-        /// 預設構造函数
+        /// 預設構造函數
         /// </summary>
         /// <param name="appId"></param>
         public AdminModel(string? appId = null)
@@ -47,7 +47,7 @@ namespace Bootstrap.Admin.Models
         public string Theme { get; protected set; }
 
         /// <summary>
-        /// 是否為演示系統
+        /// 是否為Demo系統
         /// </summary>
         public bool IsDemo { get; protected set; }
 
@@ -62,7 +62,7 @@ namespace Bootstrap.Admin.Models
         public bool ShowSideBar { get; protected set; }
 
         /// <summary>
-        /// 獲得 是否允許短信驗證碼登入
+        /// 獲得 是否允許簡訊驗證碼登入
         /// </summary>
         public bool AllowMobile { get; }
 
@@ -72,7 +72,7 @@ namespace Bootstrap.Admin.Models
         public bool AllowOAuth { get; }
 
         /// <summary>
-        /// 獲得 是否允許短信驗證碼登入
+        /// 獲得 是否允許簡訊驗證碼登入
         /// </summary>
         public bool ShowMobile { get; }
 
@@ -87,7 +87,7 @@ namespace Bootstrap.Admin.Models
         public int LockScreenPeriod { get; }
 
         /// <summary>
-        /// 獲得 自動鎖屏功能是否自動开啟 預設關閉
+        /// 獲得 自動鎖屏功能是否自動開啟 預設關閉
         /// </summary>
         public bool EnableAutoLockScreen { get; }
 

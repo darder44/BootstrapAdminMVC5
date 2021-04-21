@@ -11,7 +11,7 @@ namespace Bootstrap.Admin.Query
     public class QueryExceptionOption : PaginationOption
     {
         /// <summary>
-        /// 獲得/設置 开始時間
+        /// 獲得/設置 開始時間
         /// </summary>
         public DateTime? StartTime { get; set; }
 

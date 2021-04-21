@@ -156,7 +156,7 @@
             }, options);
 
             if (!options.url || options.url === "") {
-                toastr.error('未設置請求地址Url', '参数錯誤');
+                toastr.error('未設置請求地址Url', '参數錯誤');
                 return;
             }
 
@@ -256,7 +256,7 @@
             var op = $.extend({ header: "header", content: "body > section:first", ele: 'footer' }, options);
             var $ele = $(op.ele);
 
-            // 增加 1px 修復 IE11 下由於小数点導致頁腳消失bug
+            // 增加 1px 修復 IE11 下由於小數點導致頁腳消失bug
             return $(op.header).outerHeight() + $(op.content).outerHeight() + $ele.outerHeight() > $(window).height() + 1 ? $ele.removeClass('position-fixed') : $ele.addClass('position-fixed');
         },
         formatUrl: function (url) {
@@ -350,8 +350,8 @@
                 sortOrder: "asc",                   //排序方式
                 sidePagination: "server",           //分頁方式：client客户端分頁，server服務端分頁（*）
                 pageNumber: 1,                      //初始化加載第一頁，預設第一頁
-                pageSize: 20,                       //每頁的紀錄行数（*）
-                pageList: [20, 40, 80, 120],        //可供选择的每頁的行数（*）
+                pageSize: 20,                       //每頁的紀錄行數（*）
+                pageList: [20, 40, 80, 120],        //可供選擇的每頁的行數（*）
                 showExport: true,
                 exportTypes: ['csv', 'txt', 'excel'],
                 advancedSearchModal: '#dialogAdvancedSearch',

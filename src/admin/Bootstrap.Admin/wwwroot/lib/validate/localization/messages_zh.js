@@ -19,18 +19,18 @@ $.extend( $.validator.messages, {
 	url: "請输入有效的网址",
 	date: "請输入有效的日期",
 	dateISO: "請输入有效的日期 (YYYY-MM-DD)",
-	number: "請输入有效的数字",
-	digits: "只能输入数字",
+	number: "請输入有效的數字",
+	digits: "只能输入數字",
 	creditcard: "請输入有效的信用卡号码",
 	equalTo: "你的输入不相同",
 	extension: "請输入有效的后缀",
 	maxlength: $.validator.format( "最多可以输入 {0} 个字符" ),
 	minlength: $.validator.format( "最少要输入 {0} 个字符" ),
 	rangelength: $.validator.format( "請输入长度在 {0} 到 {1} 之间的字符串" ),
-	range: $.validator.format( "請输入范围在 {0} 到 {1} 之间的数值" ),
-	step: $.validator.format( "請输入 {0} 的整数倍值" ),
-	max: $.validator.format( "請输入不大于 {0} 的数值" ),
-	min: $.validator.format( "請输入不小于 {0} 的数值" )
+	range: $.validator.format( "請输入范围在 {0} 到 {1} 之间的數值" ),
+	step: $.validator.format( "請输入 {0} 的整數倍值" ),
+	max: $.validator.format( "請输入不大于 {0} 的數值" ),
+	min: $.validator.format( "請输入不小于 {0} 的數值" )
 } );
 return $;
 }));

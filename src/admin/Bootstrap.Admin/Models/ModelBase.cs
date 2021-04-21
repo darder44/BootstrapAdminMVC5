@@ -6,12 +6,12 @@
     public class ModelBase
     {
         /// <summary>
-        /// 獲取 網站 logo 小圖標
+        /// 獲取 網站 logo 小圖示
         /// </summary>
         public string WebSiteIcon { get; protected set; } = "~/favicon.ico";
 
         /// <summary>
-        /// 獲得 網站圖標
+        /// 獲得 網站圖示
         /// </summary>
         public string WebSiteLogo { get; protected set; } = "~/favicon.png";
     }

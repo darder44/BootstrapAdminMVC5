@@ -145,7 +145,7 @@ namespace Bootstrap.DataAccess
         /// <returns></returns>
         public virtual bool SavaByMenuId(string menuId, IEnumerable<string> roleIds)
         {
-            // 参数 id 可能是子選單
+            // 参數 id 可能是子選單
             // https://gitee.com/LongbowEnterprise/dashboard/issues?id=IQW93
 
             var ret = false;

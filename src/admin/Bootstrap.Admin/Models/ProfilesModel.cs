@@ -33,7 +33,7 @@ namespace Bootstrap.Admin.Models
         public string AppName { get; }
 
         /// <summary>
-        /// 構造函数
+        /// 構造函數
         /// </summary>
         /// <param name="host"></param>
         /// <param name="controller"></param>

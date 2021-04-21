@@ -12,7 +12,7 @@ $(function () {
             { title: "用户名稱", field: "UserName", sortable: true },
             { title: "操作時間", field: "LogTime", sortable: true },
             { title: "登入主機", field: "Ip", sortable: true },
-            { title: "操作地点", field: "City", sortable: true },
+            { title: "操作地點", field: "City", sortable: true },
             { title: "瀏覽器", field: "Browser", sortable: true },
             { title: "操作系統", field: "OS", sortable: true },
             { title: "操作頁面", field: "RequestUrl", sortable: true },

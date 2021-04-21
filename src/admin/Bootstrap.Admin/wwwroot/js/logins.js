@@ -22,7 +22,7 @@ $(function () {
             { title: "登入名稱", field: "UserName" },
             { title: "登入時間", field: "LoginTime" },
             { title: "主機", field: "Ip" },
-            { title: "登入地点", field: "City" },
+            { title: "登入地點", field: "City" },
             { title: "瀏覽器", field: "Browser" },
             { title: "操作系統", field: "OS" },
             {

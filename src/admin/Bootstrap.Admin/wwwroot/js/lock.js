@@ -52,7 +52,7 @@
                         timeHanlder = setInterval(function () {
                             if (count === 0) {
                                 clearInterval(timeHanlder);
-                                $this.text('發送驗證碼').attr('data-method', 'send').attr('data-original-title', "点击發送驗證碼").tooltip('enable');
+                                $this.text('發送驗證碼').attr('data-method', 'send').attr('data-original-title', "點擊發送驗證碼").tooltip('enable');
                                 return;
                             }
                             $this.text('登入 (' + count-- + 's)');

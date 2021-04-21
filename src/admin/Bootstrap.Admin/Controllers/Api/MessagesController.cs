@@ -44,7 +44,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 返回各個訊息列表的文件個数
+        /// 返回各個訊息列表的文件個數
         /// </summary>
         /// <returns></returns>
         [HttpGet]

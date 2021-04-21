@@ -7,7 +7,7 @@
 
     var swalDeleteOptions = {
         title: "刪除資料",
-        html: '您確定要刪除选中的所有資料吗',
+        html: '您確定要刪除選中的所有資料吗',
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: '#dc3545',
@@ -100,11 +100,11 @@
                 if (options.bootstrapTable !== null) {
                     var arrselections = options.bootstrapTable.bootstrapTable('getSelections');
                     if (arrselections.length === 0) {
-                        lgbSwal({ title: '請选择要編輯的資料', type: "warning" });
+                        lgbSwal({ title: '請選擇要編輯的資料', type: "warning" });
                         return;
                     }
                     else if (arrselections.length > 1) {
-                        lgbSwal({ title: '只能选择一項要編輯的資料', type: "warning" });
+                        lgbSwal({ title: '只能選擇一項要編輯的資料', type: "warning" });
                         return;
                     }
                     else {
@@ -168,11 +168,11 @@
                 if (options.bootstrapTable !== null) {
                     var arrselections = options.bootstrapTable.bootstrapTable('getSelections');
                     if (arrselections.length === 0) {
-                        lgbSwal({ title: '請选择要編輯的資料', type: "warning" });
+                        lgbSwal({ title: '請選擇要編輯的資料', type: "warning" });
                         return;
                     }
                     else if (arrselections.length > 1) {
-                        lgbSwal({ title: '只能选择一項要編輯的資料', type: "warning" });
+                        lgbSwal({ title: '只能選擇一項要編輯的資料', type: "warning" });
                         return;
                     }
                     else {
@@ -189,7 +189,7 @@
                 if (options.bootstrapTable !== null) {
                     var arrselections = options.bootstrapTable.bootstrapTable('getSelections');
                     if (arrselections.length === 0) {
-                        lgbSwal({ title: '請选择要刪除的資料', type: "warning" });
+                        lgbSwal({ title: '請選擇要刪除的資料', type: "warning" });
                         return;
                     }
                     else {

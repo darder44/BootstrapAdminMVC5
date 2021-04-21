@@ -6,11 +6,11 @@
     public enum CheckBoxState
     {
         /// <summary>
-        /// 未选中
+        /// 未選中
         /// </summary>
         UnChecked,
         /// <summary>
-        /// 选中
+        /// 選中
         /// </summary>
         Checked,
         /// <summary>

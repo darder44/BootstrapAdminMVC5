@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// 登陆接口
+    /// 登錄接口
     /// </summary>
     [Route("api/[controller]")]
     [AllowAnonymous]
@@ -19,7 +19,7 @@ namespace Bootstrap.Admin.Controllers.Api
     public class LoginController : ControllerBase
     {
         /// <summary>
-        /// 獲得登入历史紀錄
+        /// 獲得登入歷史紀錄
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -28,7 +28,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public QueryData<LoginUser> Get([FromQuery]QueryLoginOption value) => value.RetrieveData();
 
         /// <summary>
-        /// JWT 登陆認證接口
+        /// JWT 登錄認證接口
         /// </summary>
         /// <param name="config"></param>
         /// <param name="user"></param>
@@ -55,7 +55,7 @@ namespace Bootstrap.Admin.Controllers.Api
         }
 
         /// <summary>
-        /// 下發手機短信方法
+        /// 下發手機簡訊方法
         /// </summary>
         /// <param name="provider"></param>
         /// <param name="phone"></param>
@@ -64,7 +64,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public async Task<SMSResult> Put([FromServices]ISMSProvider provider, [FromQuery]string phone) => string.IsNullOrEmpty(phone) ? new SMSResult() { Result = false, Msg = "手機号不可為空" } : await provider.SendCodeAsync(phone);
 
         /// <summary>
-        /// 跨域握手协议
+        /// 跨域握手協議
         /// </summary>
         /// <returns></returns>
         [HttpOptions]

@@ -29,7 +29,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected ProfilesModel? Model { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否為演示系統
+        /// 獲得/設置 是否為Demo系統
         /// </summary>
         protected bool IsDemo { get; set; } = false;
 
@@ -56,12 +56,12 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected IJSRuntime? JSRuntime { get; set; }
 
         /// <summary>
-        /// 獲得/設置 选中的樣式項
+        /// 獲得/設置 選中的樣式項
         /// </summary>
         protected SelectedItem SelectedTheme { get; set; } = new SelectedItem();
 
         /// <summary>
-        /// 獲得/設置 选中的應用程式
+        /// 獲得/設置 選中的應用程式
         /// </summary>
         protected SelectedItem SelectedApp { get; set; } = new SelectedItem();
 

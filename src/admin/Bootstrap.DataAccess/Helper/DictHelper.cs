@@ -33,7 +33,7 @@ namespace Bootstrap.DataAccess
         private static IEnumerable<BootstrapDict> RetrieveProtectedDicts() => RetrieveDicts().Where(d => d.Define == 0 || d.Category == "測試平台");
 
         /// <summary>
-        /// 獲取網站 favicon 圖標
+        /// 獲取網站 favicon 圖示
         /// </summary>
         /// <param name="appId"></param>
         /// <returns></returns>
@@ -56,7 +56,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 獲取網站 logo 小圖標
+        /// 獲取網站 logo 小圖示
         /// </summary>
         /// <param name="appId"></param>
         /// <returns></returns>
@@ -71,7 +71,7 @@ namespace Bootstrap.DataAccess
                 var pathBase = ditcs.FirstOrDefault(d => d.Category == "應用首頁" && d.Name == appId)?.Code;
                 if (!string.IsNullOrEmpty(pathBase))
                 {
-                    var favIcon = ditcs.FirstOrDefault(d => d.Category == platName && d.Name == "網站圖標")?.Code;
+                    var favIcon = ditcs.FirstOrDefault(d => d.Category == platName && d.Name == "網站圖示")?.Code;
                     if (!string.IsNullOrEmpty(favIcon)) ret = $"{pathBase}{favIcon}";
                 }
             }
@@ -152,7 +152,7 @@ namespace Bootstrap.DataAccess
                 ["ShowSideBar"] = "側邊欄狀態",
                 ["FixedTableHeader"] = "固定表頭",
                 ["OAuth"] = "OAuth 認證登錄",
-                ["SMS"] = "短信驗證碼登錄",
+                ["SMS"] = "簡訊驗證碼登錄",
                 ["AutoLock"] = "自動鎖屏",
                 ["AutoLockPeriod"] = "自動鎖屏時長",
                 ["DefaultApp"] = "預設應用程式",
@@ -166,7 +166,7 @@ namespace Bootstrap.DataAccess
                 ["IPCachePeriod"] = "IP請求快取時長",
                 ["AppPath"] = "後台地址",
                 ["EnableHealth"] = "健康檢查",
-                ["Login"] = "登錄界面"
+                ["Login"] = "登錄介面"
             };
             var ret = SaveSettings(items.Where(i => cache.Any(c => c.Key == i.Name)).Select(i => new BootstrapDict()
             {
@@ -186,14 +186,14 @@ namespace Bootstrap.DataAccess
         public static IEnumerable<string> RetrieveCategories() => CacheManager.GetOrAdd(RetrieveCategoryDataKey, key => DbContextManager.Create<Dict>()?.RetrieveCategories()) ?? new string[0];
 
         /// <summary>
-        /// 獲取站点 Title 配置訊息
+        /// 獲取站點 Title 配置訊息
         /// </summary>
         /// <param name="appId"></param>
         /// <returns></returns>
         public static string RetrieveWebTitle(string appId) => DbContextManager.Create<Dict>()?.RetrieveWebTitle(appId) ?? string.Empty;
 
         /// <summary>
-        /// 獲取站点 Footer 配置訊息
+        /// 獲取站點 Footer 配置訊息
         /// </summary>
         /// <param name="appId"></param>
         /// <returns></returns>
@@ -281,20 +281,20 @@ namespace Bootstrap.DataAccess
         public static int RetrieveAccessLogPeriod() => DbContextManager.Create<Dict>()?.RetrieveAccessLogPeriod() ?? 1;
 
         /// <summary>
-        /// 獲得 是否為演示系統 預設為 false 不是演示系統
+        /// 獲得 是否為Demo系統 預設為 false 不是Demo系統
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveSystemModel() => DbContextManager.Create<Dict>()?.RetrieveSystemModel() ?? true;
 
         /// <summary>
-        /// 設置 系統是否為演示系統 預設為 false 不是演示系統
+        /// 設置 系統是否為Demo系統 預設為 false 不是Demo系統
         /// </summary>
         /// <returns></returns>
         public static bool UpdateSystemModel(bool isDemo, string authKey)
         {
             var ret = false;
             // 檢查授權碼
-            // 請求者提供 秘钥與结果 服務器端通过算法比对结果
+            // 請求者提供 秘钥與结果 伺服器端通过算法比对结果
             if (LgbCryptography.ComputeHash(authKey, RetrieveAuthorSalt()) == RetrieveAuthorHash())
             {
                 ret = DbContextManager.Create<Dict>()?.UpdateSystemModel(isDemo) ?? false;
@@ -333,7 +333,7 @@ namespace Bootstrap.DataAccess
         public static bool RetrieveSidebarStatus() => DbContextManager.Create<Dict>()?.RetrieveSidebarStatus() ?? true;
 
         /// <summary>
-        /// 獲得是否允許短信驗證碼登錄
+        /// 獲得是否允許簡訊驗證碼登錄
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveMobileLogin() => DbContextManager.Create<Dict>()?.RetrieveMobileLogin() ?? false;
@@ -357,19 +357,19 @@ namespace Bootstrap.DataAccess
         public static bool RetrieveAutoLockScreen() => DbContextManager.Create<Dict>()?.RetrieveAutoLockScreen() ?? false;
 
         /// <summary>
-        /// 獲得是否开啟預設應用功能 預設關閉
+        /// 獲得是否開啟預設應用功能 預設關閉
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveDefaultApp() => DbContextManager.Create<Dict>()?.RetrieveDefaultApp() ?? false;
 
         /// <summary>
-        /// 獲得是否开啟 Blazor 功能 預設關閉
+        /// 獲得是否開啟 Blazor 功能 預設關閉
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveEnableBlazor() => DbContextManager.Create<Dict>()?.RetrieveEnableBlazor() ?? false;
 
         /// <summary>
-        /// 獲得是否开啟 固定表頭 預設开啟
+        /// 獲得是否開啟 固定表頭 預設開啟
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveFixedTableHeader() => DbContextManager.Create<Dict>()?.RetrieveFixedTableHeader() ?? false;
@@ -387,13 +387,13 @@ namespace Bootstrap.DataAccess
         public static string RetrievePathBase() => DbContextManager.Create<Dict>()?.RetrievePathBase() ?? "";
 
         /// <summary>
-        /// 獲得字典表健康檢查是否开啟
+        /// 獲得字典表健康檢查是否開啟
         /// </summary>
         /// <returns></returns>
         public static bool RetrieveHealth() => DbContextManager.Create<Dict>()?.RetrieveHealth() ?? true;
 
         /// <summary>
-        /// 獲得登錄界面資料
+        /// 獲得登錄介面資料
         /// </summary>
         /// <returns></returns>
         public static IEnumerable<BootstrapDict> RetrieveLogins() => DbContextManager.Create<Dict>()?.RetrieveLogins() ?? new BootstrapDict[0];
@@ -446,7 +446,7 @@ namespace Bootstrap.DataAccess
                     new BootstrapDict()
                     {
                         Category = option.AppName,
-                        Name = "網站圖標",
+                        Name = "網站圖示",
                         Code = option.AppFavicon,
                         Define = 1
                     },
@@ -513,7 +513,7 @@ namespace Bootstrap.DataAccess
                 if (ret) ret = Save(new BootstrapDict()
                 {
                     Category = option.AppName,
-                    Name = "網站圖標",
+                    Name = "網站圖示",
                     Code = option.AppFavicon,
                     Define = 1
                 });

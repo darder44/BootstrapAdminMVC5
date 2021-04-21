@@ -38,7 +38,7 @@ INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設�
 INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'固定表頭', N'1', 0)
 
 -- 登錄配置
-INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'短信驗證碼登錄', N'1', 0)
+INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'簡訊驗證碼登錄', N'1', 0)
 INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'OAuth 認證登錄', N'1', 0)
 
 -- 自動鎖屏（秒）預設 30 秒
@@ -72,7 +72,7 @@ INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'地理位�
 
 -- 時長單位 分鐘
 INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'IP請求緩存時長', '10', 0)
-INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'演示系統', '0', 0)
+INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'Demo系統', '0', 0)
 INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'授權鹽值', 'yjglE2eddCGcS7tTFTDd2DfvqXHgCnMhNhpmx9HJaC9l8GAZ', 0)
 INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'哈希結果', '6jTT50HGuk8V+AIsiE4IfqjcER71PBN1DY7gqOLZE7E=', 0)
 INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'網站設置', N'驗證碼圖床', 'http://imgs.sdgxgz.com/images/', 0)
@@ -88,7 +88,7 @@ INSERT INTO Dicts (Category, Name, Code, Define) VALUES (N'系統首頁', N'系�
 INSERT INTO Dicts (Category, Name, Code, Define) VALUES (N'系統首頁', N'科技動感', N'Login-Tec', 1);
 INSERT INTO Dicts (Category, Name, Code, Define) VALUES (N'系統首頁', N'Admin-LTE', N'Login-LTE', 1);
 
-INSERT INTO Dicts (Category, Name, Code, Define) VALUES (N'網站設置', N'登錄界面', N'Login', 1);
+INSERT INTO Dicts (Category, Name, Code, Define) VALUES (N'網站設置', N'登錄介面', N'Login', 1);
 
 DELETE FROM Navigations Where Category = N'0'
 INSERT [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'後台管理', 10, N'fa fa-gear', N'~/Admin/Index', N'0')
@@ -154,7 +154,7 @@ INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'在線用戶', 140, N'fa fa-users', N'~/Admin/Online', N'0')
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'網站分析', 145, N'fa fa-line-chart', N'~/Admin/Analyse', N'0')
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'程式異常', 150, N'fa fa-cubes', N'~/Admin/Exceptions', N'0')
-INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (@@Identity, N'服務器日誌', 10, N'fa fa-fa', N'log', N'0', 2)
+INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category], IsResource) VALUES (@@Identity, N'伺服器日誌', 10, N'fa fa-fa', N'log', N'0', 2)
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'健康檢查', 155, N'fa fa-heartbeat', N'~/Admin/Healths', '0');
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (0, N'工具集合', 160, N'fa fa-gavel', N'#', N'0')
 INSERT INTO [Navigations] ([ParentId], [Name], [Order], [Icon], [Url], [Category]) VALUES (@@Identity, N'客戶端測試', 10, N'fa fa-wrench', N'~/Admin/Mobile', N'0')
@@ -198,8 +198,8 @@ Delete From [Dicts] Where Category = '應用首頁' and Name = @AppId
 INSERT [dbo].[Dicts] ([Category], [Name], [Code], [Define]) VALUES (N'應用首頁', @AppId, 'http://localhost:49185', 0)
 
 Delete From [dbo].[Dicts] Where Category = @AppName
-Insert Dicts (Category, Name, Code, Define) values (@AppName, N'網站標題', N'前台演示程式', 1);
-Insert Dicts (Category, Name, Code, Define) values (@AppName, N'網站頁腳', N'前台演示程式後台權限管理框架', 1);
+Insert Dicts (Category, Name, Code, Define) values (@AppName, N'網站標題', N'前台Demo程式', 1);
+Insert Dicts (Category, Name, Code, Define) values (@AppName, N'網站頁腳', N'前台Demo程式後台權限管理框架', 1);
 Insert Dicts (Category, Name, Code, Define) values (@AppName, N'個人中心地址', N'/Admin/Profiles', 1);
 Insert Dicts (Category, Name, Code, Define) values (@AppName, N'系統設置地址', N'/Admin/Index', 1);
 Insert Dicts (Category, Name, Code, Define) values (@AppName, N'系統通知地址', N'/Admin/Notifications', 1);

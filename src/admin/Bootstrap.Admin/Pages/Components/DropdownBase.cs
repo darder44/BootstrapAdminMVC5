@@ -15,13 +15,13 @@ namespace Bootstrap.Admin.Pages.Components
         public IEnumerable<SelectedItem> Items { get; set; } = new SelectedItem[0];
 
         /// <summary>
-        /// 獲得/設置 选中項實例
+        /// 獲得/設置 選中項實例
         /// </summary>
         [Parameter]
         public SelectedItem Value { get; set; } = new SelectedItem();
 
         /// <summary>
-        /// 獲得/設置 选中項改變回調方法
+        /// 獲得/設置 選中項改變回調方法
         /// </summary>
         [Parameter]
         public EventCallback<SelectedItem> ValueChanged { get; set; }

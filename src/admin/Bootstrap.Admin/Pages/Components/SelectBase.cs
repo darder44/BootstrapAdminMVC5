@@ -17,7 +17,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string ColumnClass { get; set; } = "col-sm-6";
 
         /// <summary>
-        /// 當前选择項實例
+        /// 當前選擇項實例
         /// </summary>
         public SelectedItem SelectedItem { get; set; } = new SelectedItem();
 
@@ -64,7 +64,7 @@ namespace Bootstrap.Admin.Pages.Components
         public Action<SelectedItem>? SelectedItemChanged { get; set; }
 
         /// <summary>
-        /// 下拉框項被选中時調用此方法
+        /// 下拉框項被選中時調用此方法
         /// </summary>
         public void ItemClickCallback(SelectedItem item)
         {

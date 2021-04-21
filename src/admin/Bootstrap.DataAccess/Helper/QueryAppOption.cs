@@ -38,12 +38,12 @@ namespace Bootstrap.DataAccess
         public string AppFooter { get; set; } = "未設置";
 
         /// <summary>
-        /// 前台應用圖標
+        /// 前台應用圖示
         /// </summary>
         public string AppIcon { get; set; } = "/favicon.ico";
 
         /// <summary>
-        /// 前台應用收藏圖標
+        /// 前台應用收藏圖示
         /// </summary>
         public string AppFavicon { get; set; } = "/favicon.png";
 
@@ -70,7 +70,7 @@ namespace Bootstrap.DataAccess
             ret.AppUrl = dicts.FirstOrDefault(d => d.Category == "應用首頁" && d.Name == key)?.Code ?? "";
             ret.AppTitle = dicts.FirstOrDefault(d => d.Category == ret.AppName && d.Name == "網站標題")?.Code ?? "";
             ret.AppFooter = dicts.FirstOrDefault(d => d.Category == ret.AppName && d.Name == "網站頁腳")?.Code ?? "";
-            ret.AppFavicon = dicts.FirstOrDefault(d => d.Category == ret.AppName && d.Name == "網站圖標")?.Code ?? "";
+            ret.AppFavicon = dicts.FirstOrDefault(d => d.Category == ret.AppName && d.Name == "網站圖示")?.Code ?? "";
             ret.AppIcon = dicts.FirstOrDefault(d => d.Category == ret.AppName && d.Name == "favicon")?.Code ?? "";
             return ret;
         }

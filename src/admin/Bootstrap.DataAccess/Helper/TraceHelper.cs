@@ -9,12 +9,12 @@ using System.Linq;
 namespace Bootstrap.DataAccess
 {
     /// <summary>
-    /// 用户跟踪操作類別
+    /// 用户跟蹤操作類別
     /// </summary>
     public static class TraceHelper
     {
         /// <summary>
-        /// 保存訪問历史記錄
+        /// 保存訪問歷史記錄
         /// </summary>
         /// <param name="context"></param>
         /// <param name="v"></param>
@@ -47,7 +47,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 進入線上跟踪的地址过濾方法
+        /// 進入線上跟蹤的地址过濾方法
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -58,7 +58,7 @@ namespace Bootstrap.DataAccess
         }
 
         /// <summary>
-        /// 獲得指定IP历史訪問記錄
+        /// 獲得指定IP歷史訪問記錄
         /// </summary>
         /// <param name="po"></param>
         /// <param name="startTime"></param>
@@ -68,7 +68,7 @@ namespace Bootstrap.DataAccess
         public static Page<Trace> Retrieves(PaginationOption po, DateTime? startTime, DateTime? endTime, string? ip) => DbContextManager.Create<Trace>()?.RetrievePages(po, startTime, endTime, ip) ?? new Page<Trace>() { Items = new List<Trace>() };
 
         /// <summary>
-        /// 獲得指定IP历史訪問記錄
+        /// 獲得指定IP歷史訪問記錄
         /// </summary>
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>

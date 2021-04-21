@@ -50,7 +50,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public bool Put(string userName, [FromBody]User user) => UserHelper.ResetPassword(userName, user.Password);
 
         /// <summary>
-        /// 忘记密碼調用
+        /// 忘記密碼調用
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>

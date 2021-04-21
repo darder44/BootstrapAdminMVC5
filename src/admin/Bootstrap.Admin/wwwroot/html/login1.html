@@ -39,11 +39,11 @@
                     </div>
                     <div class="login-sidebox-body">
                         <p>
-                            基於 RBAC 的 NetCore 後台管理框架，權限管理，前後台分离，支持多站点單点登入，兼容所有主流瀏覽器，内置微信、支付宝、QQ等多种登入方式，内置多种樣式，可切换至 Blazor 多 Tabs 模式，權限控制詳化到網頁内任意元素（按鈕、表格、文本框等等）
+                            基於 RBAC 的 NetCore 後台管理框架，權限管理，前後台分离，支持多站點單點登入，兼容所有主流瀏覽器，内置微信、支付宝、QQ等多种登入方式，内置多种樣式，可切换至 Blazor 多 Tabs 模式，權限控制詳化到網頁内任意元素（按鈕、表格、文本框等等）
                         </p>
                     </div>
                     <div class="login-sidebox-footer">
-                        <div>开源文檔：<a href="https://gitee.com/dotnetchina/BootstrapAdmin/wikis" target="_blank">碼云托管平台 - Wiki</a></div>
+                        <div>開源文檔：<a href="https://gitee.com/dotnetchina/BootstrapAdmin/wikis" target="_blank">碼云托管平台 - Wiki</a></div>
                     </div>
                 </div>
             </section>
@@ -52,7 +52,7 @@
                     <h2>登入</h2>
                     <span class="flex-self-end">
                         没有帐号？
-                        <a href="/signup">点此注册</a>
+                        <a href="/signup">點此注册</a>
                     </span>
                 </div>
                 <div class="login-form-body">
@@ -91,7 +91,7 @@
                                             data-valid="true" />
                                         <div class="input-group-append">
                                             <button type="button" id="btnSendCode" class="btn btn-sms" data-toggle="tooltip"
-                                                title="点击發送驗證碼">發送驗證碼</button>
+                                                title="點擊發送驗證碼">發送驗證碼</button>
                                         </div>
                                     </div>
                                 </div>
@@ -99,17 +99,17 @@
                             <div class="d-flex justify-content-between">
                                 <div class="form-group rememberPwd" onselectstart="return false">
                                     <i class="fa fa-square-o"></i>
-                                    <span>记住密碼自动登入</span>
+                                    <span>記住密碼自动登入</span>
                                     <input id="remember" name="remember" type="hidden" value="false" />
                                 </div>
                                 <div asp-condition="@Model.AllowMobile">
-                                    <a id="loginType" data-value="username" href="#" class="">短信驗證登陆</a>
+                                    <a id="loginType" data-value="username" href="#" class="">簡訊驗證登錄</a>
                                 </div>
                             </div>
                             <button class="btn btn-lg btn-login btn-block" data-oauth="@Model.AllowOAuth" data-toggle="tooltip"
                                 title="不填写密碼預設使用 Gitee 認證" type="submit">登 录</button>
                             <div class="d-flex justify-content-center">
-                                <a class="forget-password" href="/password/new">已有帐号，忘记密碼？</a>
+                                <a class="forget-password" href="/password/new">已有帐号，忘記密碼？</a>
                             </div>
                             <div asp-condition="@Model.AllowOAuth">
                                 <div class="login-other">

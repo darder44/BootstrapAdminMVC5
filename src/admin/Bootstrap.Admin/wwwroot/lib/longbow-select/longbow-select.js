@@ -18,7 +18,7 @@
     lgbSelect.Template += '<div class="dropdown-menu"></div>';
     lgbSelect.Template += '</div>';
     lgbSelect.DEFAULTS = {
-        placeholder: "請选择 ...",
+        placeholder: "請選擇 ...",
         borderClass: null,
         textClass: {
             'border-primary': 'text-primary',

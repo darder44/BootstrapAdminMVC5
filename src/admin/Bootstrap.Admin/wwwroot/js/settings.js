@@ -1,6 +1,6 @@
 $(function () {
     var swalDeleteOptions = {
-        title: "刪除前台站点配置",
+        title: "刪除前台站點配置",
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: '#dc3545',
@@ -146,7 +146,7 @@ $(function () {
                 var demo = $('#demo').prop('checked') ? "1" : "0";
                 var authKey = $('#authKey').val();
                 $.bc({
-                    url: Settings.url + '/Demo', data: { name: authKey, code: demo }, title: '演示系統設置', method: "post",
+                    url: Settings.url + '/Demo', data: { name: authKey, code: demo }, title: 'Demo系統設置', method: "post",
                     callback: function (result) {
                         if (result) {
                             window.setTimeout(function () { window.location.reload(true); }, 1000);
@@ -226,7 +226,7 @@ $(function () {
                 var appKey = $(this).attr('data-key');
                 var appName = $(this).parents('.input-group').prev().text();
                 var $this = $(this);
-                swal($.extend({}, swalDeleteOptions, { html: "您確定要刪除" + appName + "前台站点配置吗" })).then(function (result) {
+                swal($.extend({}, swalDeleteOptions, { html: "您確定要刪除" + appName + "前台站點配置吗" })).then(function (result) {
                     if (result.value) {
                         $.bc({
                             url: Settings.url + '/AppPath', data: { name: appName, code: appKey }, title: "刪除" + appName, method: "delete",
@@ -241,7 +241,7 @@ $(function () {
             case 'saveLoginView':
                 var logView = $('#loginView').val();
                 $.bc({
-                    url: Settings.url, data: [{ name: 'Login', code: logView }], title: '保存登入界面設置', method: "post"
+                    url: Settings.url, data: [{ name: 'Login', code: logView }], title: '保存登入介面設置', method: "post"
                 });
                 break;
         }

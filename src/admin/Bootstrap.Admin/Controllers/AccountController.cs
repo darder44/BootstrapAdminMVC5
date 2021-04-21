@@ -26,7 +26,7 @@ namespace Bootstrap.Admin.Controllers
     {
         private const string MobileSchema = "Mobile";
         /// <summary>
-        /// 系統鎖屏界面
+        /// 系統鎖屏介面
         /// </summary>
         /// <returns></returns>
         [HttpGet]

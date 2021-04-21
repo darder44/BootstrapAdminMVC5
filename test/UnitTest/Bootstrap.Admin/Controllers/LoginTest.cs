@@ -96,7 +96,7 @@ namespace Bootstrap.Admin.Controllers
             content = await r.Content.ReadAsStringAsync();
             Assert.Contains("登 录", content);
 
-            // 空密碼登陆
+            // 空密碼登錄
             view = await r.Content.ReadAsStringAsync();
             tokenTag = "<input name=\"__RequestVerificationToken\" type=\"hidden\" value=\"";
             index = view.IndexOf(tokenTag);
@@ -128,7 +128,7 @@ namespace Bootstrap.Admin.Controllers
         [Fact]
         public async void Lock_Ok()
         {
-            // 登陆
+            // 登錄
             await client.LoginAsync();
 
             var r = await client.GetAsync("/Account/Lock");

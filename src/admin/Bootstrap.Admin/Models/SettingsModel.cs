@@ -14,7 +14,7 @@ namespace Bootstrap.Admin.Models
     public class SettingsModel : NavigatorBarModel
     {
         /// <summary>
-        /// 構造函数
+        /// 構造函數
         /// </summary>
         /// <param name="controller"></param>
         public SettingsModel(ControllerBase controller) : base(controller)
@@ -68,12 +68,12 @@ namespace Bootstrap.Admin.Models
         public string IPLocatorSvr { get; }
 
         /// <summary>
-        /// 獲得 是否开啟自動鎖屏
+        /// 獲得 是否開啟自動鎖屏
         /// </summary>
         public bool AutoLockScreen { get; }
 
         /// <summary>
-        /// 獲得 是否开啟自動鎖屏
+        /// 獲得 是否開啟自動鎖屏
         /// </summary>
         public bool DefaultApp { get; }
 
@@ -108,7 +108,7 @@ namespace Bootstrap.Admin.Models
         public int IPCachePeriod { get; }
 
         /// <summary>
-        /// 獲得/設置 是否為演示系統
+        /// 獲得/設置 是否為Demo系統
         /// </summary>
         public bool EnableDemo { get; set; }
 
@@ -123,7 +123,7 @@ namespace Bootstrap.Admin.Models
         public IEnumerable<(string Key, string Name, string Url)> Apps { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否开啟健康檢查
+        /// 獲得/設置 是否開啟健康檢查
         /// </summary>
         public bool EnableHealth { get; set; }
 

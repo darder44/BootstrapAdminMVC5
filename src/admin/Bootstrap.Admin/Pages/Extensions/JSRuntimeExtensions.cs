@@ -72,14 +72,14 @@ namespace Microsoft.JSInterop
         public static void Tooltip(this IJSRuntime? jSRuntime, string id, string method) => jSRuntime?.InvokeVoidAsync("$.tooltip", $"#{id}", method);
 
         /// <summary>
-        /// 顯示或者隐藏 網站 Blazor 挂件圖標
+        /// 顯示或者隐藏 網站 Blazor 挂件圖示
         /// </summary>
         /// <param name="jSRuntime"></param>
         /// <param name="show"></param>
         public static void ToggleBlazor(this IJSRuntime? jSRuntime, bool show) => jSRuntime?.InvokeVoidAsync("$.toggleBlazor", show);
 
         /// <summary>
-        /// 顯示或者隐藏 網站 Blazor 挂件圖標
+        /// 顯示或者隐藏 網站 Blazor 挂件圖示
         /// </summary>
         /// <param name="jSRuntime"></param>
         /// <param name="showSidebar"></param>

@@ -65,7 +65,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public class AnalyseData
         {
             /// <summary>
-            /// 獲得/設置 折线資料集合
+            /// 獲得/設置 折線資料集合
             /// </summary>
             public IEnumerable<string> Polylines { get; set; } = new string[0];
 

@@ -161,7 +161,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 獲得 Table 組件选择項目集合
+        /// 獲得 Table 組件選擇項目集合
         /// </summary>
         public IEnumerable<TItem> SelectedItems { get { return Table?.SelectedItems ?? new List<TItem>(); } }
 

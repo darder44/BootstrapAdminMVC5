@@ -32,7 +32,7 @@ namespace Microsoft.AspNetCore.Builder
                     if (!autoGenerate) _init = true;
                     if (autoGenerate)
                     {
-                        // 阻止所有线程继续往下运行，等待資料庫檢查
+                        // 阻止所有線程继续往下运行，等待資料庫檢查
                         lock (_locker)
                         {
                             if (!_init)

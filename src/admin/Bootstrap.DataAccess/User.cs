@@ -320,7 +320,7 @@ namespace Bootstrap.DataAccess
         /// 通过角色ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="roleId">角色ID</param>
-        /// <param name="userIds">用户ID数組</param>
+        /// <param name="userIds">用户ID數組</param>
         /// <returns></returns>
         public virtual bool SaveByRoleId(string roleId, IEnumerable<string> userIds)
         {
@@ -358,7 +358,7 @@ namespace Bootstrap.DataAccess
         /// 通过部门ID保存當前授權用户（插入）
         /// </summary>
         /// <param name="groupId">GroupID</param>
-        /// <param name="userIds">用户ID数組</param>
+        /// <param name="userIds">用户ID數組</param>
         /// <returns></returns>
         public virtual bool SaveByGroupId(string groupId, IEnumerable<string> userIds)
         {

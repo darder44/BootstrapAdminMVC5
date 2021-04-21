@@ -33,7 +33,7 @@ namespace Bootstrap.Admin.Pages.Components
         [Parameter] public EventCallback<TItem> ValueChanged { get; set; }
 
         /// <summary>
-        /// 獲得/設置 ValueExpression 表达式
+        /// 獲得/設置 ValueExpression 表達式
         /// </summary>
         [Parameter]
         [NotNull]

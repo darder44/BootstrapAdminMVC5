@@ -26,7 +26,7 @@ namespace Bootstrap.Admin.Pages.Components
         public int PageIndex { get; set; } = 1;
 
         /// <summary>
-        /// 獲得/設置 每頁條目数量
+        /// 獲得/設置 每頁條目數量
         /// </summary>
         public int PageItems { get; set; } = 20;
     }

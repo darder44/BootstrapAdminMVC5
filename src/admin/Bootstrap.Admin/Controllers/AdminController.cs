@@ -73,7 +73,7 @@ namespace Bootstrap.Admin.Controllers
         public ActionResult Logins() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// FA 圖標頁面
+        /// FA 圖示頁面
         /// </summary>
         /// <returns></returns>
         public ActionResult FAIcon() => View(new NavigatorBarModel(this));
@@ -85,7 +85,7 @@ namespace Bootstrap.Admin.Controllers
         public ActionResult Healths() => View(new NavigatorBarModel(this));
 
         /// <summary>
-        /// 圖標視圖
+        /// 圖示視圖
         /// </summary>
         /// <returns></returns>
         [AllowAnonymous]

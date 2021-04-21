@@ -82,7 +82,7 @@ namespace Bootstrap.Admin.Api
             });
             Assert.True(resp);
 
-            // 由於 SaveUISettings 函数保护功能，上一步保存成功，但是未更改 Code 值
+            // 由於 SaveUISettings 函數保护功能，上一步保存成功，但是未更改 Code 值
             var code = DictHelper.RetrieveDicts().FirstOrDefault(d => d.Category == "UnitTest-Settings").Code;
             Assert.Equal("0", code);
 

@@ -26,7 +26,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public bool Post([FromBody]IEnumerable<BootstrapDict> values) => DictHelper.SaveUISettings(values);
 
         /// <summary>
-        /// 保存網站是否為演示系統時調用
+        /// 保存網站是否為Demo系統時調用
         /// </summary>
         /// <returns></returns>
         [HttpPost("{id}")]
@@ -44,7 +44,7 @@ namespace Bootstrap.Admin.Controllers.Api
         public bool Put([FromBody]QueryAppOption option) => option.Save();
 
         /// <summary>
-        /// 獲取網站缓存站点集合
+        /// 獲取網站缓存站點集合
         /// </summary>
         [HttpGet]
         public IEnumerable<ICacheCorsItem> Get() => CacheManager.CorsSites;

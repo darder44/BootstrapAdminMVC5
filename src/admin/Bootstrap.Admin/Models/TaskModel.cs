@@ -9,12 +9,12 @@ namespace Bootstrap.Admin.Models
     public class TaskModel : NavigatorBarModel
     {
         /// <summary>
-        /// 構造函数
+        /// 構造函數
         /// </summary>
         /// <param name="controller"></param>
         public TaskModel(ControllerBase controller) : base(controller)
         {
-            // 此處為演示程式碼，具體生产环境可以从資料庫配置獲得
+            // 此處為Demo程式碼，具體生产环境可以从資料庫配置獲得
             // Key 為任務名稱 Value 為任務執行體 FullName
             TaskExecutors = new Dictionary<string, string>
             {
@@ -35,7 +35,7 @@ namespace Bootstrap.Admin.Models
         public IDictionary<string, string> TaskExecutors { get; }
 
         /// <summary>
-        /// 獲得 系統内置触發器集合
+        /// 獲得 系統内置觸發器集合
         /// </summary>
         /// <value></value>
         public IDictionary<string, string> TaskTriggers { get; }

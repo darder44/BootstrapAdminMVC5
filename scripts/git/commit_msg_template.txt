@@ -8,7 +8,7 @@ close link fix https://gitee.com/LongbowEnterprise/dashboard/issues?id=BUGID
 
 #     樣式 :    feat(location): 接入登入API
 #                  
-#                  登入功能與服務器对接
+#                  登入功能與伺服器对接
 #
 <type>(<scope>): <subject>
 

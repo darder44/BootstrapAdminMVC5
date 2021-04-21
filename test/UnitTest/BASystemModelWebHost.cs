@@ -4,7 +4,7 @@ using Xunit;
 namespace Bootstrap.Admin
 {
     /// <summary>
-    /// 演示系統
+    /// Demo系統
     /// </summary>
     [CollectionDefinition("SystemModel")]
     public class BootstrapAdminDemoContext : ICollectionFixture<BASystemModelWebHost>
@@ -19,9 +19,9 @@ namespace Bootstrap.Admin
     {
         public BASystemModelWebHost() : base()
         {
-            // 設置系統為演示模式
+            // 設置系統為Demo模式
             using var db = Longbow.Data.DbManager.Create();
-            db.Execute("Update Dicts Set Code = @2 where Category = @0 and Name = @1", "網站設置", "演示系統", "1");
+            db.Execute("Update Dicts Set Code = @2 where Category = @0 and Name = @1", "網站設置", "Demo系統", "1");
 
             do
             {
@@ -36,7 +36,7 @@ namespace Bootstrap.Admin
         protected override void Dispose(bool disposing)
         {
             using var db = Longbow.Data.DbManager.Create();
-            db.Execute("Update Dicts Set Code = @2 where Category = @0 and Name = @1", "網站設置", "演示系統", "0");
+            db.Execute("Update Dicts Set Code = @2 where Category = @0 and Name = @1", "網站設置", "Demo系統", "0");
 
             do
             {

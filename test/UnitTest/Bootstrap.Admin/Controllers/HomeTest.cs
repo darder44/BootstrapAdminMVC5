@@ -18,7 +18,7 @@ namespace Bootstrap.Admin.Controllers
             var content = await r.Content.ReadAsStringAsync();
             if (errorCode == 0)
             {
-                Assert.Contains("未處理服務器内部錯誤", content);
+                Assert.Contains("未處理伺服器内部錯誤", content);
             }
             else if (errorCode == 404)
             {
@@ -26,7 +26,7 @@ namespace Bootstrap.Admin.Controllers
             }
             else
             {
-                Assert.Contains("服務器内部錯誤", content);
+                Assert.Contains("伺服器内部錯誤", content);
             }
         }
 

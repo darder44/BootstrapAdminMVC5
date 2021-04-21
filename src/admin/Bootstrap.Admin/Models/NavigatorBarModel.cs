@@ -13,7 +13,7 @@ namespace Bootstrap.Admin.Models
     public class NavigatorBarModel : HeaderBarModel
     {
         /// <summary>
-        /// 構造函数
+        /// 構造函數
         /// </summary>
         /// <param name="controller"></param>
         public NavigatorBarModel(ControllerBase controller) : this(controller.User.Identity!.Name, $"~{controller.Request.Path}")
@@ -22,7 +22,7 @@ namespace Bootstrap.Admin.Models
         }
 
         /// <summary>
-        /// Blazor 使用構造函数
+        /// Blazor 使用構造函數
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="activeUrl"></param>

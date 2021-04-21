@@ -127,7 +127,7 @@ $(function () {
         },
         smartTable: {
             sortName: 'RoleName',
-            queryParams: function (params) { return $.extend(params, { roleName: $("#txt_search_name").val(), description: $("#txt_role_desc").val() }); },           //傳递参数（*）
+            queryParams: function (params) { return $.extend(params, { roleName: $("#txt_search_name").val(), description: $("#txt_role_desc").val() }); },           //傳递参數（*）
             columns: [
                 { title: "角色名稱", field: "RoleName", sortable: true },
                 { title: "角色描述", field: "Description", sortable: false }
@@ -149,7 +149,7 @@ $(function () {
                 child.find(':checkbox').prop('checked', val);
             }
 
-            // 子节点全部取消時父級選單也取消
+            // 子节點全部取消時父級選單也取消
             $this.parents('ol.dd-list').each(function (index, p) {
                 var $menuType = $this.parents('.dd3-item').attr('data-resource');
                 if ($menuType === "0") {

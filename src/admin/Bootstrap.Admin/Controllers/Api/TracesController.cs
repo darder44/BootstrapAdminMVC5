@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Bootstrap.Admin.Controllers.Api
 {
     /// <summary>
-    /// 線上用户跟踪控制器
+    /// 線上用户跟蹤控制器
     /// </summary>
     [Route("api/[controller]")]
     [Authorize]

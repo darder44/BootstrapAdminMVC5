@@ -6,7 +6,7 @@
         <div class="card-body">
             <ConditionComponent>
                 <div class="alert alert-danger" role="alert">
-                    <span>演示系統禁止更改系統名稱</span>
+                    <span>Demo系統禁止更改系統名稱</span>
                 </div>
             </ConditionComponent>
             <div class="form-group">
@@ -28,7 +28,7 @@
         <div class="card-body">
             <ConditionComponent>
                 <div class="alert alert-danger" role="alert">
-                    <span>演示系統禁止更改網站頁腳</span>
+                    <span>Demo系統禁止更改網站頁腳</span>
                 </div>
             </ConditionComponent>
             <div class="form-group">
@@ -45,7 +45,7 @@
     </div>
 </ConditionComponent>
 <div class="card">
-    <div class="card-header"><label class="control-label" data-toggle="lgbinfo" data-content="通過此功能進行整個網站的登入界面設置">後台管理登入地址設置</label></div>
+    <div class="card-header"><label class="control-label" data-toggle="lgbinfo" data-content="通過此功能進行整個網站的登入介面設置">後台管理登入地址設置</label></div>
     <div class="card-body">
         <div class="form-group">
             <div class="form-group text-right">
@@ -62,7 +62,7 @@
     <div class="card-body" data-toggle="LgbValidate" data-valid-button="[data-method='appPath']">
         <ConditionComponent>
             <div class="alert alert-danger" role="alert">
-                <span>演示系統禁止更改後台管理地址</span>
+                <span>Demo系統禁止更改後台管理地址</span>
             </div>
         </ConditionComponent>
         <div class="form-group">
@@ -82,7 +82,7 @@
     <div class="card-body">
         <ConditionComponent>
             <div class="alert alert-danger" role="alert">
-                <span>演示系統禁止更改前台應用設置</span>
+                <span>Demo系統禁止更改前台應用設置</span>
             </div>
         </ConditionComponent>
         <div class="form-inline">
@@ -156,7 +156,7 @@
                     </div>
                     <div class="form-group col-6">
                         <label class="control-label" for="cardTitle">健康檢查</label>
-                        <Toggle @bind-Value="@Model.EnableHealth" OnText="开啟" OffText="關閉"></Toggle>
+                        <Toggle @bind-Value="@Model.EnableHealth" OnText="開啟" OffText="關閉"></Toggle>
                     </div>
                 </div>
             </div>
@@ -172,7 +172,7 @@
         <div class="card-body">
             <ConditionComponent>
                 <div class="alert alert-danger" role="alert">
-                    <span>演示系統禁止更改網站登入設置</span>
+                    <span>Demo系統禁止更改網站登入設置</span>
                 </div>
             </ConditionComponent>
             <div class="form-inline">
@@ -203,7 +203,7 @@
                 <div class="row">
                     <div class="form-group col-6">
                         <label class="control-label" for="lockScreen">自动鎖屏</label>
-                        <Toggle @bind-Value="@Model.AutoLockScreen" OnText="开啟" OffText="關閉"></Toggle>
+                        <Toggle @bind-Value="@Model.AutoLockScreen" OnText="開啟" OffText="關閉"></Toggle>
                     </div>
                     <div class="form-group col-6">
                         <label class="control-label" for="lockPeriod">時长間隔(秒)</label>
@@ -222,13 +222,13 @@
         <div class="card-header">預設應用設置</div>
         <div class="card-body">
             <div class="alert alert-info" role="alert">
-                <span>开啟此功能後用户登入時預設導航到第一個已授權的前台應用</span>
+                <span>開啟此功能後用户登入時預設導航到第一個已授權的前台應用</span>
             </div>
             <div class="form-inline">
                 <div class="row">
                     <div class="form-group col-6">
                         <label class="control-label" for="defaultApp">預設應用</label>
-                        <Toggle @bind-Value="@Model.DefaultApp" OnText="开啟" OffText="關閉"></Toggle>
+                        <Toggle @bind-Value="@Model.DefaultApp" OnText="開啟" OffText="關閉"></Toggle>
                     </div>
                 </div>
             </div>
@@ -243,13 +243,13 @@
         <div class="card-header">網站設置</div>
         <div class="card-body">
             <div class="alert alert-info" role="alert">
-                <span>开啟此功能網站增加 Blazor 與 MVC 切换挂件</span>
+                <span>開啟此功能網站增加 Blazor 與 MVC 切换挂件</span>
             </div>
             <div class="form-inline">
                 <div class="row">
                     <div class="form-group col-6">
                         <label class="control-label" for="blazor">MVC 切换</label>
-                        <Toggle @bind-Value="@Model.EnableBlazor" OnText="开啟" OffText="關閉"></Toggle>
+                        <Toggle @bind-Value="@Model.EnableBlazor" OnText="開啟" OffText="關閉"></Toggle>
                     </div>
                 </div>
             </div>
@@ -265,7 +265,7 @@
         <div class="card-body">
             <ConditionComponent>
                 <div class="alert alert-danger" role="alert">
-                    <span>演示系統禁止更改地理信息配置</span>
+                    <span>Demo系統禁止更改地理信息配置</span>
                 </div>
             </ConditionComponent>
             <div class="form-group">
@@ -285,7 +285,7 @@
         <div class="card-body">
             <ConditionComponent>
                 <div class="alert alert-danger" role="alert">
-                    <span>演示系統禁止更改日誌缓存設置</span>
+                    <span>Demo系統禁止更改日誌缓存設置</span>
                 </div>
             </ConditionComponent>
             <div class="form-inline">
@@ -325,13 +325,13 @@
     </div>
 </ConditionComponent>
 <div class="card" asp-auth="demo">
-    <div class="card-header">演示系統設置</div>
+    <div class="card-header">Demo系統設置</div>
     <div class="card-body">
         <div class="form-inline">
             <div class="row">
                 <div class="form-group col-6">
-                    <label class="control-label" data-toggle="lgbinfo" data-content="开啟此功能網站切换至演示系統">演示系統</label>
-                    <Toggle @bind-Value="@Model.EnableDemo" OnText="开啟" OffText="關閉"></Toggle>
+                    <label class="control-label" data-toggle="lgbinfo" data-content="開啟此功能網站切换至Demo系統">Demo系統</label>
+                    <Toggle @bind-Value="@Model.EnableDemo" OnText="開啟" OffText="關閉"></Toggle>
                 </div>
                 <div class="form-group col-6">
                     <label class="control-label" for="authKey">授權碼</label>

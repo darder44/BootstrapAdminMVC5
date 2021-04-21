@@ -23,7 +23,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected IJSRuntime? JSRuntime { get; set; }
 
         /// <summary>
-        /// 每頁資料数量 預設 20 行
+        /// 每頁資料數量 預設 20 行
         /// </summary>
         protected const int DefaultPageItems = 20;
 
@@ -105,7 +105,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected IEnumerable<TItem> Items { get; set; } = new TItem[0];
 
         /// <summary>
-        /// 獲得/設置 已选择的資料集合
+        /// 獲得/設置 已選擇的資料集合
         /// </summary>
         public List<TItem> SelectedItems { get; } = new List<TItem>();
 
@@ -116,7 +116,7 @@ namespace Bootstrap.Admin.Pages.Components
         public bool ShowLineNo { get; set; } = true;
 
         /// <summary>
-        /// 獲得/設置 是否顯示选择列 預設為 false
+        /// 獲得/設置 是否顯示選擇列 預設為 false
         /// </summary>
         [Parameter]
         public bool ShowCheckbox { get; set; }
@@ -164,7 +164,7 @@ namespace Bootstrap.Admin.Pages.Components
         public string ButtonTemplateHeaderText { get; set; } = "操作";
 
         /// <summary>
-        /// 点击翻頁回調方法
+        /// 點擊翻頁回調方法
         /// </summary>
         [Parameter]
         public Func<QueryPageOptions, QueryData<TItem>>? OnQuery { get; set; }
@@ -200,7 +200,7 @@ namespace Bootstrap.Admin.Pages.Components
         public Func<IEnumerable<TItem>, bool>? OnDelete { get; set; }
 
         /// <summary>
-        /// 獲得/設置 每頁資料数量
+        /// 獲得/設置 每頁資料數量
         /// </summary>
         [Parameter]
         public int PageItems { get; set; } = DefaultPageItems;
@@ -256,7 +256,7 @@ namespace Bootstrap.Admin.Pages.Components
         protected string SortName { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 當前排序规则
+        /// 獲得/設置 當前排序規則
         /// </summary>
         protected SortOrder SortOrder { get; set; }
 
@@ -289,7 +289,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 点击頁碼調用此方法
+        /// 點擊頁碼調用此方法
         /// </summary>
         /// <param name="pageIndex"></param>
         /// <param name="pageItems"></param>
@@ -304,7 +304,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 每頁紀錄條数變化是調用此方法
+        /// 每頁紀錄條數變化是調用此方法
         /// </summary>
         protected void PageItemsChange(int pageItems)
         {
@@ -317,7 +317,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 选择框点击時調用此方法
+        /// 選擇框點擊時調用此方法
         /// </summary>
         /// <param name="item"></param>
         /// <param name="check"></param>
@@ -382,7 +382,7 @@ namespace Bootstrap.Admin.Pages.Components
             }
             else
             {
-                ShowMessage("編輯資料", "請选择一個要編輯的資料", ToastCategory.Information);
+                ShowMessage("編輯資料", "請選擇一個要編輯的資料", ToastCategory.Information);
             }
         }
 
@@ -435,7 +435,7 @@ namespace Bootstrap.Admin.Pages.Components
             }
             else
             {
-                ShowMessage("刪除資料", "請选择要刪除的資料", ToastCategory.Information);
+                ShowMessage("刪除資料", "請選擇要刪除的資料", ToastCategory.Information);
             }
         }
 
@@ -478,13 +478,13 @@ namespace Bootstrap.Admin.Pages.Components
         /// </summary>
         protected void SearchClick()
         {
-            // 查詢控件按鈕触發此事件
+            // 查詢控件按鈕觸發此事件
             PageIndex = 1;
             Query();
         }
 
         /// <summary>
-        /// 高級查詢按鈕点击時調用此方法
+        /// 高級查詢按鈕點擊時調用此方法
         /// </summary>
         protected void AdvancedSearchClick()
         {

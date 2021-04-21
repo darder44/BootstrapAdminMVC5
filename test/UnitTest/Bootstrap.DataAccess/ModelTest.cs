@@ -68,7 +68,7 @@ namespace Bootstrap.DataAccess
             var user = UserHelper.Retrieves().FirstOrDefault(m => m.UserName == "User");
             user.DisplayName = "UnitTest";
 
-            // 演示模式下不允許更改  Admin User 账户信息
+            // Demo模式下不允許更改  Admin User 账户信息
             Assert.True(UserHelper.Save(user));
         }
 
@@ -97,7 +97,7 @@ namespace Bootstrap.DataAccess
             Assert.NotNull(dict);
             dict.Code = "JuheIPSvr";
 
-            // 演示模式下不能保存
+            // Demo模式下不能保存
             Assert.True(DictHelper.Save(dict));
             Assert.Equal("None", DictHelper.RetrieveLocaleIPSvr());
         }

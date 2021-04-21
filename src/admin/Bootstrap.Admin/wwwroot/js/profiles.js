@@ -19,8 +19,8 @@
         ],
         initialPreviewAsData: true,
         overwriteInitial: true,
-        dropZoneTitle: "請选择頭像",
-        msgPlaceholder: "請选择頭像",
+        dropZoneTitle: "請選擇頭像",
+        msgPlaceholder: "請選擇頭像",
         fileActionSettings: { showUpload: false }
     }).on('fileuploaded', function (event, data, previewId, index) {
         var url = data.response.initialPreview[0];
@@ -30,7 +30,7 @@
         return new Promise(function (resolve, reject) {
             var swalDeleteOptions = {
                 title: "您確定要刪除吗？",
-                html: '您確定要刪除选中的所有資料吗',
+                html: '您確定要刪除選中的所有資料吗',
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: '#dc3545',

@@ -184,7 +184,7 @@ $(function () {
                     mousePosition.screenX = e.screenX;
                     mousePosition.screenY = e.screenY;
 
-                    // 计数器归零
+                    // 计數器归零
                     count = 1;
                     return;
                 }

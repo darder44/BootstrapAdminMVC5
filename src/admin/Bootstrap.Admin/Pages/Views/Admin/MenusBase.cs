@@ -183,7 +183,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
             {
                 if (EditPage.SelectedItems.Count() != 1)
                 {
-                    ShowMessage("角色授權", "請选择一個選單", ToastCategory.Information);
+                    ShowMessage("角色授權", "請選擇一個選單", ToastCategory.Information);
                 }
                 else
                 {
@@ -213,7 +213,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         }
 
         /// <summary>
-        /// 选择框点击時調用此方法
+        /// 選擇框點擊時調用此方法
         /// </summary>
         /// <param name="item"></param>
         /// <param name="check"></param>

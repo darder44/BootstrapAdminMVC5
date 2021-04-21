@@ -109,7 +109,7 @@
                 that.reset();
             });
 
-            // bs bug 彈窗内控件值更改後再次点击關閉按鈕是 hide.bs.modal 事件不被触發
+            // bs bug 彈窗内控件值更改後再次點擊關閉按鈕是 hide.bs.modal 事件不被觸發
             // 兼容 鍵盘事件 ESC
             var dismissTooltip = function (e) {
                 // 移除残留 tooltip
@@ -318,11 +318,11 @@
 
             $.validator.addMethod("radioGroup", function (value, element) {
                 return $(element).find(':checked').length === 1;
-            }, "請选择一個选項");
+            }, "請選擇一個選項");
 
             $.validator.addMethod("checkGroup", function (value, element) {
                 return $(element).parents('[data-toggle="LgbValidate"]').find(':checked').length >= 1;
-            }, "請选择一個选項");
+            }, "請選擇一個選項");
 
             $.validator.addMethod("userName", function (value, element) {
                 return this.optional(element) || /^[a-zA-Z0-9_@.]*$/.test(value);

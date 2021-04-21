@@ -6,7 +6,7 @@
     public class LockModel : HeaderBarModel
     {
         /// <summary>
-        /// 構造函数
+        /// 構造函數
         /// </summary>
         /// <param name="userName"></param>
         public LockModel(string? userName) : base(userName)

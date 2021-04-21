@@ -50,7 +50,7 @@ namespace Bootstrap.Admin.Pages.Components
         public Action? OnQuery { get; set; }
 
         /// <summary>
-        /// 参数設置方法
+        /// 参數設置方法
         /// </summary>
         protected override void OnParametersSet()
         {

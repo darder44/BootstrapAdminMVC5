@@ -1,4 +1,4 @@
-namespace Bootstrap.Admin
+﻿namespace Bootstrap.Admin
 {
     /// <summary>
     /// 任務描述類
@@ -16,7 +16,7 @@ namespace Bootstrap.Admin
         public string TaskExecutorName { get; set; } = "";
 
         /// <summary>
-        /// 獲得/設置 Cron 任務表达式
+        /// 獲得/設置 Cron 任務表達式
         /// </summary>
         public string CronExpression { get; set; } = "";
     }
