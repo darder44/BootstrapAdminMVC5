@@ -9,7 +9,7 @@ namespace Bootstrap.Admin.Pages.Extensions
     public static class PagesExtensions
     {
         /// <summary>
-        /// Pages 转化為 QueryData 實例方法
+        /// Pages 轉化為 QueryData 實例方法
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="pages"></param>

@@ -2178,14 +2178,14 @@ define('zrender/zrender', [
             magicType: {
                 show: false,
                 title: {
-                    line: '折線圖切换',
-                    bar: '柱形圖切换',
+                    line: '折線圖切換',
+                    bar: '柱形圖切換',
                     stack: '堆积',
                     tiled: '平铺',
-                    force: '力導向布局圖切换',
-                    chord: '和弦圖切换',
-                    pie: '饼圖切换',
-                    funnel: '漏斗圖切换'
+                    force: '力導向布局圖切換',
+                    chord: '和弦圖切換',
+                    pie: '饼圖切換',
+                    funnel: '漏斗圖切換'
                 },
                 type: []
             },

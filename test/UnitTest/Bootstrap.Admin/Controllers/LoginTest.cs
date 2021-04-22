@@ -136,7 +136,7 @@ namespace Bootstrap.Admin.Controllers
             var content = await r.Content.ReadAsStringAsync();
             Assert.Contains("系統鎖屏", content);
 
-            // 第二次調用 跳转到登入頁面
+            // 第二次調用 跳轉到登入頁面
             r = await client.GetAsync("/Account/Lock");
             Assert.True(r.IsSuccessStatusCode);
             content = await r.Content.ReadAsStringAsync();

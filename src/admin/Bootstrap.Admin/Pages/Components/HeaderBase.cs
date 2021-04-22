@@ -47,7 +47,7 @@ namespace Bootstrap.Admin.Pages.Components
         public EventCallback<string> DisplayNameChanged { get; set; }
 
         /// <summary>
-        /// 獲得/設置 是否顯示 Blazor MVC 切换圖示
+        /// 獲得/設置 是否顯示 Blazor MVC 切換圖示
         /// </summary>
         protected bool EnableBlazor { get; set; }
 

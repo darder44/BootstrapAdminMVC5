@@ -138,7 +138,7 @@ namespace Bootstrap.Admin.Pages.Components
         }
 
         /// <summary>
-        /// 将 字符串 Value 属性转化為 泛型 Value 方法
+        /// 将 字符串 Value 属性轉化為 泛型 Value 方法
         /// </summary>
         /// <param name="value"></param>
         /// <param name="result"></param>

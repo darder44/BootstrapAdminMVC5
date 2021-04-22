@@ -18,7 +18,7 @@ namespace Bootstrap.DataAccess
                 OS = "UnitTest",
                 Ip = "::1",
                 CRUD = "UnitTest",
-                RequestUrl = "~/Admin/Index"
+                RequestUrl = "~/Home/Index"
             };
             Assert.True(LogHelper.Save(log));
             Assert.NotNull(LogHelper.RetrievePages(new PaginationOption() { Limit = 20, Sort = "LogTime", Order = "desc" }, null, null, null));

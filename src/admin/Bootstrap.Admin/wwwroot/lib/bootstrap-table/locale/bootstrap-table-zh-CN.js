@@ -680,7 +680,7 @@
 	    return '刷新';
 	  },
 	  formatToggle: function formatToggle() {
-	    return '切换';
+	    return '切換';
 	  },
 	  formatToggleOn: function formatToggleOn() {
 	    return '顯示卡片視圖';
@@ -692,7 +692,7 @@
 	    return '列';
 	  },
 	  formatColumnsToggleAll: function formatColumnsToggleAll() {
-	    return '切换所有';
+	    return '切換所有';
 	  },
 	  formatFullscreen: function formatFullscreen() {
 	    return '全屏';
@@ -707,7 +707,7 @@
 	    return '導出資料';
 	  },
 	  formatJumpTo: function formatJumpTo() {
-	    return '跳转';
+	    return '跳轉';
 	  },
 	  formatAdvancedSearch: function formatAdvancedSearch() {
 	    return '高級查詢';

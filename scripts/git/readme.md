@@ -26,7 +26,7 @@ Windows 版本的 Fork 提供了提交模板 （commit message template）功能
 如下圖所示  
 ![輸入圖片說明](https://images.gitee.com/uploads/images/2020/0327/123310_1b9b4af3_554725.png "Screen Shot 2020-03-27 at 12.30.38.png")
 
-4. 切换到 **提交模板** 面板（Commit Template）
+4. 切換到 **提交模板** 面板（Commit Template）
 5. 勾選使用 **全局配置文件** （Use global git configuration file）
 
 下面的文本框内即出现提交模板内容

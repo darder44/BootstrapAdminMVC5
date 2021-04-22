@@ -148,7 +148,7 @@ namespace Bootstrap.Admin.Pages.Views.Admin.Components
         protected void SaveBlazor()
         {
             var ret = DictHelper.SaveSettings(new BootstrapDict[] { new BootstrapDict() { Category = "網站設置", Name = "Blazor", Code = Model.EnableBlazor ? "1" : "0" } });
-            if (Model.EnableBlazor) ShowMessage("MVC 切换設置保存", ret);
+            if (Model.EnableBlazor) ShowMessage("MVC 切換設置保存", ret);
 
             // 根據保存结果隐藏 Header 挂件
             if (ret) RootLayout?.JSRuntime?.ToggleBlazor(Model.EnableBlazor);

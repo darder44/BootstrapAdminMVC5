@@ -9,7 +9,7 @@ namespace Bootstrap.Admin.Pages.Extensions
     public static class QueryPageOptionsExtensions
     {
         /// <summary>
-        /// QueryPageOptions 转换為 PaginationOption 方法
+        /// QueryPageOptions 轉換為 PaginationOption 方法
         /// </summary>
         /// <param name="options"></param>
         /// <returns></returns>

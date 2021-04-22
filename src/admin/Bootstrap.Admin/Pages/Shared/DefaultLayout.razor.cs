@@ -98,7 +98,7 @@ namespace Bootstrap.Admin.Pages.Shared
         /// <returns></returns>
         protected override async Task OnInitializedAsync()
         {
-            // 網頁跳转监控
+            // 網頁跳轉监控
             if (NavigationManager != null)
             {
                 NavigationManager.LocationChanged += NavigationManager_LocationChanged;

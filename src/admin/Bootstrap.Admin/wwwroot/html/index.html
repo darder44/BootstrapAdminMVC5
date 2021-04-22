@@ -62,7 +62,7 @@
         <div class="bg"></div>
         <div class="tip">
             <h2>網站正在升級中，請稍後重試，請選擇其他Demo地址</h2>
-            <h3><span>5</span> 秒後自动跳转到备用Demo地址</h3>
+            <h3><span>5</span> 秒後自动跳轉到备用Demo地址</h3>
             <p>Demo地址1：<a class="active" href="http://argo.zylweb.cn/">http://argo.zylweb.cn</a></p>
             <p>Demo地址2：<a href="http://admin.blazor.zone/">http://admin.blazor.zone</a></p>
         </div>
@@ -75,7 +75,7 @@
             var left = parseInt($span.innerHTML);
             var handler = window.setInterval(function () {
                 if (left <= 1) {
-                    $h3.innerHTML = "正在跳转...請稍等!";
+                    $h3.innerHTML = "正在跳轉...請稍等!";
                     window.clearInterval(handler);
                     window.location.href = target.href;
                 }

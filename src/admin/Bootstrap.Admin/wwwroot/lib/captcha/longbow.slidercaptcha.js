@@ -191,7 +191,7 @@
             that.text.removeClass('text-danger');
             if ($.isFunction(that.options.setSrc)) src = that.options.setSrc();
             if (!src || src === '') src = 'https://picsum.photos/' + that.options.width + '/' + that.options.height + '/?image=' + Math.round(Math.random() * 20);
-            if (isIE) { // IE瀏覽器無法通過img.crossOrigin跨域，使用ajax獲取圖片blob然後转為dataURL顯示
+            if (isIE) { // IE瀏覽器無法通過img.crossOrigin跨域，使用ajax獲取圖片blob然後轉為dataURL顯示
                 var xhr = new XMLHttpRequest();
                 xhr.onloadend = function (e) {
                     var file = new FileReader(); // FileReader仅支持IE10+

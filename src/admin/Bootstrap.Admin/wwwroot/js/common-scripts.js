@@ -165,7 +165,7 @@ $(function () {
     // enable animoation effect
     $('body').removeClass('trans-mute');
 
-    // blazor widget 切换功能
+    // blazor widget 切換功能
     $('[data-method="blazor"]').on('click', function (e) { 
         e.preventDefault();
         var path = window.location.pathname;

@@ -10,21 +10,21 @@ namespace Bootstrap.Admin.Pages.Extensions
     public static class UrlHelperExtensions
     {
         /// <summary>
-        /// 转换為 Blazor 地址 ~/Admin/Index => Admin/Index
+        /// 轉換為 Blazor 地址 ~/Admin/Index => Admin/Index
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>
         public static string ToBlazorLink(this string url) => (url.StartsWith("http://", StringComparison.OrdinalIgnoreCase) || url.StartsWith("https://", StringComparison.OrdinalIgnoreCase)) ? url : url.Replace("~/", "");
-
+         
         /// <summary>
-        /// 转化為 Blazor 選單地址 ~/Admin/Index => Pages/Admin/Index
+        /// 轉化為 Blazor 選單地址 ~/Admin/Index => Pages/Admin/Index
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>
         public static string ToBlazorMenuUrl(this string url) => url.Replace("~/", "Pages/");
 
         /// <summary>
-        /// 转化為 Mvc 選單地址 /Pages/Admin/Index => ~/Admin/Index
+        /// 轉化為 Mvc 選單地址 /Pages/Admin/Index => ~/Admin/Index
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>

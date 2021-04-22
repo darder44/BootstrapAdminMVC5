@@ -368,7 +368,7 @@
                 showSearchButton: true,             //是否顯示查詢按鈕
                 showColumns: true,                  //是否顯示所有的列
                 showRefresh: true,                  //是否顯示刷新按鈕
-                showToggle: true,                   //是否顯示詳詳視圖和列表視圖的切换按鈕
+                showToggle: true,                   //是否顯示詳詳視圖和列表視圖的切換按鈕
                 cardView: $(window).width() < 768,  //是否顯示詳詳視圖
                 queryButton: '#btn_query',
                 onLoadSuccess: function (data) {
@@ -722,7 +722,7 @@
                     return '<span>刷新</span>';
                 },
                 formatToggle: function formatToggle() {
-                    return '<span>切换</span>';
+                    return '<span>切換</span>';
                 },
                 formatToggleOn: function formatToggleOn() {
                     return '<span>顯示卡片視圖</span>';
@@ -734,7 +734,7 @@
                     return '<span>列</span>';
                 },
                 formatColumnsToggleAll: function formatColumnsToggleAll() {
-                    return '<span>切换所有</span>';
+                    return '<span>切換所有</span>';
                 },
                 formatFullscreen: function formatFullscreen() {
                     return '<span>全屏</span>';
@@ -749,7 +749,7 @@
                     return '<span>導出資料</span>';
                 },
                 formatJumpTo: function formatJumpTo() {
-                    return '<span>跳转</span>';
+                    return '<span>跳轉</span>';
                 },
                 formatAdvancedSearch: function formatAdvancedSearch() {
                     return '<span>高級查詢</span>';

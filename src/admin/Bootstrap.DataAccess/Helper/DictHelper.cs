@@ -500,7 +500,7 @@ namespace Bootstrap.DataAccess
                 {
                     Category = option.AppName,
                     Name = "系統設置地址",
-                    Code = "/Admin/Index",
+                    Code = "/Home/Index",
                     Define = 1
                 });
                 if (ret) ret = Save(new BootstrapDict()
